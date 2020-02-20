@@ -1,0 +1,158 @@
+.. _orbital.energies.spin.zora-d3e2487:
+
+orbital.energies.spin.zora
+==========================
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | ADF log                           |
+   +-----------------------------------+-----------------------------------+
+   | id                                | orbital.energies.spin.zora        |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Scaled ZORA Orbital Energies, per |
+   |                                   | Irrep and Spin                    |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*\*{5}\sSPIN\s1\s\*{5}         |
+   |                                   | $\s*$\s*Scaled\sZORA\sOrbital\sEn |
+   |                                   | ergies,\sper\sIrrep\sand\sSpin.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*$((?!Scaled).)*$\s*={1,10}.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern2                       | \\s*Orbital\sEnergies.\*          |
+   +-----------------------------------+-----------------------------------+
+   | endPattern3                       | ~                                 |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 0                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | orbital.energies.spin.zora.xml    |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+                                      ***** SPIN 1 *****
+
+    Scaled ZORA Orbital Energies, per Irrep and Spin:
+    =================================================
+                           Occup              E (au)              E (eV)       Diff (eV) with prev. cycle
+                           -----      --------------------        ------       --------------------------
+    A
+                126        1.000     -0.26008646815165E+00        -7.077               1.83E-07
+                127        1.000     -0.25781999029727E+00        -7.016               3.52E-07
+                128        1.000     -0.25699868806828E+00        -6.993               1.06E-10
+                129        1.000     -0.25595775813818E+00        -6.965               6.46E-07
+                130        1.000     -0.25407143833458E+00        -6.914               2.56E-06
+                131        1.000     -0.25216298624559E+00        -6.862              -1.95E-06
+                132        1.000     -0.24738870719756E+00        -6.732              -2.87E-06
+                133        1.000     -0.24458950993547E+00        -6.656               5.09E-07
+                134        1.000     -0.23651101035863E+00        -6.436               5.84E-07
+                135        1.000     -0.14436903565444E+00        -3.928               4.38E-06
+                136        0.000     -0.13973721933427E+00        -3.802
+                137        0.000     -0.13911236092124E+00        -3.785
+                138        0.000     -0.13630424441218E+00        -3.709
+                139        0.000     -0.13385012437203E+00        -3.642
+                140        0.000     -0.12495039656029E+00        -3.400
+                141        0.000     -0.11648915160100E+00        -3.170
+                142        0.000     -0.11106588918696E+00        -3.022
+                143        0.000     -0.10384602891531E+00        -2.826
+                144        0.000     -0.98190357544712E-01        -2.672
+                145        0.000     -0.90915193627333E-01        -2.474
+     
+    HOMO :      135 A                -0.14436903565444E+00
+    LUMO :      136 A                -0.13973721933427E+00
+     
+
+
+                                      ***** SPIN 2 *****
+
+    Scaled ZORA Orbital Energies, per Irrep and Spin:
+    =================================================
+                           Occup              E (au)              E (eV)       Diff (eV) with prev. cycle
+                           -----      --------------------        ------       --------------------------
+    A
+                124        1.000     -0.26151756635197E+00        -7.116               9.47E-07
+                125        1.000     -0.25988938848734E+00        -7.072               4.85E-07
+                126        1.000     -0.25782939664517E+00        -7.016               4.29E-07
+                127        1.000     -0.25734050727707E+00        -7.003               5.32E-07
+                128        1.000     -0.25603072257653E+00        -6.967               4.93E-08
+                129        1.000     -0.25493051104018E+00        -6.937               2.75E-07
+                130        1.000     -0.25187079680692E+00        -6.854              -2.00E-06
+                131        1.000     -0.24765626939943E+00        -6.739              -1.91E-06
+                132        1.000     -0.24443397178525E+00        -6.651               2.30E-06
+                133        1.000     -0.23696580759681E+00        -6.448               1.38E-06
+                134        0.000     -0.18136783566543E+00        -4.935
+                135        0.000     -0.13725573393882E+00        -3.735
+                136        0.000     -0.13385605031175E+00        -3.642
+                137        0.000     -0.12917729410767E+00        -3.515
+                138        0.000     -0.12206337549451E+00        -3.322
+                139        0.000     -0.11625374888062E+00        -3.163
+                140        0.000     -0.11091373037949E+00        -3.018
+                141        0.000     -0.10502482951990E+00        -2.858
+                142        0.000     -0.10124646754563E+00        -2.755
+                143        0.000     -0.98090546319035E-01        -2.669
+     
+    HOMO :      133 A                -0.23696580759681E+00
+    LUMO :      134 A                -0.18136783566543E+00
+     
+
+
+    Orbital Energies, both Spins
+    ========================================
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="orbital.energies.spin.zora">
+           <module cmlx:templateRef="orbital.energies.spin.zora">
+                <list cmlx:templateRef="energies" dictRef="energies">
+                  <array dataType="xsd:integer" dictRef="cc:serial" size="40">126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143</array>
+                  <array dataType="xsd:double" dictRef="cc:occup" size="40">1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000</array>
+                  <array dataType="xsd:double" dictRef="cc:energy" size="40" units="nonsi:electronvolt">-7.077 -7.016 -6.993 -6.965 -6.914 -6.862 -6.732 -6.656 -6.436 -3.928 -3.802 -3.785 -3.709 -3.642 -3.400 -3.170 -3.022 -2.826 -2.672 -2.474 -7.116 -7.072 -7.016 -7.003 -6.967 -6.937 -6.854 -6.739 -6.651 -6.448 -4.935 -3.735 -3.642 -3.515 -3.322 -3.163 -3.018 -2.858 -2.755 -2.669</array>
+                  <array dataType="xsd:string" dictRef="cc:irrep" size="40">A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A</array>
+                  <array dataType="xsd:string" dictRef="cc:spin" size="40">A A A A A A A A A A A A A A A A A A A A B B B B B B B B B B B B B B B B B B B B</array>
+                </list>
+           </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <template id="spin" name="spin section" pattern="\s*\*{5}\sSPIN\s.*\s\*{5}.*" endPattern="\s*LUMO.*" endPattern2="~" repeat="*">    <record>\s*\*{5}\sSPIN\s{A,cc:spin}\s\*{5}.*</record>    <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin' and text()='1']" value="A" />    <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin' and text()='2']" value="B" />    <record repeat="5" />    <templateList>      <template id="section" pattern="\s*\S+\s*" endPattern="\s*\S+\s*" endPattern2="~" endOffset="0" repeat="*">        <record>{A,cc:irrep}</record>        <record repeat="*">{I,cc:serial}{F,cc:occup}\s+\S+\s+{F,cc:energy}.*</record>        <transform process="addChild" xpath="./cml:list/cml:list" elementName="cml:scalar" dictRef="cc:irrep" />        <transform process="addAttribute" xpath=".//cml:scalar[@dictRef='cc:irrep']" name="dataType" value="xsd:string" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:irrep']" value="$string(ancestor::cml:module[@cmlx:templateRef='section']//cml:scalar[@dictRef='cc:irrep' and text() != ''])" />        <transform process="addChild" xpath="./cml:list/cml:list" elementName="cml:scalar" dictRef="cc:spin" />        <transform process="addAttribute" xpath=".//cml:scalar[@dictRef='cc:spin']" name="dataType" value="xsd:string" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin']" value="$string(ancestor::cml:module[@cmlx:templateRef='spin']//cml:scalar[@dictRef='cc:spin'])" />        <transform process="delete" xpath="./ancestor::cml:module[@cmlx:templateRef='spin']/cml:list/cml:scalar[@dictRef='cc:spin']" />                                            
+                       </template>
+                   </templateList>    <transform process="delete" xpath=".//cml:module[@cmlx:templateRef='section']/cml:list/cml:scalar" />
+               </template>
+           </templateList>
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:serial']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:spin']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:occup']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:energy']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:irrep']" />
+   <transform process="addUnits" xpath=".//cml:array[@dictRef='cc:energy']" value="nonsi:electronvolt" />
+   <transform process="move" xpath=".//cml:array" to="." />
+   <transform process="addChild" xpath="." elementName="cml:list" dictRef="energies" />
+   <transform process="addAttribute" xpath="./cml:list[@dictRef='energies']" name="cmlx:templateRef" value="energies" />
+   <transform process="move" xpath=".//cml:array" to=".//cml:list[@dictRef='energies']" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

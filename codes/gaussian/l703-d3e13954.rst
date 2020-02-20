@@ -1,0 +1,70 @@
+.. _l703-d3e13954:
+
+l703
+====
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l703                              |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Compute integral first            |
+   |                                   | derivatives                       |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | newline                           | $                                 |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | .*Compute integral first          |
+   |                                   | derivatives.\*                    |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | .\*                               |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l703.xml                          |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    (Enter /usr/local/Gaussian/g03/l703.exe)
+    Compute integral first derivatives, UseDBF=F.
+    Integral derivatives from FoFDir, PRISM(SPDF).
+    Symmetry not used in FoFDir.
+    MinBra= 0 MaxBra= 2 Meth= 1.
+    IRaf=       0 NMat=   1 IRICut=       1 DoRegI=T DoRafI=F ISym2E= 0 JSym2E=0.
+    Leave Link  703 at Thu Aug 31 00:25:38 2006, MaxMem=    6291456 cpu:     382.5
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l703.integral">
+       <module cmlx:templateRef="l703" />
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="*" id="703" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

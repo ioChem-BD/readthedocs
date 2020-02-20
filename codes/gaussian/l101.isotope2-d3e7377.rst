@@ -1,0 +1,122 @@
+.. _l101.isotope2-d3e7377:
+
+l101.isotope2
+=============
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l101.isotope2                     |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*Atom.*$\s*IAtWgt.\*           |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Generating.\*                 |
+   +-----------------------------------+-----------------------------------+
+   | endPattern2                       | \\s*$\s\*                         |
+   +-----------------------------------+-----------------------------------+
+   | endPattern3                       | \\s*Leave\sLink.\*                |
+   +-----------------------------------+-----------------------------------+
+   | endPattern4                       | ~                                 |
+   +-----------------------------------+-----------------------------------+
+   | endPattern5                       | \\s*(NMagM                        |
+   |                                   | |AtZNuc)\=.*$\s*$\s+((?!Atom).)\* |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l101/l101.isotope2.xml            |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+                               Isotopes and Nuclear Properties:
+    (Nuclear quadrupole moments (NQMom) in fm**2, nuclear magnetic moments (NMagM)
+     in nuclear magnetons)
+
+     Atom         1           2           3           4           5           6           7           8           9          10
+    IAtWgt=         103           1          12          16          31          31          16          16          16          12
+    AtmWgt= 102.9048000   1.0078250  12.0000000  15.9949146  30.9737634  30.9737634  15.9949146  15.9949146  15.9949146  12.0000000
+    NucSpn=           1           1           0           0           1           1           0           0           0           0
+    AtZEff=-229.5000000  -1.0000000  -3.9000000  -6.0000000-180.0000000-180.0000000  -6.0000000  -6.0000000  -6.0000000  -3.9000000
+    NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+    NMagM=   -0.0884000   2.7928460   0.0000000   0.0000000   1.1316000   1.1316000   0.0000000   0.0000000   0.0000000   0.0000000
+
+     Atom        11          12          13          14          15          16          17          18          19          20
+    IAtWgt=          12           1           1          12          12          12          12          12          12          12
+    AtmWgt=  12.0000000   1.0078250   1.0078250  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000
+    NucSpn=           0           1           1           0           0           0           0           0           0           0
+    AtZEff=  -3.9000000  -1.0000000  -1.0000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000
+    NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+    NMagM=    0.0000000   2.7928460   2.7928460   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+     Atom        21          22          23          24          25          26          27          28          29          30
+    IAtWgt=          12          12          12          12          12          12          12          12          12          12
+    AtmWgt=  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000  12.0000000
+    NucSpn=           0           0           0           0           0           0           0           0           0           0
+    AtZEff=  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000  -3.9000000
+    NQMom=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+    NMagM=    0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000   0.0000000
+
+     Atom        31
+    IAtWgt=          12
+    AtmWgt=  12.0000000
+    NucSpn=           0
+    AtZEff=  -3.9000000
+    NQMom=    0.0000000
+    NMagM=    0.0000000
+
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l101.isotope2">
+         <module cmlx:lineCount="31" cmlx:templateRef="l101.isotope2">
+              <array dataType="xsd:integer" size="31" dictRef="x:x" cmlx:templateRef="atom">1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31</array>
+              <array dataType="xsd:integer" size="31" dictRef="x:x" cmlx:templateRef="iatwgt">103 1 12 16 31 31 16 16 16 12 12 1 1 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12 12</array>
+              <array dataType="xsd:double" size="31" dictRef="x:x" cmlx:templateRef="atmwgt">102.9048 1.007825 12.0 15.9949146 30.9737634 30.9737634 15.9949146 15.9949146 15.9949146 12.0 12.0 1.007825 1.007825 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0 12.0</array>
+              <array dataType="xsd:integer" size="31" dictRef="x:x" cmlx:templateRef="nucspn">1 1 0 0 1 1 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</array>
+              <array dataType="xsd:double" size="31" dictRef="x:x" cmlx:templateRef="atzeff">-229.5 -1.0 -3.9 -6.0 -180.0 -180.0 -6.0 -6.0 -6.0 -3.9 -3.9 -1.0 -1.0 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9 -3.9</array>
+              <array dataType="xsd:double" size="31" dictRef="x:x" cmlx:templateRef="nqmom">0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0</array>
+         </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <template id="l101.isotope2" pattern="\s*Atom.*" repeat="*" endPattern="\s*NMagM\=.*" endOffset="1">    <record id="atom">\s*Atom {1_10I,x:x}</record>    <record id="iatwgt">\s*IAtWgt={1_10I,x:x}</record>    <record id="atmwgt">\s*AtmWgt={1_10F12.7,x:x}</record>    <record id="nucspn">\s*NucSpn={1_10I,x:x}</record>    <record id="atzeff">\s*AtZEff={1_10F12.7,x:x}</record>    <record id="nqmom">\s*NQMom={1_10F12.7,x:x}</record>    <record id="nmagm">\s*NMagM={1_10F12.7,x:x}</record>
+       </template>
+     </templateList>
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='atom']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='iatwgt']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='atmwgt']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='nucspn']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='atzeff']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='nqmom']/cml:array" />
+   <transform process="joinArrays" xpath=".//cml:list[@cmlx:templateRef='nmagm']/cml:array" />
+   <transform process="pullupSingleton" xpath=".//cml:list" />
+   <transform process="delete" xpath=".//cml:module[not(cml:array)]" />
+   <transform process="pullup" xpath=".//cml:array" />
+   <transform process="delete" xpath=".//cml:module[not(cml:array)]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

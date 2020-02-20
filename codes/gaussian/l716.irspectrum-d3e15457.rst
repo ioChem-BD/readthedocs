@@ -1,0 +1,83 @@
+.. _l716.irspectrum-d3e15457:
+
+l716.irspectrum
+===============
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l716.irspectrum                   |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Thermochemistry properties        |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | .*$\s+IR Spectrum\s\*             |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*X[\sX]+$\s\*                  |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l716/l716.irspectrum.xml          |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+                                                          chlorobz/cl complex basis
+                                                                IR Spectrum
+    
+      33333                                                             1 1 11    1 1   11 11 11                                        
+      22211                                                             6 5 44    3 3   21 00 0099 9   8 7 76  6     4 44   3  2  1     
+      20099                                                             1 6 88    5 1   08 99 2098 2   2 8 19  1     6 10   0  2  3 75  
+      09962                                                             0 4 91    4 4   03 54 6816 8   6 1 06  5     6 62   1  0  8 35  
+    
+      XXXXX                                                             X X XX    X X   XX XX XXXX X   X X XX  X     X X    X  X    XX  
+                                                                        X   X              X    X        X             X                
+                                                                        X   X              X             X                              
+                                                                        X   X              X             X                              
+                                                                        X   X              X             X                              
+                                                                        X                  X             X                              
+                                                                        X                  X                                            
+                                                                        X                                                               
+                                                                        X                                                               
+    
+    
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l716.irspectrum">
+       <module cmlx:templateRef="l716.irspectrum">
+         <scalar dataType="xsd:string" dictRef="g:irspectrum" cmlx:templateRef="discard">chlorobz/cl complex basis</scalar>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="discard">{X,g:irspectrum}</record>
+   <record repeat="*" />
+   <transform process="pullupSingleton" xpath="./cml:list" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

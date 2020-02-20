@@ -1,0 +1,63 @@
+.. _l502.footer2-d3e13888:
+
+l502.footer2
+============
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l502.footer2                      |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\                                |
+   |                                   | s+S\*\*2\sbefore\sannihilation.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | .\*                               |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 0                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l502/l502.footer2.xml             |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+           S**2 before annihilation     0.7541,   after     2.0001
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l502.footer2">
+           <module id="spincontamination" cmlx:lineCount="1" cmlx:templateRef="l502.footer2">
+               <scalar dataType="xsd:double" dictRef="cc:spincontamination">0.7541</scalar>
+           </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="spincontamination">\s+S\*\*2\sbefore\sannihilation{F,cc:spincontamination}.*</record>
+   <transform process="pullup" xpath="./cml:list/cml:scalar" />
+   <transform process="delete" xpath="./cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Total.png

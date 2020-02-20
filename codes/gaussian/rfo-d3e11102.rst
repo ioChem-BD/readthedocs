@@ -1,0 +1,75 @@
+.. _rfo-d3e11102:
+
+rfo
+===
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | rfo                               |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*RFO step.*$.*$.\*             |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | .[^I][^t].\*                      |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 0                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l103/l103.rfo.xml                 |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    RFO step:  Lambda=-1.94485150D-03.
+    Linear search not attempted -- first point.
+    Iteration  1 RMS(Cart)=  0.02447047 RMS(Int)=  0.00000000
+    Iteration  2 RMS(Cart)=  0.00000000 RMS(Int)=  0.00000000
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l103.rfo">
+       <module cmlx:templateRef="rfo">
+         <list cmlx:templateRef="rfo">
+           <scalar dataType="xsd:double" dictRef="g:lambda">-0.0019448515</scalar>
+         </list>
+         <list cmlx:templateRef="nolinear">
+           <scalar dataType="xsd:string" dictRef="g:linear">Linear search</scalar>
+         </list>
+         <list cmlx:lineCount="2" cmlx:templateRef="iteration">
+           <array dataType="xsd:integer" dictRef="cc:serial" size="2">1 2</array>
+           <array dataType="xsd:double" dictRef="g:rmscart" size="2">0.02447047 0.0</array>
+           <array dataType="xsd:double" dictRef="g:rmsint" size="2">0.0 0.0</array>
+         </list>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="rfo">\s*RFO step:\s+Lambda={E,g:lambda}\.\s*</record>
+   <record id="nolinear">\s*{X,g:linear}\snot attempted.*</record>
+   <record repeat="*" id="iteration" makeArray="true">\s*Iteration\s+{I,cc:serial}\s*RMS\(Cart\)={F,g:rmscart}\s*RMS\(Int\)={F,g:rmsint}\s*</record>
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

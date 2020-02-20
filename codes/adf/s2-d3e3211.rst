@@ -1,0 +1,76 @@
+.. _s2-d3e3211:
+
+s2
+==
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | ADF log                           |
+   +-----------------------------------+-----------------------------------+
+   | id                                | s2                                |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Total S2                          |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*S\*\*2\svalue.\*              |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Total\sS2\s\(S\ssquared\).\*  |
+   +-----------------------------------+-----------------------------------+
+   | offset                            | -1                                |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | s2.xml                            |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    ==========
+    S**2 value  ***  see also R. Bulo et al., J.Am.Chem.Soc., 124 (2002) 13903-13910, note (29)  ***
+    ==========
+
+                                          exact      expectation value
+
+    Total S2 (S squared)                  0.75000             0.75228
+       
+       
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="s2">
+           <module cmlx:lineCount="7" cmlx:templateRef="s2">
+               <scalar dataType="xsd:double" dictRef="cc:s2">0.75</scalar>
+               <scalar dataType="xsd:double" dictRef="cc:s2expected">0.75228</scalar>
+           </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="6" />
+   <record id="s2">\s*Total\sS2\s\(S\ssquared\){F,cc:s2}{F,cc:s2expected}</record>
+   <transform process="pullup" xpath=".//cml:scalar" repeat="2" />
+   <transform process="delete" xpath=".//cml:list" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Total.png

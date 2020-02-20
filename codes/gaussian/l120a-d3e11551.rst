@@ -1,0 +1,67 @@
+.. _l120a-d3e11551:
+
+l120a
+=====
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l120a                             |
+   +-----------------------------------+-----------------------------------+
+   | name                              | l120a                             |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*ONIOM:\s*g                    |
+   |                                   | enerating\spoint.*on.*\ssystem.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | .\*                               |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l120a.xml                         |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    ONIOM: generating point  1 -- low level on model system.    
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l120a">
+           <module cmlx:templateRef="l120a">
+               <scalar dataType="xsd:integer" dictRef="g:point">1</scalar>
+               <scalar dataType="xsd:string" dictRef="x:level">low</scalar>
+               <scalar dataType="xsd:string" dictRef="x:system">model</scalar>
+           </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record>\s*ONIOM:\sgenerating\spoint{I,g:point}--{A,x:level}level\son{X,x:system}\ssystem.*</record>
+   <transform process="pullup" xpath=".//cml:scalar" repeat="2" />
+   <transform process="delete" xpath="./cml:list" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

@@ -1,0 +1,86 @@
+.. _l601.state-d3e13344:
+
+l601.state
+==========
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l601.state                        |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Electronic state                  |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*The electronic state.\*       |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | .\*                               |
+   +-----------------------------------+-----------------------------------+
+   | endPattern2                       | ~                                 |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 0                                 |
+   +-----------------------------------+-----------------------------------+
+   | keep                              | first                             |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | ../l601/l601.state.xml            |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    The electronic state of the initial guess is 1-A.
+     
+
+**Input.**
+
+::
+
+    The electronic state is 1-A.
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l601.state">
+       <module cmlx:templateRef="l601.state">
+         <scalar dataType="xsd:string" dictRef="g:l601.state">1-A.</scalar>
+       </module>
+     </comment>
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l601.state1">
+       <module cmlx:templateRef="l601.state">
+         <scalar dataType="xsd:string" dictRef="g:l601.state">1-A.</scalar>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="l601.state">\s*The electronic state\s*.*\s*is{A,g:l601.state}</record>
+   <transform process="pullup" xpath=".//cml:scalar" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

@@ -1,0 +1,70 @@
+.. _l302.basis2-d3e13245:
+
+l302.basis2
+===========
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l302.basis2                       |
+   +-----------------------------------+-----------------------------------+
+   | name                              | basis                             |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*Precomputing XC.\*            |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*NSgBfM=.\*                    |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l302/l302.basis2.xml              |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    Precomputing XC quadrature grid using
+    IXCGrd= 2 IRadAn=           0 IRanWt=          -1 IRanGd=           0.
+    NRdTot=     965 NPtTot=      122250 NUsed=      129066 NTot=      129098
+    NSgBfM=   209   209   209   209.
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l302.basis2">
+       <module cmlx:templateRef="l302.basis2">
+         <list cmlx:templateRef="basis">
+           <array dataType="xsd:string" size="5" dictRef="g:basis">Precomputing XC quadrature grid using</array>
+           <array dataType="xsd:string" size="8" dictRef="g:basis">IXCGrd= 2 IRadAn= 0 IRanWt= -1 IRanGd= 0.</array>
+           <array dataType="xsd:string" size="8" dictRef="g:basis">NRdTot= 965 NPtTot= 122250 NUsed= 129066 NTot= 129098</array>
+           <array dataType="xsd:string" size="5" dictRef="g:basis">NSgBfM= 209 209 209 209.</array>
+         </list>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="basis" repeat="*">\s*{1_20A,g:basis}\s*</record>
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

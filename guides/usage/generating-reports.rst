@@ -1,16 +1,8 @@
 Generating reports
 ==================
 
-Video: Reaction energy profile report
--------------------------------------
-
-.. raw:: html
-
-    <iframe width="696" height="435" src="https://www.youtube.com/embed/IRQ28Jd6_X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-User reports list
------------------
+User reports' list
+------------------
 
 Along with navigation and search, there is another tab called *Reports*. 
 This is responsible for storing and managing user-generated reports.

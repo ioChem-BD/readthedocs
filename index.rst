@@ -5,6 +5,16 @@
 ioChem-BD documentation
 ===========================================
 
+
+.. raw:: html
+
+   <a href='https://gitlab.com/ioChem-BD/iochem-bd/-/blob/master/COPYING'>
+    <img src='https://img.shields.io/badge/license-AGPL-green' alt='License type' />
+   </a>
+   <a href='https://docs.iochem-bd.org/en/latest/?badge=latest'>
+    <img src='https://readthedocs.org/projects/iochem-bd-documentation/badge/?version=latest' alt='Documentation Status' />
+   </a>
+
 Welcome
 ------------
 
@@ -114,6 +124,7 @@ Topics inside this documentation
    Uploading content into Create </guides/usage/uploading-content-to-create>   
    Publish a dataset into Browse </guides/usage/publishing-calculations/publish-process>
    Generating reports </guides/usage/generating-reports>
+   Video tutorials </guides/usage/video-tutorials>
 
 .. toctree::
    :maxdepth: 1

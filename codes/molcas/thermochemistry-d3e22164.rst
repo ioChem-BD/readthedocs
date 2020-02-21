@@ -79,7 +79,7 @@ thermochemistry
 
 .. code:: xml
 
-   <xi:include href="zpve.xml" />
+   <xi:include href="modules/thermochemistry/zpve.xml" />
 
 .. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Partial.png

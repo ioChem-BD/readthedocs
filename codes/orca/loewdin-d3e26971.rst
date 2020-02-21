@@ -41,7 +41,7 @@ loewdin
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | loewdin/loewdintop.xml            |
+   | xml:base                          | job/loewdin/loewdintop.xml        |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -60,7 +60,7 @@ loewdin
 
 .. code:: xml
 
-   <templateList>  <xi:include href="loewdin.xml" />  <xi:include href="loewdinspin.xml" />  
+   <templateList>  <xi:include href="loewdin/loewdin.xml" />  <xi:include href="loewdin/loewdinspin.xml" />  
        </templateList>
    <transform process="move" xpath=".//cml:module[@cmlx:templateRef='loewdin']/cml:array" to="." />
 

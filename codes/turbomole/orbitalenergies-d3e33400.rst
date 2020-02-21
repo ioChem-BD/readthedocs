@@ -93,7 +93,7 @@ orbitalenergies
 
 .. code:: xml
 
-   <templateList>  <xi:include href="restricted.orbitals.xml" />  <xi:include href="unrestricted.orbitals.xml" />
+   <templateList>  <xi:include href="molecularorbitals/restricted.orbitals.xml" />  <xi:include href="molecularorbitals/unrestricted.orbitals.xml" />
        </templateList>
    <transform process="pullup" xpath="./cml:module/cml:module" />
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />

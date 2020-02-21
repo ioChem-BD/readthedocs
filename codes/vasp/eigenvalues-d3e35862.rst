@@ -86,7 +86,7 @@ eigenvalues
 
 .. code:: xml
 
-   <templateList>  <xi:include href="spin.xml" />  <xi:include href="nospin.xml" />
+   <templateList>  <xi:include href="eigenvalues/spin.xml" />  <xi:include href="eigenvalues/nospin.xml" />
        </templateList>
    <transform process="pullup" xpath=".//cml:list" />
    <transform process="delete" xpath=".//cml:module" />

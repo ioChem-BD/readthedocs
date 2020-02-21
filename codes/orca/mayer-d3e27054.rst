@@ -39,7 +39,7 @@ mayer
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | mayer/mayertop.xml                |
+   | xml:base                          | job/mayer/mayertop.xml            |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -124,7 +124,7 @@ mayer
 
 .. code:: xml
 
-   <templateList>  <xi:include href="mayer.xml" />  <xi:include href="bonds.xml" />
+   <templateList>  <xi:include href="mayer/mayer.xml" />  <xi:include href="mayer/bonds.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

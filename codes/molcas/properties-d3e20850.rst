@@ -103,8 +103,8 @@ properties
 
 .. code:: xml
 
-   <xi:include href="prop.root.xml" />
-   <xi:include href="mol.props.xml" />
+   <xi:include href="modules/properties/prop.root.xml" />
+   <xi:include href="modules/properties/mol.props.xml" />
    <transform process="pullup" xpath=".//cml:scalar[@dictRef='m:rootnumber']" repeat="2" />
    <transform process="delete" xpath=".//cml:module[@cmlx:templateRef='root']" />
    <transform process="addChild" id="root" xpath="." elementName="cml:scalar" dictRef="m:rootnumber" value="$string((preceding-sibling::cml:module[@cmlx:templateRef='caspt2.root'])[last()]//cml:scalar/text())" />

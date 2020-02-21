@@ -46,7 +46,7 @@ ci
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | ci/ci.xml                         |
+   | xml:base                          | job/ci/ci.xml                     |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -283,7 +283,7 @@ ci
 
 .. code:: xml
 
-   <templateList>  <xi:include href="coupledcluster.xml" />  <xi:include href="rhftriplescorr.xml" />  <xi:include href="triplescorr.xml" />
+   <templateList>  <xi:include href="ci/coupledcluster.xml" />  <xi:include href="ci/rhftriplescorr.xml" />  <xi:include href="ci/triplescorr.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

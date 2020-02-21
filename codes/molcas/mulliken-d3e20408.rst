@@ -93,9 +93,9 @@ mulliken
 
 .. code:: xml
 
-   <xi:include href="mulliken.header.xml" />
-   <xi:include href="mulliken.charges.xml" />
-   <xi:include href="mulliken.spin.xml" />
+   <xi:include href="modules/mulliken/mulliken.header.xml" />
+   <xi:include href="modules/mulliken/mulliken.charges.xml" />
+   <xi:include href="modules/mulliken/mulliken.spin.xml" />
    <transform process="addChild" xpath="." elementName="cml:module" dictRef="mulliken.header" />
    <transform process="addAttribute" xpath=".//cml:module[@dictRef='mulliken.header']" name="cmlx:templateRef" value="mulliken.header" />
    <transform process="addChild" id="root" xpath="./cml:module[@dictRef='mulliken.header' and count(*) = 0]" elementName="cml:scalar" dictRef="m:rootnumber" value="$string((preceding::cml:module[@cmlx:templateRef='caspt2.root'])[last()]//cml:scalar/text())" />

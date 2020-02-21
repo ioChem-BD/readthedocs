@@ -94,7 +94,7 @@ l401.orbsym
 .. code:: xml
 
    <templateList>  <template id="harris" pattern="\s*((Harris)|(ExpMin)|(HarFok)|(ScaDFX)).*" endPattern="\s*Initial\sguess\sorbital\ssymmetries:.*">    <record id="harris" repeat="*">\s*((Harris)|(ExpMin)|(HarFok)|(ScaDFX)){X,g:expmin}</record>      
-       </template>  <xi:include href="l4601.occupied.xml" />  <xi:include href="l4601.virtual.xml" />  <xi:include href="../l601/l601.state.xml" />
+       </template>  <xi:include href="l401/l4601.occupied.xml" />  <xi:include href="l401/l4601.virtual.xml" />  <xi:include href="l401/../l601/l601.state.xml" />
      </templateList>
    <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='harris']" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />

@@ -39,7 +39,7 @@ adf.runtype
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | runtype/runtype.xml               |
+   | xml:base                          | adf/runtype/runtype.xml           |
    +-----------------------------------+-----------------------------------+
 
 **Input.**
@@ -117,7 +117,7 @@ adf.runtype
 .. code:: xml
 
    <templateList>  <template pattern=".*R\sU\sN\s+T\sY\sP\sE.*" endPattern=".*" endOffset="0">    <record id="runtype">.*R\sU\sN\s+T\sY\sP\sE\s\:{X,cc:runtype}\*.*</record>    <transform process="pullup" repeat="2" xpath=".//cml:scalar[@dictRef='cc:runtype']" />
-           </template>  <xi:include href="geometry.xml" />  <xi:include href="symmetry.xml" />   
+           </template>  <xi:include href="runtype/geometry.xml" />  <xi:include href="runtype/symmetry.xml" />   
        </templateList>
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />

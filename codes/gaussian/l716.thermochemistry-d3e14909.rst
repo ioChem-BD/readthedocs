@@ -111,7 +111,7 @@ l716.thermochemistry
 .. code:: xml
 
    <record repeat="3" />
-   <templateList>  <xi:include href="l716.thermochemistry.temperature.xml" />  <xi:include href="l716.thermochemistry.mass.xml" />  <xi:include href="l716.thermochemistry.moi.xml" />  <xi:include href="l716.thermochemistry.top.xml" />  <xi:include href="l716.thermochemistry.rotsymnum.xml" />  <xi:include href="l716.thermochemistry.rottemp.xml" />  <xi:include href="l716.thermochemistry.rotconsts.xml" />  <xi:include href="l716.thermochemistry.zpe.xml" />  <xi:include href="l716.thermochemistry.vibtemp.xml" />
+   <templateList>  <xi:include href="l716/thermochemistry/l716.thermochemistry.temperature.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.mass.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.moi.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.top.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.rotsymnum.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.rottemp.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.rotconsts.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.zpe.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.vibtemp.xml" />
        
      </templateList>
    <transform process="pullup" xpath="./cml:module/*" />

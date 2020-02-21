@@ -109,7 +109,7 @@ l716.forcematrix
 .. code:: xml
 
    <record />
-   <templateList>  <xi:include href="l716.lowfreq.xml" />  <xi:include href="l716.diagvib.xml" />  <xi:include href="l716.freq.chunk.xml" />
+   <templateList>  <xi:include href="l716/l716.lowfreq.xml" />  <xi:include href="l716/l716.diagvib.xml" />  <xi:include href="l716/l716.freq.chunk.xml" />
      </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

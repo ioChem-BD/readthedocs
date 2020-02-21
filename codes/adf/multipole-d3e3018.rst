@@ -44,7 +44,7 @@ multipole
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | multipole/multipole.xml           |
+   | xml:base                          | results/multipole/multipole.xml   |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -77,7 +77,7 @@ multipole
 
 .. code:: xml
 
-   <templateList>  <xi:include href="atomic.charges.xml" />  <xi:include href="atomic.charges.spin.xml" />  <xi:include href="spin.density.xml" />
+   <templateList>  <xi:include href="multipole/atomic.charges.xml" />  <xi:include href="multipole/atomic.charges.spin.xml" />  <xi:include href="multipole/spin.density.xml" />
        </templateList>
 
 .. _atomic.charges-d3e3025:
@@ -117,7 +117,7 @@ atomic.charges
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | atomic.charges.xml                |
+   | xml:base                          | multipole/atomic.charges.xml      |
    +-----------------------------------+-----------------------------------+
 
 **Input.**
@@ -289,7 +289,7 @@ atomic.charges.spin
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | atomic.charges.spin.xml           |
+   | xml:base                          | multipole/atomic.charges.spin.xml |
    +-----------------------------------+-----------------------------------+
 
 **Input.**
@@ -419,7 +419,7 @@ spin.density
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | spin.density.xml                  |
+   | xml:base                          | multipole/spin.density.xml        |
    +-----------------------------------+-----------------------------------+
 
 **Input.**

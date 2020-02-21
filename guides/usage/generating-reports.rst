@@ -1,6 +1,17 @@
 Generating reports
 ==================
 
+Video: Reaction energy profile report
+-------------------------------------
+
+.. raw:: html
+
+    <iframe width="696" height="435" src="https://www.youtube.com/embed/IRQ28Jd6_X0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+User reports list
+-----------------
+
 Along with navigation and search, there is another tab called *Reports*. 
 This is responsible for storing and managing user-generated reports.
 
@@ -18,6 +29,8 @@ To generate a new report, users have to click on the Reports tab and then choose
 
 .. note:: The current version of ioChem-BD has *Supporting information* and *Energy reaction profile* reports activated.
 
+Report page
+-----------
 
 A new tab will appear with a blank report form. We can split the report's content into three sections:
 

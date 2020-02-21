@@ -278,11 +278,11 @@ l9999.archive
 .. code:: xml
 
    <record repeat="*" id="ginc">\s{X,g:ginc1}</record>
-   <xi:include href="l9999.archive.toplevel.xml" />
-   <xi:include href="l9999.archive.line1.xml" />
+   <xi:include href="l9999/l9999.archive.toplevel.xml" />
+   <xi:include href="l9999/l9999.archive.line1.xml" />
    <transform process="delete" xpath=".//cml:scalar[@dictRef='g:archive']" />
-   <xi:include href="l9999.molecule.xml" />
-   <xi:include href="l9999.namevalue.xml" />
+   <xi:include href="l9999/l9999.molecule.xml" />
+   <xi:include href="l9999/l9999.namevalue.xml" />
    <transform process="createArray" xpath=".//cml:scalar[@dictRef='x:Dipole']" splitter="," from="." dictRef="cc:dipole" dataType="xsd:double" />
    <transform process="createArray" xpath=".//cml:scalar[@dictRef='x:DipoleDeriv']" splitter="," from="." dictRef="cc:dipolederiv" dataType="xsd:double" />
    <transform process="createArray" xpath=".//cml:scalar[@dictRef='x:Polar']" delimiter="|" splitter="," from="." dictRef="cc:polarizability" dataType="xsd:double" />
@@ -294,8 +294,8 @@ l9999.archive
    <transform process="addDictRef" xpath="./cml:molecule/cml:formula" value="cc:formula.calc" />
    <transform process="addDictRef" xpath="./cml:formula" value="cc:formula.user" />
    <transform process="move" xpath=".//cml:formula[@dictRef='cc:formula.user']" to=".//cml:molecule" />
-   <xi:include href="l9999.archive.addUnits.xml" />
-   <xi:include href="l9999.archive.delete.xml" />
+   <xi:include href="l9999/l9999.archive.addUnits.xml" />
+   <xi:include href="l9999/l9999.archive.delete.xml" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
 

@@ -64,7 +64,7 @@ preddelta
 .. code:: xml
 
    <record id="predicted">\s*Predicted change in Energy={E,g:predchange}.*</record>
-   <templateList>  <xi:include href="l103.catchall.xml" />
+   <templateList>  <xi:include href="l103/l103.catchall.xml" />
      </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

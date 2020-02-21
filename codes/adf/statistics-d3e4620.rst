@@ -60,7 +60,7 @@ statistics
 
 .. code:: xml
 
-   <templateList>  <xi:include href="timing.xml" />
+   <templateList>  <xi:include href="statistics/timing.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

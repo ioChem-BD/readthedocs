@@ -96,7 +96,7 @@ nmr
 
 .. code:: xml
 
-   <templateList>  <xi:include href="../program.header.xml" />  <xi:include href="nuclear.coordinates.xml" />  <xi:include href="nucleus.xml" />   
+   <templateList>  <xi:include href="nmr/../program.header.xml" />  <xi:include href="nmr/nuclear.coordinates.xml" />  <xi:include href="nmr/nucleus.xml" />   
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

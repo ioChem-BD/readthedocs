@@ -310,7 +310,7 @@ spin.orbit
 
 .. code:: xml
 
-   <templateList>  <xi:include href="eigenvalues.xml" />       
+   <templateList>  <xi:include href="modules/rassi/eigenvalues.xml" />     
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

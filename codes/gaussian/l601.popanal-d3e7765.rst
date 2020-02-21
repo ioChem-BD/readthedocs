@@ -370,7 +370,7 @@ l601.popanal
 
    <record repeat="5" />
    <record repeat="2" />
-   <templateList>  <xi:include href="../l401/l4601.occupied.xml" />  <xi:include href="../l401/l4601.virtual.xml" />  <xi:include href="l601.alphabetaeigen.xml" />  <xi:include href="l601.orbital.openshell.xml" />  <xi:include href="l601.orbital.closedshell.xml" />  <xi:include href="l601.condensed.xml" />  <xi:include href="l601.mulliken.xml" />  <xi:include href="l601.multipole.xml" />  <xi:include href="l601.state.xml" />  <xi:include href="l601.gross.orbital.pop.xml" />
+   <templateList>  <xi:include href="l601/../l401/l4601.occupied.xml" />  <xi:include href="l601/../l401/l4601.virtual.xml" />  <xi:include href="l601/l601.alphabetaeigen.xml" />  <xi:include href="l601/l601.orbital.openshell.xml" />  <xi:include href="l601/l601.orbital.closedshell.xml" />  <xi:include href="l601/l601.condensed.xml" />  <xi:include href="l601/l601.mulliken.xml" />  <xi:include href="l601/l601.multipole.xml" />  <xi:include href="l601/l601.state.xml" />  <xi:include href="l601/l601.gross.orbital.pop.xml" />
        
      </templateList>
    <record repeat="*" id="popanal">{X,x:popanal}</record>

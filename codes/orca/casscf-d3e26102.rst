@@ -37,7 +37,7 @@ casscf
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | casscf/casscf.xml                 |
+   | xml:base                          | job/casscf/casscf.xml             |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -100,9 +100,9 @@ casscf
 
 .. code:: xml
 
-   <xi:include href="cisetup/cisetup.xml" />
-   <xi:include href="../orbitals/orbitalenergies.xml" />
-   <xi:include href="casscfstates.xml" />
+   <xi:include href="casscf/cisetup/cisetup.xml" />
+   <xi:include href="casscf/../orbitals/orbitalenergies.xml" />
+   <xi:include href="casscf/casscfstates.xml" />
 
 .. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/None.png

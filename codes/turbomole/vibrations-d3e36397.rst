@@ -73,7 +73,7 @@ vibrations
 
 .. code:: xml
 
-   <templateList>  <xi:include href="normal.xml" />  <xi:include href="spectrum.xml" />  
+   <templateList>  <xi:include href="vibrations/normal.xml" />  <xi:include href="vibrations/spectrum.xml" />    
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

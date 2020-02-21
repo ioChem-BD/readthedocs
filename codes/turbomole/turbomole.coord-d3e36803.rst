@@ -37,7 +37,7 @@ turbomole.coord
 
 .. code:: xml
 
-   <templateList id="init">  <xi:include href="geometry.xml" />  <xi:include href="restrictions.xml" />
+   <templateList id="init">  <xi:include href="JUMBO_HOME/jumbo-converters-compchem/jumbo-converters-compchem-turbomole/src/main/resources/org/xmlcml/cml/converters/compchem/turbomole/coord/templates/geometry.xml" />  <xi:include href="JUMBO_HOME/jumbo-converters-compchem/jumbo-converters-compchem-turbomole/src/main/resources/org/xmlcml/cml/converters/compchem/turbomole/coord/templates/restrictions.xml" />
        </templateList>
    <transform process="delete" xpath="//node()[count(*)!=0]/text()" />
 

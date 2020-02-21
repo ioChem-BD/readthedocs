@@ -50,7 +50,7 @@ adf.results
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | results/results.xml               |
+   | xml:base                          | adf/results/results.xml           |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -120,7 +120,7 @@ adf.results
 
 .. code:: xml
 
-   <templateList>  <xi:include href="orbital.energies.spin.zora.xml" />  <xi:include href="orbital.energies.zora.xml" />  <xi:include href="orbital.energies.xml" />  <xi:include href="orbital.energies.spin.xml" />  <xi:include href="fit.test.xml" />  <xi:include href="mulliken.xml" />  <xi:include href="multipole/multipole.xml" />  <xi:include href="quadrupole.moment.xml" />  <xi:include href="s2.xml" />  <xi:include href="bonding.energy.xml" />  <xi:include href="sfopopulation/sfo.population.xml" />  <xi:include href="excitationenergy/excitation.energy.xml" />     
+   <templateList>  <xi:include href="results/orbital.energies.spin.zora.xml" />  <xi:include href="results/orbital.energies.zora.xml" />  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/multipole/multipole.xml" />  <xi:include href="results/quadrupole.moment.xml" />  <xi:include href="results/s2.xml" />  <xi:include href="results/bonding.energy.xml" />  <xi:include href="results/sfopopulation/sfo.population.xml" />  <xi:include href="results/excitationenergy/excitation.energy.xml" />     
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

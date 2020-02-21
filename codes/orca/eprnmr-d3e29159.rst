@@ -37,7 +37,7 @@ eprnmr
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | eprnmr/eprnmr.xml                 |
+   | xml:base                          | job/eprnmr/eprnmr.xml             |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -58,8 +58,8 @@ eprnmr
 
 .. code:: xml
 
-   <xi:include href="gmatrix.xml" />
-   <xi:include href="zerofield.xml" />
+   <xi:include href="eprnmr/gmatrix.xml" />
+   <xi:include href="eprnmr/zerofield.xml" />
 
 .. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png

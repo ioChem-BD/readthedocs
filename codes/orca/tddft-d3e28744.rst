@@ -40,14 +40,14 @@ tddft
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | tddft/tddft.xml                   |
+   | xml:base                          | job/tddft/tddft.xml               |
    +-----------------------------------+-----------------------------------+
 
 **Template definition.**
 
 .. code:: xml
 
-   <templateList>  <xi:include href="excitedstates.xml" />  <xi:include href="absorptionspec.xml" />
+   <templateList>  <xi:include href="tddft/excitedstates.xml" />  <xi:include href="tddft/absorptionspec.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

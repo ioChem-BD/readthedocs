@@ -41,7 +41,7 @@ mullikenpopulation
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | mulliken/mulliken.xml             |
+   | xml:base                          | job/mulliken/mulliken.xml         |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -59,7 +59,7 @@ mullikenpopulation
 
 .. code:: xml
 
-   <templateList>  <xi:include href="atomiccharges.xml" />  <xi:include href="atomicchargesspin.xml" />
+   <templateList>  <xi:include href="mulliken/atomiccharges.xml" />  <xi:include href="mulliken/atomicchargesspin.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

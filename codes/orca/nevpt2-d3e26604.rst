@@ -37,16 +37,16 @@ nevpt2
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | nevpt2/nevpt2.xml                 |
+   | xml:base                          | job/nevpt2/nevpt2.xml             |
    +-----------------------------------+-----------------------------------+
 
 **Template definition.**
 
 .. code:: xml
 
-   <xi:include href="../casscf/cisetup/systemsettings.xml" />
-   <xi:include href="../casscf/cisetup/orbitalranges.xml" />
-   <xi:include href="nevpt2results.xml" />
+   <xi:include href="nevpt2/../casscf/cisetup/systemsettings.xml" />
+   <xi:include href="nevpt2/../casscf/cisetup/orbitalranges.xml" />
+   <xi:include href="nevpt2/nevpt2results.xml" />
 
 .. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/None.png

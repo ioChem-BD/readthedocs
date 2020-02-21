@@ -44,7 +44,8 @@ sfo.population
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | sfopopulation/sfo.population.xml  |
+   | xml:base                          | results                           |
+   |                                   | /sfopopulation/sfo.population.xml |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -80,7 +81,7 @@ sfo.population
 
 .. code:: xml
 
-   <templateList>  <xi:include href="molecular.orbitals.xml" />
+   <templateList>  <xi:include href="sfopopulation/molecular.orbitals.xml" />
        </templateList>
 
 .. _molecular.orbitals-d3e3351:
@@ -119,7 +120,8 @@ molecular.orbitals
    +-----------------------------------+-----------------------------------+
    | endOffset                         | 0                                 |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | molecular.orbitals.xml            |
+   | xml:base                          | sfo                               |
+   |                                   | population/molecular.orbitals.xml |
    +-----------------------------------+-----------------------------------+
 
 **Input.**

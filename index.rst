@@ -11,9 +11,15 @@ Welcome
 | Find here notes and guides about ioChem-BD platform, how to use it and eventually, how to install it. 
 | Don’t hesitate contacting us at contact@iochem-bd.org if you need further information.
 
-| Please, before continuing reading this documentation, consider reading this paper published in
-| J. Chem. Inf. Model.:
-| `Managing the Computational Chemistry Big Data Problem: The ioChem-BD Platform`_.
+.. topic:: Please consider reading some papers regarding this platform and other related topics:
+
+   | Álvarez-Moreno, M., de Graaf, C., López, N., Maseras, F., Poblet, J. M., Bo, C.  
+   | *Managing the Computational Chemistry Big Data Problem: The ioChem-BD Platform.* 
+   | J. Chem. Inf. Model, 55, 1, 95-103 (2015). https://doi.org/10.1021/ci500593j
+
+   | Bo, C., Maseras, F. & López, N. 
+   | *The role of computational results databases in accelerating the discovery of catalysts.* 
+   | Nat Catal 1, 809–810 (2018). https://doi.org/10.1038/s41929-018-0176-4
 
 
 About
@@ -25,7 +31,7 @@ ioChem-BD relies in an unique software platform which is builded in a modular wa
 | The main node of the network runs the `Find module`_, which acts as central server and is feed by any new data published in the repositories. 
 | The *Find* module provides a fast chemical-aware search engine open public service and is hosted at the Barcelona Supercomputer Center (BSC). Also, the `first public-access node`_ is provided by BSC.
 
-Other ioChem-BD modules automatize relevant data-extracting processes and transforms raw numerical data into labeled data in a database. It provides the researcher with tools for validating, enriching, publishing and sharing information, as well as tools to access, post-process and visualize data. The final goal is to contribute building a new reference tool in research. 
+Other ioChem-BD modules automatize relevant data-extracting processes and transforms raw numerical data into labeled data in a database. It provides the researcher with tools for validating, enriching, publishing and sharing information, as well as tools to access, post-process and visualize data.
 
 Users include computational chemistry research groups worldwide, university libraries and related services, and high performance supercomputer centers. 
 
@@ -143,7 +149,6 @@ Topics inside this documentation
 
 
 .. _Uploading Content page: ./usage/uploading-content-to-create.html
-.. _`Managing the Computational Chemistry Big Data Problem: The ioChem-BD Platform`: http://pubs.acs.org/doi/abs/10.1021/ci500593j
 .. _`Find module`: https://www.iochem-bd.org
 .. _`first public-access node`: https://iochem-bd.bsc.es
 .. _`Uploading Content into Create`: guides/usage/uploading-content-to-create.html

@@ -40,7 +40,7 @@ adf.computation
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | computation/computation.xml       |
+   | xml:base                          | adf/computation/computation.xml   |
    +-----------------------------------+-----------------------------------+
 
 **Comment.**
@@ -74,7 +74,7 @@ adf.computation
 
 .. code:: xml
 
-   <templateList>  <xi:include href="scf.xml" />  <xi:include href="geometry.cycle.xml" />
+   <templateList>  <xi:include href="computation/scf.xml" />  <xi:include href="computation/geometry.cycle.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

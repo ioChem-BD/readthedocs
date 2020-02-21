@@ -105,7 +105,7 @@ spin.free
 
 .. code:: xml
 
-   <templateList>  <xi:include href="eigenvalues.xml" />  <xi:include href="dipole.transition.xml" />                        
+   <templateList>  <xi:include href="modules/rassi/eigenvalues.xml" />  <xi:include href="modules/rassi/dipole.transition.xml" />                        
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

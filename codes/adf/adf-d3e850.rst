@@ -123,7 +123,7 @@ adf
 
 .. code:: xml
 
-   <templateList>  <xi:include href="../program.header.xml" />  <xi:include href="init/modelparameters/model.parameters.xml" />  <xi:include href="runtype/runtype.xml" />  <xi:include href="build/build_fragments.xml" />  <xi:include href="technical/technical.xml" />  <xi:include href="computation/computation.xml" />  <xi:include href="results/results.xml" />  <xi:include href="frequencyanalysis/frequencyanalysis.xml" />       
+   <templateList>  <xi:include href="adf/../program.header.xml" />  <xi:include href="adf/init/modelparameters/model.parameters.xml" />  <xi:include href="adf/runtype/runtype.xml" />  <xi:include href="adf/build/build_fragments.xml" />  <xi:include href="adf/technical/technical.xml" />  <xi:include href="adf/computation/computation.xml" />  <xi:include href="adf/results/results.xml" />  <xi:include href="adf/frequencyanalysis/frequencyanalysis.xml" />       
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

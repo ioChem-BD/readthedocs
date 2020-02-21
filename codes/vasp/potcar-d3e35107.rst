@@ -151,7 +151,7 @@ potcar
 
 .. code:: xml
 
-   <templateList>  <xi:include href="atom.potcar.xml" />
+   <templateList>  <xi:include href="potcar/atom.potcar.xml" />
        </templateList>
    <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='v:pseudopotential']" delimiter="|" />
    <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:atomType']" />

@@ -28,7 +28,8 @@ l716.thermochemistry.vibtemp
    +-----------------------------------+-----------------------------------+
    | endPattern                        | \\s\*                             |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | l716.thermochemistry.vibtemp.xml  |
+   | xml:base                          | l716/thermochemistry              |
+   |                                   | /l716.thermochemistry.vibtemp.xml |
    +-----------------------------------+-----------------------------------+
 
 **Input.**

@@ -34,7 +34,7 @@ mp2
    +-----------------------------------+-----------------------------------+
    | endOffset                         | 1                                 |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | mp2/mp2.xml                       |
+   | xml:base                          | job/mp2/mp2.xml                   |
    +-----------------------------------+-----------------------------------+
 
 **Input.**
@@ -132,7 +132,7 @@ mp2
 
 .. code:: xml
 
-   <xi:include href="mp2f12.xml" />
+   <xi:include href="mp2/mp2f12.xml" />
    <templateList>  <template id="energy" pattern="\s*MP2\sTOTAL\sENERGY:.*" endPattern=".*" endPattern2="~">    <record>\s*MP2\sTOTAL\sENERGY\s*:{F,o:total}.*</record>    <transform process="addUnits" xpath=".//cml:scalar[@dictRef='o:total']" value="nonsi:hartree" />    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />         
            </template>   
        </templateList>

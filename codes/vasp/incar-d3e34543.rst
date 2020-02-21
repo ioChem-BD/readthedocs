@@ -234,7 +234,7 @@ incar
 
 .. code:: xml
 
-   <templateList>  <xi:include href="dimension.xml" />  <xi:include href="startparameters.xml" />  <xi:include href="electronic.relaxation.xml" />  <xi:include href="ionic.relaxation.xml" />  <xi:include href="exchange.correlation.xml" />  <xi:include href="atom.info.xml" />  <xi:include href="dipole.xml" />  <xi:include href="vcw.xml" />  <xi:include href="dos.xml" />
+   <templateList>  <xi:include href="incar/dimension.xml" />  <xi:include href="incar/startparameters.xml" />  <xi:include href="incar/electronic.relaxation.xml" />  <xi:include href="incar/ionic.relaxation.xml" />  <xi:include href="incar/exchange.correlation.xml" />  <xi:include href="incar/atom.info.xml" />  <xi:include href="incar/dipole.xml" />  <xi:include href="incar/vcw.xml" />  <xi:include href="incar/dos.xml" />
        </templateList>
    <templateList>  <template id="temperature" pattern="\s*TEIN.*" endPattern=".*" endPattern2="~">    <record id="temperature">\s*TEIN\s*={F,cc:temp}initial\stemperature.*</record>    <transform process="addUnits" xpath=".//cml:scalar[@dictRef='cc:temp']" value="si:k" />
            </template>  <template id="potim" pattern="\s*POTIM.*" endPattern=".*" endPattern2="~">    <record id="potim">\s*POTIM\s*={F,v:potim}.*</record>

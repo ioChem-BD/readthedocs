@@ -86,7 +86,7 @@ quild.module
 
 .. code:: xml
 
-   <templateList>  <xi:include href="../program.header.xml" />  <xi:include href="quild.coord.xml" />        
+   <templateList>  <xi:include href="quild/../program.header.xml" />  <xi:include href="quild/quild.coord.xml" />        
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

@@ -42,7 +42,7 @@ model.parameters
    +-----------------------------------+-----------------------------------+
    | offset                            | -1                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | init/mod                          |
+   | xml:base                          | adf/init/mod                      |
    |                                   | elparameters/model.parameters.xml |
    +-----------------------------------+-----------------------------------+
 
@@ -68,7 +68,7 @@ model.parameters
 
 .. code:: xml
 
-   <templateList>  <xi:include href="parameters.xml" />  <xi:include href="fragment.files.xml" />  <xi:include href="solvation.xml" />         
+   <templateList>  <xi:include href="init/modelparameters/parameters.xml" />  <xi:include href="init/modelparameters/fragment.files.xml" />  <xi:include href="init/modelparameters/solvation.xml" />          
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

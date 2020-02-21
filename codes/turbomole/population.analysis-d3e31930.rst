@@ -97,7 +97,7 @@ population.analysis
 .. code:: xml
 
    <templateList>  <template pattern="\s*(MULLIKEN|LOEWDIN|NATURAL)\sPOPULATION\sANALYSIS\s*\(.*\).*" endPattern=".*">    <record>{A,t:populationtype}\sPOPULATION\sANALYSIS.*</record>    <transform process="pullup" xpath=".//cml:scalar[@dictRef='t:populationtype']" repeat="2" />
-       </template>  <xi:include href="populations.xml" />  <xi:include href="spin.density.xml" />
+       </template>  <xi:include href="population/populations.xml" />  <xi:include href="population/spin.density.xml" />
      </templateList>
    <transform process="delete" xpath=".//cml:list[count(*) = 0]" />
    <transform process="delete" xpath=".//cml:module[count(*) = 0]" />

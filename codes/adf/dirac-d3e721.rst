@@ -87,7 +87,7 @@ dirac
 
 .. code:: xml
 
-   <templateList>  <xi:include href="../program.header.xml" />
+   <templateList>  <xi:include href="dirac/../program.header.xml" />
            </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

@@ -43,7 +43,7 @@ electricproperties
    +-----------------------------------+-----------------------------------+
    | endOffset                         | 0                                 |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | electric                          |
+   | xml:base                          | job/electric                      |
    |                                   | properties/electricproperties.xml |
    +-----------------------------------+-----------------------------------+
 
@@ -104,7 +104,7 @@ electricproperties
 
 .. code:: xml
 
-   <templateList>  <xi:include href="dipole.xml" />  <xi:include href="quadrupole.xml" />        
+   <templateList>  <xi:include href="electricproperties/dipole.xml" />  <xi:include href="electricproperties/quadrupole.xml" />      
        </templateList>
    <transform process="move" xpath=".//cml:array" to="." />
    <transform process="move" xpath=".//cml:scalar" to="." />

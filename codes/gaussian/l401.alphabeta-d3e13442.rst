@@ -103,7 +103,7 @@ l401.alphabeta
 
    <record id="alphabeta">\s*{A,g:l401.type}\s*Orbitals:\s*</record>
    <record id="l401" repeat="*">\s*{1_20A,g:l401}\s*</record>
-   <templateList>  <xi:include href="l4601.occupied.xml" />  <xi:include href="l4601.virtual.xml" />
+   <templateList>  <xi:include href="l401/l4601.occupied.xml" />  <xi:include href="l401/l4601.virtual.xml" />
      </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

@@ -96,7 +96,7 @@ l1.end
 
 .. code:: xml
 
-   <templateList>  <xi:include href="l1.version.xml" />  <xi:include href="l1.options.xml" />  <xi:include href="../l101/l101.title.xml" />  <xi:include href="l1.keywords.xml" />  <xi:include href="l1.control.xml" />
+   <templateList>  <xi:include href="l1/l1.version.xml" />  <xi:include href="l1/l1.options.xml" />  <xi:include href="l1/../l101/l101.title.xml" />  <xi:include href="l1/l1.keywords.xml" />  <xi:include href="l1/l1.control.xml" />
      </templateList>
    <transform process="pullup" xpath=".//cml:module[@cmlx:templateRef='l1.version']/cml:*" />
    <transform process="pullup" xpath=".//cml:module[@cmlx:templateRef='l1.options']/cml:*" />

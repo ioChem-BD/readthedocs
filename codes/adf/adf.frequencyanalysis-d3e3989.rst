@@ -44,7 +44,7 @@ adf.frequencyanalysis
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
-   | xml:base                          | freque                            |
+   | xml:base                          | adf/freque                        |
    |                                   | ncyanalysis/frequencyanalysis.xml |
    +-----------------------------------+-----------------------------------+
 
@@ -122,7 +122,7 @@ adf.frequencyanalysis
 
 .. code:: xml
 
-   <templateList>  <xi:include href="zeropoint.xml" />  <xi:include href="vibrations.xml" />  <xi:include href="intensities.xml" />  <xi:include href="thermochemistry.xml" />
+   <templateList>  <xi:include href="frequencyanalysis/zeropoint.xml" />  <xi:include href="frequencyanalysis/vibrations.xml" />  <xi:include href="frequencyanalysis/intensities.xml" />  <xi:include href="frequencyanalysis/thermochemistry.xml" />
        </templateList>
 
 .. |image0| image:: ../../imgs/Total.png

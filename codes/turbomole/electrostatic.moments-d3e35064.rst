@@ -1,0 +1,206 @@
+.. _electrostatic.moments-d3e35064:
+
+electrostatic.moments
+=====================
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Turbomole log                     |
+   +-----------------------------------+-----------------------------------+
+   | id                                | electrostatic.moments             |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Electrostatic moments             |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*=+\s*$\s*el                   |
+   |                                   | ectrostatic\smoments\s*$\s*=+\s\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*anisotropy.*$\s\*             |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | electrostatic.moments.xml         |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    ==============================================================================
+                              electrostatic moments
+    ==============================================================================
+
+                 nuc           elec       ->  total
+    ------------------------------------------------------------------------------
+                             charge      
+    ------------------------------------------------------------------------------
+            550.000000    -550.000000       0.000000
+
+    ------------------------------------------------------------------------------
+                          dipole moment  
+    ------------------------------------------------------------------------------
+      x      -0.090687       0.166831       0.076145
+      y      -0.041945       0.051629       0.009684
+      z       0.567783      -0.818557      -0.250774
+
+      | dipole moment | =     0.2623 a.u. =     0.6666 debye 
+
+    ------------------------------------------------------------------------------
+                        quadrupole moment
+    ------------------------------------------------------------------------------
+     xx   10119.859111  -10496.759762    -376.900651
+     yy   10125.197471  -10502.659146    -377.461675
+     zz    9680.059047  -10072.467517    -392.408470
+     xy       0.127854      -0.367505      -0.239651
+     xz       0.051984       0.019512       0.071495
+     yz       0.669742      -1.313620      -0.643878
+
+        1/3  trace=    -382.256932
+        anisotropy=      15.281960
+       
+       
+
+**Input.**
+
+::
+
+    ==============================================================================
+                              electrostatic moments
+    ==============================================================================
+
+                 nuc           elec       ->  total
+    ------------------------------------------------------------------------------
+                             charge      
+    ------------------------------------------------------------------------------
+            514.000000    -514.000000       0.000000
+    a-b                                     2.000000
+
+    ------------------------------------------------------------------------------
+                          dipole moment  
+    ------------------------------------------------------------------------------
+      x       0.000000       0.000000       0.000000
+      y       0.000000       0.000000       0.000000
+      z       3.580005      -3.760554      -0.180549
+
+      | dipole moment | =     0.1805 a.u. =     0.4589 debye 
+
+    ------------------------------------------------------------------------------
+                        quadrupole moment
+    ------------------------------------------------------------------------------
+     xx    9781.706347  -10165.163711    -383.457364
+     yy    9781.706347  -10165.163711    -383.457364
+     zz   11419.946420  -11781.872673    -361.926253
+     xy       0.000000       0.000000       0.000000
+     xz       0.000000       0.000000       0.000000
+     yz       0.000000       0.000000       0.000000
+
+        1/3  trace=    -376.280327
+        anisotropy=      21.531111
+            
+       
+
+**Input.**
+
+::
+
+    ==============================================================================
+                              electrostatic moments
+    ==============================================================================
+    
+                 nuc           gs,e       ->  gs,tot          excit     ->  total
+    ------------------------------------------------------------------------------
+                             charge      
+    ------------------------------------------------------------------------------
+             78.000000     -78.000000      -0.000000      -0.000000      -0.000000
+    
+    ------------------------------------------------------------------------------
+                          dipole moment  
+    ------------------------------------------------------------------------------
+      x       2.076731      -1.947505       0.129226       0.294085       0.423311
+      y      -0.094460       0.111083       0.016624       0.038121       0.054745
+      z      20.334346     -18.413193       1.921153       4.379850       6.301003
+    
+      | dipole moment | =     6.3154 a.u. =    16.0523 debye 
+    
+    ------------------------------------------------------------------------------
+                        quadrupole moment
+    ------------------------------------------------------------------------------
+     xx     175.120056    -222.239278     -47.119222       1.210722     -45.908500
+     yy     168.850277    -215.861605     -47.011328       1.141470     -45.869858
+     zz    1720.161459   -1781.012183     -60.850724       5.918615     -54.932110
+     xy      43.859726     -40.895254       2.964471      -2.442602       0.521869
+     xz     104.084454    -105.021528      -0.937074       0.378742      -0.558332
+     yz      10.519612     -10.845750      -0.326137       0.190593      -0.135544
+    
+        1/3  trace=     -48.903489
+        anisotropy=       9.142378
+       
+       
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="electrostatic.moments">
+           <module cmlx:lineCount="32" cmlx:templateRef="electrostatic.moments">
+               <scalar dataType="xsd:double" dictRef="t:nuclearCharge">550.000000</scalar>
+               <scalar dataType="xsd:double" dictRef="t:electronCharge">-550.000000</scalar>
+               <scalar dataType="xsd:double" dictRef="t:charge">0.0</scalar>
+               <array dataType="xsd:double" dictRef="cc:dipole" size="9">-0.090687 0.166831 0.076145 -0.041945 0.051629 0.009684 0.567783 -0.818557 -0.250774</array> 
+               <array dataType="xsd:double" dictRef="cc:quadrupole" size="18">10119.859111 -10496.759762 -376.900651 10125.197471 -10502.659146 -377.461675 9680.059047 -10072.467517 -392.40847 0.127854 -0.367505     -0.239651 0.051984 0.019512 0.071495 0.669742 -1.31362 -0.643878</array>
+               <scalar dataType="xsd:double" dictRef="t:onethirdtrace">-382.256932</scalar>
+               <scalar dataType="xsd:double" dictRef="t:anisotropy">15.28196</scalar>
+          </module>
+       </comment>
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output2" id="electrostatic.moments">
+           <module cmlx:templateRef="electrostatic.moments">
+               <scalar dataType="xsd:double" dictRef="t:nuclearCharge">514.000000</scalar>
+               <scalar dataType="xsd:double" dictRef="t:electronCharge">-514.000000</scalar>
+                <scalar dataType="xsd:double" dictRef="t:charge">0.000000</scalar>
+                <scalar dataType="xsd:double" dictRef="t:spinPolarization">2.000000</scalar>
+                <array dataType="xsd:double" dictRef="cc:dipole" size="9">0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 3.580005 -3.760554 -0.180549</array>
+                <scalar dataType="xsd:double" dictRef="t:onethirdtrace">-376.280327</scalar>
+                <scalar dataType="xsd:double" dictRef="t:anisotropy">21.531111</scalar>
+                <array dataType="xsd:double" dictRef="cc:quadrupole" size="18">9781.706347 -10165.163711 -383.457364 9781.706347 -10165.163711 -383.457364 11419.946420 -11781.872673 -361.926253 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</array>
+           </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <template id="charge" pattern="\s*charge.*" endPattern="\s*" endOffset="1">    <record repeat="2" />    <templateList>      <template id="totalCharges" pattern="(\s*[+-]?\d+\.\d+\s*){3}" endPattern=".*">        <record>{F,t:nuclearCharge}{F,t:electronCharge}{F,t:charge}</record>           
+                   </template>      <template id="totalCharges" pattern="(\s*[+-]?\d+\.\d+\s*){5}" endPattern=".*">        <record>{F,t:nuclearCharge}{F,t:electronCharge}{F,x:dummy}{F,x:dummy}{F,t:charge}</record>          
+                   </template>      <template id="spinPolarization" pattern="\s*a-b.*" endPattern=".*" endPattern2="~">        <record>\s+.*\s+{F,t:spinPolarization}</record>
+                   </template>
+               </templateList>    <transform process="delete" xpath=".//cml:scalar[@dictRef='x:dummy']" />    <transform process="pullup" xpath=".//cml:module[@cmlx:templateRef='totalCharges']//cml:scalar" repeat="4" />    <transform process="pullup" xpath=".//cml:scalar[@dictRef='t:spinPolarization']" repeat="3" />
+           </template>  <template id="dipole" pattern="\s*dipole\smoment\s*" endPattern="\s*\|\s*dipole\smoment\s*\|.*" endOffset="1">    <record repeat="2" />    <record id="dipole" makeArray="true" repeat="3">\s*\w\s*{3_5F,cc:dipole}</record>    <record repeat="1" />    <record>\s*\|\sdipole\smoment\s\|\s=.*={X,t:debye}debye\s*</record>    <transform process="pullup" xpath=".//cml:array" repeat="2" />    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />
+           </template>  <template id="quadrupoleMoment" pattern="\s*quadrupole\smoment\s*" endPattern="\s*anisotropy.*" endOffset="1">    <record repeat="2" />    <record id="quadrupole" makeArray="true" repeat="6">\s*\w\w\s*{3_5F,cc:quadrupole}</record>    <record repeat="1" />    <record id="onethirdtrace">\s*1/3\s*trace={F,t:onethirdtrace}</record>    <record id="anisotropy">\s*anisotropy={F,t:anisotropy}</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />    <transform process="pullup" xpath=".//cml:array" repeat="2" />          
+           </template>
+       </templateList>
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

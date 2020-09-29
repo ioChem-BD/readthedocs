@@ -1,0 +1,65 @@
+.. _l101.title-d3e7143:
+
+l101.title
+==========
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l101.title                        |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*\-+\s*$.\*                    |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*\-+\s\*                       |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l101/l101.title.xml               |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    ---
+    CH4
+    ---
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l1.redundantcoords">
+       <module cmlx:templateRef="l101.title">
+         <scalar dataType="xsd:string" dictRef="cc:title" cmlx:templateRef="title">CH4</scalar>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record />
+   <record id="title">{X,cc:title}</record>
+   <record />
+   <transform process="pullupSingleton" xpath=".//cml:list" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

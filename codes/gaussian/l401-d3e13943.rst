@@ -1,0 +1,87 @@
+l401
+=====================================
+
+.. toctree::
+   :maxdepth: 5  
+
+   /codes/gaussian/l401.orbsym-d3e13950
+   /codes/gaussian/l401.alphabeta-d3e14094
+
+====
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l401                              |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Generates basis set information   |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*\(Enter.*l401\..\*            |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Leave\sLink\s+401\s.\*        |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l401.xml                          |
+   +-----------------------------------+-----------------------------------+
+
+**Comment.**
+
+::
+
+    (Enter /opt/G09/g09/l401.exe)
+    Initial guess read from the read-write file.
+    B after Tr=     0.000000    0.000000    0.000000
+            Rot=    1.000000    0.000000    0.000000    0.000000 Ang=   0.00 deg.
+    Guess basis will be translated and rotated to current coordinates.
+    Initial guess orbital symmetries:
+          Occupied  (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A)
+          Virtual   (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+                    (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A) (A)
+   ...
+   Leave Link  401 at Tue Dec 20 22:59:23 2011, MaxMem= 2516582400 cpu:     119.3
+     
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <xi:include href="l401/l401.orbsym.xml" />  <xi:include href="l401/l401.alphabeta.xml" />
+     </templateList>
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

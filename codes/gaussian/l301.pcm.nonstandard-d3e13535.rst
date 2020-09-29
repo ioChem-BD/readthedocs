@@ -1,0 +1,98 @@
+.. _l301.pcm.nonstandard-d3e13535:
+
+l301.pcm.nonstandard
+====================
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l301.pcm.nonstandard              |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\sUsing\sthe\sfollowing\sn       |
+   |                                   | on\-standard\sinput\sfor\sPCM:.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*\-\-\-\se                     |
+   |                                   | nd\sof\snon\-standard\sinput\..\* |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Polarizable continuum model -     |
+   |                                   | nonstandard                       |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l301/l301.pcm.nonstandard.xml     |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    Using the following non-standard input for PCM:
+    EPS=37.8
+    RSOLV=2.642
+    SPHEREONH=25
+    SPHEREONH=26
+    SPHEREONH=27
+    SPHEREONH=28
+    SPHEREONH=29
+    SPHEREONH=30
+    SPHEREONH=31
+    SPHEREONH=32
+    SPHEREONH=33
+    SPHEREONH=34
+    SPHEREONH=35
+    SPHEREONH=36
+    SPHEREONH=37
+    SPHEREONH=38
+    SPHEREONH=39
+    SPHEREONH=40
+    SPHEREONH=41
+    SPHEREONH=42
+    SPHEREONH=43
+    SPHEREONH=44
+    SPHEREONH=45
+    --- end of non-standard input.
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l301.pcm.nonstandard1">       
+           <module cmlx:lineCount="25" cmlx:templateRef="l301.pcm.nonstandard">
+               <scalar dataType="xsd:double" dictRef="cc:eps">37.8</scalar>
+               <scalar dataType="xsd:double" dictRef="cc:rsolv" units="nonsi:angstrom">2.642</scalar>
+               <array dataType="xsd:integer" size="21" dictRef="cc:sphereonh">25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45</array>
+           </module>     
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="1" />
+   <record id="eps">\s+EPS\={F,cc:eps}</record>
+   <record id="rsolv">\s+RSOLV\={F,cc:rsolv}</record>
+   <record id="sphereonh" repeat="*">\s+SPHEREONH\={I,cc:sphereonh}</record>
+   <record repeat="1" />
+   <transform process="createArray" xpath="." from="./descendant-or-self::cml:scalar[@dictRef='cc:sphereonh']" />
+   <transform process="pullup" xpath="./cml:list/*" repeat="1" />
+   <transform process="delete" xpath="./descendant-or-self::cml:list[count(*)=0]" />
+   <transform process="addUnits" xpath="./cml:scalar[@dictRef='cc:rsolv']" value="nonsi:angstrom" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

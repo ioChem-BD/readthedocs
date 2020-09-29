@@ -280,7 +280,7 @@ Examples:
 .. code:: console
 
     $ findpro -n metan*            # Finds projects which name match regular expression metan*
-    $ findpro -d "alco*"             # Finds projects which description match regular expression alco*
+    $ findpro -d "alco*"           # Finds projects which description match regular expression alco*
 
 
 |
@@ -291,14 +291,26 @@ Calculation related commands
 viewcalc 
 ~~~~~~~~
 
-This comands displays the most relevant information about a calculation.
+This comands displays the most relevant information about a calculation and retrieves its files.
 
-========== =============================================
-Parameters Description
-========== =============================================
--n *path*  Relative or absolute project path (mandatory)
--f         If present shows full contents. (optional)
-========== =============================================
+=========== ========================================================================================
+Parameters  Description
+=========== ========================================================================================
+-n *path*   Relative or absolute project path (mandatory)
+-f          Download also calculation files. It is mandatory to set also -dcp parameter. (optional)
+-dcp *path* Full path where to store the files. It is mandatory to set also -f parameter. (optional)
+=========== ========================================================================================
+
+
+Examples:
++++++++++
+
+.. code:: console
+
+    $ viewcalc -n calc1                      # Display calculation on current project with name calc1
+    $ viewcalc -n /db/user1/project/calc1    # Display calculation providing is fullpath
+    $ viewcalc -n calc1 -f -dcp /home/user/tmp/calc1  # Display calculation information and store its files on the provided folder
+
 
 |
 

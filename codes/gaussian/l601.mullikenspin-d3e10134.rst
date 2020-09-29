@@ -1,0 +1,83 @@
+.. _l601.mullikenspin-d3e10134:
+
+l601.mullikenspin
+=================
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l601.mullikenspin                 |
+   +-----------------------------------+-----------------------------------+
+   | name                              | l601.mullikenspin                 |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s+Mull                          |
+   |                                   | iken\satomic\sspin\sdensities:.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s+Sum\sof\sMulliken.\*          |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l601.mullikenspin.xml             |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+        Mulliken atomic spin densities:
+                     1
+            1  C    0.002225
+            2  C    0.003585
+            3  C   -0.055895
+            4  C    0.952100
+            5  C   -0.074048
+            6  C    0.005545
+            7  H   -0.000392
+            8  H   -0.000302
+            9  H    0.059828
+           10  H   -0.043572
+           11  H    0.027173
+           12  H    0.001472
+           13  H   -0.000191
+           14  H    0.053241
+           15  H    0.000353
+           16  H   -0.001111
+           17  O    0.059815
+           18  H    0.010174
+        Sum of Mulliken spin densities=   1.00000
+       
+
+.. warning::
+
+   Current template has input comments defined but it's output is
+   missing, please notify software developers.
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="1" />
+   <record repeat="1" />
+   <record id="row" makeArray="true" repeat="*">{I,cc:serial}{A,cc:elementType}{F,x:charge}</record>
+   <record id="sum">\s*Sum\sof\sMulliken.*={F,x:density.sum}</record>
+   <transform process="pullup" xpath="./cml:list/cml:array" repeat="1" />
+   <transform process="delete" xpath="./descendant-or-self::cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Total.png

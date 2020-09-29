@@ -1,0 +1,101 @@
+.. _l405-d3e14213:
+
+l405
+====
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l405                              |
+   +-----------------------------------+-----------------------------------+
+   | name                              | l405                              |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*\(Enter.*\/l405.exe\).\*      |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Leave\sLink\s*405.\*          |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l405.xml                          |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+      (Enter /mnt/data/applications/G09/g09/l405.exe)
+             Truncation Level=               99999
+             a=  1          b=  0          c=  3
+             a=N/2 - s   b=2s   c=n- (a+b)
+             no. active orbitals (n)  4
+             no. active ELECTRONS (N)=  2
+                                                     IRREPS TO BE RETAINED = 1 2
+                                                     GROUP IRREP. MULT. TABLE
+                                                         1    2
+                                                         2    1
+                                                     IRREP. LABELS FOR ORBITALS
+                                                      2 1 1 1
+             BOTTOM WEIGHT=  2     TOP WEIGHT=  8
+             Configuration         1 Symmetry 1 1000
+             Configuration         2 Symmetry 2 ab00
+             Configuration         3 Symmetry 1 0100
+             Configuration         4 Symmetry 2 a0b0
+             Configuration         5 Symmetry 1 0ab0
+             Configuration         6 Symmetry 2 a00b
+             Configuration         7 Symmetry 1 0010
+             Configuration         8 Symmetry 1 0a0b
+             Configuration         9 Symmetry 1 00ab
+             Configuration        10 Symmetry 1 0001
+             NO OF BASIS FUNCTIONS =        10 NO TO BE DELETED =    0
+    CI Matrix Elements calculated here
+             NO. OF CONFIGURATIONS IN REFERENCE SPACE =    1
+                                      SECONDARY SPACE =   10
+                                      TERTIARY SPACE =   10
+             NO. OF ORBITALS =    4
+             NO. OF ELECTRONS =    2
+             NO. OF WEIGHTS =    7
+             REFERENCE STATE CONFIGURATIONS ARE:     0
+             NO. OF CORE ORBITALS =    0
+             OPTION:  NON-DIAGONAL HOLE LINE INTERACTIONS INCLUDED
+    Len28=        2263 LenMCI=         445.
+    Leave Link  405 at Thu Mar  5 03:32:45 2015, MaxMem=   917504000 cpu:        18.8
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l405">
+       <module cmlx:templateRef="l405">
+           <scalar dataType="xsd:integer" dictRef="g:orbitalnum">4</scalar>
+           <scalar dataType="xsd:integer" dictRef="g:electronnum">2</scalar>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <template pattern="\s*NO\.\sOF\sORBITALS.*" endPattern="\s*NO\.\sOF\sELECTRONS.*" endOffset="1">    <record>\s*NO\.\sOF\sORBITALS\s*={I,g:orbitalnum}</record>    <record>\s*NO\.\sOF\sELECTRONS\s*={I,g:electronnum}</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />                 
+       </template>  
+     </templateList>
+   <transform process="delete" xpath="./cml:module" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

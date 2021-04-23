@@ -146,11 +146,11 @@ Data source: <module cmlx:templateRef='`energies`_'>
                               
                               
 
-.. _header template: ../codes/mopac/header-d3e23610.html
-.. _input.file: ../codes/mopac/input.file-d3e23657.html
-.. _geometry module: ../codes/mopac/geometry-d3e23862.html
-.. _vibrations: ../codes/mopac/vibrations-d3e23560.html
-.. _energies: ../codes/mopac/energies-d3e23998.html
+.. _header template: ../codes/mopac/header-d3e24120.html
+.. _input.file: ../codes/mopac/input.file-d3e24167.html
+.. _geometry module: ../codes/mopac/geometry-d3e24372.html
+.. _vibrations: ../codes/mopac/vibrations-d3e24070.html
+.. _energies: ../codes/mopac/energies-d3e24508.html
 
 .. |image0| image:: /imgs/MOPAC_header.png
 .. |image1| image:: /imgs/MOPAC_molecularinfo.png

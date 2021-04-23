@@ -231,10 +231,10 @@ Lattice replication
 .. _laticce: #lattice
 .. _calculated.position: #calculated.position
 .. _basis used: #atom.potcar
-.. _KPOINTS file: ../codes/from/vasp.kpoints-d3e40649.html
+.. _KPOINTS file: ../codes/from/vasp.kpoints-d3e41159.html
 .. _energy: #energy
 .. _eigenvalues: #eigenvalues
-.. _vasp.doscar: ../codes/from/vasp.doscar-d3e40689.html
+.. _vasp.doscar: ../codes/from/vasp.doscar-d3e41199.html
 .. _magnetization: #magnetization
 .. _vibrations: #vibrations
 

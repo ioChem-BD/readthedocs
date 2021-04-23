@@ -1,0 +1,154 @@
+.. _cpcm-d3e26425:
+
+cpcm
+====
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Orca log                          |
+   +-----------------------------------+-----------------------------------+
+   | id                                | cpcm                              |
+   +-----------------------------------+-----------------------------------+
+   | name                              | CPCM section                      |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*-{                            |
+   |                                   | 10,}$\s*CPCM\sSOLVATION\sMODEL.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Overall\st                    |
+   |                                   | ime\sfor\sCPCM\sinitialization.\* |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | job/cpcm/cpcm.xml                 |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+   ------------------------------------------------------------------------------
+                              CPCM SOLVATION MODEL                               
+   ------------------------------------------------------------------------------
+
+
+   CPCM parameters:
+     Epsilon                                         ...      80.4000
+     Refrac                                          ...       1.3300
+     Rsolv                                           ...       1.3000
+     Surface type                                    ...    GEPOL SES
+     Epsilon function type                           ...         CPCM
+   Radii:
+    Radius for O  used is    3.2503 Bohr (=   1.7200 Ang.)
+    Radius for C  used is    3.7795 Bohr (=   2.0000 Ang.)
+    Radius for H  used is    2.4566 Bohr (=   1.3000 Ang.)
+    
+   Calculating surface                               ...        done! (  0.0s)
+   GEPOL surface points                              ...          281
+   GEPOL Volume                                      ...     538.7664
+   GEPOL Surface-area                                ...     353.6151
+   Calculating surface distance matrix               ...        done! (  0.0s)
+   Performing Cholesky decomposition & store         ...        done! (  0.0s)
+   Overall time for CPCM initialization              ...                 0.0s
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="cpcm">    
+         <module dictRef="cc:userDefinedModule" id="otherComponents">       
+             <list cmlx:templateRef="technical">
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Epsilon</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">80.4000</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Refrac</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">1.3300</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Rsolv</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">1.3000</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Surface type</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">GEPOL SES</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Epsilon function type</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">CPCM</scalar>
+                </list>
+             </list>
+             <list cmlx:templateRef="radii">
+                <array dataType="xsd:string" dictRef="cc:elementType" size="3">O C H</array>
+                <array dataType="xsd:double" dictRef="o:radius" size="3" units="nonsi:angstrom">1.7200 2.0000 1.3000</array>
+             </list>
+             <list cmlx:templateRef="parameters" dictRef="parameters">
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Calculating surface</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">done! (  0.0s)</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">GEPOL surface points</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">281</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">GEPOL Volume</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">538.7664</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">GEPOL Surface-area</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">353.6151</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Calculating surface distance matrix</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">done! (  0.0s)</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Performing Cholesky decomposition & store</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">done! (  0.0s)</scalar>
+                </list>
+                <list>
+                   <scalar dataType="xsd:string" dictRef="cc:parameter">Overall time for CPCM initialization</scalar>
+                   <scalar dataType="xsd:string" dictRef="cc:value">0.0s</scalar>
+                </list>
+             </list>
+          </module>
+       </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <templateList>  <template pattern="\s*CPCM\sparameters.*" endPattern="\s*Radii.*" endPattern2="\w.*" endPattern3="~" repeat="*">    <record />    <record id="technical" repeat="*">{X,cc:parameter}\.\.\.{X,cc:value}</record>
+           </template>  <template pattern="\s*Radii:\s*" endPattern="\s*(?!.*Radius).+" endPattern2="~" repeat="*">    <record />    <record id="radii" repeat="*" makeArray="true">\s*Radius\sfor{A,cc:elementType}used\sis.*\(={F,o:radius}.*</record>
+           </template>  <template id="parameter" pattern=".*\.\.\..*" endPattern=".*" endPattern2="~" repeat="*">    <record>{X,cc:parameter}\.\.\.{X,cc:value}</record>
+           </template>
+       </templateList>
+   <transform process="move" xpath=".//cml:module[@cmlx:templateRef='parameter']/cml:list/cml:list" to="." />
+   <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='radii']" />
+   <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='technical']" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module" />
+   <transform process="addUnits" xpath=".//cml:array[@dictRef='o:radius']" value="nonsi:angstrom" />
+   <transform process="addChild" elementName="cml:list" xpath="." dictRef="parameters" />
+   <transform process="addAttribute" xpath=".//cml:list[@dictRef='parameters']" name="cmlx:templateRef" value="parameters" />
+   <transform process="move" xpath="./cml:list[not(@cmlx:templateRef)]" to="./cml:list[@cmlx:templateRef='parameters']" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

@@ -150,6 +150,13 @@ Data source: <module cmlx:templateRef="`multipole`_">
 
 |image12|
 
+Final Excitation Energies
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Data source: <module cmlx:templateRef='`l914`_'>
+
+|image13|
+
 .. [1]
    string ``gaussian:getCalcType`` boolean ``isOptimization`` boolean ``hasStationaryPoint`` boolean ``hasMinimum``
 
@@ -175,32 +182,33 @@ Data source: <module cmlx:templateRef="`multipole`_">
            
                               
 
-.. _`cc:program`: ../codes/gaussian/jobcpu-d3e18437.html
-.. _thermochemistry: ../codes/gaussian/l716.thermochemistry-d3e15561.html
-.. _`cc:temp`: ../codes/gaussian/l716.thermochemistry.temperature-d3e15571.html
-.. _`cc:press`: ../codes/gaussian/l716.thermochemistry.temperature-d3e15571.html
-.. _basis used and core: ../codes/gaussian/l301.basis2-d3e12816.html
-.. _basis: ../codes/gaussian/l301.basis-d3e12527.html
+.. _`cc:program`: ../codes/gaussian/jobcpu-d3e18917.html
+.. _thermochemistry: ../codes/gaussian/l716.thermochemistry-d3e16041.html
+.. _`cc:temp`: ../codes/gaussian/l716.thermochemistry.temperature-d3e16051.html
+.. _`cc:press`: ../codes/gaussian/l716.thermochemistry.temperature-d3e16051.html
+.. _basis used and core: ../codes/gaussian/l301.basis2-d3e12924.html
+.. _basis: ../codes/gaussian/l301.basis-d3e12639.html
 .. _`g:multiplicity`: ../codes/gaussian/l101.qmmm-d3e7175.html
 .. _l101.zmat module: ../codes/gaussian/l101.zmat-d3e7651.html
 .. _l101.zmata module: ../codes/gaussian/l101.zmata-d3e7734.html
-.. _`x:spinMultiplicity`: ../codes/gaussian/l9999.archive-d3e17754.html
-.. _l9999.archive module: ../codes/gaussian/l9999.archive-d3e17754.html
+.. _`x:spinMultiplicity`: ../codes/gaussian/l9999.archive-d3e18234.html
+.. _l9999.archive module: ../codes/gaussian/l9999.archive-d3e18234.html
 .. _l101.qmmm: ../codes/gaussian/l101.qmmm-d3e7175.html
 .. _l101.modredundant: ../codes/gaussian/l101.modredundant-d3e8119.html
-.. _l202.stoich: ../codes/gaussian/l202.stoich-d3e12429.html
-.. _l301.pcm.standard: ../codes/gaussian/l301.pcm.standard-d3e13579.html
-.. _`g:rbhflyp`: ../codes/gaussian/l502.footer-d3e14359.html
-.. _`cc:dispenergy`: ../codes/gaussian/l502.pcm-d3e14499.html
-.. _l120: ../codes/gaussian/l120-d3e12162.html
-.. _l122: ../codes/gaussian/l122-d3e17537.html
-.. _l716.zeropoint: ../codes/gaussian/l716.zeropoint-d3e15245.html
-.. _l9999.archive: ../codes/gaussian/l9999.archive-d3e17754.html
+.. _l202.stoich: ../codes/gaussian/l202.stoich-d3e12541.html
+.. _l301.pcm.standard: ../codes/gaussian/l301.pcm.standard-d3e13687.html
+.. _`g:rbhflyp`: ../codes/gaussian/l502.footer-d3e14467.html
+.. _`cc:dispenergy`: ../codes/gaussian/l502.pcm-d3e14690.html
+.. _l120: ../codes/gaussian/l120-d3e12274.html
+.. _l122: ../codes/gaussian/l122-d3e18017.html
+.. _l716.zeropoint: ../codes/gaussian/l716.zeropoint-d3e15581.html
+.. _l9999.archive: ../codes/gaussian/l9999.archive-d3e18234.html
 .. _l601.mullikenspin: ../codes/gaussian/l601.mullikenspin-d3e10134.html
-.. _`cc:spincontamination`: ../codes/gaussian/l502.footer2-d3e14540.html
-.. _l716.freq.chunkx: ../codes/gaussian/l716.freq.chunkx-d3e14884.html
+.. _`cc:spincontamination`: ../codes/gaussian/l502.footer2-d3e14732.html
+.. _l716.freq.chunkx: ../codes/gaussian/l716.freq.chunkx-d3e15076.html
 .. _mulliken: ../codes/gaussian/mulliken-d3e10094.html
 .. _multipole: ../codes/gaussian/multipole-d3e10263.html
+.. _l914: ../codes/gaussian/l914-d3e17459.html
 
 .. |image0| image:: /imgs/GAUSSIAN_header.png
 .. |image1| image:: /imgs/GAUSSIAN_header2.png
@@ -215,3 +223,4 @@ Data source: <module cmlx:templateRef="`multipole`_">
 .. |image10| image:: /imgs/GAUSSIAN_module_frequencies.png
 .. |image11| image:: /imgs/GAUSSIAN_module_mulliken.png
 .. |image12| image:: /imgs/GAUSSIAN_module_dipole_moment.png
+.. |image13| image:: /imgs/GAUSSIAN_module_finalexcitationenergies.png

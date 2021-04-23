@@ -4,11 +4,11 @@ MOPAC
 .. toctree::
    :maxdepth: 10 
 
-   /codes/mopac/input.file-d3e23657
-   /codes/mopac/optimization-d3e23857
-   /codes/mopac/geometry-d3e24238
-   /codes/mopac/energies-d3e24375
-   /codes/mopac/total.time-d3e24498
-   /codes/mopac/input.data-d3e23415
-   /codes/mopac/vibrations-d3e23560
-   /codes/mopac/header-d3e23610
+   /codes/mopac/input.file-d3e24167
+   /codes/mopac/optimization-d3e24367
+   /codes/mopac/geometry-d3e24748
+   /codes/mopac/energies-d3e24885
+   /codes/mopac/total.time-d3e25008
+   /codes/mopac/input.data-d3e23925
+   /codes/mopac/vibrations-d3e24070
+   /codes/mopac/header-d3e24120

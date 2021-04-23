@@ -1,0 +1,68 @@
+.. _l716.polarizability-d3e14850:
+
+l716.polarizability
+===================
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l716.polarizability               |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Polarizability                    |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*Polarizability=.\*            |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s{16}.\*                        |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l716/l716.polarizability.xml      |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    Polarizability= 1.80172759D+02 9.64366159D-02 8.96067492D+01
+                    1.42853847D+01 2.32604318D-02 8.23087172D+01
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l716.polarizability">
+       <module cmlx:templateRef="l716.polarizability">
+         <array dataType="xsd:double" size="6" dictRef="cc:polarizability" cmlx:templateRef="polariz">180.172759 0.0964366159 89.6067492 14.2853847 0.0232604318 82.3087172</array>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="polariz">\sPolarizability={3E,cc:polarizability}</record>
+   <record id="polariz">\s*{3E,x:d}</record>
+   <transform process="joinArrays" xpath=".//cml:array" />
+   <transform process="pullupSingleton" dictRef="cc:polarizability" xpath="./cml:list" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

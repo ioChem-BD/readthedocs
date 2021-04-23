@@ -26,9 +26,9 @@ nucleus
    +-----------------------------------+-----------------------------------+
    | pattern                           | .*N\sU\sC\sL\sE\sU\sS\s:.\*       |
    +-----------------------------------+-----------------------------------+
-   | endPattern                        | \\s*#{20,}\s\*                    |
+   | endPattern                        | \\s*#{50,}\s\*                    |
    +-----------------------------------+-----------------------------------+
-   | endPattern2                       | \\s?\*{20,}\s\*                   |
+   | endPattern2                       | \\s?\*{50,}\s\*                   |
    +-----------------------------------+-----------------------------------+
    | endPattern3                       | ~                                 |
    +-----------------------------------+-----------------------------------+
@@ -133,16 +133,16 @@ nucleus
 .. code:: xml
 
    <record id="nucleus">.*N\sU\sC\sL\sE\sU\sS\s:{A,cc:elementType}\({X,a:nucleus}\)\s*</record>
-   <templateList>  <template id="paramagnetic" pattern="\s*===(\sSCALED:)?\s*PARAMAGNETIC\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sparamagnetic\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="paramagnetic">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
+   <templateList>  <template id="paramagnetic" pattern="\s*===(\s(UN)?SCALED:)?\s*PARAMAGNETIC\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sparamagnetic\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="paramagnetic">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
                    </template>
                </templateList>   
-           </template>  <template id="diamagnetic" pattern="\s*===(\sSCALED:)?\s*DIAMAGNETIC\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sdiamagnetic(\sNMR)?\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="diamagnetic">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
+           </template>  <template id="diamagnetic" pattern="\s*===(\s(UN)?SCALED:)?\s*DIAMAGNETIC\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sdiamagnetic(\sNMR)?\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="diamagnetic">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
                    </template>
                </templateList>   
-           </template>  <template id="spinorbit" pattern="\s*===(\sSCALED:)?\s*SPIN-ORBIT\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sspin-orbit\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="shielding">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
+           </template>  <template id="spinorbit" pattern="\s*===(\s(UN)?SCALED:)?\s*SPIN-ORBIT\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sspin-orbit\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="shielding">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
                    </template>
                </templateList>   
-           </template>  <template id="total" pattern="\s*===(\sSCALED:)?\s*TOTAL\sNMR\sSHIELDING\sTENSOR\s*\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern="\s*isotropic(\sshielding)?.*" endPattern=".*">        <record id="shielding">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
+           </template>  <template id="total" pattern="\s*===(\s(UN)?SCALED:)?\s*TOTAL\sNMR\sSHIELDING\sTENSOR\s*\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern="\s*isotropic(\sshielding)?.*" endPattern=".*">        <record id="shielding">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>
                    </template>
                </templateList>   
            </template>   

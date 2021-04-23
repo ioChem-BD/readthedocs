@@ -1,0 +1,87 @@
+.. _species-d3e31083:
+
+species
+=======
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | QuantumEspresso log               |
+   +-----------------------------------+-----------------------------------+
+   | id                                | species                           |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Atomic species                    |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | ^\s*atomic\s+species.\*           |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s\*                             |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | initialization/atomic-species.xml |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+        atomic species   valence    mass     pseudopotential
+           Fe1           16.00    55.84500     Fe( 1.00)
+           Fe2           16.00    55.84500     Fe( 1.00)
+           O              6.00    15.99990     O ( 1.00)
+           H              1.00     1.00790     H ( 1.00)
+           
+      
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="species">
+       <module cmlx:templateRef="species">
+           <list cmlx:templateRef="species">
+               <array dataType="xsd:string" dictRef="qex:specie" size="4">Fe1 Fe2 O H</array>
+               <array dataType="xsd:double" dictRef="x:valelectrons" size="4">16.00 16.00 6.00 1.00</array>
+               <array dataType="xsd:double" dictRef="cc:mass" size="4">55.84500 55.84500 15.99990 1.00790</array>
+               <array dataType="xsd:string" dictRef="cc:elementType" size="4">Fe Fe O H</array>
+               <array dataType="xsd:double" dictRef="qex:pseudopot" size="4">1.00 1.00 1.00 1.00</array>
+           </list>
+           <map id="speciesToAtomTypeMap">
+               <link from="Fe1" to="Fe" />
+               <link from="Fe2" to="Fe" />
+               <link from="O" to="O" />
+               <link from="H" to="H" />
+           </map>        
+       </module>
+      </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="1" />
+   <record id="species" repeat="*">{A,qex:specie}{F,x:valelectrons}{F,cc:mass}{A,cc:elementType}\({F,qex:pseudopot}\).*</record>
+   <transform process="addMap" xpath="." id="speciesToAtomTypeMap" from=".//cml:scalar[@dictRef='qex:specie']" to=".//cml:scalar[@dictRef='cc:elementType']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='qex:specie']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='x:valelectrons']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:mass']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:elementType']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='qex:pseudopot']" />
+   <transform process="pullup" xpath=".//cml:array" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Total.png

@@ -1,0 +1,185 @@
+.. _l301.basis-d3e12639:
+
+l301.basis
+==========
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l301.basis                        |
+   +-----------------------------------+-----------------------------------+
+   | name                              | basis                             |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*Standard basis.\*             |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*NAtoms=.\*                    |
+   +-----------------------------------+-----------------------------------+
+   | endPattern2                       | \\s*Leave\sLink\s+301\s.\*        |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l301/l301.basis.xml               |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+    Standard basis: 6-31G(d) (6D, 7F)
+    There are     8 symmetry adapted basis functions of A   symmetry.
+    There are     5 symmetry adapted basis functions of B1  symmetry.
+    There are     5 symmetry adapted basis functions of B2  symmetry.
+    There are     5 symmetry adapted basis functions of B3  symmetry.
+    Integral buffers will be    262144 words long.
+    Raffenetti 2 integral format.
+    Two-electron integral symmetry is turned on.
+       23 basis functions,    44 primitive gaussians,    23 cartesian basis functions
+        5 alpha electrons        5 beta electrons
+          nuclear repulsion energy        13.1577484238 Hartrees.
+    NAtoms=    5 NActive=    5 NUniq=    2 SFac= 5.66D+00 NAtFMM=   60 Big=F
+     
+
+**Input.**
+
+::
+
+    Standard basis: 3-21G (6D, 7F)
+    Ernie: Thresh=  0.10000D-02 Tol=  0.10000D-05 Strict=F.
+    There are     7 symmetry adapted basis functions of AG  symmetry.
+    There are     0 symmetry adapted basis functions of B1G symmetry.
+    There are     2 symmetry adapted basis functions of B2G symmetry.
+    There are     4 symmetry adapted basis functions of B3G symmetry.
+    There are     0 symmetry adapted basis functions of AU  symmetry.
+    There are     7 symmetry adapted basis functions of B1U symmetry.
+    There are     4 symmetry adapted basis functions of B2U symmetry.
+    There are     2 symmetry adapted basis functions of B3U symmetry.
+    Integral buffers will be    131072 words long.
+    Raffenetti 1 integral format.
+    Two-electron integral symmetry is turned on.
+       26 basis functions,    42 primitive gaussians,    26 cartesian basis functions
+        8 alpha electrons        8 beta electrons
+          nuclear repulsion energy        33.7515964544 Hartrees.
+          
+    IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000
+    ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+    IRadAn=      0 IRanWt=     -1 IRanGd=            0 ICorTp=0
+    NAtoms=    6 NActive=    6 NUniq=    2 SFac= 4.00D+00 NAtFMM=   50 NAOKFM=F Big=F
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l301.basis">
+       <module cmlx:templateRef="l301.basis">
+         <scalar dataType="xsd:string" dictRef="cc:basis">6-31G(d)</scalar>
+         <scalar dataType="xsd:string" dictRef="cc:diffuse">(6D, 7F)</scalar>
+         <list cmlx:lineCount="4" cmlx:templateRef="symmadapt">
+           <array dataType="xsd:integer" dictRef="cc:adapted" size="4">8 5 5 5</array>
+           <array dataType="xsd:string" dictRef="cc:symm" size="4">A B1 B2 B3</array>
+         </list>
+         <scalar dataType="xsd:integer" dictRef="g:buffer">262144</scalar>
+         <scalar dataType="xsd:string" dictRef="g:integralformat">Raffenetti 2</scalar>
+         <scalar dataType="xsd:string" dictRef="g:twoe">Two-electron</scalar>
+         <scalar dataType="xsd:string" dictRef="g:twoestatus">on</scalar>      
+         <scalar dataType="xsd:integer" dictRef="cc:basiscount">23</scalar>
+         <scalar dataType="xsd:integer" dictRef="g:primbasis">44</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:cartesianbasis">23</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:alphae">5</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:betae">5</scalar>
+         <scalar dataType="xsd:double" dictRef="cc:nucrepener">13.1577484238</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:natoms">5</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:nactiveatoms">5</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:uniqatoms">2</scalar>
+         <scalar dataType="xsd:double" dictRef="g:sfac">5.66</scalar>
+         <scalar dataType="xsd:integer" dictRef="g:natfmm">60</scalar>
+         <scalar dataType="xsd:string" dictRef="g:big">F</scalar>
+       </module>
+     </comment>
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l301.basis.09">
+       <module cmlx:templateRef="l301.basis">
+         <scalar dataType="xsd:string" dictRef="cc:basis">3-21G</scalar>
+         <scalar dataType="xsd:string" dictRef="cc:diffuse">(6D, 7F)</scalar>
+         <module cmlx:templateRef="ernie">
+           <scalar dataType="xsd:double" dictRef="g:thresh">0.10000e-02</scalar>
+           <scalar dataType="xsd:double" dictRef="g:tol">0.10000e-05</scalar>
+           <scalar dataType="xsd:string" dictRef="g:strict">F</scalar>
+         </module>
+         <list cmlx:templateRef="symmadapt">
+           <array dataType="xsd:integer" dictRef="cc:adapted" size="8">7 0 2 4 0 7 4 2</array>
+           <array dataType="xsd:string" dictRef="cc:symm" size="8">AG B1G B2G B3G AU B1U B2U B3U</array>
+         </list>
+         <scalar dataType="xsd:integer" dictRef="g:buffer">131072</scalar>
+         <scalar dataType="xsd:string" dictRef="g:integralformat">Raffenetti 1</scalar>
+         <scalar dataType="xsd:string" dictRef="g:twoe">Two-electron</scalar>
+         <scalar dataType="xsd:string" dictRef="g:twoestatus">on</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:basiscount">26</scalar>
+         <scalar dataType="xsd:integer" dictRef="g:primbasis">42</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:cartesianbasis">26</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:alphae">8</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:betae">8</scalar>
+         <scalar dataType="xsd:double" dictRef="cc:nucrepener">33.7515964544</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:natoms">6</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:nactiveatoms">6</scalar>
+         <scalar dataType="xsd:integer" dictRef="cc:uniqatoms">2</scalar>
+         <scalar dataType="xsd:double" dictRef="g:sfac">4.00e+00</scalar>
+         <scalar dataType="xsd:integer" dictRef="g:natfmm">50</scalar>
+         <scalar dataType="xsd:string" dictRef="g:big">F</scalar>
+         <scalar dataType="xsd:string" dictRef="g:misc">IExCor=    0 DFT=F Ex=HF Corr=None ExCW=0 ScaHFX=  1.000000</scalar>
+         <scalar dataType="xsd:string" dictRef="g:misc">ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000</scalar>
+         <scalar dataType="xsd:string" dictRef="g:misc">IRadAn=      0 IRanWt=     -1 IRanGd=            0 ICorTp=0</scalar>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record id="basis">\s*Standard basis:{A,cc:basis}{X,cc:diffuse}</record>
+   <templateList id="ernie">  <template pattern="\s*Ernie.*" endPattern=".*" endOffset="0" id="ernie">    <record id="ernie" repeat="*">\s*Ernie: Thresh={E,g:thresh}\s*Tol={E,g:tol}\s*Strict={A,g:strict}\.\s*</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" /> 
+       </template>
+     </templateList>
+   <templateList>  <template pattern="\s*There\sare.*" endPattern="\s*nuclear\srepulsion.*" id="symaddnuc" endOffset="1">    <record id="symmadaptcart" repeat="*" makeArray="true">\s* There are{I,cc:adapted} symmetry adapted cartesian basis functions of{A,cc:symm}symmetry\.\s*</record>    <record id="symmadapt" repeat="*" makeArray="true">\s*There are{I,cc:adapted} symmetry adapted basis functions of{A,cc:symm}symmetry\.\s*</record>    <templateList>      <template pattern="\s*Integral\sbuffers.*" endPattern=".*" endPattern2="~" endOffset="0">        <record id="buffer">\s*Integral buffers will be {I,g:buffer}\s*words long\.\s*</record>        <transform process="pullup" xpath=".//cml:scalar" repeat="2" />  
+           </template>      <template pattern=".*integral\sformat.*" endPattern=".*" endPattern2="~" endOffset="0">        <record id="raff">\s*{X,g:integralformat}\sintegral format\.\s*</record>        <transform process="pullup" xpath=".//cml:scalar" repeat="2" />   
+           </template>      <template pattern=".*integral\ssymmetry.*" endPattern=".*" endPattern2="~" endOffset="0">        <record id="twoe">\s*{X,g:twoe} integral symmetry is turned {X,g:twoestatus}\.\s*</record>        <transform process="pullup" xpath=".//cml:scalar" repeat="3" />
+           </template>      <template pattern=".*basis\sfunctions\,.*" endPattern="\s*nuclear\srepulsion.*" endPattern2="~" endOffset="1">        <record id="basiscount">\s*{I,cc:basiscount}basis functions,{I,g:primbasis}primitive gaussians,{I,cc:cartesianbasis}cartesian basis functions\s*</record>        <record id="alphabeta">\s*{I,cc:alphae}alpha electrons\s*{I,cc:betae}beta electrons\s*</record>        <record id="nucrep">\s*nuclear repulsion energy\s*{F,cc:nucrepener}Hartrees\.\s*</record>        <transform process="pullup" xpath="./cml:list/cml:list/cml:scalar" repeat="3" />        <transform process="pullup" xpath="./cml:list/cml:scalar" repeat="2" />
+           </template>
+         </templateList>    <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='symmadaptcart']" />    <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='symmadapt']" />    <transform process="pullup" xpath="./cml:scalar" />
+                       
+       </template>    
+     </templateList>
+   <templateList id="natoms">  <template pattern="\s*NAtoms=.*" repeat="*" endPattern=".*" endPattern2="~" id="natoms">    <record id="natoms" repeat="*">\s*NAtoms={I,cc:natoms}\sNActive={I,cc:nactiveatoms}\sNUniq={I,cc:uniqatoms}\sSFac={E,g:sfac}\sNAtFMM={I,g:natfmm}.*\sBig={A,g:big}\s*</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="3" /> 
+       </template>
+     </templateList>
+   <templateList id="misc">  <template pattern="\s*((IExCor)|(ScaDFX)|(IRadAn)).*" repeat="*" endPattern=".*" endPattern2="~" id="misc">    <record id="misc">\s*{X,g:misc}\s*</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />
+       </template>
+     </templateList>
+   <transform process="pullup" xpath="./cml:list[@cmlx:templateRef='basis']/cml:list/cml:scalar" repeat="2" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:module[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Partial.png

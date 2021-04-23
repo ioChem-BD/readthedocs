@@ -1,0 +1,126 @@
+.. _l202.distmat-d3e12467:
+
+l202.distmat
+============
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | Gaussian log                      |
+   +-----------------------------------+-----------------------------------+
+   | id                                | l202.distmat                      |
+   +-----------------------------------+-----------------------------------+
+   | name                              | Distance matrix                   |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*Distance matrix.*$[\s\d]+     |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s?[A-Z].\*                      |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | l202/l202.distmat.xml             |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+                       Distance matrix (angstroms):
+                       1          2          3          4          5
+        1  Al   0.000000
+        2  Al   1.534811   0.000000
+        3  Al   2.965253   1.534811   0.000000
+        4  Al   4.193182   2.964801   1.534811   0.000000
+        5  Al   5.135969   4.193182   2.965253   1.534811   0.000000
+        6  Al   5.727993   5.135187   4.193182   2.964801   1.534811
+        7  Al   5.930507   5.727993   5.135969   4.193182   2.965253
+        8  Al   5.727993   5.929603   5.727993   5.135187   4.193182
+        9  Al   5.135969   5.727993   5.930507   5.727993   5.135969
+       10  Al   4.193182   5.135187   5.727993   5.929603   5.727993
+       11  Al   2.965253   4.193182   5.135969   5.727993   5.930507
+       12  Al   1.534811   2.964801   4.193182   5.135187   5.727993
+                       6          7          8          9         10
+        6  Al   0.000000
+        7  Al   1.534811   0.000000
+        8  Al   2.964801   1.534811   0.000000
+        9  Al   4.193182   2.965253   1.534811   0.000000
+       10  Al   5.135187   4.193182   2.964801   1.534811   0.000000
+       11  Al   5.727993   5.135969   4.193182   2.965253   1.534811
+       12  Al   5.929603   5.727993   5.135187   4.193182   2.964801
+                      11         12
+       11  Al   0.000000
+       12  Al   1.534811   0.000000
+    Test    
+     
+
+**Input.**
+
+::
+
+                       Distance matrix (angstroms):
+                       1          2          3          4          5
+        1  C    0.000000
+        2  H    1.113000   0.000000
+        3  H    1.113000   1.817522   0.000000
+        4  H    1.113000   1.817521   1.817522   0.000000
+        5  H    1.113000   1.817522   1.817522   1.817522   0.000000
+    Test 
+     
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l202.distmat.1">
+       <module cmlx:templateRef="l202.distmat">
+         <array dataType="xsd:double" size="78" dictRef="cc:distance">0.0 1.534811 0.0 2.965253 1.534811 0.0 4.193182 2.964801 1.534811 0.0 5.135969 4.193182 2.965253 1.534811 0.0 5.727993 5.135187 4.193182 2.964801 1.534811 0.0 5.930507 5.727993 5.135969 4.193182 2.965253 1.534811 0.0 5.727993 5.929603 5.727993 5.135187 4.193182 2.964801 1.534811 0.0 5.135969 5.727993 5.930507 5.727993 5.135969 4.193182 2.965253 1.534811 0.0 4.193182 5.135187 5.727993 5.929603 5.727993 5.135187 4.193182 2.964801 1.534811 0.0 2.965253 4.193182 5.135969 5.727993 5.930507 5.727993 5.135969 4.193182 2.965253 1.534811 0.0 1.534811 2.964801 4.193182 5.135187 5.727993 5.929603 5.727993 5.135187 4.193182 2.964801 1.534811 0.0</array>
+       </module>
+     </comment>
+
+**Output text.**
+
+.. code:: xml
+
+   <comment class="example.output" id="l202.distmat.2">
+       <module cmlx:templateRef="l202.distmat">
+         <array dataType="xsd:double" size="15" dictRef="cc:distance">0.0 1.113 0.0 1.113 1.817522 0.0 1.113 1.817521 1.817522 0.0 1.113 1.817522 1.817522 1.817522 0.0</array>
+       </module>
+     </comment>
+
+**Template definition.**
+
+.. code:: xml
+
+   <record repeat="1" id="y">{X,y:y}</record>
+   <templateList>  <template id="l202.distance" pattern="\s{10}\s*\d+\s*[\d\s]*$.*" endPattern=".*$\s{10}\s*[\s\d]+.*" endPattern2="~" endOffset="1" repeat="*">    <record id="serial">{1_5I,x:serial}</record>    <record repeat="*" id="row">\s*{I,g:row}\s{A,cc:elementType}\s{1_5F,cc:distance}</record>          
+       </template>
+       
+     </templateList>
+   <transform process="joinArrays" xpath=".//cml:array[@dictRef='x:serial']" />
+   <transform process="addAttribute" xpath=".//cml:array[@dictRef='cc:distance']" name="cmlx:row" value="$string(../cml:scalar[@dictRef='g:row'])" />
+   <transform process="joinArrays" xpath=".//cml:array[@cmlx:row]" key="$string(@cmlx:row)" />
+   <transform process="joinArrays" xpath=".//cml:module[@cmlx:templateRef='l202.distance'][1]//cml:list[@cmlx:templateRef='row']//cml:array" />
+   <transform process="delete" xpath=".//cml:scalar[@dictRef='y:y']" />
+   <transform process="delete" xpath=".//cml:scalar[@dictRef='g:row']" />
+   <transform process="delete" xpath=".//cml:scalar[@dictRef='cc:elementType']" />
+   <transform process="delete" xpath=".//cml:array[@dictRef='x:serial']" />
+   <transform process="delete" xpath="text()" />
+   <transform process="pullup" xpath=".//cml:array" repeat="3" />
+   <transform process="delete" xpath=".//cml:module[@cmlx:templateRef='l202.distance']" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+   <transform process="delete" xpath=".//cml:list[count(*)=0]" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/None.png

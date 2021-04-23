@@ -154,4 +154,4 @@ l914_excitations
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
 
 .. |image0| image:: ../../imgs/Total.png
-.. |image1| image:: ../../imgs/None.png
+.. |image1| image:: ../../imgs/Total.png

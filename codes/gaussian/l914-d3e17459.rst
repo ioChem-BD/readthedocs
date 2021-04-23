@@ -411,4 +411,4 @@ l914
    </templateList>
 
 .. |image0| image:: ../../imgs/Total.png
-.. |image1| image:: ../../imgs/None.png
+.. |image1| image:: ../../imgs/Partial.png

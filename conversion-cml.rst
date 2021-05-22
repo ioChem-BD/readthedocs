@@ -7,6 +7,7 @@ From chemical codes to CML
 
    /codes/adf
    /codes/gaussian
+   /codes/gronor
    /codes/molcas
    /codes/mopac
    /codes/orca

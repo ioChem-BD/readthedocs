@@ -27,9 +27,11 @@ lattice
    | pattern                           | \\s*direct\slattice\svectors\     |
    |                                   | s*reciprocal\slattice\svectors.\* |
    +-----------------------------------+-----------------------------------+
-   | endPattern                        | \\s*\w+.*$\s\*                    |
+   | endPattern                        | \\s\*                             |
    +-----------------------------------+-----------------------------------+
-   | endOffset                         | 1                                 |
+   | endPattern2                       | ~                                 |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 0                                 |
    +-----------------------------------+-----------------------------------+
    | repeat                            | \*                                |
    +-----------------------------------+-----------------------------------+
@@ -66,7 +68,7 @@ lattice
    <templateList>  <template pattern="\s*direct\slattice\svectors\s*reciprocal\slattice\svectors.*" endPattern="~">    <record repeat="1" />    <record>{3F,cc:lattice}.*</record>    <record>{3F,cc:lattice}.*</record>    <record>{3F,cc:lattice}.*</record>    <transform process="pullup" xpath=".//cml:array" repeat="2" />                               
            </template>   
        </templateList>
-   <transform process="delete" xpath="./cml:module" />
+   <transform process="delete" xpath=".//cml:module" />
 
 .. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png

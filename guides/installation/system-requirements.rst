@@ -14,7 +14,7 @@ Software requirements
 ---------------------
 
   -  Linux OS 2.6.24 or greater (64 bit)(Tested on Centos / Fedora / Debian)
-  -  Java JDK 8+   
+  -  Java JDK 8 (greater versions are not supported)   
   -  PostgreSQL 9.1+ database server
   -  gcc package, used to compile INCHI libraries ( *yum install gcc* / *apt-get install gcc*),
 

@@ -20,4 +20,4 @@ QuantumEspresso
    /codes/quantumespresso/eigenvalues-d3e32898
    /codes/quantumespresso/projwfc-d3e33011
    /codes/quantumespresso/frequencies-d3e33230
-   /codes/quantumespresso/qespresso.input-d3e42412
+   /codes/quantumespresso/qespresso.input-d3e42374

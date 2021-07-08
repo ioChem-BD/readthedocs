@@ -232,8 +232,8 @@ Data source: <module cmlx:templateRef='`frequencies`_'>
 .. _environ: ../codes/quantumespresso/environ-d3e32419.html
 .. _`cc:parameter`: ../codes/quantumespresso/environ-d3e32419.html
 .. _parameters: ../codes/quantumespresso/parameters-d3e31641.html
-.. _atoms: ../codes/quantumespresso/qespresso.input-d3e42412.html
-.. _species: ../codes/quantumespresso/qespresso.input-d3e42412.html
+.. _atoms: ../codes/quantumespresso/qespresso.input-d3e42374.html
+.. _species: ../codes/quantumespresso/qespresso.input-d3e42374.html
 .. _lattice: ../codes/quantumespresso/lattice-d3e31822.html
 .. _axes: ../codes/quantumespresso/axes-d3e31931.html
 .. _ldau: ../codes/quantumespresso/ldau-d3e32709.html

@@ -34,4 +34,4 @@ MOLCAS
    /codes/molcas/cchc-d3e24362
    /codes/molcas/atom.expansion-d3e24431
    /codes/molcas/dynamic.loprop-d3e24547
-   /codes/molcas/molcas.input-d3e42150
+   /codes/molcas/molcas.input-d3e42112

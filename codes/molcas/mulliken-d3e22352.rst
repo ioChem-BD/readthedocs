@@ -1,6 +1,13 @@
-.. _mulliken-d3e22352:
-
 mulliken
+=====================================
+
+.. toctree::
+   :maxdepth: 5  
+
+   /codes/molcas/mulliken.header-d3e22361
+   /codes/molcas/mulliken.charges-d3e22411
+   /codes/molcas/mulliken.spin-d3e22582
+
 ========
 
 .. table:: Implementation level
@@ -93,9 +100,8 @@ mulliken
 
 .. code:: xml
 
-   <xi:include href="modules/mulliken/mulliken.header.xml" />
-   <xi:include href="modules/mulliken/mulliken.charges.xml" />
-   <xi:include href="modules/mulliken/mulliken.spin.xml" />
+   <templateList>  <xi:include href="modules/mulliken/mulliken.header.xml" />  <xi:include href="modules/mulliken/mulliken.charges.xml" />  <xi:include href="modules/mulliken/mulliken.spin.xml" />
+       </templateList>
    <transform process="addChild" xpath="." elementName="cml:module" dictRef="mulliken.header" />
    <transform process="addAttribute" xpath=".//cml:module[@dictRef='mulliken.header']" name="cmlx:templateRef" value="mulliken.header" />
    <transform process="addChild" id="root" xpath="./cml:module[@dictRef='mulliken.header' and count(*) = 0]" elementName="cml:scalar" dictRef="m:rootnumber" value="$string((preceding::cml:module[@cmlx:templateRef='caspt2.root'])[last()]//cml:scalar/text())" />

@@ -1,0 +1,99 @@
+.. _loprop-d3e22973:
+
+loprop
+======
+
+.. table:: Implementation level
+
+   +-----------------------------------+-----------------------------------+
+   | Type                              | Status                            |
+   +===================================+===================================+
+   | CML extraction template           | |image0|                          |
+   +-----------------------------------+-----------------------------------+
+   | HTML5 representation              | |image1|                          |
+   +-----------------------------------+-----------------------------------+
+
+.. table:: Template attributes
+
+   +-----------------------------------+-----------------------------------+
+   | Attribute                         | Value                             |
+   +===================================+===================================+
+   | *source*                          | MOLCAS log                        |
+   +-----------------------------------+-----------------------------------+
+   | id                                | loprop                            |
+   +-----------------------------------+-----------------------------------+
+   | name                              | LoProp population analysis        |
+   +-----------------------------------+-----------------------------------+
+   | pattern                           | \\s*LoProp\spopulatio             |
+   |                                   | n\sAnalysis\sfor\sroot\snumber.\* |
+   +-----------------------------------+-----------------------------------+
+   | pattern2                          | \\                                |
+   |                                   | s*LoProp\sCharges\sper\scenter.\* |
+   +-----------------------------------+-----------------------------------+
+   | endPattern                        | \\s*Total.*$\s*$\s{0,10}\S+.\*    |
+   +-----------------------------------+-----------------------------------+
+   | endPattern2                       | \\s*\-\-\s\*                      |
+   +-----------------------------------+-----------------------------------+
+   | endOffset                         | 1                                 |
+   +-----------------------------------+-----------------------------------+
+   | repeat                            | \*                                |
+   +-----------------------------------+-----------------------------------+
+   | xml:base                          | modules/loprop.xml                |
+   +-----------------------------------+-----------------------------------+
+
+**Input.**
+
+::
+
+         LoProp population Analysis for root number: 1
+         -----------------------------------------------
+
+
+         LoProp Charges per center                                                                                               
+
+
+                      N1       N2       O1       O2       C1       C2       C3       C4       H1       H2  
+         Nuclear      7.0000   7.0000   8.0000   8.0000   6.0000   6.0000   6.0000   6.0000   1.0000   1.0000
+         Electronic  -6.7339  -6.7346  -8.5323  -8.5324  -5.8535  -6.1062  -5.8540  -6.1068  -0.8480  -0.8520
+
+         Total        0.2661   0.2654  -0.5323  -0.5324   0.1465  -0.1062   0.1460  -0.1068   0.1520   0.1480
+
+
+                      H3       H4  
+         Nuclear      1.0000   1.0000
+         Electronic  -0.8479  -0.8523
+
+         Total        0.1521   0.1477
+
+         Natural Bond Order Analysis for root number: 1
+       
+
+**Input.**
+
+::
+
+.. warning::
+
+   Current template has input comments defined but it's output is
+   missing, please notify software developers.
+
+**Template definition.**
+
+.. code:: xml
+
+   <template pattern="\s*LoProp\spopulation\sAnalysis\sfor\sroot\snumber.*" endPattern=".*">  <record>\s*LoProp\spopulation\sAnalysis\sfor\sroot\snumber:{I,m:rootnumber}</record>
+       </template>
+   <template pattern="\s*{15,}\S+.*$\s*Nuclear.*" endPattern="\s*Total.*" endOffset="1" repeat="*">  <record>{1_15A,m:label}</record>  <record>\s*Nuclear{1_15F,m:lopropnuclear}</record>  <record>\s*Electronic{1_15F,m:lopropelec}</record>  <record>\s*Total{1_15F,m:loproptotal}</record>        
+       </template>
+   <transform process="pullup" xpath=".//cml:scalar[@dictRef='m:rootnumber']" />
+   <transform process="joinArrays" xpath=".//cml:array[@dictRef='m:label']" />
+   <transform process="joinArrays" xpath=".//cml:array[@dictRef='m:lopropnuclear']" />
+   <transform process="joinArrays" xpath=".//cml:array[@dictRef='m:lopropelec']" />
+   <transform process="joinArrays" xpath=".//cml:array[@dictRef='m:loproptotal']" />
+   <transform process="pullup" xpath=".//cml:scalar" />
+   <transform process="pullup" xpath=".//cml:array" repeat="2" />
+   <transform process="delete" xpath=".//cml:list" />
+   <transform process="delete" xpath=".//cml:module" />
+
+.. |image0| image:: ../../imgs/Total.png
+.. |image1| image:: ../../imgs/Total.png

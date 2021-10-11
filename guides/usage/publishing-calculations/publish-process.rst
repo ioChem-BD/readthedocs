@@ -39,12 +39,6 @@ Once desired projects and calculations are selected, right click on the current 
 
    Calculation selection
 
-A dialog box will appear asking for our account password:
-
-.. figure:: /imgs/CreatePublishCredentials.png
-   :alt: Credential validation
-
-   Credential validation
 
 If an error message appears at this point, please read the FAQ entry about `no publishing community defined`_.
 

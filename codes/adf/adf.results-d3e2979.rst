@@ -24,9 +24,9 @@ adf.results
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -55,7 +55,9 @@ adf.results
    | xml:base                                                                                                                   | adf/results/results.xml                                                                                                    |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Comment.**
+.. container:: formalpara-title
+
+   **Comment**
 
 ::
 
@@ -118,12 +120,14 @@ adf.results
     ***************************************************************************************************    
        
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
    <templateList>  <xi:include href="results/orbital.energies.spin.zora.xml" />  <xi:include href="results/orbital.energies.zora.xml" />  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/multipole/multipole.xml" />  <xi:include href="results/quadrupole.moment.xml" />  <xi:include href="results/s2.xml" />  <xi:include href="results/bonding.energy.xml" />  <xi:include href="results/sfopopulation/sfo.population.xml" />  <xi:include href="results/excitationenergy/excitation.energy.xml" />     
        </templateList>
 
-.. |image0| image:: ../../imgs/Total.png
-.. |image1| image:: ../../imgs/None.png
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/None.png

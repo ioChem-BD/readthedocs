@@ -17,9 +17,9 @@ adf.frequencyanalysis
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -46,7 +46,9 @@ adf.frequencyanalysis
    | xml:base                                                                                                                   | adf/frequencyanalysis/frequencyanalysis.xml                                                                                |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Comment.**
+.. container:: formalpara-title
+
+   **Comment**
 
 ::
 
@@ -116,12 +118,14 @@ adf.frequencyanalysis
     
        
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
    <templateList>  <xi:include href="frequencyanalysis/masses.xml" />  <xi:include href="frequencyanalysis/zeropoint.xml" />  <xi:include href="frequencyanalysis/vibrations.xml" />  <xi:include href="frequencyanalysis/intensities.xml" />  <xi:include href="frequencyanalysis/thermochemistry.xml" />
        </templateList>
 
-.. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

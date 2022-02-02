@@ -8,9 +8,9 @@ orbital.energies.zora
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -39,7 +39,9 @@ orbital.energies.zora
    | xml:base                                                                                                                   | results/orbital.energies.zora.xml                                                                                          |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -87,7 +89,9 @@ orbital.energies.zora
     ================================================== 
        
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -119,7 +123,9 @@ orbital.energies.zora
     ========================================
        
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -134,7 +140,9 @@ orbital.energies.zora
             </module>      
        </comment>
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -149,7 +157,9 @@ orbital.energies.zora
            </module>
        </comment>
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
@@ -172,5 +182,5 @@ orbital.energies.zora
    <transform process="addAttribute" xpath="./cml:list[@dictRef='energies']" name="cmlx:templateRef" value="energies" />
    <transform process="move" xpath=".//cml:array" to=".//cml:list" />
 
-.. |image0| image:: ../../imgs/Total.png
-.. |image1| image:: ../../imgs/None.png
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/None.png

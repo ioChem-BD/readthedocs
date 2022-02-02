@@ -8,9 +8,9 @@ excitation.energy
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -37,7 +37,9 @@ excitation.energy
    | xml:base                                                                                                                   | results/excitationenergy/excitation.energy.xml                                                                             |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -112,7 +114,9 @@ excitation.energy
     Normal termination of EXCITATION program part 
        
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -216,7 +220,9 @@ excitation.energy
     Normal termination of EXCITATION program part  
        
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -260,7 +266,9 @@ excitation.energy
            </module>
        </comment>
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -293,7 +301,9 @@ excitation.energy
            </module> 
        </comment>
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
@@ -314,5 +324,5 @@ excitation.energy
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />
 
-.. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

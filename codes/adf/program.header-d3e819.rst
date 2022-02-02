@@ -8,9 +8,9 @@ program.header
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -37,7 +37,9 @@ program.header
    | xml:base                                                                                                                   | program.header.xml                                                                                                         |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -69,7 +71,9 @@ program.header
     DIRAC 2007.01  RunTime: Oct16-2008 12:08:11    
            
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -104,7 +108,9 @@ program.header
     DIRAC 2014  RunTime: Mar01-2016 19:27:34  Nodes: 1  Procs: 1        
            
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -140,7 +146,9 @@ program.header
            
            
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -156,7 +164,9 @@ program.header
           </module>
        </comment>
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -171,7 +181,9 @@ program.header
             </module>
        </comment>
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -187,7 +199,9 @@ program.header
            </module> 
        </comment>
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
@@ -212,5 +226,5 @@ program.header
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />
 
-.. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

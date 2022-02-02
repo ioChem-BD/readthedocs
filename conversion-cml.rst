@@ -6,7 +6,9 @@ From chemical codes to CML
    :maxdepth: 5
 
    /codes/adf
+   /codes/amber
    /codes/gaussian
+   /codes/gromacs
    /codes/gronor
    /codes/molcas
    /codes/mopac

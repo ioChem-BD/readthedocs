@@ -9,9 +9,13 @@ Per file type
 -------------
 
 - `loadadf`_
+- `loadamber`_
 - `loadgauss`_
+- `loadgromacs`_
+- `loadgronor`_
 - `loadmolcas`_
 - `loadmopac`_
+- `loadorca`_
 - `loadqespresso`_
 - `loadturbo`_
 - `loadvasp`_
@@ -22,13 +26,13 @@ Per file type
 loadadf
 ~~~~~~~
 
-Loads an ADF calculation into the the Create module.
+Loads an ADF calculation into the Create module.
 
 ============= ======================================================================================================
 Parameters    Description
 ============= ======================================================================================================
--i *filename* Input file, (optional), if not defined will use script defined name
--o *filename* Output file (optional), if not defined will use script defined name
+-i *filename* Input file, if not defined will use script defined name
+-o *filename* Output file, if not defined will use script defined name
 -a            Append additional file (optional)
 -n *name*     Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*     Description of the calculation in the data base (optional), if not defined will use parent folder name
@@ -74,12 +78,170 @@ Upload calculation and automatically build its parent folder. calculation name a
 
        $ loadadf -i irc_ts2_09.in -o irc_ts2_09.out --auto
 
+loadamber
+~~~~~~~~~~~
+
+Loads a Amber calculation into the Create module.
+
+============== ======================================================================================================
+Parameters     Description
+============== ======================================================================================================
+-i *filename*  Input file, if not defined will use script defined name
+-o *filename*  Output file, if not defined will use script defined name
+-p *filename*  Parameter/topology file specification (.prmtop), if not defined will use script defined name
+-r *filename*  NetCDF restart file (.ncrst), if not defined will use script defined name
+-t *filename*  NetCDF trajectory file (.nc), if not defined will use script defined name
+-a             Append additional file (optional)
+-n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+============== ======================================================================================================
+
+If parameters **-i**, **-o**, **-p**, **-r** and/or **-t** are not set, this script will look for *input.in*, *output.out*, *topology.prmtop*, *restartnc.ncrst* and *trajectory.nc* files. 
+If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadamber* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.in"
+       OUTPUT_DEFAULT_FILENAME="output.out"
+       TOPOLOGY_DEFAULT_FILENAME="topology.prmtop"
+       RESTART_DEFAULT_FILENAME="restartnc.ncrst"
+       TRAJECTORY_DEFAUL_FILENAME="trajectory.nc"
+       
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+This command will set upload calculation name and description equals to parent folder and upload all files that match by name.
+
+.. code:: bash
+   
+       $ loadamber
+
+This command will upload all matching files in directory, set calculation name as "Au-CoO-H2O" and description as "Sample upload".
+
+.. code:: bash
+   
+       $ loadamber -n Au-CoO-H2O -d "Sample upload"
+
+This command will behave the same as previous one but will upload different files rather than default.
+
+.. code:: bash
+   
+       $ loadamber -n Au-CoO-H2O -d "Sample upload" -i input2.in -o output2.log -p Au-CoO-H2O.prmtop -r Au-CoO-H2O.ncrst -t Au-CoO-H2O.nc
+
+
 loadgauss
 ~~~~~~~~~
 
 Same parameters and functionalities than the `loadadf`_ script.
   
-.. Attention:: Please always use **#p** flag in your Gaussian calculations. Link information is required by ioChem-BD to properly capture Gaussian sections information.
+.. important:: It is advised to use **#p** flag in Gaussian calculations. Link information helps ioChem-BD to capture some more extra information such as basis sets used.
+
+loadgromacs
+~~~~~~~~~~~
+
+Loads a GROMACS calculation into the Create module.
+
+============== ======================================================================================================
+Parameters     Description
+============== ======================================================================================================
+-i *filename*  Molecular dynamics parameters (.mdp) as the Input file, if not defined will use script defined name
+-o *filename*  Logfile (.log) as the Output file, if not defined will use script defined name
+-oc *filename* Molecular structure in Gromos87 format. (.gro), if not defined will use script defined name
+-t *filename*  Trajectory file (.xtc), if not defined will use script defined name
+-a             Append additional file (optional)
+-n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+============== ======================================================================================================
+
+If parameters **-i**, **-o**, **-oc** and/or **-t** are not set, this script will look for *input.mdp*, *output.log*, *geometry.gro* and *trajectory.xtc* files. If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadgromacs* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.mdp"
+       OUTPUT_DEFAULT_FILENAME="output.log"
+       GEOMETRY_DEFAULT_FILENAME="geometry.gro"
+       TRAJECTORY_DEFAULT_FILENAME="trajectory.xtc"
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+Upload calculation *LIN24_LI192* using required files
+
+.. code:: bash
+ 
+       $ loadgromacs -i npt.mdp -o LIN24_LI192.log -oc LIN24_LI192.gro -t  LIN24_LI192.xtc -n "LIN24_LI192" -d "LIN24 LI192 SOL25208 40000ps NPT 300K calculation"
+
+Upload same calculation but name and description are picked from the parent folder name.
+
+.. code:: bash
+
+       $ pwd
+       /home/user/Desktop/LIN24_LI192
+       $ loadgromacs -i npt.mdp -o LIN24_LI192.log -oc LIN24_LI192.gro -t  LIN24_LI192.xtc
+
+
+Upload calculation and automatically build its parent folder. calculation name and description will be same as parent folder
+
+.. code:: bash
+
+       $ loadgromacs -i npt.mdp -o LIN24_LI192.log -oc LIN24_LI192.gro -t  LIN24_LI192.xtc --auto
+
+
+loadgronor
+~~~~~~~~~~
+
+Loads an GronOR calculation into the Create module.
+
+============= ======================================================================================================
+Parameters    Description
+============= ======================================================================================================
+-i *filename* Input file (optional)
+-o *filename* Output file in CML format, if not defined will use script defined name
+-a            Append additional file (optional)
+-n *name*     Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*     Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto         Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+============= ======================================================================================================
+
+If parameter **-o** are not set, this script will look for *output.out* files. If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadgronor* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       OUTPUT_DEFAULT_FILENAME="output.cml"
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+This command will set upload calculation name and description equals to parent folder and upload all files that match by name.
+
+.. code:: bash
+
+       $ loadgronor
+
+
+This command will upload all matching files in directory, set calculation name as "Sc2C82" and description as "Sample upload".
+
+.. code:: bash
+  
+       $ loadgronor -n Sc2C82 -d "Sample upload"
+      
+     
+This command will behave the same as previous one but will upload different files rather than default.
+
+.. code:: bash
+
+       $ loadgronor -n Sc2C82 -d "Sample upload" -i input2.in -o dimmer.cml
 
 loadmolcas
 ~~~~~~~~~~
@@ -96,7 +258,72 @@ Same parameters and functionalities than the `loadadf`_ script.
 loadqespresso
 ~~~~~~~~~~~~~
 
-Same parameters and functionalities than the `loadadf`_ script.
+Loads a QuantumESPRESSO calculation into the Create module.
+
+============== =======================================================================================================
+Parameters     Description
+============== =======================================================================================================
+-i *filename*  Input file, if not defined will use script defined name.
+-o *filename*  Output file, if not defined will use script defined name.
+-as *filename* Absorption spectra data file, see below for further details (optional).
+-a             Append additional file (optional).
+-n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name.
+-d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name.
+–auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+============== =======================================================================================================
+
+
+If parameters **-i** and **-o** are not set, this script will look for *input.in* and *output.out* files. If any of that files don't exist, the upload process will be aborted. If you wish to use another naming convention just edit the *loadqespresso* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.in"
+       OUTPUT_DEFAULT_FILENAME="output.out"
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Absorption spectra
+''''''''''''''''''
+
+ioChem-BD can process and display absorption spectrum data coming from time-dependent density functional theory calculations (TDDFT). 
+
+The required file is generated by the combination of the following QuantumEspresso tools:
+
+  `pw.x`_ -> `turbo_lanczos.x`_ -> `turbo_spectrum.x`_
+    
+  SCF -> TDDF calculation -> Spectrum creation
+
+Once the spectrum data file is generated, it can be uploaded along with the calculation using the **-as** parameter.
+ 
+Examples
+'''''''' 
+
+Upload calculation *a-pw12* using *a-pw12.opt.in* and *a-pw12.opt.in* files
+
+.. code:: bash
+
+       $ loadqespresso -i a-pw12.opt.in -o a-pw12.opt.out -n "a-pw12" -d "Optimization a-pw12"
+
+Upload calculation named *bencene* using *pw_scf.in* and *pw_scf.out* files; name and description are picked from the parent folder name.
+
+.. code:: bash
+
+       $ pwd
+       /home/user/Desktop/bencene
+       $ loadqespresso -i pw_scf.in -o pw_scf.out
+
+Upload calculation named *a-pw12.opt* and attach spectra file *plot_chi.dat*
+
+.. code:: bash
+
+       $ loadqespresso -i pw_scf.in -o pw_scf.out -as plot_chi.dat -n a-pw12.opt -d "Bencene calculation"
+
+Upload calculation and automatically build its parent folder. calculation name and description will be same as parent folder
+
+.. code:: bash
+
+       $ loadqespresso -i irc_ts2_09.in -o irc_ts2_09.out --auto
 
 
 
@@ -277,7 +504,7 @@ Example of a DIM calculation upload: Upload Dimmer, attach KPOINTS and DOSCAR in
 loadorca 
 ~~~~~~~~
 
-Loads an ORCA calculation into the the Create module, it can be used standalone as other shell client commands or it can be attached to a job script to be automatically uploaded after the calculation has finished.
+Loads an ORCA calculation into the Create module, it can be used standalone as other shell client commands or it can be attached to a job script to be automatically uploaded after the calculation has finished.
 
 ============= ==================================================================================================================================================================================
 Parameters    Description
@@ -340,6 +567,8 @@ Upload calculation and automatically build its parent folder, calculation name a
 .. code:: bash
 
        $ loadorca -i ete.inp -o ete.out --auto
+
+
 
 –auto parameter 
 ---------------
@@ -413,6 +642,34 @@ Generated projects path will generate also *mnt_cluster* project, because **-aut
               fi
           done
       fi
+
+
+
+
+Per usage
+---------
+
+- `getproject`_
+
+
+getproject
+~~~~~~~~~~
+
+This script is an example of how the shell client tools can be used in order to retrieve, query or manipulate content that is inside Create module.
+
+It retrieves a complete project content using the shell client commands. Project names will be prepended with *p_* and calculations with *c_* to ease its grouping and reading.
+
+Must be run using the *source* command to be effective. The project full path must be provided as parameter, user must be the owner of that project or at least have read rights on it.
+
+.. code:: bash
+
+       $  source getproject /db/username/hexenol
+
+
+To execute it outside the shell client folder, append the path to the shell client to your *PATH* environment variable.
+
+
+
 
 Shell upload automation 
 -----------------------
@@ -555,9 +812,13 @@ Restrictions:
 
 
 .. _loadadf: #loadadf
+.. _loadamber: #loadamber
 .. _loadgauss: #loadgauss
+.. _loadgromacs: #loadgromacs
+.. _loadgronor: #loadgronor
 .. _loadmolcas: #loadmolcas
 .. _loadmopac: #loadmopac
+.. _loadorca: #loadorca
 .. _loadqespresso: #loadqespresso
 .. _loadturbo: #loadturbo
 .. _loadvasp: #loadvasp
@@ -566,6 +827,7 @@ Restrictions:
 .. _downloadable: ../../../usage/uploading-content-to-create/using-shell-client.html#shell-client
 .. _-auto: #auto-parameter
 .. _loadadf: #loadadf
+.. _getproject: #getproject
 .. _Uploading NEB/DIM calculations section: #neb
 .. _1: http://theory.cm.utexas.edu/vtsttools/neb.html
 .. _2: http://theory.cm.utexas.edu/vtsttools/dimer.html
@@ -573,3 +835,7 @@ Restrictions:
 .. _cpro: ../../../usage/uploading-content-to-create/shell-commands.html#cpro
 .. _cdpro: ../../../usage/uploading-content-to-create/shell-commands.html#cdpro
 .. _pwdpro: ../../../usage/uploading-content-to-create/shell-commands.html#pwdpro
+.. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
+.. _turbo_lanczos.x: https://www.quantum-espresso.org/Doc/INPUT_Lanczos.html 
+.. _turbo_spectrum.x: https://www.quantum-espresso.org/Doc/INPUT_Spectrum.html
+

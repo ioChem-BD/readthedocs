@@ -15,20 +15,16 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | `header template`_                                                                                                   | Mopac 2016 - 16.041 64BITS                                                                                                                                    |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | C 4 H 6 O 4                                                                                                                                                   |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Calculation type                                                                                                      | Custom logic                                                                                                         | Geometry optimization                                                                                                                                         |
+   | Calculation type                                                                                                      | Custom logic  [1]_                                                                                                   | Geometry optimization                                                                                                                                         |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method                                                                                                                | Custom logic                                                                                                         | RASSCF RASPT2                                                                                                                                                 |
+   | Method                                                                                                                | Custom logic  [2]_                                                                                                   | RASSCF RASPT2                                                                                                                                                 |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
-
- [1]_
-
- [2]_
+.. image:: /imgs/MOPAC_header.png
 
 Molecular Info
 --------------
@@ -48,7 +44,7 @@ Molecular Info
    | Multiplicity                                                                                                                       | Readed from input file section `input.file`_ module with SINGLET, DOUBLE, TRIPLET ... keywords.                                    | 3                                                                                                                                  |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image1|
+.. image:: /imgs/MOPAC_molecularinfo.png
 
 Atomic coordinates
 ------------------
@@ -59,7 +55,7 @@ For every atom, we will output it's serial number, atom type, coordinates in ang
 
 Initially its readed from `geometry module`_
 
-|image2|
+.. image:: /imgs/MOPAC_geometry.png
 
 Modules
 -------
@@ -71,14 +67,14 @@ This module will display JSpecView + JSmol plugins (using javascript libraries) 
 
 Data source: <module cmlx:templateRef='`vibrations`_'>
 
-|image3|
+.. image:: /imgs/ORCA_module_irspectrum.png
 
 Final results - energies
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`energies`_'>
 
-|image4|
+.. image:: /imgs/MOPAC_module_finalresults.png
 
 .. [1]
    string ``molcas:getCalcType`` boolean ``isRestrictedOpt`` boolean ``isOptimization`` boolean ``isTS`` boolean ``isIncomplete``
@@ -144,16 +140,10 @@ Data source: <module cmlx:templateRef='`energies`_'>
               </xsl:for-each>
           </xsl:for-each>
                               
-                              
+                                                  
 
-.. _header template: ../codes/mopac/header-d3e24978.html
-.. _input.file: ../codes/mopac/input.file-d3e25025.html
-.. _geometry module: ../codes/mopac/geometry-d3e25230.html
-.. _vibrations: ../codes/mopac/vibrations-d3e24928.html
-.. _energies: ../codes/mopac/energies-d3e25366.html
-
-.. |image0| image:: /imgs/MOPAC_header.png
-.. |image1| image:: /imgs/MOPAC_molecularinfo.png
-.. |image2| image:: /imgs/MOPAC_geometry.png
-.. |image3| image:: /imgs/ORCA_module_irspectrum.png
-.. |image4| image:: /imgs/MOPAC_module_finalresults.png
+.. _header template: ../codes/mopac/header-d3e28949.html
+.. _input.file: ../codes/mopac/input.file-d3e28996.html
+.. _geometry module: ../codes/mopac/geometry-d3e29201.html
+.. _vibrations: ../codes/mopac/vibrations-d3e28899.html
+.. _energies: ../codes/mopac/energies-d3e29337.html

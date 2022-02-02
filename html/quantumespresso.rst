@@ -15,15 +15,15 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | `header template`_                                                                                                   | QuantumEspresso 6.1                                                                                                                                           |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | Bi 32 O 128 V 32                                                                                                                                              |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Calculation type                                                                                                      | Custom logic                                                                                                         | Geometry optimization                                                                                                                                         |
+   | Calculation type                                                                                                      | Custom logic  [1]_                                                                                                   | Geometry optimization                                                                                                                                         |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Method                                                                                                                | Method used (fixed)                                                                                                  | DFT                                                                                                                                                           |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Functional                                                                                                            | Custom logic                                                                                                         | Extracted from the initial section in `parameters template`_                                                                                                  |
+   | Functional                                                                                                            | Custom logic  [2]_                                                                                                   | Extracted from the initial section in `parameters template`_                                                                                                  |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: QuantumEspresso- General Info - Additional fields (if they appear in `environ`_ module)
@@ -36,11 +36,7 @@ General Info
    | Pressure                                                                                                                           | <scalar dictRef="`cc:parameter`_">external pressure in input</scalar>                                                              | -3454.231433506 atm                                                                                                                |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
-
- [1]_
-
- [2]_
+.. image:: /imgs/QUANTUMESPRESSO_header.png
 
 Settings
 --------
@@ -75,7 +71,7 @@ Most relevant calculation input parameters. All information fields come from <mo
 
 -  ...
 
-|image1|
+.. image:: /imgs/QUANTUMESPRESSO_settings.png
 
 Atoms and Basis Sets
 --------------------
@@ -86,7 +82,7 @@ Geometry is readed from input file using :<list cmlx:templateRef="`atoms`_">, <l
 
 For every atom, we will output it's serial number, atom type, cartesian and fractional coordinates (in angstroms) , and <list cmlx:templateRef="`species`_">.
 
-|image2|
+.. image:: /imgs/QUANTUMESPRESSO_geometry.png
 
 Molecular Info
 --------------
@@ -98,21 +94,21 @@ LDA+U calculation
 
 Data source: <module cmlx:templateRef='`ldau`_'>
 
-|image3|
+.. image:: /imgs/QUANTUMESPRESSO_info_ldau.png
 
 Kpoint list
 ~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`kpoints`_'>
 
-|image4|
+.. image:: /imgs/QUANTUMESPRESSO_kpoints.png
 
 Point group
 ~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`point.group`_'>
 
-|image5|
+.. image:: /imgs/QUANTUMESPRESSO_point_group.png
 
 Modules
 -------
@@ -122,42 +118,51 @@ Forces
 
 Data source: <module cmlx:templateRef='`forces`_'>
 
-|image6|
+.. image:: /imgs/QUANTUMESPRESSO_module_forces.png
 
 Energies
 ~~~~~~~~
 
 Data source: <module cmlx:templateRef='`energies`_'>
 
-|image7|
+.. image:: /imgs/QUANTUMESPRESSO_module_energies.png
+
+.. image:: /imgs/QUANTUMESPRESSO_module_energies_graph.png
 
 Magnetic moment per site
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`magnetic`_'>
 
-|image8|
+.. image:: /imgs/QUANTUMESPRESSO_module_magnetic.png
 
 Eigenvalues
 ~~~~~~~~~~~
 
 Data source <module cmlx:templateRef='`eigenvalues`_'>
 
-|image9|
+.. image:: /imgs/QUANTUMESPRESSO_module_eigen.png
 
 Projects wavefunctions onto orthogonalized atomic wavefunctions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`projwfc`_'>
 
-|image10|
+.. image:: /imgs/QUANTUMESPRESSO_module_projwfc.png
 
 Frequencies
 ~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`frequencies`_'>
 
-|image11|
+.. image:: /imgs/QUANTUMESPRESSO_module_frequencies.png
+
+Absorption spectra
+~~~~~~~~~~~~~~~~~~
+
+Data source: <module id='`qespresso.absorptionspec`_'>
+
+.. image:: /imgs/QUANTUMESPRESSO_module_absorption.png
 
 .. [1]
    string ``qex:getCalcType`` string ``modName`` string ``calculation``
@@ -214,47 +219,39 @@ Data source: <module cmlx:templateRef='`frequencies`_'>
                   </xsl:otherwise>            
               </xsl:choose>
                               
-                              
+                                                  
 
 .. [2]
    .. code:: xml
 
                                   
-          $functionals  <module cmlx:templateRef="header" >
-          $calculation   Calculation type defined on <module cmlx:templateRef="qespresso.input" > , CONTROL section. 
-                         
+          $functionals  Exchange-correlation parameter from <module cmlx:templateRef="parameter" >
+          $functionalsFromFilenames  Functionals readed from qex:pseudofile scalar on <module cmlx:templateRef="pseudopotential" >
+                                                      
+                     
+          <xsl:param name="functionals"/>
+          <xsl:param name="functionalsFromFilenames"/>
 
+          <xsl:value-of select="if(exists($functionals)) then $functionals else $functionalsFromFilenames"/>
                               
-                              
+                                                  
 
-.. _header template: ../codes/quantumespresso/header-d3e31655.html
-.. _parameters template: ../codes/quantumespresso/parameters-d3e31718.html
-.. _environ: ../codes/quantumespresso/environ-d3e32496.html
-.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e32496.html
-.. _parameters: ../codes/quantumespresso/parameters-d3e31718.html
-.. _atoms: ../codes/quantumespresso/qespresso.input-d3e42451.html
-.. _species: ../codes/quantumespresso/qespresso.input-d3e42451.html
-.. _lattice: ../codes/quantumespresso/lattice-d3e31899.html
-.. _axes: ../codes/quantumespresso/axes-d3e32008.html
-.. _ldau: ../codes/quantumespresso/ldau-d3e32786.html
-.. _kpoints: ../codes/quantumespresso/kpoints-d3e32831.html
-.. _point.group: ../codes/quantumespresso/point.group-d3e32473.html
-.. _forces: ../codes/quantumespresso/forces-d3e32884.html
-.. _energies: ../codes/quantumespresso/energies-d3e32676.html
-.. _magnetic: ../codes/quantumespresso/magnetic-d3e32940.html
-.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e32975.html
-.. _projwfc: ../codes/quantumespresso/projwfc-d3e33088.html
-.. _frequencies: ../codes/quantumespresso/frequencies-d3e33307.html
-
-.. |image0| image:: /imgs/QUANTUMESPRESSO_header.png
-.. |image1| image:: /imgs/QUANTUMESPRESSO_settings.png
-.. |image2| image:: /imgs/QUANTUMESPRESSO_geometry.png
-.. |image3| image:: /imgs/QUANTUMESPRESSO_info_ldau.png
-.. |image4| image:: /imgs/QUANTUMESPRESSO_kpoints.png
-.. |image5| image:: /imgs/QUANTUMESPRESSO_point_group.png
-.. |image6| image:: /imgs/QUANTUMESPRESSO_module_forces.png
-.. |image7| image:: /imgs/QUANTUMESPRESSO_module_energies.png
-.. |image8| image:: /imgs/QUANTUMESPRESSO_module_magnetic.png
-.. |image9| image:: /imgs/QUANTUMESPRESSO_module_eigen.png
-.. |image10| image:: /imgs/QUANTUMESPRESSO_module_projwfc.png
-.. |image11| image:: /imgs/QUANTUMESPRESSO_module_frequencies.png
+.. _header template: ../codes/quantumespresso/header-d3e35627.html
+.. _parameters template: ../codes/quantumespresso/parameters-d3e35690.html
+.. _environ: ../codes/quantumespresso/environ-d3e36526.html
+.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e36526.html
+.. _parameters: ../codes/quantumespresso/parameters-d3e35690.html
+.. _atoms: ../codes/quantumespresso/qespresso.input-d3e51126.html
+.. _species: ../codes/quantumespresso/qespresso.input-d3e51126.html
+.. _lattice: ../codes/quantumespresso/lattice-d3e35871.html
+.. _axes: ../codes/quantumespresso/axes-d3e35980.html
+.. _ldau: ../codes/quantumespresso/ldau-d3e36816.html
+.. _kpoints: ../codes/quantumespresso/kpoints-d3e36861.html
+.. _point.group: ../codes/quantumespresso/point.group-d3e36503.html
+.. _forces: ../codes/quantumespresso/forces-d3e36941.html
+.. _energies: ../codes/quantumespresso/energies-d3e36706.html
+.. _magnetic: ../codes/quantumespresso/magnetic-d3e36997.html
+.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e37032.html
+.. _projwfc: ../codes/quantumespresso/projwfc-d3e37145.html
+.. _frequencies: ../codes/quantumespresso/frequencies-d3e37364.html
+.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e52128.html

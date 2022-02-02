@@ -8,9 +8,9 @@ molecular.orbitals
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -35,7 +35,9 @@ molecular.orbitals
    | xml:base                                                                                                                   | sfopopulation/molecular.orbitals.xml                                                                                       |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -84,7 +86,9 @@ molecular.orbitals
        
        
 
-**Input.**
+.. container:: formalpara-title
+
+   **Input**
 
 ::
 
@@ -156,7 +160,9 @@ molecular.orbitals
 
        
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -217,7 +223,9 @@ molecular.orbitals
            </module>
        </comment>
 
-**Output text.**
+.. container:: formalpara-title
+
+   **Output text**
 
 .. code:: xml
 
@@ -278,7 +286,9 @@ molecular.orbitals
            </module>
        </comment>
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
@@ -299,5 +309,5 @@ molecular.orbitals
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />
    <transform process="delete" xpath=".//cml:module[count(*)=0]" />
 
-.. |image0| image:: ../../imgs/Total.png
 .. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

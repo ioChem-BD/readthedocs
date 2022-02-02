@@ -41,7 +41,10 @@ Command                            Description
 `loadcalc`_                        Load calculation into repository
 Calculation type specific commands 
 `loadadf`_                         Load ADF calculation
+`loadamber`_                       Load Amber calculation
 `loadgauss`_                       Load Gaussian calculation
+`loadgromacs`_                     Load GROMACS calculation
+`loadgronor`_                      Load GronOR calculation
 `loadmolcas`_                      Load Molcas calculation
 `loadmopac`_                       Load Mopac calculation
 `loadorca`_                        Load Orca calculation
@@ -293,13 +296,13 @@ viewcalc
 
 This comands displays the most relevant information about a calculation and retrieves its files.
 
-=========== ========================================================================================
-Parameters  Description
-=========== ========================================================================================
--n *path*   Relative or absolute project path (mandatory)
--f          Download also calculation files. It is mandatory to set also -dcp parameter. (optional)
--dcp *path* Full path where to store the files. It is mandatory to set also -f parameter. (optional)
-=========== ========================================================================================
+================ ====================================================================================================
+Parameters       Description
+================ ====================================================================================================
+-n *path*        Relative or absolute project path (mandatory)
+-f *[filename]*  Download single calculation file, all if filename not specified. Requires -dcp parameter. (optional)
+-dcp *path*      Full path where to store the files. It is mandatory to set also -f parameter. (optional)
+================ ====================================================================================================
 
 
 Examples:
@@ -309,8 +312,8 @@ Examples:
 
     $ viewcalc -n calc1                      # Display calculation on current project with name calc1
     $ viewcalc -n /db/user1/project/calc1    # Display calculation providing is fullpath
+    $ viewcalc -n calc1 -f output.cml -dcp /home/user/tmp/calc1  # Display calculation information and store output.cml file on the provided folder
     $ viewcalc -n calc1 -f -dcp /home/user/tmp/calc1  # Display calculation information and store its files on the provided folder
-
 
 |
 
@@ -432,7 +435,10 @@ To ease the usage of this command we have developed a group of helper Linux scri
 Script                                                                                                  Function
 ======================================================================================================= ==============================================================================
 `loadadf`_                                                                                              Upload **ADF** calculation
+`loadamber`_                                                                                            Upload **Amber** calculation
 `loadgauss`_                                                                                            Upload **Gaussian** calculation
+`loadgromacs`_                                                                                          Upload **GROMACS** calculation
+`loadgronor`_                                                                                           Upload **GronOR** calculation
 `loadmolcas`_                                                                                           Upload **Molcas** calculation
 `loadmopac`_                                                                                            Upload **Mopac** calculation
 `loadorca`_                                                                                             Upload **Orca** calculation
@@ -456,7 +462,10 @@ Script                                                                          
 .. _dcalc: #dcalc
 .. _loadcalc: #loadcalc
 .. _loadadf:  ./using-shell-client/shell-automated-scripts.html#loadadf
+.. _loadamber:  ./using-shell-client/shell-automated-scripts.html#loadamber
 .. _loadgauss:  ./using-shell-client/shell-automated-scripts.html#loadgauss
+.. _loadgromacs:  ./using-shell-client/shell-automated-scripts.html#loadgromacs
+.. _loadgronor:  ./using-shell-client/shell-automated-scripts.html#loadgronor
 .. _loadmolcas:  ./using-shell-client/shell-automated-scripts.html#loadmolcas
 .. _loadmopac:  ./using-shell-client/shell-automated-scripts.html#loadmopac
 .. _loadorca:  ./using-shell-client/shell-automated-scripts.html#loadorca

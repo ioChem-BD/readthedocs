@@ -15,7 +15,7 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | `program.header template`_                                                                                           | ADF 2007                                                                                                                                                      |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | H 1 O 40 P 1 Ti 1 W 11                                                                                                                                        |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -34,7 +34,7 @@ General Info
    | Pressure                                                                                                                           | <scalar dictRef="`cc:press`_">                                                                                                     | 1.0 atm                                                                                                                            |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
+.. image:: /imgs/ADF_header.png
 
 Atoms and Basis Sets
 --------------------
@@ -65,7 +65,7 @@ If there are multiple geometries we'll capture them acording with the following 
    | <module cmlx:templateRef="`geometry`_">                                                                                                                                                               | Single point initial geometry                                                                                                                                                                         |
    +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|image1|
+.. image:: /imgs/ADF_geometry.png
 
 Molecular Info
 --------------
@@ -86,7 +86,7 @@ This section captures molecule additional information not captured on previous s
    | Solvation                                                                                                                          | <module cmlx:templateRef="`solvation`_">                                                                                           | Solvation parameters                                                                                                               |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image2|
+.. image:: /imgs/ADF_molecularinfo.png
 
 Modules
 -------
@@ -96,21 +96,21 @@ Bonding energy
 
 Data source: <module cmlx:templateRef='`bonding.energy`_'>
 
-|image3|
+.. image:: /imgs/ADF_module_bondingenergies.png
 
 Fit test
 ~~~~~~~~
 
 Data source: <module cmlx:templateRef='`fit.test`_'>
 
-|image4|
+.. image:: /imgs/ADF_module_fittest.png
 
 MOs / SFO gross populations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`molecular-orbitals`_'>
 
-|image5|
+.. image:: /imgs/ADF_module_molecularorbitals.png
 
 MOs Energies
 ~~~~~~~~~~~~
@@ -119,18 +119,18 @@ Data source: <module cmlx:templateRef='`orbital.energies`_'>
 
 Data source: <module cmlx:templateRef='`orbital.energies.spin`_'>
 
-|image6|
+.. image:: /imgs/ADF_module_orbitalenergies.png
 
 Data source: <module cmlx:templateRef='`orbital.energies.spin`_'>
 
-|image7|
+.. image:: /imgs/ADF_module_orbitalenergiesspin.png
 
 Mulliken Atomic Charges
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source <module cmlx:templateRef='`mulliken`_'>
 
-|image8|
+.. image:: /imgs/ADF_module_mullikenatomiccharges.png
 
 Multipole Derived Atomic Charges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -141,32 +141,32 @@ Data source: <module cmlx:templateRef='`atomic.charges.spin`_'>
 
 Data source: <module cmlx:templateRef='`spin.density`_'>
 
-|image9|
+.. image:: /imgs/ADF_module_multipolederivedatomiccharges.png
 
-|image10|
+.. image:: /imgs/ADF_module_multipolederivedatomiccharges2.png
 
-|image11|
+.. image:: /imgs/ADF_module_multipolederivedatomiccharges3.png
 
 Quadrupole Moment
 ~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`quadrupole.moment`_'>
 
-|image12|
+.. image:: /imgs/ADF_module_quadrupolemoment.png
 
 S**2
 ~~~~
 
 Data source: <module cmlx:templateRef="`s2`_">
 
-|image13|
+.. image:: /imgs/ADF_module_s2.png
 
 Vibrational Frequencies and Intensities
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`intensities`_'>
 
-|image14|
+.. image:: /imgs/ADF_module_intensities.png
 
 IR spectrum
 ~~~~~~~~~~~
@@ -175,7 +175,7 @@ Data source: <module cmlx:templateRef='`vibrations`_'>
 
 This module will display JSpecView + JSmol plugins (using javascript libraries) working together to represent molecule IR spectrum.
 
-|image15|
+.. image:: /imgs/ADF_module_frequencies.png
 
 Zero Point Energy
 ~~~~~~~~~~~~~~~~~
@@ -184,42 +184,42 @@ Data source:
 
 -  <module cmlx:templateRef="zeropoint"><scalar dictRef="`cc:zeropoint`_">
 
-|image16|
+.. image:: /imgs/ADF_module_zeropointenergy.png
 
 Thermochemistry
 ~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`thermochemistry`_'>
 
-|image17|
+.. image:: /imgs/ADF_module_thermochemistry.png
 
 Final Excitation Energies
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`excitation.energy`_'>
 
-|image18|
+.. image:: /imgs/ADF_module_finalexcitationenergies.png
 
 NMR Shielding Tensors
 ~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`nmr`_'>
 
-|image19|
+.. image:: /imgs/ADF_module_nmr.png
 
 Timing
 ~~~~~~
 
 Data source: <module cmlx:templateRef='`timing`_'>
 
-|image20|
+.. image:: /imgs/ADF_module_timing.png
 
 Input file
 ~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`input.file`_'>
 
-|image21|
+.. image:: /imgs/ADF_module_inputfile.png
 
 .. [1]
    string ``adf:getCalcType`` string ``runtype`` boolean ``hasVibrations`` boolean ``isMininum`` boolean ``isQuild`` boolean ``isNMR``
@@ -316,26 +316,3 @@ Data source: <module cmlx:templateRef='`input.file`_'>
 .. _nmr: ../codes/adf/nmr-d3e21.html
 .. _timing: ../codes/adf/timing-d3e5279.html
 .. _input.file: ../codes/adf/input.file-d3e6642.html
-
-.. |image0| image:: /imgs/ADF_header.png
-.. |image1| image:: /imgs/ADF_geometry.png
-.. |image2| image:: /imgs/ADF_molecularinfo.png
-.. |image3| image:: /imgs/ADF_module_bondingenergies.png
-.. |image4| image:: /imgs/ADF_module_fittest.png
-.. |image5| image:: /imgs/ADF_module_molecularorbitals.png
-.. |image6| image:: /imgs/ADF_module_orbitalenergies.png
-.. |image7| image:: /imgs/ADF_module_orbitalenergiesspin.png
-.. |image8| image:: /imgs/ADF_module_mullikenatomiccharges.png
-.. |image9| image:: /imgs/ADF_module_multipolederivedatomiccharges.png
-.. |image10| image:: /imgs/ADF_module_multipolederivedatomiccharges2.png
-.. |image11| image:: /imgs/ADF_module_multipolederivedatomiccharges3.png
-.. |image12| image:: /imgs/ADF_module_quadrupolemoment.png
-.. |image13| image:: /imgs/ADF_module_s2.png
-.. |image14| image:: /imgs/ADF_module_intensities.png
-.. |image15| image:: /imgs/ADF_module_frequencies.png
-.. |image16| image:: /imgs/ADF_module_zeropointenergy.png
-.. |image17| image:: /imgs/ADF_module_thermochemistry.png
-.. |image18| image:: /imgs/ADF_module_finalexcitationenergies.png
-.. |image19| image:: /imgs/ADF_module_nmr.png
-.. |image20| image:: /imgs/ADF_module_timing.png
-.. |image21| image:: /imgs/ADF_module_inputfile.png

@@ -20,7 +20,7 @@ webpage. Here are some useful hints:
    a line of text of such section in WebHelp Search field (on search
    tab).
 
-   |image0|
+   .. image:: /imgs/searchTab.png
 
    We must avoid capturing numerical values because our search will fail
    to find matches, just use alphabetic and symbol characters, p.ex.:
@@ -45,16 +45,16 @@ webpage. Here are some useful hints:
       On top of this template definition there must be a resume table
       that defines it's implementation level :
 
-      |image1|
+      .. image:: /imgs/implementationLevel.png
 
       This value will vary depending on current template implementation
       status:
 
-      -  |image2|\ All fields all captured / displayed
+      -  |image1|\ All fields all captured / displayed
 
-      -  |image3|\ Some fields are captured / displayed
+      -  |image2|\ Some fields are captured / displayed
 
-      -  |image4|\ No field is captured / displayed
+      -  |image3|\ No field is captured / displayed
 
    -  If there are no matches for our section, you can try to find it
       directly from *Conversion templates : Text to CML* section inside
@@ -71,8 +71,6 @@ webpage. Here are some useful hints:
    selected format and later navigate to *Page components detail* and
    then to *Header* section.
 
-.. |image0| image:: /imgs/searchTab.png
-.. |image1| image:: /imgs/implementationLevel.png
-.. |image2| image:: /imgs/Total.png
-.. |image3| image:: /imgs/Partial.png
-.. |image4| image:: /imgs/None.png
+.. |image1| image:: /imgs/Total.png
+.. |image2| image:: /imgs/Partial.png
+.. |image3| image:: /imgs/None.png

@@ -3,7 +3,7 @@ Shell client
 
 The ioChem-BD shell client is intented to be deployed into a Linux box, where your calculations are generated and reside, or on any \*nix machine where calculations are visible.
 
-First we need to download the shell client into that box. To do so, you will first login in your Create Module. Then you click on *Options* in upper right menu bar. You need to selecy *Download shell client* so that it displays a form that will request your ioChem-BD password, the same that you used to login.
+First we need to download the shell client into that box. To do so, you will first login in your Create Module, then click on *Options* in upper right menu bar and finally select *Download shell client*.
 
 .. figure:: /imgs/WebUploadForm5.png
    :alt: Options menu bar
@@ -39,7 +39,20 @@ Or its abreviatted form:
                  
        $ . start-rep-shell
        
+
+If it is the first time we login or the server has been restarted, it will request our password to login and store the session cookie:
+
+.. code:: console
+                 
+       $ . start-rep-shell
+       Could not retrieve latest session cookie, please login again.
+       Username: sampleuser@ns-mail7.com
+       Password (empty to quit): 
+       
+       $ (start using shell commands...)
                      
+Once validated, the session cookie is stored and further uses won't require user to login.   
+
 
 More infornation: `Shell commands`_
 

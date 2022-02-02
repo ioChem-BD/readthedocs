@@ -65,7 +65,10 @@ The Navigation tab will display a navigation tree composed of nodes and leaves. 
 | On calculations, the *Type* column contains the abbreviation of the original software package used:
 
   -  ADF: Calculation generated with `Amsterdam Density functional`_ software package
+  -  AMB: Calculation generated with `Amber`_ software package
   -  GAU: Calculation generated with `Gaussian`_ software package
+  -  GMC: Calculation generated with `GROMACS`_ software package
+  -  GRO: Calculation generated with `GronOR`_ software package
   -  MOL: Calculation generated with `Molcas`_ software package
   -  MOP: Calculation generated with `Mopac`_ software package
   -  ORC: Calculation generated with `Orca`_ software package
@@ -234,7 +237,10 @@ On the bottom area of this frame there is an empty space. It is left blank inten
 .. _Download: #download
 .. _RAW CML:  #raw-view
 .. _Amsterdam Density functional: https://www.scm.com/
+.. _Amber: http://ambermd.org/
 .. _Gaussian: http://www.gaussian.com/
+.. _GROMACS: http://www.gromacs.org/
+.. _GronOR: http://gronor.org/
 .. _Molcas: https://www.molcas.org/
 .. _Mopac: http://openmopac.net/
 .. _Orca: https://orcaforum.kofo.mpg.de/app.php/portal

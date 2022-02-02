@@ -15,20 +15,16 @@ Header
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | <scalar dictRef="`cc:program`_"> template                                                                            | Turbomole 5.3.2                                                                                                                                               |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | C 6 H 12 Fe 1 N 24                                                                                                                                            |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Calculation type                                                                                                      | Custom logic                                                                                                         | Geometry optimization Minimum                                                                                                                                 |
+   | Calculation type                                                                                                      | Custom logic  [1]_                                                                                                   | Geometry optimization Minimum                                                                                                                                 |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method(s)                                                                                                             | Custom logic                                                                                                         | DFT (b3-lyp, D3, ri-j, gridsize:m3)                                                                                                                           |
+   | Method(s)                                                                                                             | Custom logic  [2]_                                                                                                   | DFT (b3-lyp, D3, ri-j, gridsize:m3)                                                                                                                           |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
-
- [1]_
-
- [2]_
+.. image:: /imgs/TURBOMOLE_header.png
 
 Atoms and Basis Sets
 --------------------
@@ -47,7 +43,7 @@ If the geometry optimization `did not converge`_, there will appear the phrase *
 
 If there are multiple geometries we'll capture it's last appearance.
 
-|image1|
+.. image:: /imgs/TURBOMOLE_geometry.png
 
 Molecular Info
 --------------
@@ -80,7 +76,7 @@ This section captures molecule additional information not captured on previous s
    | Solvation                                                                                                                          | <module cmlx:templateRef="`cosmo`_">                                                                                               | Solvation parameters                                                                                                               |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image2|
+.. image:: /imgs/TURBOMOLE_molecularinfo.png
 
 Modules
 -------
@@ -94,7 +90,7 @@ Data source: <module cmlx:templateRef='`fit.pointcharges`_'>
 
 This module will hold Mulliken, Loewdin and Natural population analysis, will also contain (if exists) information from unpaired electrons from D(alpha)-D(beta)
 
-|image3|
+.. image:: /imgs/TURBOMOLE_module_popanalysis.png
 
 Electrostatic moments
 ~~~~~~~~~~~~~~~~~~~~~
@@ -103,14 +99,14 @@ Data source: <module cmlx:templateRef='`electrostatic.moments`_'>
 
 This module will display charge, dipole and multipole values.
 
-|image4|
+.. image:: /imgs/TURBOMOLE_module_electromoments.png
 
 Orbital specification
 ~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`orbitals`_'>
 
-|image5|
+.. image:: /imgs/TURBOMOLE_module_orbspecification.png
 
 Final results
 ~~~~~~~~~~~~~
@@ -123,7 +119,7 @@ Data source: <module cmlx:templateRef='`nuclear.repulsion`_'>
 
 Data source: <module cmlx:templateRef='`zero.point.energy`_'>
 
-|image6|
+.. image:: /imgs/TURBOMOLE_module_finalresults.png
 
 IR spectrum
 ~~~~~~~~~~~
@@ -132,16 +128,16 @@ Data source: <module cmlx:templateRef='`vibrations`_'>
 
 This module will display JSpecView + JSmol plugins (using javascript libraries) working together to represent molecule IR spectrum.
 
-All information will come from "$vibrational normal modes" and "$vibrational spectrum" sections inside Turbomole *control* file, in case they are defined on external files such as *vib_normal_modes* and *vibspectrum*\ we must copy them inside *control* file.
+All information will come from "$vibrational normal modes" and "$vibrational spectrum" sections inside Turbomole *control* file, in case they are defined on external files such as *vib_normal_modes* and *vibspectrum* we must copy them inside *control* file.
 
-|image7|
+.. image:: /imgs/TURBOMOLE_module_irspectrum.png
 
 TDDFT/TDHF
 ~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`excitation`_'>
 
-|image8|
+.. image:: /imgs/TURBOMOLE_module_tddft1.png
 
 .. [1]
    string ``turbo:getCalcType`` boolean ``isRestrictedOptimization`` boolean ``isOptimization`` boolean ``isIncomplete`` nodeset ``vibrations`` nodeset ``statpt`` nodeset ``soes``
@@ -200,7 +196,7 @@ Data source: <module cmlx:templateRef='`excitation`_'>
               "/>
               <xsl:sequence select="concat($calcType, ' ', $vibration, ' ', $isExcitedState)"/>
            
-                              
+                                                  
 
 .. [2]
    string ``turbo:getMehod`` nodeset ``soes`` nodeset ``methodScalar``
@@ -266,36 +262,26 @@ Data source: <module cmlx:templateRef='`excitation`_'>
                   </xsl:otherwise>
               </xsl:choose>       
                                   
-                              
+                                                  
 
-.. _`cc:program`: ../codes/turbomole/program-d3e33358.html
-.. _coord file: ../codes/turbomole/turbomole.coord-d3e38895.html
-.. _atomcoord: ../codes/turbomole/atomcoord-d3e33648.html
-.. _basis used: ../codes/turbomole/basisset-d3e34282.html
-.. _did not converge: ../codes/turbomole/convergence.info-d3e36053.html
-.. _symmetry module: ../codes/turbomole/symmetry-d3e34339.html
-.. _`t:charge`: ../codes/turbomole/electrostatic.moments-d3e35362.html
-.. _Orbital statistics module: ../codes/turbomole/molecular.orbitals.statistics-d3e35976.html
-.. _Unrestricted orbitals control file section: ../codes/turbomole/unrestrictedorbitals-d3e38824.html
-.. _restrictions: ../codes/turbomole/restrictions-d3e39250.html
-.. _cosmo: ../codes/turbomole/cosmo-d3e34781.html
-.. _population.analysis: ../codes/turbomole/population.analysis-d3e34045.html
-.. _fit.pointcharges: ../codes/turbomole/fit.pointcharges-d3e36362.html
-.. _electrostatic.moments: ../codes/turbomole/electrostatic.moments-d3e35362.html
-.. _orbitals: ../codes/turbomole/orbitals-d3e34420.html
-.. _turbomole.energy: ../codes/turbomole/turbomole.energy-d3e41852.html
-.. _energy: ../codes/turbomole/energy-d3e36237.html
-.. _nuclear.repulsion: ../codes/turbomole/nuclear.repulsion-d3e36205.html
-.. _zero.point.energy: ../codes/turbomole/zero.point.energy-d3e36334.html
-.. _vibrations: ../codes/turbomole/vibrations-d3e38473.html
-.. _excitation: ../codes/turbomole/excitation-d3e34497.html
-
-.. |image0| image:: /imgs/TURBOMOLE_header.png
-.. |image1| image:: /imgs/TURBOMOLE_geometry.png
-.. |image2| image:: /imgs/TURBOMOLE_molecularinfo.png
-.. |image3| image:: /imgs/TURBOMOLE_module_popanalysis.png
-.. |image4| image:: /imgs/TURBOMOLE_module_electromoments.png
-.. |image5| image:: /imgs/TURBOMOLE_module_orbspecification.png
-.. |image6| image:: /imgs/TURBOMOLE_module_finalresults.png
-.. |image7| image:: /imgs/TURBOMOLE_module_irspectrum.png
-.. |image8| image:: /imgs/TURBOMOLE_module_tddft1.png
+.. _`cc:program`: ../codes/turbomole/program-d3e37414.html
+.. _coord file: ../codes/turbomole/turbomole.coord-d3e47570.html
+.. _atomcoord: ../codes/turbomole/atomcoord-d3e37704.html
+.. _basis used: ../codes/turbomole/basisset-d3e38338.html
+.. _did not converge: ../codes/turbomole/convergence.info-d3e40109.html
+.. _symmetry module: ../codes/turbomole/symmetry-d3e38395.html
+.. _`t:charge`: ../codes/turbomole/electrostatic.moments-d3e39418.html
+.. _Orbital statistics module: ../codes/turbomole/molecular.orbitals.statistics-d3e40032.html
+.. _Unrestricted orbitals control file section: ../codes/turbomole/unrestrictedorbitals-d3e47499.html
+.. _restrictions: ../codes/turbomole/restrictions-d3e47925.html
+.. _cosmo: ../codes/turbomole/cosmo-d3e38837.html
+.. _population.analysis: ../codes/turbomole/population.analysis-d3e38101.html
+.. _fit.pointcharges: ../codes/turbomole/fit.pointcharges-d3e40418.html
+.. _electrostatic.moments: ../codes/turbomole/electrostatic.moments-d3e39418.html
+.. _orbitals: ../codes/turbomole/orbitals-d3e38476.html
+.. _turbomole.energy: ../codes/turbomole/turbomole.energy-d3e50527.html
+.. _energy: ../codes/turbomole/energy-d3e40293.html
+.. _nuclear.repulsion: ../codes/turbomole/nuclear.repulsion-d3e40261.html
+.. _zero.point.energy: ../codes/turbomole/zero.point.energy-d3e40390.html
+.. _vibrations: ../codes/turbomole/vibrations-d3e47148.html
+.. _excitation: ../codes/turbomole/excitation-d3e38553.html

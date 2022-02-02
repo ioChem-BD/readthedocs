@@ -132,7 +132,7 @@ Subcommunity generation
 
 Depending on the needed hierarchy, you will have to generate new subcommunities inside your top communities.
 
-As administrators, we will navigate to the base community via *Browse > *Communities and collections*, then click on the desired community.
+As administrators, we will navigate to the base community via *Browse > Communities and collections*, then click on the desired community.
 
 From the right sidebar we will choose *Create Sub-community* option and follow the same steps as when we create a top community.
 

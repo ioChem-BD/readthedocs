@@ -20,9 +20,9 @@ adf
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
    | Type                                                                                                                       | Status                                                                                                                     |
    +============================================================================================================================+============================================================================================================================+
-   | CML extraction template                                                                                                    | |image0|                                                                                                                   |
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
-   | HTML5 representation                                                                                                       | |image1|                                                                                                                   |
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: Template attributes
@@ -49,7 +49,9 @@ adf
    | xml:base                                                                                                                   | adf/adf.xml                                                                                                                |
    +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
-**Comment.**
+.. container:: formalpara-title
+
+   **Comment**
 
 ::
 
@@ -118,12 +120,14 @@ adf
                                 A D F   E X I T        
        
 
-**Template definition.**
+.. container:: formalpara-title
+
+   **Template definition**
 
 .. code:: xml
 
    <templateList>  <xi:include href="adf/../program.header.xml" />  <xi:include href="adf/init/modelparameters/model.parameters.xml" />  <xi:include href="adf/runtype/runtype.xml" />  <xi:include href="adf/build/build_fragments.xml" />  <xi:include href="adf/technical/technical.xml" />  <xi:include href="adf/computation/computation.xml" />  <xi:include href="adf/results/results.xml" />  <xi:include href="adf/frequencyanalysis/frequencyanalysis.xml" />       
        </templateList>
 
-.. |image0| image:: ../../imgs/Total.png
-.. |image1| image:: ../../imgs/None.png
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/None.png

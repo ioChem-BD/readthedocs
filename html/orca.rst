@@ -15,20 +15,16 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | `header template`_                                                                                                   | Orca 3.0.1                                                                                                                                                    |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | H 2 Fe 1 O 1                                                                                                                                                  |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Calculation type                                                                                                      | Custom logic                                                                                                         | Geometry optimization Minimum                                                                                                                                 |
+   | Calculation type                                                                                                      | Custom logic  [1]_                                                                                                   | Geometry optimization Minimum                                                                                                                                 |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method(s)                                                                                                             | Custom logic                                                                                                         | DFT ( PBE0 )                                                                                                                                                  |
+   | Method(s)                                                                                                             | Custom logic  [2]_                                                                                                   | DFT ( PBE0 )                                                                                                                                                  |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
-
- [1]_
-
- [2]_
+.. image:: /imgs/ORCA_header.png
 
 Modules
 -------
@@ -40,7 +36,7 @@ After header section, our HTML resume will output a xyz coordinates table with c
 
 For every atom, we will output it's serial number, atom type, coordinates in angstroms, basis used and contraction.
 
-|image1|
+.. image:: /imgs/ORCA_geometry.png
 
 Molecular Info
 ~~~~~~~~~~~~~~
@@ -57,7 +53,7 @@ This section captures molecule additional information not captured on previous s
    | Charge                                                                                                                             | Readed from Charge parameter on General settings section of `scfsettings`_ module                                                  | 0                                                                                                                                  |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image2|
+.. image:: /imgs/ORCA_molecularinfo.png
 
 Bond distances
 ^^^^^^^^^^^^^^
@@ -66,21 +62,21 @@ Data source (to read molecule and calculate bonds): <module cmlx:templateRef='`i
 
 Data source (to read molecule and calculate bonds): <module cmlx:templateRef='`geometry`_'>
 
-|image3|
+.. image:: /imgs/ORCA_bonddistances.png
 
 Solvation input
 ^^^^^^^^^^^^^^^
 
 Data source: <module cmlx:templateRef='`cosmo`_'>
 
-|image4|
+.. image:: /imgs/ORCA_solvationinput.png
 
 Restrictions in the Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Data source: <module cmlx:templateRef='`optsetup`_'>
 
-|image5|
+.. image:: /imgs/ORCA_restrictions.png
 
 Total SCF energy
 ~~~~~~~~~~~~~~~~
@@ -93,7 +89,7 @@ Data source: <module cmlx:templateRef='`ci`_'>
 
 Data source: <module cmlx:templateRef='`d3`_'>
 
-|image6|
+.. image:: /imgs/ORCA_module_scfenergy.png
 
 IR spectrum / Vibrational frequencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -104,9 +100,9 @@ Data source: <module cmlx:templateRef='`vibrations`_'>
 
 Data source: <module cmlx:templateRef='`irspectrum`_'>
 
-|image7|
+.. image:: /imgs/ORCA_module_irspectrum.png
 
-|image8|
+.. image:: /imgs/ORCA_module_frequencies.png
 
 Population analysis
 ~~~~~~~~~~~~~~~~~~~
@@ -115,9 +111,9 @@ Data source <module cmlx:templateRef='`loewdin`_'>
 
 Data source <module cmlx:templateRef='`mullikenpopulation`_'>
 
-|image9|
+.. image:: /imgs/ORCA_module_popanal1.png
 
-|image10|
+.. image:: /imgs/ORCA_module_popanal2.png
 
 Electrostatic moments
 ~~~~~~~~~~~~~~~~~~~~~
@@ -126,30 +122,30 @@ Data source: Charge parameter on General settings section of `scfsettings`_
 
 Data source: `<module cmlx:templateRef='electricproperties'>`_
 
-|image11|
+.. image:: /imgs/ORCA_module_electrostatic.png
 
 Broken symmetry magnetic coupling analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef="`brokensym`_">
 
-|image12|
+.. image:: /imgs/ORCA_module_brokensymm.png
 
 Frontier orbitals
 ~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`orbitalenergies`_'>
 
-|image13|
+.. image:: /imgs/ORCA_module_frontierorb1.png
 
-|image14|
+.. image:: /imgs/ORCA_module_frontierorb2.png
 
 Natural orbitals
 ~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`natural`_'>
 
-|image15|
+.. image:: /imgs/
 
 NMR Shielding tensors
 ~~~~~~~~~~~~~~~~~~~~~
@@ -158,7 +154,7 @@ Data source:
 
 -  <module cmlx:templateRef="`nmr`_">
 
-|image16|
+.. image:: /imgs/ORCA_module_nmr.png
 
 TDHF / TDDFT
 ~~~~~~~~~~~~
@@ -169,16 +165,16 @@ Data source: <module cmlx:templateRef='`tddft`_'>
 
 Data source: <module cmlx:templateRef='`orbitalenergies`_'>
 
-|image17|
+.. image:: /imgs/ORCA_module_tddft1.png
 
-|image18|
+.. image:: /imgs/ORCA_module_tddft2.png
 
 g-matrix and ZFS
 ~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`eprnmr`_'>
 
-|image19|
+.. image:: /imgs/ORCA_module_eprnmr.png
 
 Final results
 ~~~~~~~~~~~~~
@@ -195,11 +191,11 @@ Data source: <module cmlx:templateRef='`ci`_'>
 
 Data source: <module cmlx:templateRef='`dftd3`_'>
 
-|image20|
+.. image:: /imgs/ORCA_module_finalresults1.png
 
-|image21|
+.. image:: /imgs/ORCA_module_finalresults2.png
 
-|image22|
+.. image:: /imgs/ORCA_module_finalresults3.png
 
 .. [1]
    string ``orca:getCalcType`` boolean ``isOptimization`` boolean ``isBrokenSymm`` boolean ``hasVibrations`` integer ``negativeFrequenciesCount``
@@ -254,7 +250,7 @@ Data source: <module cmlx:templateRef='`dftd3`_'>
           
           <xsl:value-of select="concat($type, ' ', $type2)"/>                              
                               
-                              
+                                                  
 
 .. [2]
    string ``orca:getMehods`` nodeset ``section`` boolean ``isTddft``
@@ -296,53 +292,29 @@ Data source: <module cmlx:templateRef='`dftd3`_'>
                   </xsl:for-each>                
               </xsl:for-each>
                                   
-                              
+                                                  
 
-.. _header template: ../codes/orca/header-d3e25902.html
-.. _scfsettings: ../codes/orca/scfsettings-d3e29719.html
-.. _input: ../codes/orca/input-d3e25936.html
-.. _geometry: ../codes/orca/geometry-d3e27466.html
-.. _cosmo: ../codes/orca/cosmo-d3e27100.html
-.. _optsetup: ../codes/orca/optsetup-d3e31550.html
-.. _totalenergy: ../codes/orca/totalenergy-d3e29583.html
-.. _mp2: ../codes/orca/mp2-d3e30358.html
-.. _ci: ../codes/orca/ci-d3e30469.html
+.. _header template: ../codes/orca/header-d3e29874.html
+.. _scfsettings: ../codes/orca/scfsettings-d3e33691.html
+.. _input: ../codes/orca/input-d3e29908.html
+.. _geometry: ../codes/orca/geometry-d3e31438.html
+.. _cosmo: ../codes/orca/cosmo-d3e31072.html
+.. _optsetup: ../codes/orca/optsetup-d3e35522.html
+.. _totalenergy: ../codes/orca/totalenergy-d3e33555.html
+.. _mp2: ../codes/orca/mp2-d3e34330.html
+.. _ci: ../codes/orca/ci-d3e34441.html
 .. _d3: #d3
-.. _vibrations: ../codes/orca/vibrations-d3e27746.html
-.. _irspectrum: ../codes/orca/irspectrum-d3e28037.html
-.. _loewdin: ../codes/orca/loewdin-d3e28991.html
-.. _mullikenpopulation: ../codes/orca/mullikenpopulation-d3e28894.html
-.. _`<module cmlx:templateRef='electricproperties'>`: ../codes/orca/electricproperties-d3e29238.html
-.. _brokensym: ../codes/orca/brokensym-d3e27648.html
-.. _orbitalenergies: ../codes/orca/orbitalenergies-d3e28800.html
-.. _natural: ../codes/orca/natural-d3e29364.html
-.. _nmr: ../codes/orca/nmr-d3e30646.html
-.. _tddft: ../codes/orca/tddft-d3e30764.html
-.. _eprnmr: ../codes/orca/eprnmr-d3e31179.html
-.. _spincontamination: ../codes/orca/spincontamination-d3e30317.html
-.. _innerenergy: ../codes/orca/innerenergy-d3e27900.html
-.. _dftd3: ../codes/orca/dftd3-d3e31147.html
-
-.. |image0| image:: /imgs/ORCA_header.png
-.. |image1| image:: /imgs/ORCA_geometry.png
-.. |image2| image:: /imgs/ORCA_molecularinfo.png
-.. |image3| image:: /imgs/ORCA_bonddistances.png
-.. |image4| image:: /imgs/ORCA_solvationinput.png
-.. |image5| image:: /imgs/ORCA_restrictions.png
-.. |image6| image:: /imgs/ORCA_module_scfenergy.png
-.. |image7| image:: /imgs/ORCA_module_irspectrum.png
-.. |image8| image:: /imgs/ORCA_module_frequencies.png
-.. |image9| image:: /imgs/ORCA_module_popanal1.png
-.. |image10| image:: /imgs/ORCA_module_popanal2.png
-.. |image11| image:: /imgs/ORCA_module_electrostatic.png
-.. |image12| image:: /imgs/ORCA_module_brokensymm.png
-.. |image13| image:: /imgs/ORCA_module_frontierorb1.png
-.. |image14| image:: /imgs/ORCA_module_frontierorb2.png
-.. |image15| image:: /imgs/
-.. |image16| image:: /imgs/ORCA_module_nmr.png
-.. |image17| image:: /imgs/ORCA_module_tddft1.png
-.. |image18| image:: /imgs/ORCA_module_tddft2.png
-.. |image19| image:: /imgs/ORCA_module_eprnmr.png
-.. |image20| image:: /imgs/ORCA_module_finalresults1.png
-.. |image21| image:: /imgs/ORCA_module_finalresults2.png
-.. |image22| image:: /imgs/ORCA_module_finalresults3.png
+.. _vibrations: ../codes/orca/vibrations-d3e31718.html
+.. _irspectrum: ../codes/orca/irspectrum-d3e32009.html
+.. _loewdin: ../codes/orca/loewdin-d3e32963.html
+.. _mullikenpopulation: ../codes/orca/mullikenpopulation-d3e32866.html
+.. _`<module cmlx:templateRef='electricproperties'>`: ../codes/orca/electricproperties-d3e33210.html
+.. _brokensym: ../codes/orca/brokensym-d3e31620.html
+.. _orbitalenergies: ../codes/orca/orbitalenergies-d3e32772.html
+.. _natural: ../codes/orca/natural-d3e33336.html
+.. _nmr: ../codes/orca/nmr-d3e34618.html
+.. _tddft: ../codes/orca/tddft-d3e34736.html
+.. _eprnmr: ../codes/orca/eprnmr-d3e35151.html
+.. _spincontamination: ../codes/orca/spincontamination-d3e34289.html
+.. _innerenergy: ../codes/orca/innerenergy-d3e31872.html
+.. _dftd3: ../codes/orca/dftd3-d3e35119.html

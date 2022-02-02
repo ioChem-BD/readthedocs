@@ -15,20 +15,16 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Program                                                                                                               | `program.header template`_                                                                                           | Molcas 8.0 - service pack 1                                                                                                                                   |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Author                                                                                                                | *Username fullname*                                                                                                  | Alvarez Moreno, Moises                                                                                                                                        |
+   | Author                                                                                                                | *Username fullname*                                                                                                  | Doe, John                                                                                                                                                     |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Formula                                                                                                               | *Atom count from final geometry*                                                                                     | C 8 H 12 N 8 O 2                                                                                                                                              |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Calculation type                                                                                                      | Custom logic                                                                                                         | Geometry optimization                                                                                                                                         |
+   | Calculation type                                                                                                      | Custom logic  [1]_                                                                                                   | Geometry optimization                                                                                                                                         |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method                                                                                                                | Custom logic                                                                                                         | RASSCF RASPT2                                                                                                                                                 |
+   | Method                                                                                                                | Custom logic  [2]_                                                                                                   | RASSCF RASPT2                                                                                                                                                 |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-|image0|
-
- [1]_
-
- [2]_
+.. image:: /imgs/MOLCAS_header.png
 
 Atomics and Basis Sets
 ----------------------
@@ -41,7 +37,7 @@ In geometry optimizations calculations, next to geometry section header there wi
 
 If the geometry optimization did not converge, there will appear the phrase **(calculation did not converge)**.
 
-|image1|
+.. image:: /imgs/MOLCAS_geometry.png
 
 Molecular Info
 --------------
@@ -53,7 +49,7 @@ Symmetry information
 
 Data source: <module cmlx:templateRef='`symmetry`_'>
 
-|image2|
+.. image:: /imgs/MOLCAS_symmetry.png
 
 Molecular Info
 ~~~~~~~~~~~~~~
@@ -68,7 +64,7 @@ Molecular Info
    | Multiplicity                                                                                                                       | Readed from scalar[m:spinquantumnum] inside `wave.specs`_ module OR from scalar[m:spin] inside `scf-ksdft`_ module                 | 3                                                                                                                                  |
    +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
 
-|image3|
+.. image:: /imgs/MOLCAS_molecularinfo.png
 
 Solvation input
 ~~~~~~~~~~~~~~~
@@ -77,28 +73,28 @@ Data source: <module cmlx:templateRef='`pcm`_'>
 
 Data source: <module cmlx:templateRef='`kirkwood`_'>
 
-|image4|
+.. image:: /imgs/MOLCAS_solvation.png
 
 Integrals
 ~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`seward.generate`_'>
 
-|image5|
+.. image:: /imgs/MOLCAS_sewardgenerate.png
 
 Bond distances
 ~~~~~~~~~~~~~~
 
 Data source (to read molecule and calculate bonds): <module cmlx:templateRef='`coordinates`_'>
 
-|image6|
+.. image:: /imgs/MOLCAS_bonddistances.png
 
 Restrictions in the Geometry Optimization
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`constraint`_'>
 
-|image7|
+.. image:: /imgs/MOLCAS_restrictions.png
 
 Modules
 -------
@@ -108,56 +104,56 @@ Wave function specification
 
 Data source: <module cmlx:templateRef='`wave.specs`_'>
 
-|image8|
+.. image:: /imgs/MOLCAS_module_wavefunction.png
 
 Orbital specifications
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`orbital.specs`_'>
 
-|image9|
+.. image:: /imgs/MOLCAS_module_orbitalspecs.png
 
 CI expansion specifications
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`ci.expansion`_'>
 
-|image10|
+.. image:: /imgs/MOLCAS_module_ciexpansion.png
 
 Energies
 ~~~~~~~~
 
 Data source: <module cmlx:templateRef='`wave.printout`_'>
 
-|image11|
+.. image:: /imgs/MOLCAS_module_energies.png
 
 Wave functions / Weights of the most important CSFs
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source <module cmlx:templateRef='`wave.printout`_'>
 
-|image12|
+.. image:: /imgs/MOLCAS_module_wavefunctioncsf.png
 
 Natural Occupation numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`wave.printout`_'>, module "natural"
 
-|image13|
+.. image:: /imgs/MOLCAS_module_natural.png
 
 Mulliken Spin Population
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`mulliken`_'>, submodule "mulliken.spin"
 
-|image14|
+.. image:: /imgs/MOLCAS_module_mullikenspin.png
 
 Electrostatic moments
 ~~~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef="`properties`_">
 
-|image15|
+.. image:: /imgs/MOLCAS_module_electrostaticmoments.png
 
 Population analysis / Mulliken atomic charges
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,16 +162,16 @@ Data source: <module cmlx:templateRef="`loprop`_">
 
 Data source: <module cmlx:templateRef="`mulliken`_">
 
-|image16|
+.. image:: /imgs/MOLCAS_module_loprop.png
 
-|image17|
+.. image:: /imgs/MOLCAS_module_mulliken.png
 
 Single-State CASPT2
 ~~~~~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef="`final.caspt2`_">
 
-|image18|
+.. image:: /imgs/MOLCAS_module_singlestate_caspt2.png
 
 Final energy
 ~~~~~~~~~~~~
@@ -188,16 +184,16 @@ Data source: <module cmlx:templateRef="`cchc`_"> scalar dictRef='m:e2ccsdenergy'
 
 Data source: <module cmlx:templateRef="`ccsdt`_"> scalar dictRef='m:ccsdtcorrenergy'
 
-|image19|
+.. image:: /imgs/MOLCAS_module_finalenergy.png
 
-|image20|
+.. image:: /imgs/MOLCAS_module_finalenergy2.png
 
 HZERO
 ~~~~~
 
 Data source: <module cmlx:templateRef="`extras`_">
 
-|image21|
+.. image:: /imgs/MOLCAS_module_hzero.png
 
 Harmonic frequencies
 ~~~~~~~~~~~~~~~~~~~~
@@ -206,9 +202,9 @@ This module also allows displaying harmonic frequency intensities on a customiza
 
 Data source: <module cmlx:templateRef='`vibrations`_'>
 
-|image22|
+.. image:: /imgs/MOLCAS_module_harmonicfreq.png
 
-|image23|
+.. image:: /imgs/MOLCAS_module_harmonicfreq2.png
 
 IR spectrum / Vibrational frequencies
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -217,21 +213,21 @@ Data source: <module cmlx:templateRef='`vibrations`_'>
 
 This module will display JSpecView + JSmol plugins (using javascript libraries) working together to represent molecule IR spectrum.
 
-|image24|
+.. image:: /imgs/MOLCAS_module_frequencies.png
 
 Multipole Expansion Analysis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Data source:<module cmlx:templateRef="`atom.expansion`_">
 
-|image25|
+.. image:: /imgs/MOLCAS_module_multipoleexpansion.png
 
 LoProp Analysis
 ~~~~~~~~~~~~~~~
 
 Data source: <module cmlx:templateRef='`dynamic.loprop`_'>
 
-|image26|
+.. image:: /imgs/MOLCAS_module_loprop_analysis.png
 
 .. [1]
    string ``molcas:getCalcType`` boolean ``isRestrictedOpt`` boolean ``isOptimization`` boolean ``isTS`` boolean ``isIncomplete``
@@ -269,7 +265,7 @@ Data source: <module cmlx:templateRef='`dynamic.loprop`_'>
               <xsl:text> </xsl:text><xsl:value-of select="$molcas:Incomplete"/>
           </xsl:if>                           
                               
-                              
+                                                  
 
 .. [2]
    string ``molcas:getMethods`` node\* ``modules`` node ``ksdft`` node ``wavespecs``
@@ -343,56 +339,28 @@ Data source: <module cmlx:templateRef='`dynamic.loprop`_'>
                   </xsl:if>           
               </xsl:for-each>              
                               
-                              
+                                                  
 
-.. _program.header template: ../codes/molcas/module.header-d3e19941.html
-.. _symmetry: ../codes/molcas/symmetry-d3e22681.html
+.. _program.header template: ../codes/molcas/module.header-d3e23903.html
+.. _symmetry: ../codes/molcas/symmetry-d3e26646.html
 .. _molcharge: #molcharge
-.. _mulliken: ../codes/molcas/mulliken-d3e22352.html
-.. _wave.specs: ../codes/molcas/wave.specs-d3e20496.html
-.. _scf-ksdft: ../codes/molcas/scf-ksdft-d3e21769.html
-.. _pcm: ../codes/molcas/pcm-d3e20590.html
-.. _kirkwood: ../codes/molcas/kirkwood-d3e20640.html
-.. _seward.generate: ../codes/molcas/seward.generate-d3e20687.html
-.. _coordinates: ../codes/molcas/coordinates-d3e20270.html
-.. _constraint: ../codes/molcas/constraint-d3e24216.html
-.. _orbital.specs: ../codes/molcas/orbital.specs-d3e21845.html
-.. _ci.expansion: ../codes/molcas/ci.expansion-d3e22110.html
-.. _wave.printout: ../codes/molcas/wave.printout-d3e20751.html
-.. _properties: ../codes/molcas/properties-d3e22794.html
-.. _loprop: ../codes/molcas/loprop-d3e22967.html
-.. _final.caspt2: ../codes/molcas/final.caspt2-d3e23487.html
-.. _cchc: ../codes/molcas/cchc-d3e24439.html
+.. _mulliken: ../codes/molcas/mulliken-d3e26314.html
+.. _wave.specs: ../codes/molcas/wave.specs-d3e24458.html
+.. _scf-ksdft: ../codes/molcas/scf-ksdft-d3e25731.html
+.. _pcm: ../codes/molcas/pcm-d3e24552.html
+.. _kirkwood: ../codes/molcas/kirkwood-d3e24602.html
+.. _seward.generate: ../codes/molcas/seward.generate-d3e24649.html
+.. _coordinates: ../codes/molcas/coordinates-d3e24232.html
+.. _constraint: ../codes/molcas/constraint-d3e28187.html
+.. _orbital.specs: ../codes/molcas/orbital.specs-d3e25807.html
+.. _ci.expansion: ../codes/molcas/ci.expansion-d3e26072.html
+.. _wave.printout: ../codes/molcas/wave.printout-d3e24713.html
+.. _properties: ../codes/molcas/properties-d3e26759.html
+.. _loprop: ../codes/molcas/loprop-d3e26935.html
+.. _final.caspt2: ../codes/molcas/final.caspt2-d3e27455.html
+.. _cchc: ../codes/molcas/cchc-d3e28410.html
 .. _ccsdt: #ccsdt
-.. _extras: ../codes/molcas/extras-d3e23031.html
-.. _vibrations: ../codes/molcas/vibrations-d3e24007.html
-.. _atom.expansion: ../codes/molcas/atom.expansion-d3e24508.html
-.. _dynamic.loprop: ../codes/molcas/dynamic.loprop-d3e24624.html
-
-.. |image0| image:: /imgs/MOLCAS_header.png
-.. |image1| image:: /imgs/MOLCAS_geometry.png
-.. |image2| image:: /imgs/MOLCAS_symmetry.png
-.. |image3| image:: /imgs/MOLCAS_molecularinfo.png
-.. |image4| image:: /imgs/MOLCAS_solvation.png
-.. |image5| image:: /imgs/MOLCAS_sewardgenerate.png
-.. |image6| image:: /imgs/MOLCAS_bonddistances.png
-.. |image7| image:: /imgs/MOLCAS_restrictions.png
-.. |image8| image:: /imgs/MOLCAS_module_wavefunction.png
-.. |image9| image:: /imgs/MOLCAS_module_orbitalspecs.png
-.. |image10| image:: /imgs/MOLCAS_module_ciexpansion.png
-.. |image11| image:: /imgs/MOLCAS_module_energies.png
-.. |image12| image:: /imgs/MOLCAS_module_wavefunctioncsf.png
-.. |image13| image:: /imgs/MOLCAS_module_natural.png
-.. |image14| image:: /imgs/MOLCAS_module_mullikenspin.png
-.. |image15| image:: /imgs/MOLCAS_module_electrostaticmoments.png
-.. |image16| image:: /imgs/MOLCAS_module_loprop.png
-.. |image17| image:: /imgs/MOLCAS_module_mulliken.png
-.. |image18| image:: /imgs/MOLCAS_module_singlestate_caspt2.png
-.. |image19| image:: /imgs/MOLCAS_module_finalenergy.png
-.. |image20| image:: /imgs/MOLCAS_module_finalenergy2.png
-.. |image21| image:: /imgs/MOLCAS_module_hzero.png
-.. |image22| image:: /imgs/MOLCAS_module_harmonicfreq.png
-.. |image23| image:: /imgs/MOLCAS_module_harmonicfreq2.png
-.. |image24| image:: /imgs/MOLCAS_module_frequencies.png
-.. |image25| image:: /imgs/MOLCAS_module_multipoleexpansion.png
-.. |image26| image:: /imgs/MOLCAS_module_loprop_analysis.png
+.. _extras: ../codes/molcas/extras-d3e26999.html
+.. _vibrations: ../codes/molcas/vibrations-d3e27975.html
+.. _atom.expansion: ../codes/molcas/atom.expansion-d3e28479.html
+.. _dynamic.loprop: ../codes/molcas/dynamic.loprop-d3e28595.html

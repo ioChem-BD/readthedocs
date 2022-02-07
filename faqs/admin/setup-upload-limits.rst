@@ -16,11 +16,18 @@ To limit the size of the files uploaded via web, there are two parameters that c
    upload.output.max.file.size = -1
 
 
+Unsetting the parameter or setting its value to -1 will remove that specific upload restriction.
+
 Properties: 
   * upload.max.file.size: Define the max file size uploaded via web, in bytes.
   * upload.output.max.file.size: Define the max file size of the output files, the file type that consumes more CPU during file conversion, in bytes.
-  
-Unsetting the parameter or setting its value to -1 will remove that specific upload restriction.
+
+
+Uploading a file that exceeds the defined size when limitations are set will prompt the following error:   
+
+.. figure:: /imgs/faqs_upload_size_error.png
+   :alt: Upload size error message box
+
 
 .. warning::
    Every modification of these parameters will require restarting the ioChem-BD service to load the new configuration.

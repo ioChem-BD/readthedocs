@@ -83,7 +83,7 @@ residue.pointer
    <transform process="pullup" xpath=".//cml:array" />
    <transform process="delete" xpath=".//cml:list" />
    <transform process="addChild" xpath="." elementName="cml:scalar" dictRef="residue.count" />
-   <transform process="setValue" xpath=".//cml:scalar[@dictRef='residue.count']" value="$number(count(tokenize(replace(//cml:array [@dictRef='am:residue']/text(), '(\|HOH|\|WAT|\|H20|\|TIP|\|SOL)', ''), '\|')) + 1)" />
+   <transform process="setValue" xpath=".//cml:scalar[@dictRef='residue.count']" value="$number(count(tokenize(replace(//cml:array [@dictRef='am:residue']/text(), '(\|HOH|\|WAT|\|H20|\|TIP|\|SOL|\|Cl[A-Za-z\+\-]*|\|CIO|\|Cs\+|\|IB|\|K[A-Za-z\+\-]*|\|Li\+|\|MG[A-Za-z\+\-]*|\|Na\+|\|Rb\+|\|CS|\|RB|\|NA|\|F|\|CL)', ''), '\|')) + 1)" />
    <transform process="addChild" xpath="." elementName="cml:scalar" dictRef="residue.atom.index" />
    <transform process="setValue" xpath="//cml:scalar[@dictRef='residue.atom.index']" value="$number(subsequence(tokenize(//cml:array[@dictRef='am:residue.pointer']/text(), '\s+'), //cml:scalar[@dictRef='residue.count'], 1))" />
    <transform process="setValue" xpath="//cml:scalar[@dictRef='residue.atom.index' and not(exists(text()))]" value="9999999999" />

@@ -83,21 +83,22 @@ loadamber
 
 Loads a Amber calculation into the Create module.
 
-============== ======================================================================================================
+============== ======================================================================================================================
 Parameters     Description
-============== ======================================================================================================
+============== ======================================================================================================================
 -i *filename*  Input file, if not defined will use script defined name
 -o *filename*  Output file, if not defined will use script defined name
 -p *filename*  Parameter/topology file specification (.prmtop), if not defined will use script defined name
--r *filename*  NetCDF restart file (.ncrst), if not defined will use script defined name
--t *filename*  NetCDF trajectory file (.nc), if not defined will use script defined name
+-ir *filename* Initial coordinates file (.inpcrd) or intial restart file (.ncrst) used, if not defined will use script defined name
+-r *filename*  Final restart file (.ncrst), if not defined will use script defined name
+-t *filename*  Trajectory file (.nc), if not defined will use script defined name
 -a             Append additional file (optional)
 -n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
-============== ======================================================================================================
+============== ======================================================================================================================
 
-If parameters **-i**, **-o**, **-p**, **-r** and/or **-t** are not set, this script will look for *input.in*, *output.out*, *topology.prmtop*, *restartnc.ncrst* and *trajectory.nc* files. 
+If parameters **-i**, **-o**, **-p**, **-ir**, **-r** and/or **-t** are not set, this script will look for *input.in*, *output.out*, *topology.prmtop*, *coords.inpcrd*,  *restartnc.ncrst* and *trajectory.nc* files. 
 If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadamber* script file and replace default filenames.
 
 .. code:: bash
@@ -106,6 +107,7 @@ If that info is missing, the upload process will be aborted. If you wish to use 
        INPUT_DEFAULT_FILENAME="input.in"
        OUTPUT_DEFAULT_FILENAME="output.out"
        TOPOLOGY_DEFAULT_FILENAME="topology.prmtop"
+       COORDINATES_DEFAULT_FILENAME="coords.inpcrd"
        RESTART_DEFAULT_FILENAME="restartnc.ncrst"
        TRAJECTORY_DEFAUL_FILENAME="trajectory.nc"
        
@@ -130,7 +132,7 @@ This command will behave the same as previous one but will upload different file
 
 .. code:: bash
    
-       $ loadamber -n Au-CoO-H2O -d "Sample upload" -i input2.in -o output2.log -p Au-CoO-H2O.prmtop -r Au-CoO-H2O.ncrst -t Au-CoO-H2O.nc
+       $ loadamber -n Au-CoO-H2O -d "Sample upload" -i step1.in -o step1.out -p Au-CoO-H2O.prmtop -ir Au-CoO-H2O.inpcrd -r Au-CoO-H2O.ncrst -t Au-CoO-H2O.nc
 
 
 loadgauss

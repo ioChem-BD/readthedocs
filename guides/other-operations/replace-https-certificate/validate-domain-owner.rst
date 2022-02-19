@@ -17,7 +17,7 @@ Stop ioChem-BD web service:
 
 .. code:: bash
 
-   iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh
+   iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh -force
 
 Copy the downloaded file into webapps2/ROOT folder
 

@@ -26,7 +26,7 @@ Update process must be performed with the service stopped.
 .. code:: bash
 
    iochembd$  cd BASE_PATH/apache-tomcat/bin
-   iochembd$  ./shutdown.sh
+   iochembd$  ./shutdown.sh -force
    ... wait one minute
    iochembd$  ps -eaf | grep tomcat
    ... if there is no running process it has stopped properly otherwise kill the process

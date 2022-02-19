@@ -217,7 +217,7 @@ The files responsible for managing our web service are:
 .. code:: console
 
    iochembd$  BASE_PATH/apache-tomcat/bin/startup.sh    # to start service
-   iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh   # to stop service
+   iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh -force  # to stop service
   
 
 After starting the web server you can track *BASE_PATH*/apache-tomcat/logs/catalina.out file to look for start-up errors. If they appear, please `contact us`_ in order to assist you as soon as possible.

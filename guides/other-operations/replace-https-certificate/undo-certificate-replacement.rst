@@ -19,7 +19,7 @@ To restore them, we will stop the web service and replace the generated files wi
 
 .. code:: bash
 
-      iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh
+      iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh -force
       
       iochembd$  cp BASE_PATH/ssl/keystore_161019191826 BASE_PATH/ssl/keystore   
       iochembd$  cp BASE_PATH/ssl/truststore_161019191826  BASE_PATH/ssl/truststore

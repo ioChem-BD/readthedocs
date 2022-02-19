@@ -76,7 +76,7 @@ We will initially stop the web service:
 
 .. code:: bash
 
-      iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh
+      iochembd$  BASE_PATH/apache-tomcat/bin/shutdown.sh -force
 
 Once the service has stopped, we will copy copy all certificate files inside *BASE_PATH/ssl/new* folder:
 

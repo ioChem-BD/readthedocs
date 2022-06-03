@@ -1,0 +1,363 @@
+.. _nmr-d3e35482:
+
+nmr
+===
+
+.. table:: Implementation level
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Type                                                                                                                       | Status                                                                                                                     |
+   +============================================================================================================================+============================================================================================================================+
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: Template attributes
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                                                                                                                  | Value                                                                                                                      |
+   +============================================================================================================================+============================================================================================================================+
+   | *source*                                                                                                                   | Orca log                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | id                                                                                                                         | nmr                                                                                                                        |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | name                                                                                                                       | NMR section                                                                                                                |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | pattern                                                                                                                    | &#92;s*-{10,}$&#92;s*CHEMICAL&#92;sSHIFTS&#92;s*$&#92;s*-{10,}                                                             |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern                                                                                                                 | &#92;s*-{10,}$&#92;s*[A-Z]{2,}.\*                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern2                                                                                                                | &#92;s*&#92;*{10,}                                                                                                         |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern3                                                                                                                | ~                                                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endOffset                                                                                                                  | 0                                                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | repeat                                                                                                                     | \*                                                                                                                         |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | xml:base                                                                                                                   | job/nmr/nmr.xml                                                                                                            |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+   ---------------
+   CHEMICAL SHIFTS
+   ---------------
+
+    --------------
+    Nucleus   0C :
+    --------------
+    Raw-matrix : 
+            0.0001365   -0.0000000    0.0000000
+           -0.0000000    0.0001365   -0.0000000
+           -0.0000000   -0.0000000    0.0001365
+
+    Diagonalized sT*s matrix:
+    sDSO    0.0002562    0.0002562    0.0002562  iso=   0.0002562
+    sPSO   -0.0001197   -0.0001197   -0.0001197  iso=  -0.0001197
+           ---------------  ---------------  ---------------
+    Total   0.0001365    0.0001365    0.0001365  iso=   0.0001365
+
+    Orientation:
+      X     0.0064703   -0.4858406    0.8740235
+      Y     0.0108064   -0.8739568   -0.4858835
+      Z     0.9999207    0.0125889   -0.0004046
+
+    --------------
+    Nucleus   1H :
+    --------------
+    Raw-matrix : 
+            0.0000379    0.0000000    0.0000000
+           -0.0000000    0.0000291   -0.0000000
+           -0.0000000   -0.0000000    0.0000291
+
+    Diagonalized sT*s matrix:
+    sDSO    0.0000255    0.0000255    0.0000379  iso=   0.0000297
+    sPSO    0.0000036    0.0000036   -0.0000000  iso=   0.0000024
+           ---------------  ---------------  ---------------
+    Total   0.0000291    0.0000291    0.0000379  iso=   0.0000320
+
+    Orientation:
+      X     0.0000004    0.0000065   -1.0000000
+      Y     0.0036682   -0.9999933   -0.0000065
+      Z     0.9999933    0.0036682    0.0000005
+
+    --------------
+    Nucleus   2H :
+    --------------
+    Raw-matrix : 
+            0.0000301   -0.0000028    0.0000000
+           -0.0000028    0.0000369    0.0000000
+           -0.0000000   -0.0000000    0.0000291
+
+    Diagonalized sT*s matrix:
+    sDSO    0.0000255    0.0000255    0.0000379  iso=   0.0000297
+    sPSO    0.0000036    0.0000036   -0.0000000  iso=   0.0000024
+           ---------------  ---------------  ---------------
+    Total   0.0000291    0.0000291    0.0000379  iso=   0.0000320
+
+    Orientation:
+      X    -0.9427514   -0.0102314    0.3333394
+      Y    -0.3333198   -0.0036173   -0.9428069
+      Z    -0.0108521    0.9999411    0.0000001
+
+    --------------
+    Nucleus   3H :
+    --------------
+    Raw-matrix : 
+            0.0000301    0.0000014    0.0000024
+            0.0000014    0.0000311    0.0000034
+            0.0000024    0.0000034    0.0000350
+
+    Diagonalized sT*s matrix:
+    sDSO    0.0000255    0.0000255    0.0000379  iso=   0.0000297
+    sPSO    0.0000036    0.0000036   -0.0000000  iso=   0.0000024
+           ---------------  ---------------  ---------------
+    Total   0.0000291    0.0000291    0.0000379  iso=   0.0000320
+
+    Orientation:
+      X     0.9244046   -0.1853986    0.3333218
+      Y    -0.3337063   -0.8163411    0.4714099
+      Z    -0.1847056    0.5470051    0.8164982
+
+    --------------
+    Nucleus   4H :
+    --------------
+    Raw-matrix : 
+            0.0000301    0.0000014   -0.0000024
+            0.0000014    0.0000311   -0.0000034
+           -0.0000024   -0.0000034    0.0000350
+
+    Diagonalized sT*s matrix:
+    sDSO    0.0000255    0.0000255    0.0000379  iso=   0.0000297
+    sPSO    0.0000036    0.0000036   -0.0000000  iso=   0.0000024
+           ---------------  ---------------  ---------------
+    Total   0.0000291    0.0000291    0.0000379  iso=   0.0000320
+
+    Orientation:
+      X     0.9266924   -0.1736030   -0.3333214
+      Y    -0.3232756   -0.8205276   -0.4714099
+      Z     0.1916612   -0.5446067    0.8164983
+
+
+   -----------------------------------------
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+   ---------------
+   CHEMICAL SHIFTS
+   ---------------
+
+   Note: using conversion factor for au to ppm alpha^2/2 =   26.625677252 
+   Doing GIAO para- and diamagnetic shielding integrals analytically     ...done
+   Doing remaining GIAO terms numerically                                ...done
+    --------------
+    Nucleus   0C :
+    --------------
+
+   Diamagnetic contribution to the shielding tensor (ppm) : 
+              244.001          0.000         0.000
+                0.000        244.001         0.000
+               -0.000         -0.000       244.001
+
+   Paramagnetic contribution to the shielding tensor (ppm): 
+              -42.869         -0.000        -0.000
+                0.000        -42.869        -0.000
+                0.000          0.000       -42.869
+
+   Total shielding tensor (ppm): 
+              201.132          0.000        -0.000
+                0.000        201.132        -0.000
+                0.000          0.000       201.132
+
+
+    Diagonalized sT*s matrix:
+    
+    sDSO           244.001          244.001          244.001  iso=     244.001
+    sPSO           -42.869          -42.869          -42.869  iso=     -42.869
+           ---------------  ---------------  ---------------
+    Total          201.132          201.132          201.132  iso=     201.132
+
+    --------------
+    Nucleus   1H :
+    --------------
+
+   Diamagnetic contribution to the shielding tensor (ppm) : 
+               38.357          0.000         0.000
+                0.000         26.092        -0.000
+               -0.000         -0.000        26.092
+
+   Paramagnetic contribution to the shielding tensor (ppm): 
+               -0.215          0.000         0.000
+                0.000          2.216        -0.000
+                0.000          0.000         2.216
+
+   Total shielding tensor (ppm): 
+               38.142          0.000         0.000
+                0.000         28.308        -0.000
+                0.000         -0.000        28.309
+
+
+    Diagonalized sT*s matrix:
+    
+    sDSO            26.092           26.092           38.357  iso=      30.180
+    sPSO             2.216            2.216           -0.215  iso=       1.406
+           ---------------  ---------------  ---------------
+    Total           28.308           28.309           38.142  iso=      31.586
+
+    --------------
+    Nucleus   2H :
+    --------------
+
+   Diamagnetic contribution to the shielding tensor (ppm) : 
+               27.455         -3.854         0.000
+               -3.854         36.994         0.000
+               -0.000         -0.000        26.092
+
+   Paramagnetic contribution to the shielding tensor (ppm): 
+                1.946          0.764        -0.000
+                0.764          0.055        -0.000
+                0.000          0.000         2.216
+
+   Total shielding tensor (ppm): 
+               29.401         -3.090        -0.000
+               -3.090         37.049         0.000
+                0.000         -0.000        28.308
+
+
+    Diagonalized sT*s matrix:
+    
+    sDSO            26.092           26.092           38.357  iso=      30.180
+    sPSO             2.216            2.216           -0.215  iso=       1.406
+           ---------------  ---------------  ---------------
+    Total           28.308           28.309           38.142  iso=      31.586
+
+    --------------
+    Nucleus   3H :
+    --------------
+
+   Diamagnetic contribution to the shielding tensor (ppm) : 
+               27.455          1.927         3.338
+                1.927         28.818         4.721
+                3.338          4.721        34.269
+
+   Paramagnetic contribution to the shielding tensor (ppm): 
+                1.946         -0.382        -0.662
+               -0.382          1.676        -0.936
+               -0.662         -0.936         0.595
+
+   Total shielding tensor (ppm): 
+               29.401          1.545         2.676
+                1.545         30.494         3.785
+                2.676          3.785        34.864
+
+
+    Diagonalized sT*s matrix:
+    
+    sDSO            26.092           26.092           38.357  iso=      30.180
+    sPSO             2.216            2.216           -0.215  iso=       1.406
+           ---------------  ---------------  ---------------
+    Total           28.308           28.309           38.142  iso=      31.586
+
+    --------------
+    Nucleus   4H :
+    --------------
+
+   Diamagnetic contribution to the shielding tensor (ppm) : 
+               27.455          1.927        -3.338
+                1.927         28.818        -4.721
+               -3.338         -4.721        34.269
+
+   Paramagnetic contribution to the shielding tensor (ppm): 
+                1.946         -0.382         0.662
+               -0.382          1.676         0.936
+                0.662          0.936         0.595
+
+   Total shielding tensor (ppm): 
+               29.401          1.545        -2.676
+                1.545         30.494        -3.785
+               -2.676         -3.785        34.864
+
+
+    Diagonalized sT*s matrix:
+    
+    sDSO            26.092           26.092           38.357  iso=      30.180
+    sPSO             2.216            2.216           -0.215  iso=       1.406
+           ---------------  ---------------  ---------------
+    Total           28.308           28.309           38.142  iso=      31.586
+
+
+
+   --------------------------
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="nmr">
+           <module cmlx:templateRef="nmr">
+            <array dataType="xsd:integer" dictRef="o:nucleus" size="5">0 1 2 3 4</array>
+            <array dataType="xsd:string" dictRef="cc:elementType" size="5">C H H H H</array>
+            <array dataType="xsd:double" dictRef="o:paramagneticShielding" size="5" units="nonsi2:ppm">256.2 29.7 29.7 29.7 29.7</array>
+            <array dataType="xsd:double" dictRef="o:diamagneticShielding" size="5" units="nonsi2:ppm">-119.7 2.4 2.4 2.4 2.4</array>
+            <array dataType="xsd:double" dictRef="o:total" size="5" units="nonsi2:ppm">136.5 32.0 32.0 32.0 32.0</array>
+           </module>
+       </comment>
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="nmr2">
+           <module cmlx:templateRef="nmr">
+            <array dataType="xsd:integer" dictRef="o:nucleus" size="5">0 1 2 3 4</array>
+            <array dataType="xsd:string" dictRef="cc:elementType" size="5">C H H H H</array>
+            <array dataType="xsd:double" dictRef="o:paramagneticShielding" size="5" units="nonsi2:ppm">244.001 30.180 30.180 30.180 30.180</array>
+            <array dataType="xsd:double" dictRef="o:diamagneticShielding" size="5" units="nonsi2:ppm">-42.869 1.406 1.406 1.406 1.406</array>
+            <array dataType="xsd:double" dictRef="o:total" size="5" units="nonsi2:ppm">201.132 31.586 31.586 31.586 31.586</array>
+           </module>
+       </comment>
+
+.. container:: formalpara-title
+
+   **Template definition**
+
+.. code:: xml
+
+   <templateList>  <template id="nucleus" name="nucleus" pattern="\s*Nucleus.*" endPattern="\s*-{10,}.*$\s*Nucleus.*" endPattern2="~" repeat="*" endOffset="0">    <record>\s*Nucleus\s*{I,o:nucleus}{A,cc:elementType}:\s*</record>    <templateList>      <template pattern="\s*(Diamagnetic|Paramagnetic|Total\sshielding).*\(ppm\).*" endPattern=".*" endOffset="0" repeat="*">        <record id="ppmUnits">{X,cc:deleteme}</record>
+                   </template>      <template pattern="\s*Diagonalized\s*sT\*s\s*matrix.*" endPattern=".*[0-9]\s*$\s*" endOffset="1">        <record repeat="1" />        <record repeat="*">\s*</record>        <record id="paramagnetic">\s*sDSO.*iso={F,o:shielding}</record>        <record id="diamagnetic">\s*sPSO.*iso={F,o:shielding}</record>        <record />        <record id="total">\s*Total.*iso={F,o:shielding}</record>
+                   </template>
+               </templateList>
+               
+               
+           </template>
+       </templateList>
+   <transform process="operateScalar" xpath=".//cml:module[@cmlx:templateRef='nucleus' and not( descendant-or-self::cml:list[@cmlx:templateRef='ppmUnits'])]//cml:scalar[@dictRef='o:shielding']" args="operator=multiply operand=1000000" />
+   <transform process="operateScalar" xpath=".//cml:module[@cmlx:templateRef='nucleus' and not( descendant-or-self::cml:list[@cmlx:templateRef='ppmUnits'])]//cml:scalar[@dictRef='o:diamagneticShielding']" args="operator=multiply operand=1000000" />
+   <transform process="operateScalar" xpath=".//cml:module[@cmlx:templateRef='nucleus' and not( descendant-or-self::cml:list[@cmlx:templateRef='ppmUnits'])]//cml:scalar[@dictRef='o:total']" args="operator=multiply operand=1000000" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='o:nucleus']" />
+   <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:elementType']" />
+   <transform process="createArray" xpath="." from=".//cml:list[@cmlx:templateRef='paramagnetic']/cml:scalar[@dictRef='o:shielding']" dictRef="o:paramagneticShielding" />
+   <transform process="createArray" xpath="." from=".//cml:list[@cmlx:templateRef='diamagnetic']/cml:scalar[@dictRef='o:shielding']" dictRef="o:diamagneticShielding" />
+   <transform process="createArray" xpath="." from=".//cml:list[@cmlx:templateRef='total']/cml:scalar[@dictRef='o:shielding']" dictRef="o:total" />
+   <transform process="move" xpath=".//cml:array" to="." />
+   <transform process="delete" xpath=".//cml:module" />
+   <transform process="addUnits" xpath=".//cml:array[@dictRef='o:paramagneticShielding']" value="nonsi2:ppm" />
+   <transform process="addUnits" xpath=".//cml:array[@dictRef='o:diamagneticShielding']" value="nonsi2:ppm" />
+   <transform process="addUnits" xpath=".//cml:array[@dictRef='o:total']" value="nonsi2:ppm" />
+
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Partial.png

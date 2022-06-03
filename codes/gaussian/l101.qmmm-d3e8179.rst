@@ -1,0 +1,157 @@
+.. _l101.qmmm-d3e8179:
+
+l101.qmmm
+=========
+
+.. table:: Implementation level
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Type                                                                                                                       | Status                                                                                                                     |
+   +============================================================================================================================+============================================================================================================================+
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: Template attributes
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                                                                                                                  | Value                                                                                                                      |
+   +============================================================================================================================+============================================================================================================================+
+   | *source*                                                                                                                   | Gaussian log                                                                                                               |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | id                                                                                                                         | l101.qmmm                                                                                                                  |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | pattern                                                                                                                    | &#92;s+Charge.*Multiplicity.*for.*level&#92;scalculation.\*                                                                |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern                                                                                                                 | &#92;s\*                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern2                                                                                                                | ~                                                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endOffset                                                                                                                  | 1                                                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | repeat                                                                                                                     | \*                                                                                                                         |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | xml:base                                                                                                                   | l101/l101.qmmm.xml                                                                                                         |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+    Charge =  0 Multiplicity = 1 for low   level calculation on real  system.
+    Charge =  0 Multiplicity = 1 for high  level calculation on model system.
+    Charge =  0 Multiplicity = 1 for low   level calculation on model system.
+    C-C_2                0    -0.23158   0.44977   0.       H 
+    H-H_                 0    -0.36056   1.51197   0.       H 
+    C-C_3                0     1.18639  -0.15104   0.       L    H-H_     1     0.        0. 
+    H-H_                 0     1.90836   0.63867   0.       L 
+    H-H_                 0     1.31801  -0.75462   0.87365  L 
+    H-H_                 0     1.31801  -0.75463  -0.87365  L 
+    O-O_2                0    -1.23909  -0.30422   0.       H 
+       
+       
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="l101.qmmm">
+          <module cmlx:templateRef="l101.qmmm">                      
+               <list cmlx:templateRef="chargemultlevelsystem">
+                  <array dataType="xsd:integer" dictRef="g:charge" size="3">0 0 0</array>
+                  <array dataType="xsd:integer" dictRef="g:multiplicity" size="3">1 1 1</array>
+                  <array dataType="xsd:string" dictRef="x:level" size="3">low high low</array>
+                  <array dataType="xsd:string" dictRef="x:system" size="3">real model model</array>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">C</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">C_2</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">-0.23158 0.44977 0.</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">H</scalar>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">H</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">H_</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">-0.36056 1.51197 0.</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">H</scalar>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">C</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">C_3</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">1.18639 -0.15104 0.</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">L</scalar>
+                  <scalar dataType="xsd:string" dictRef="x:atomlink">H-H_</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:bondedto">1</scalar>
+                  <array dataType="xsd:double" dictRef="x:scalefactor" size="2">0. 0.</array>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">H</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">H_</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">1.90836 0.63867 0.</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">L</scalar>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">H</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">H_</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">1.31801 -0.75462 0.87365</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">L</scalar>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">H</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">H_</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">1.31801 -0.75463 -0.87365</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">L</scalar>
+               </list>
+               <list cmlx:templateRef="isotope">
+                  <scalar dataType="xsd:string" dictRef="x:atom">O</scalar>
+                  <scalar dataType="xsd:string" dictRef="g:atomicType">O_2</scalar>
+                  <scalar dataType="xsd:integer" dictRef="x:frozen">0</scalar>
+                  <array dataType="xsd:double" dictRef="x:coords" size="3">-1.23909 -0.30422 0.</array>
+                  <scalar dataType="xsd:string" dictRef="x:layer">H</scalar>
+               </list>
+            </module> 
+       </comment>
+
+.. container:: formalpara-title
+
+   **Template definition**
+
+.. code:: xml
+
+   <record id="chargemultlevelsystem" repeat="*" makeArray="true">\s+Charge\s+\={I,g:charge}Multiplicity\s\={I,g:multiplicity}for\s{A,x:level}level\scalculation\son{A,x:system}system.*</record>
+   <templateList>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)--([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s+\S+\s+.*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">{A,x:atom}-{A,g:atomicType}--{F,x:charge}{I,x:frozen}{3F,x:coords}{A,x:layer}{A,x:atomlink}{I,x:bondedto}{1_3F,x:scalefactor}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:charge']" args="operator=multiply operand=-1" />    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)--([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}--{F,x:charge}\s+{I,x:frozen}\s+{3F,x:coords}\s+{X,x:layer}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:charge']" args="operator=multiply operand=-1" />    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)--([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}--{F,x:charge}\s+{I,x:frozen}\s+{3F,x:coords}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:charge']" args="operator=multiply operand=-1" />    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)--([a-zA-Z_0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}--{F,x:charge}\s+{3F,x:coords}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:charge']" args="operator=multiply operand=-1" />    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)-([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s+\S+\s+.*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">{A,x:atom}-{A,g:atomicType}-{F,x:charge}{I,x:frozen}{3F,x:coords}{A,x:layer}{A,x:atomlink}{I,x:bondedto}{1_3F,x:scalefactor}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)-([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}-{F,x:charge}\s+{I,x:frozen}\s+{3F,x:coords}\s+{X,x:layer}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)-([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}-{F,x:charge}\s+{I,x:frozen}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)-([a-zA-Z_0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}-{F,x:charge}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s+\S+\s+.*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">{A,x:atom}-{A,g:atomicType}\s+{I,x:frozen}{3F,x:coords}{A,x:layer}{A,x:atomlink}{I,x:bondedto}{1_3F,x:scalefactor}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}\s+{I,x:frozen}\s+{3F,x:coords}\s+{X,x:layer}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}\s+{I,x:frozen}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}-{A,g:atomicType}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s+\S+\s+.*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">{A,x:atom}\s+{I,x:frozen}{3F,x:coords}{A,x:layer}{A,x:atomlink}{I,x:bondedto}{1_3F,x:scalefactor}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}\s+{I,x:frozen}\s+{3F,x:coords}\s+{X,x:layer}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}\s+{I,x:frozen}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>  <template pattern="\s+([a-zA-Z_0-9]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">\s*{A,x:atom}\s+{3F,x:coords}</record>    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />
+           </template>   
+
+
+       </templateList>
+   <transform process="pullup" xpath="./cml:module/cml:list[@cmlx:templateRef='isotope']" repeat="1" />
+   <transform process="delete" xpath="./cml:module[count(*)=0]" />
+
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

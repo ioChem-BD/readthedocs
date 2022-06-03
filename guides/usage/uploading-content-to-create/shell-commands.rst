@@ -45,6 +45,7 @@ Calculation type specific commands
 `loadgauss`_                       Load Gaussian calculation
 `loadgromacs`_                     Load GROMACS calculation
 `loadgronor`_                      Load GronOR calculation
+`loadlammps`_                      Load LAMMPS calculation
 `loadmolcas`_                      Load Molcas calculation
 `loadmopac`_                       Load Mopac calculation
 `loadorca`_                        Load Orca calculation
@@ -439,6 +440,7 @@ Script                                                                          
 `loadgauss`_                                                                                            Upload **Gaussian** calculation
 `loadgromacs`_                                                                                          Upload **GROMACS** calculation
 `loadgronor`_                                                                                           Upload **GronOR** calculation
+`loadlammps`_                                                                                           Upload **LAMMPS** calculation
 `loadmolcas`_                                                                                           Upload **Molcas** calculation
 `loadmopac`_                                                                                            Upload **Mopac** calculation
 `loadorca`_                                                                                             Upload **Orca** calculation
@@ -466,6 +468,7 @@ Script                                                                          
 .. _loadgauss:  ./using-shell-client/shell-automated-scripts.html#loadgauss
 .. _loadgromacs:  ./using-shell-client/shell-automated-scripts.html#loadgromacs
 .. _loadgronor:  ./using-shell-client/shell-automated-scripts.html#loadgronor
+.. _loadlammps:  ./using-shell-client/shell-automated-scripts.html#loadlammps
 .. _loadmolcas:  ./using-shell-client/shell-automated-scripts.html#loadmolcas
 .. _loadmopac:  ./using-shell-client/shell-automated-scripts.html#loadmopac
 .. _loadorca:  ./using-shell-client/shell-automated-scripts.html#loadorca

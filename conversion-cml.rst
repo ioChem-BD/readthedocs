@@ -10,6 +10,7 @@ From chemical codes to CML
    /codes/gaussian
    /codes/gromacs
    /codes/gronor
+   /codes/lammps
    /codes/molcas
    /codes/mopac
    /codes/orca

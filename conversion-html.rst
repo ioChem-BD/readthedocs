@@ -10,6 +10,7 @@ From CML to HTML5 report
    /html/gaussian
    /html/gromacs
    /html/gronor
+   /html/lammps
    /html/molcas
    /html/mopac
    /html/orca

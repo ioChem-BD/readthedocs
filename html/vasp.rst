@@ -97,9 +97,16 @@ This module will hold Free ,E0 , dE and E-fermi energies.
 
 In case of single calculations (single point, geometry optimization), a table with this values will be displayed.
 
-On multiple OUTCAR calculations like Nudge Elastic Band (NEB) or Dimmer, a graphic will be printed with each diferential energy as step.
-
 .. image:: /imgs/VASP_module_energies_single.png
+   :alt:  Energies (single calculation)
+
+On Molecular Dynamics calculations, a table with energy and force progression will appear along with a plot of such values.
+
+.. image:: /imgs/VASP_module_energies_md.png
+
+.. image:: /imgs/VASP_module_energies_md2.png
+
+On multiple OUTCAR calculations like Nudge Elastic Band (NEB) or Dimmer, a graphic will be printed with each diferential energy as step.
 
 .. image:: /imgs/VASP_module_energies_multiple.png
 
@@ -217,19 +224,19 @@ Lattice replication
                                   
                                                   
 
-.. _`cc:program`: ../codes/vasp/generator-d3e40663.html
-.. _`v:ispin`: ../codes/vasp/incar-d3e40713.html
-.. _`cc:temp`: ../codes/vasp/incar-d3e40713.html
-.. _incar: ../codes/vasp/incar-d3e40713.html
-.. _grimmes: ../codes/vasp/grimmes-d3e42172.html
-.. _position: ../codes/vasp/position-d3e41405.html
-.. _potcar: ../codes/vasp/potcar-d3e41277.html
-.. _laticce: ../codes/vasp/lattice-d3e41365.html
-.. _calculated.position: ../codes/vasp/calculated.position-d3e41549.html
-.. _basis used: ../codes/vasp/atom.potcar-d3e41285.html
-.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e50653.html
-.. _energy: ../codes/vasp/energy-d3e41762.html
-.. _eigenvalues: ../codes/vasp/eigenvalues-d3e41998.html
-.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e50693.html
-.. _magnetization: ../codes/vasp/magnetization-d3e41860.html
-.. _vibrations: ../codes/vasp/vibrations-d3e41695.html
+.. _`cc:program`: ../codes/vasp/generator-d3e41528.html
+.. _`v:ispin`: ../codes/vasp/incar-d3e41578.html
+.. _`cc:temp`: ../codes/vasp/incar-d3e41578.html
+.. _incar: ../codes/vasp/incar-d3e41578.html
+.. _grimmes: ../codes/vasp/grimmes-d3e43063.html
+.. _position: ../codes/vasp/position-d3e42270.html
+.. _potcar: ../codes/vasp/potcar-d3e42142.html
+.. _laticce: ../codes/vasp/lattice-d3e42230.html
+.. _calculated.position: ../codes/vasp/calculated.position-d3e42414.html
+.. _basis used: ../codes/vasp/atom.potcar-d3e42150.html
+.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e52230.html
+.. _energy: ../codes/vasp/energy-d3e42653.html
+.. _eigenvalues: ../codes/vasp/eigenvalues-d3e42889.html
+.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e52271.html
+.. _magnetization: ../codes/vasp/magnetization-d3e42752.html
+.. _vibrations: ../codes/vasp/vibrations-d3e42587.html

@@ -21,7 +21,7 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Calculation type                                                                                                      | Fixed value                                                                                                          | NOCI                                                                                                                                                          |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method                                                                                                                | `environment <#../codes/gronor/initialization-d3e23069.html>`__ template.                                            | NOCI-Fragments                                                                                                                                                |
+   | Method                                                                                                                | `environment <#../codes/gronor/initialization-d3e23276.html>`__ template.                                            | NOCI-Fragments                                                                                                                                                |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. image:: /imgs/GRONOR_header.png
@@ -80,8 +80,8 @@ Data source: <module dictRef='`cc:finalization`_'> and <module id='`environment`
 
 .. image:: /imgs/GRONOR_timing.png
 
-.. _environment: ../codes/gronor/environment-d3e22986.html
-.. _initialization: ../codes/gronor/initialization-d3e23069.html
-.. _geometry: ../codes/gronor/geometry-d3e23109.html
-.. _`cc:calculation`: ../codes/gronor/calculation-d3e23503.html
-.. _`cc:finalization`: ../codes/gronor/finalization-d3e23730.html
+.. _environment: ../codes/gronor/environment-d3e23193.html
+.. _initialization: ../codes/gronor/initialization-d3e23276.html
+.. _geometry: ../codes/gronor/geometry-d3e23316.html
+.. _`cc:calculation`: ../codes/gronor/calculation-d3e23710.html
+.. _`cc:finalization`: ../codes/gronor/finalization-d3e23937.html

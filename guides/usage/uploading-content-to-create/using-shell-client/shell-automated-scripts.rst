@@ -13,6 +13,7 @@ Per file type
 - `loadgauss`_
 - `loadgromacs`_
 - `loadgronor`_
+- `loadlammps`_
 - `loadmolcas`_
 - `loadmopac`_
 - `loadorca`_
@@ -244,6 +245,65 @@ This command will behave the same as previous one but will upload different file
 .. code:: bash
 
        $ loadgronor -n Sc2C82 -d "Sample upload" -i input2.in -o dimmer.cml
+
+loadlammps
+~~~~~~~~~~~
+
+Loads a LAMMPS calculation into the Create module.
+
+Read more about LAMMPS format capture restricitions on the following `page`_.
+
+============== ======================================================================================================
+Parameters     Description
+============== ======================================================================================================
+-i *filename*  User defined input file, if not provided will use script defined name
+-p *filename*  Data file used on the *read_data* command, if not defined will use script defined name
+-o *filename*  Output file, called by default *log.lammps*, if not defined will use script defined name
+-t *filename*  Trajectory file, it can be compressed in .zip or .tar.gz, if not defined will use script defined name
+-a             Append additional file (optional)
+-n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+============== ======================================================================================================
+
+If parameters **-i**, **-o**, **-p** and/or **-t** are not set, this script will look for *input.in*, *log.lammps*, *lammps.dat* and *trajectory.zip* files. 
+If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadlammps* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.in"
+       OUTPUT_DEFAULT_FILENAME="log.lammps"
+       DATAFILE_DEFAULT_FILENAME="lammps.dat"
+       TRAJECTORY_DEFAULT_FILENAME="trajectory.zip"
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+Upload calculation *LIN24_LI192* using required files
+
+.. code:: bash
+ 
+       $ loadlammps -i lammps.lmp -p lammps.dat -o log.lammps -t trajectory.zip -n "LIN24_LI192" -d "LIN24 LI192 SOL25208 40000ps NPT 300K calculation"
+
+
+Upload same calculation but name and description are picked from the parent folder name.
+
+.. code:: bash
+
+       $ pwd
+       /home/user/Desktop/LIN24_LI192
+       $ loadlammps -i lammps.lmp -p lammps.dat -o log.lammps -t trajectory.zip
+
+
+Upload calculation and automatically build its parent folder. calculation name and description will be same as parent folder
+
+.. code:: bash
+
+       $ loadlammps -i lammps.lmp -p lammps.dat -o log.lammps -t trajectory.zip --auto
+
 
 loadmolcas
 ~~~~~~~~~~
@@ -818,6 +878,7 @@ Restrictions:
 .. _loadgauss: #loadgauss
 .. _loadgromacs: #loadgromacs
 .. _loadgronor: #loadgronor
+.. _loadlammps: #loadlammps
 .. _loadmolcas: #loadmolcas
 .. _loadmopac: #loadmopac
 .. _loadorca: #loadorca
@@ -840,4 +901,5 @@ Restrictions:
 .. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
 .. _turbo_lanczos.x: https://www.quantum-espresso.org/Doc/INPUT_Lanczos.html 
 .. _turbo_spectrum.x: https://www.quantum-espresso.org/Doc/INPUT_Spectrum.html
+.. _page: ../../../../html/lammps.html#lammps
 

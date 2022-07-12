@@ -17,6 +17,6 @@ VASP
    /codes/vasp/magnetization-d3e42752
    /codes/vasp/eigenvalues-d3e42889
    /codes/vasp/grimmes-d3e43063
-   /codes/vasp/vasp.incar-d3e52150
-   /codes/vasp/vasp.kpoints-d3e52230
-   /codes/vasp/vasp.doscar-d3e52271
+   /codes/vasp/vasp.incar-d3e52154
+   /codes/vasp/vasp.kpoints-d3e52234
+   /codes/vasp/vasp.doscar-d3e52275

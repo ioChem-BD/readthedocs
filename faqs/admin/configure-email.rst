@@ -216,6 +216,17 @@ Edit *BASE_PATH/browse/config/dspace.cfg* with the following properties:
                        mail.smtp.starttls.required=true    
 
 
+If this setup doesn't work, try to set also the ssl protocol used:
+
+.. code:: bash
+
+    mail.server.port = 587
+    mail.extraproperties = mail.smtp.starttls.enable=true, \
+                       mail.smtp.socketFactory.port=587, \
+                       mail.smtp.ssl.protocols=TLSv1.2, \
+                       mail.smtp.starttls.required=true
+
+
 
 Please contact us at contact@iochem-bd.org for further assistance if you have problems configuring the mail service. 
    

@@ -241,8 +241,8 @@ Data source: <module id='`qespresso.absorptionspec`_'>
 .. _environ: ../codes/quantumespresso/environ-d3e37390.html
 .. _`cc:parameter`: ../codes/quantumespresso/environ-d3e37390.html
 .. _parameters: ../codes/quantumespresso/parameters-d3e36554.html
-.. _atoms: ../codes/quantumespresso/qespresso.input-d3e52703.html
-.. _species: ../codes/quantumespresso/qespresso.input-d3e52703.html
+.. _atoms: ../codes/quantumespresso/qespresso.input-d3e52707.html
+.. _species: ../codes/quantumespresso/qespresso.input-d3e52707.html
 .. _lattice: ../codes/quantumespresso/lattice-d3e36735.html
 .. _axes: ../codes/quantumespresso/axes-d3e36844.html
 .. _ldau: ../codes/quantumespresso/ldau-d3e37680.html
@@ -254,4 +254,4 @@ Data source: <module id='`qespresso.absorptionspec`_'>
 .. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e37896.html
 .. _projwfc: ../codes/quantumespresso/projwfc-d3e38009.html
 .. _frequencies: ../codes/quantumespresso/frequencies-d3e38228.html
-.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e53705.html
+.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e53709.html

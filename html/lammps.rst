@@ -226,7 +226,7 @@ Data sources:
 .. _atom_styles: https://docs.lammps.org/read_data.html#format-of-the-body-of-a-data-file
 .. _program.header template: ../codes/lammps/header-d3e23974.html
 .. _setup: ../codes/lammps/setup-d3e24010.html
-.. _read_data structure file: ../codes/lammps/lammps.data-d3e51574.html
+.. _read_data structure file: ../codes/lammps/lammps.data-d3e51578.html
 .. _steps: ../codes/lammps/steps-d3e24250.html
 .. _mpi: ../codes/lammps/mpi-d3e24368.html
 .. _walltime: ../codes/lammps/walltime-d3e24432.html

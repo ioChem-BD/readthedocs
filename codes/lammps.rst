@@ -11,4 +11,4 @@ LAMMPS
    /codes/lammps/mpi-d3e24368
    /codes/lammps/walltime-d3e24432
    /codes/lammps/header-d3e23974
-   /codes/lammps/lammps.data-d3e51574
+   /codes/lammps/lammps.data-d3e51578

@@ -20,5 +20,5 @@ QuantumEspresso
    /codes/quantumespresso/eigenvalues-d3e37896
    /codes/quantumespresso/projwfc-d3e38009
    /codes/quantumespresso/frequencies-d3e38228
-   /codes/quantumespresso/qespresso.input-d3e52703
-   /codes/quantumespresso/qespresso.absorptionspec-d3e53705
+   /codes/quantumespresso/qespresso.input-d3e52707
+   /codes/quantumespresso/qespresso.absorptionspec-d3e53709

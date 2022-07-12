@@ -234,9 +234,9 @@ Lattice replication
 .. _laticce: ../codes/vasp/lattice-d3e42230.html
 .. _calculated.position: ../codes/vasp/calculated.position-d3e42414.html
 .. _basis used: ../codes/vasp/atom.potcar-d3e42150.html
-.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e52230.html
+.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e52234.html
 .. _energy: ../codes/vasp/energy-d3e42653.html
 .. _eigenvalues: ../codes/vasp/eigenvalues-d3e42889.html
-.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e52271.html
+.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e52275.html
 .. _magnetization: ../codes/vasp/magnetization-d3e42752.html
 .. _vibrations: ../codes/vasp/vibrations-d3e42587.html

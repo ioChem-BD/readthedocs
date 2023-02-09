@@ -40,7 +40,7 @@ After settings, our HTML resume will output a xyz coordinates table with current
 
 For every atom, we will output it's serial number, atom type, coordinates in angstroms.
 
-Information its readed from `molecular structure file.`_
+Information its read from `molecular structure file.`_
 
 .. image:: /imgs/GROMACS_geometry.png
 
@@ -102,10 +102,10 @@ Data sources:
                               
                               
 
-.. _program.header template: ../codes/gromacs/header-d3e21978.html
-.. _input.parameters: ../codes/gromacs/input.parameters-d3e22121.html
-.. _molecular structure file.: ../codes/gromacs/gromacs.geometry-d3e43943.html
-.. _averages: ../codes/gromacs/averages-d3e22705.html
-.. _hardware: ../codes/gromacs/hardware-d3e22563.html
-.. _summary: ../codes/gromacs/summary-d3e23118.html
-.. _accounting: ../codes/gromacs/accounting-d3e23043.html
+.. _program.header template: ../codes/gromacs/header-d3e26549.html
+.. _input.parameters: ../codes/gromacs/input.parameters-d3e26692.html
+.. _molecular structure file.: ../codes/gromacs/gromacs.geometry-d3e49140.html
+.. _averages: ../codes/gromacs/averages-d3e27278.html
+.. _hardware: ../codes/gromacs/hardware-d3e27136.html
+.. _summary: ../codes/gromacs/summary-d3e27691.html
+.. _accounting: ../codes/gromacs/accounting-d3e27616.html

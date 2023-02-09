@@ -66,11 +66,15 @@ Most relevant calculation input parameters. Almost all information fields come f
 Atoms info
 ----------
 
-After settings section, our HTML resume will output cell coordinates, lattice vectors and a coordinates table with molecule atoms.
+After settings section, our HTML resume will output cell coordinates and a coordinates table with molecule atoms.
 
-Initial geometry its readed from OUTCAR file using: <module cmlx:templateRef="`position`_">, <module cmlx:templateRef="`incar`_">, <module cmlx:templateRef="`potcar`_"> and <module cmlx:templateRef="`laticce`_">
+Initial geometry its read from OUTCAR file using: <module cmlx:templateRef="`position`_">, <module cmlx:templateRef="`incar`_">, <module cmlx:templateRef="`potcar`_"> and <module cmlx:templateRef="`laticce`_">
 
 Final geometry will be generated using the same modules than Initial geometry, but coordinates will come from last instance of <module cmlx:templateRef="`calculated.position`_">
+
+NEB and DIM calculation types will display buttons to choose the displayed geometry.
+
+On geometry optimization calculations, the initial and final geometries will be displayed side to side on a JSmol viewer.
 
 For every atom, we will output it's serial number, atom type, cartesian and fractional coordinates (in angstroms) , and `basis used`_.
 
@@ -81,7 +85,7 @@ Molecular Info
 
 This section captures molecule additional information not captured on previous section.
 
-K-point generation parameters readed form `KPOINTS file`_
+K-point generation parameters read from `KPOINTS file`_
 
 .. image:: /imgs/VASP_molecularinfo.png
 
@@ -151,6 +155,15 @@ Lattice replication
 
 .. image:: /imgs/VASP_module_structure.png
 
+Band structure
+~~~~~~~~~~~~~~
+
+Data source: <module id='`kpoints`_'> and <module cmlx:templateRef='`eigenvalues`_'>
+
+On Band structure calculations the platform will display a graph with the eigenvalues for each band, centering zero on the Fermi energy value.
+
+.. image:: /imgs/VASP_module_bands.png
+
 .. [1]
    string ``vasp:getCalcType`` nodeset ``ibrion``
 
@@ -182,7 +195,7 @@ Lattice replication
    .. code:: xml
 
        
-              gga, lhfcalc, hfscreen , ...           parameters readed from OUTCAR file <module cmlx:templateRef="incar">                                      
+              gga, lhfcalc, hfscreen , ...           parameters read from OUTCAR file <module cmlx:templateRef="incar">                                      
                                   
            <xsl:param name="gga"/>
            <xsl:param name="lhfcalc"/>
@@ -224,19 +237,20 @@ Lattice replication
                                   
                                                   
 
-.. _`cc:program`: ../codes/vasp/generator-d3e41528.html
-.. _`v:ispin`: ../codes/vasp/incar-d3e41578.html
-.. _`cc:temp`: ../codes/vasp/incar-d3e41578.html
-.. _incar: ../codes/vasp/incar-d3e41578.html
-.. _grimmes: ../codes/vasp/grimmes-d3e43063.html
-.. _position: ../codes/vasp/position-d3e42270.html
-.. _potcar: ../codes/vasp/potcar-d3e42142.html
-.. _laticce: ../codes/vasp/lattice-d3e42230.html
-.. _calculated.position: ../codes/vasp/calculated.position-d3e42414.html
-.. _basis used: ../codes/vasp/atom.potcar-d3e42150.html
-.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e52234.html
-.. _energy: ../codes/vasp/energy-d3e42653.html
-.. _eigenvalues: ../codes/vasp/eigenvalues-d3e42889.html
-.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e52275.html
-.. _magnetization: ../codes/vasp/magnetization-d3e42752.html
-.. _vibrations: ../codes/vasp/vibrations-d3e42587.html
+.. _`cc:program`: ../codes/vasp/generator-d3e46138.html
+.. _`v:ispin`: ../codes/vasp/incar-d3e46188.html
+.. _`cc:temp`: ../codes/vasp/incar-d3e46188.html
+.. _incar: ../codes/vasp/incar-d3e46188.html
+.. _grimmes: ../codes/vasp/grimmes-d3e47673.html
+.. _position: ../codes/vasp/position-d3e46880.html
+.. _potcar: ../codes/vasp/potcar-d3e46752.html
+.. _laticce: ../codes/vasp/lattice-d3e46840.html
+.. _calculated.position: ../codes/vasp/calculated.position-d3e47024.html
+.. _basis used: ../codes/vasp/atom.potcar-d3e46760.html
+.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e55480.html
+.. _energy: ../codes/vasp/energy-d3e47263.html
+.. _eigenvalues: ../codes/vasp/eigenvalues-d3e47499.html
+.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e55697.html
+.. _magnetization: ../codes/vasp/magnetization-d3e47362.html
+.. _vibrations: ../codes/vasp/vibrations-d3e47197.html
+.. _kpoints: ../codes/vasp/vasp.kpoints-d3e55480.html

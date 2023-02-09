@@ -9,7 +9,9 @@ Per file type
 -------------
 
 - `loadadf`_
+- `loadams`_
 - `loadamber`_
+- `loadcastep`_
 - `loadgauss`_
 - `loadgromacs`_
 - `loadgronor`_
@@ -18,7 +20,13 @@ Per file type
 - `loadmopac`_
 - `loadorca`_
 - `loadqespresso`_
+     - `Absorption spectra`_ calculations 
+     - `Band structure`_ calculations
+     - `Projected DOS`_ calculations
+     - `Phonon dispersion`_ calculations
+     - `Phonon DOS`_ calculations
 - `loadturbo`_
+- `loadsiesta`_
 - `loadvasp`_
      - `neb`_ calculations
      - `dim`_ calculations
@@ -27,14 +35,14 @@ Per file type
 loadadf
 ~~~~~~~
 
-Loads an ADF calculation into the Create module.
+Loads an ADF calculation into the Create module (until AMS2020).
 
 ============= ======================================================================================================
 Parameters    Description
 ============= ======================================================================================================
 -i *filename* Input file, if not defined will use script defined name
 -o *filename* Output file, if not defined will use script defined name
--a            Append additional file (optional)
+-a *filename* Append additional file (optional)
 -n *name*     Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*     Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto         Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
@@ -53,7 +61,7 @@ If parameters **-n** and **-d** are not defined, the scripts will use the parent
 Examples
 '''''''' 
 
-Upload calculation *a-pw12* using *a-pw12.opt.in* and *a-pw12.opt.in* files
+Upload calculation *a-pw12* using *a-pw12.opt.in* and *a-pw12.opt.out* files
 
 .. code:: bash
 
@@ -79,6 +87,60 @@ Upload calculation and automatically build its parent folder. calculation name a
 
        $ loadadf -i irc_ts2_09.in -o irc_ts2_09.out --auto
 
+
+loadams
+~~~~~~~
+
+Loads an AMS ADF calculation into the Create module (since AMS2020).
+
+================ ======================================================================================================
+Parameters       Description
+================ ======================================================================================================
+-i *filename*    Input file, if not defined will use script defined name
+-rkf1 *filename* ams.rkf binary file, if not defined will use script defined name
+-rkf2 *filename* adf.rkf binary file, if not defined will use script defined name
+-o *filename*    Output file, if not defined will use script defined name
+-a *filename*    Append additional file (optional)
+-n *name*        Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*        Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto            Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+================ ======================================================================================================
+
+If parameters **-i**, **-rkf1**, **-rkf2** and **-o** are not set, this script will look for *input.in*, *ams.rkf*, *adf.rkf* and *output.out* files. If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadams* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.in"
+       OUTPUT_DEFAULT_FILENAME="output.out"
+       AMS_DEFAULT_FILENAME="ams.rkf"
+       ADF_DEFAULT_FILENAME="adf.rkf"
+
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+Upload calculation *a-pw12* with its files:
+
+.. code:: bash
+
+       $ loadams -i a-pw12.opt.in -o a-pw12.opt.out -rkf1 Test.results/ams.rkf -rkf2 Test.results/adf.rkf -n "a-pw12" -d "Optimization a-pw12"
+
+
+Upload calculation named *a-pw12.opt* and attach additional file *report.pdf*
+
+.. code:: bash
+
+       $ loadams -i a-pw12.opt.in -o a-pw12.opt.out -rkf1 Test.results/ams.rkf -rkf2 Test.results/adf.rkf -a report.pdf -n a-pw12.opt -d "Optimization a-pw12"
+
+Upload calculation and automatically build its parent folder. calculation name and description will be same as parent folder
+
+.. code:: bash
+
+       $ loadams -i irc_ts2_09.in -o irc_ts2_09.out -rkf1 Test.results/ams.rkf -rkf2 Test.results/adf.rkf --auto
+
 loadamber
 ~~~~~~~~~~~
 
@@ -93,7 +155,7 @@ Parameters     Description
 -ir *filename* Initial coordinates file (.inpcrd) or intial restart file (.ncrst) used, if not defined will use script defined name
 -r *filename*  Final restart file (.ncrst), if not defined will use script defined name
 -t *filename*  Trajectory file (.nc), if not defined will use script defined name
--a             Append additional file (optional)
+-a *filename*  Append additional file (optional)
 -n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
@@ -136,6 +198,84 @@ This command will behave the same as previous one but will upload different file
        $ loadamber -n Au-CoO-H2O -d "Sample upload" -i step1.in -o step1.out -p Au-CoO-H2O.prmtop -ir Au-CoO-H2O.inpcrd -r Au-CoO-H2O.ncrst -t Au-CoO-H2O.nc
 
 
+
+loadcastep
+~~~~~~~~~~~
+
+Loads a CASTEP calculation into the Create module. 
+
+More about the format capture restrictions on the following `page <../../../../html/castep.html#castep>`_.
+
+
+=============== ======================================================================================================================
+Parameters      Description
+=============== ======================================================================================================================
+-i *filename*   Input parameters file (.param), if not defined will use script defined name
+-o *filename*   Output resume file (.castep), if not defined will use script defined name
+-oc *filename*  Cell file (.cell), if not defined will use script defined name
+-xcd *filename* Graph file (.xcd), can be repeated to add multiple files (optional) 
+-og *filename*  Geometry steps file (.geom), it is **mandatory only on geometry optimization calculations**.
+-a *filename*   Append additional file, can be repeated to add multiple files (optional)
+-n *name*       Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*       Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto           Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section
+=============== ======================================================================================================================
+
+If parameters **-i**, **-o** and **-oc** are not set, this script will look for *calc.param*, *calc.castep*, *calc.cell* files. 
+If that files are missing, the upload process will be aborted. 
+
+If you wish to use another naming convention set the parameters to override default values or edit the *loadcastep* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="calc.param"
+       OUTPUT_DEFAULT_FILENAME="calc.castep"
+       CELL_DEFAULT_FILENAME="calc.cell"
+     
+       
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Additional files, like trajectories (.trj), can be attached to the uploaded calculation using the **-a** additional file parameter. 
+
+Examples
+'''''''' 
+
+.. code:: bash
+
+       $ loadcastep
+
+This command will set upload calculation name and description equals to parent folder and upload all required files if they match by name.
+
+
+.. code:: bash
+   
+       $ loadcastep -n Si_51688 -d "Sample upload"
+
+This command will upload required matching files in directory, set calculation name as "Si_51688" and description as "Sample upload".
+
+
+.. code:: bash
+   
+       $ loadcastep -n Si_51688 -d "Sample upload" -i Si_51688.param -o Si_51688.castep -oc Si_51688.cell -xcd Si_51688_Energies.xcd -xcd Si_51688_Convergence.xcd
+
+This command will use different filenames and also upload two additional graph files.   
+
+
+.. code:: bash
+
+       $ loadcastep -n Si_51688 -d "Sample upload" -i Si_51688.param -o Si_51688.castep -oc Si_51688.cell -geom Si_51688.geom
+
+This command will add the .geom file due to it's an optimization calculation.
+
+
+.. code:: bash
+
+       $ loadcastep -n Si_51688 -d "Sample upload" -i Si_51688.param -o Si_51688.castep -oc Si_51688.cell -a Si_51688.trj
+
+This command will upload the calculation adding a trajectory file as an additional file.
+
+
 loadgauss
 ~~~~~~~~~
 
@@ -155,7 +295,7 @@ Parameters     Description
 -o *filename*  Logfile (.log) as the Output file, if not defined will use script defined name
 -oc *filename* Molecular structure in Gromos87 format. (.gro), if not defined will use script defined name
 -t *filename*  Trajectory file (.xtc), if not defined will use script defined name
--a             Append additional file (optional)
+-a *filename*  Append additional file (optional)
 -n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
@@ -208,7 +348,7 @@ Parameters    Description
 ============= ======================================================================================================
 -i *filename* Input file (optional)
 -o *filename* Output file in CML format, if not defined will use script defined name
--a            Append additional file (optional)
+-a *filename* Append additional file (optional)
 -n *name*     Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*     Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto         Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
@@ -260,7 +400,7 @@ Parameters     Description
 -p *filename*  Data file used on the *read_data* command, if not defined will use script defined name
 -o *filename*  Output file, called by default *log.lammps*, if not defined will use script defined name
 -t *filename*  Trajectory file, it can be compressed in .zip or .tar.gz, if not defined will use script defined name
--a             Append additional file (optional)
+-a *filename*  Append additional file (optional)
 -n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name
 –auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
@@ -320,20 +460,25 @@ Same parameters and functionalities than the `loadadf`_ script.
 loadqespresso
 ~~~~~~~~~~~~~
 
-Loads a QuantumESPRESSO calculation into the Create module.
+Loads a QuantumESPRESSO calculation into the Create module. 
 
-============== =======================================================================================================
-Parameters     Description
-============== =======================================================================================================
--i *filename*  Input file, if not defined will use script defined name.
--o *filename*  Output file, if not defined will use script defined name.
--as *filename* Absorption spectra data file, see below for further details (optional).
--a             Append additional file (optional).
--n *name*      Name of the calculation in the data base (optional), if not defined will use parent folder name.
--d *desc*      Description of the calculation in the data base (optional), if not defined will use parent folder name.
-–auto          Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
-============== =======================================================================================================
+Options like *-b*, *-dos*, *-pi* or *-.po* are restricted to specificic calculation types described below.
 
+================= =======================================================================================================
+Parameters        Description
+================= =======================================================================================================
+-i *filename*     Input file, if not defined will use script defined name.
+-o *filename*     Output file, if not defined will use script defined name.
+-as *filename*    Absorption spectra data file, see Absorption spectra section below for further details (optional).
+-b *filename*     Reordered band data file, see Band structure section below for further details (optional).
+-dos *filename*   PDOS atom file(s) (optional).
+-pi *filename*    Input used on the phonon matdyn.x tool, contains k-points and labels (optional).
+-po *filename*    Output file containing the phonon frequencies. (optional)
+-a *filename*     Append additional file (optional).
+-n *name*         Name of the calculation in the data base (optional), if not defined will use parent folder name.
+-d *desc*         Description of the calculation in the data base (optional), if not defined will use parent folder name.
+–auto             Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+================= =======================================================================================================
 
 If parameters **-i** and **-o** are not set, this script will look for *input.in* and *output.out* files. If any of that files don't exist, the upload process will be aborted. If you wish to use another naming convention just edit the *loadqespresso* script file and replace default filenames.
 
@@ -345,27 +490,15 @@ If parameters **-i** and **-o** are not set, this script will look for *input.in
 
 If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
 
-Absorption spectra
-''''''''''''''''''
-
-ioChem-BD can process and display absorption spectrum data coming from time-dependent density functional theory calculations (TDDFT). 
-
-The required file is generated by the combination of the following QuantumEspresso tools:
-
-  `pw.x`_ -> `turbo_lanczos.x`_ -> `turbo_spectrum.x`_
-    
-  SCF -> TDDF calculation -> Spectrum creation
-
-Once the spectrum data file is generated, it can be uploaded along with the calculation using the **-as** parameter.
- 
 Examples
-'''''''' 
+''''''''
 
 Upload calculation *a-pw12* using *a-pw12.opt.in* and *a-pw12.opt.in* files
 
 .. code:: bash
 
        $ loadqespresso -i a-pw12.opt.in -o a-pw12.opt.out -n "a-pw12" -d "Optimization a-pw12"
+
 
 Upload calculation named *bencene* using *pw_scf.in* and *pw_scf.out* files; name and description are picked from the parent folder name.
 
@@ -375,11 +508,6 @@ Upload calculation named *bencene* using *pw_scf.in* and *pw_scf.out* files; nam
        /home/user/Desktop/bencene
        $ loadqespresso -i pw_scf.in -o pw_scf.out
 
-Upload calculation named *a-pw12.opt* and attach spectra file *plot_chi.dat*
-
-.. code:: bash
-
-       $ loadqespresso -i pw_scf.in -o pw_scf.out -as plot_chi.dat -n a-pw12.opt -d "Bencene calculation"
 
 Upload calculation and automatically build its parent folder. calculation name and description will be same as parent folder
 
@@ -388,6 +516,183 @@ Upload calculation and automatically build its parent folder. calculation name a
        $ loadqespresso -i irc_ts2_09.in -o irc_ts2_09.out --auto
 
 
+Absorption spectra calculations
+'''''''''''''''''''''''''''''''
+
+ioChem-BD can process and display absorption spectrum data coming from time-dependent density functional theory calculations (TDDFT).
+
+
+.. figure:: /imgs/QEX-absorption.png
+   :alt:  Absorption spectra plot 
+   
+   Sample absorption spectra plot
+
+
+The required file is generated by the combination of the following QuantumEspresso tools:
+
+  `pw.x`_ -> `turbo_lanczos.x`_ -> `turbo_spectrum.x`_
+    
+  SCF -> TDDF calculation -> Spectrum creation
+
+Once the spectrum data file is generated, it can be uploaded along with the calculation using the **-as** parameter.
+ 
+Example
+^^^^^^^ 
+
+Upload calculation named *a-pw12.opt* and attach spectra file *plot_chi.dat*
+
+.. code:: bash
+
+       $ loadqespresso -i pw_scf.in -o pw_scf.out -as plot_chi.dat -n a-pw12.opt -d "Bencene calculation"
+
+
+Band structure calculations
+'''''''''''''''''''''''''''
+
+ioChem-BD can process and display band dispersion data on its HTML report. 
+
+.. figure:: /imgs/QEX-bands.png
+   :alt:  Band structure 
+   
+   Sample band structure plot
+
+
+The following QuantumEspresso tool workflow will generate the required files:
+
+  `pw.x`_ -> `pw.x (bands)`_  -> `bands.x <https://www.quantum-espresso.org/Doc/INPUT_BANDS.html>`_
+    
+  SCF -> Band path calculation -> Band dispersion calculation
+
+Once the bands dispersion file is generated, it must be uploaded along with the calculation using the **-b** parameter. When having spin up/down band files, please provide two **-b** parameters, being the spin up band file the first and the down file the second.  
+
+The provided input file must be the band path calculation file from 2nd step, which contains kpoint band path.
+
+The provided output files must be the SCF output file from the 1st step and the band path calculation file from 2nd step, so two **-o** parameters should be provided, the order must be kept the same as described here.
+
+.. important:: The first output file (SCF) is optional but if not provided the generated graph won't center its energies on fermi energy value.
+
+Examples
+^^^^^^^^ 
+ 
+Upload calculation named *Ce_bands* and attach band structure information file *bands.out*:
+
+.. code:: bash
+
+       $ loadqespresso -i ce_nscf.in -o ce_scf.out -o ce_nscf.out -b bands.out -n Ce_bands -d "Bands for Ce atom"
+       
+
+Same calculation but with spin up/down band files:
+
+.. code:: bash
+
+       $ loadqespresso -i ce_nscf.in -o ce_scf.out -o ce_nscf.out -b bands_up.out -b bands_down.out -n Ce_bands -d "Bands for Ce atom"
+
+
+Projected Density of States calculations
+''''''''''''''''''''''''''''''''''''''''
+
+ioChem-BD can process and display the projected density of states information on its HTML report. 
+
+.. figure:: /imgs/QEX-pdos.png
+   :alt:  Projected DOS graph 
+   
+   PDOS plot per atom and orbital type, both spins
+
+
+The following QuantumEspresso tool workflow will generate the required files:
+
+  `pw.x`_ -> `pw.x`_  -> `projwfc.x <https://www.quantum-espresso.org/Doc/INPUT_PROJWFC.html>`_
+    
+  SCF -> NSCF -> Projects wavefunctions onto orthogonalized atomic wavefunctions.
+
+We need first a self-consistent field calculation and then a non-self-consistent field calculation with denser k-points. Then we prepare the input file for the tool projwfc.x.
+
+The tool generates all the PDOS values files following this naming template: 
+
+.. code:: text
+
+     .*.pdos_atm#XXX(YYY)_wfc#AAA(BBB)
+
+
+Being the first two parameters (in uppercase) the id and element symbol of the atom and the last two the id and number of the atomic orbital.
+ 
+All the atom pdos files must be uploaded along with the calculation using the **-dos** parameter on each file, the *totals* dos file is not required because it is calculated from the individual values.   
+
+The provided output files must be the SCF output file from the 1st step and the NSCF output file from the 2nd step, so two **-o** parameters should be provided, the order must be kept the same as described here.
+
+.. important:: Review the documentation section **DATA CONVERSION -> From CML to HTML -> QuantumEspresso** to check the used file format. 
+
+Example
+^^^^^^^
+ 
+Upload calculation named *CeO2_pdos* and attach the pdos files:
+
+.. code:: bash
+
+       $ loadqespresso -i ceo2_nscf.in -o ceo2_scf.out -o ceo2_nscf.out -n CeO2_pdos -d 'Cerium dioxide PDOS' -dos 'pwscf.pdos_atm#1(Fe)_wfc#1(s) '-dos pwscf.pdos_atm#1\(Fe\)_wfc#2\(p\) -dos 'pwscf.pdos_atm#1(Fe)_wfc#3(d)' 
+
+On calculation with spin up/down files we will upload all PDOS files as on the previous example.       
+
+.. important:: The PDOS filename contain symbols that can break the upload process if they are not escaped or enclosed between single quotes, please review last the command for both examples.
+
+
+Phonon dispersion 
+'''''''''''''''''
+
+ioChem-BD can process and display phonon dispersion data on its HTML report. 
+
+.. figure:: /imgs/QEX-phonon.png
+   :alt:  Phonon structure 
+   
+   Sample phonon dispersion plot
+
+
+The following QuantumEspresso tool workflow will generate the required files:
+
+  `pw.x`_ -> `ph.x`_  -> `matdyn.x`_
+    
+  Structure optimization  -> PHonon -> Phonon dispersion calculation 
+
+Once the structure is relaxed, the dynamical matrix is calculated on the on 2nd step to finally get the phonon dispersion on the 3rd calculation.  
+
+The provided input **-i** and output file **-o** must be the optimization ones from 1st step.
+
+The provided phonon input file **-pi** will contain the kpoint definition, weights and labels. Finally the **-po** will be the data file containing the phonon frequency level on each kpoint. 
+
+.. important:: Review the documentation section **DATA CONVERSION -> From CML to HTML -> QuantumEspresso** to check the used file format. 
+
+Example
+^^^^^^^ 
+ 
+Upload calculation named *Ce_phonon* and attach phonon dispersion information file *matdyn.freq*:
+
+.. code:: bash
+
+       $ loadqespresso -i ce_opt.in -o ce_opt.out -pi qe_matdyn_phdisp.pwi -po matdyn.freq -n Ce_phonon -d "Phonon dispersion for Ce atom" 
+
+
+Phonon DOS
+''''''''''
+
+ioChem-BD can process and display phonon density of states data on its HTML report. 
+
+.. figure:: /imgs/QEX-phonon-dos.png
+   :alt:  Phonon structure 
+   
+   Sample phonon DOS plot
+   
+Will use the same tool workflow that the previous *Phonon dispersion* example but on the 3rd step will request *matdyn.x* tool to generate Phonon DOS data.
+
+The uploaded files will be the same except that, in this case,  the **-pi** file won't be required, just the the **-po** with the data file containing the phonon dos energies.
+
+Example
+^^^^^^^ 
+
+Upload calculation named *Ce_phonon_dos* and attach phonon dispersion information file *matdyn.dos*:
+
+.. code:: bash
+
+       $ loadqespresso -i ce_opt.in -o ce_opt.out -po matdyn.dos -n Ce_phonon_dos -d "Phonon DOS for Ce atom"
 
 loadturbo
 ~~~~~~~~~
@@ -455,6 +760,50 @@ If no parameter is set, *name* and *description* fields will come from parent fo
        $ loadturbo
 
 
+loadsiesta
+~~~~~~~~~~
+
+Loads a SIESTA calculation into the Create module.
+
+For this chemical format, the provided output file must not be the textual one, it must be the XML one. It is generated by declaring the following flag on the input file:
+
+.. code:: text
+
+       XML.Write .true.
+
+================ ======================================================================================================
+Parameters       Description
+================ ======================================================================================================
+-i *filename(s)* Input file(s), if not defined will use script defined name
+-o *filename*    Output file, if not defined will use script defined name
+-a *filename*    Append additional file (optional)
+-n *name*        Name of the calculation in the data base (optional), if not defined will use parent folder name
+-d *desc*        Description of the calculation in the data base (optional), if not defined will use parent folder name
+–auto            Autogenerate current path into Create module (optional). Refer to `-auto`_ parameter section.
+================ ======================================================================================================
+
+SIESTA can combine multiple input files to bundle the final input file, in this case, you can set multiple **-i** parameters, one for each partial input file.
+
+If parameters **-i** and **-o** are not set, this script will look for *input.fdf* and *output.xml* files. If that info is missing, the upload process will be aborted. If you wish to use another naming convention just edit the *loadsiesta* script file and replace default filenames.
+
+.. code:: bash
+
+       # Default static file names, change them in order to fit your naming conventions
+       INPUT_DEFAULT_FILENAME="input.fdf"
+       OUTPUT_DEFAULT_FILENAME="output.xml"
+
+If parameters **-n** and **-d** are not defined, the scripts will use the parent folder’s name as calculation name and description.
+
+Examples
+'''''''' 
+
+Upload *h2o* calculation, that contains two input files and a output *.xml* file:
+
+.. code:: bash
+
+       $ loadsiesta -n h2o -d \"Sample upload\" -i h2o.fdf -i Default.fdf  -o h2o.xml
+
+
 loadvasp
 ~~~~~~~~
 
@@ -467,7 +816,7 @@ Parameters    Description
 -o *OUTCAR*   Output file (optional) , set to OUTCAR by default
 -dc *DOSCAR*  Attach DOSCAR file information to resulting uploaded calculation (optional), it will extract Density of states coefficients.
 -kp *KPOINTS* Attach KPOINTS file information to resulting uploaded calculation (optional), it will extract KPOINT generation data
--a *file*     Coord file (optional), if not defined it will look for the *coord* file from the current folder
+-a *filename* Coord file (optional), if not defined it will look for the *coord* file from the current folder
 -n            Name of the calculation in the data base (optional), if not defined the calculations’ output file name will be used
 -d *desc*     Description of the calculation in the data base (optional), if not defined the calculations’ file name will used.
 –auto         Autogenerate current path into Create module (optional). Refer to the `-auto`_ parameter section.
@@ -573,7 +922,7 @@ Parameters    Description
 ============= ==================================================================================================================================================================================
 -i *filename* Input file, (optional), if not defined will use script defined name
 -o *filename* Output file (optional), if not defined will use script defined name
--a            Append additional file (optional)
+-a *filename* Append additional file (optional)
 -n *name*     Name of the calculation in the data base (optional), if not defined will use parent folder name
 -d *desc*     Description of the calculation in the data base (optional), if not defined will use parent folder name
 –molden       Build molden file with calculation molecular orbitals from output file. Will use orca_m2kl script to do such conversion. Please read `–molden`_ section for further configuration.
@@ -874,7 +1223,9 @@ Restrictions:
 
 
 .. _loadadf: #loadadf
+.. _loadams: #loadams
 .. _loadamber: #loadamber
+.. _loadcastep: #loadcastep
 .. _loadgauss: #loadgauss
 .. _loadgromacs: #loadgromacs
 .. _loadgronor: #loadgronor
@@ -883,7 +1234,13 @@ Restrictions:
 .. _loadmopac: #loadmopac
 .. _loadorca: #loadorca
 .. _loadqespresso: #loadqespresso
+.. _Absorption spectra: #absorption-spectra-calculations
+.. _Band structure: #band-structure-calculations
+.. _Projected DOS: #projected-density-of-states-calculations
+.. _Phonon dispersion: #phonon-dispersion
+.. _Phonon DOS: #phonon-dos
 .. _loadturbo: #loadturbo
+.. _loadsiesta: #loadsiesta
 .. _loadvasp: #loadvasp
 .. _neb: #neb
 .. _dim: #dim
@@ -901,5 +1258,13 @@ Restrictions:
 .. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
 .. _turbo_lanczos.x: https://www.quantum-espresso.org/Doc/INPUT_Lanczos.html 
 .. _turbo_spectrum.x: https://www.quantum-espresso.org/Doc/INPUT_Spectrum.html
+.. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
+.. _pw.x (bands): https://www.quantum-espresso.org/Doc/INPUT_PW.html#idm37 
+.. _bands.x: https://www.quantum-espresso.org/Doc/INPUT_BANDS.html
+.. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
+.. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
+.. _pw.x: http://www.quantum-espresso.org/Doc/INPUT_PW.html
+.. _ph.x: https://www.quantum-espresso.org/Doc/INPUT_PH.html
+.. _matdyn.x: https://www.quantum-espresso.org/Doc/INPUT_MATDYN.html
 .. _page: ../../../../html/lammps.html#lammps
 

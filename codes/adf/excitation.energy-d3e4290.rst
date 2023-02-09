@@ -239,7 +239,7 @@ excitation.energy
                    <module cmlx:lineCount="10" cmlx:templateRef="dipole">
                        <array dataType="xsd:integer" dictRef="cc:serial" size="5">1 2 4 5 6</array>
                        <array dataType="xsd:string" dictRef="cc:energy" size="5">4.8698 4.9292 5.6978 5.8296 6.3996</array>
-                       <array dataType="xsd:string" dictRef="cc:energyDiff" size="5">0.41613E-02 0.67918E-03 0.29712E-02 0.83640E-04 1.1274</array>
+                       <array dataType="xsd:string" dictRef="cc:oscillator" size="5">0.41613E-02 0.67918E-03 0.29712E-02 0.83640E-04 1.1274</array>
                        <array dataType="xsd:string" dictRef="cc:muX" size="5">0.0000 0.0000 0.0000 0.0000 0.0000</array>
                        <array dataType="xsd:string" dictRef="cc:muY" size="5">0.26355E-16 -0.47650E-16 -0.21366E-17 0.19705E-16 0.76377E-17</array>
                        <array dataType="xsd:string" dictRef="cc:muZ" size="5">-0.18676 -0.74994E-01 -0.14589 0.24200E-01 2.6816</array>
@@ -257,7 +257,7 @@ excitation.energy
                    <module cmlx:lineCount="9" cmlx:templateRef="dipole">
                        <array dataType="xsd:integer" dictRef="x:serial" size="4">3 4 5 6</array>
                        <array dataType="xsd:string" dictRef="cc:energy" size="4">4.9483 5.0602 5.2367 5.4724</array>
-                       <array dataType="xsd:string" dictRef="cc:energyDiff" size="4">0.73217E-03 0.64273E-02 0.94836E-03 0.15097E-01</array>
+                       <array dataType="xsd:string" dictRef="cc:oscillator" size="4">0.73217E-03 0.64273E-02 0.94836E-03 0.15097E-01</array>
                        <array dataType="xsd:string" dictRef="cc:muX" size="4">-0.77714E-01 0.22769 0.85976E-01 -0.33556</array>
                        <array dataType="xsd:string" dictRef="cc:muY" size="4">0.0000 0.0000 0.0000 0.0000</array>
                        <array dataType="xsd:string" dictRef="cc:muZ" size="4">0.0000 0.0000 0.0000 0.0000</array>
@@ -285,7 +285,7 @@ excitation.energy
                 <module cmlx:templateRef="dipole">
                    <array dataType="xsd:integer" dictRef="cc:serial" size="15">1 2 4 5 7 8 9 13 14 15 17 20 21 22 23</array>
                    <array dataType="xsd:string" dictRef="cc:energy" size="15">1.9018 2.0389 2.1219 2.2576 2.8157 2.8181 2.9018 2.9758 2.9914 3.0120 3.1073 3.2006 3.2602 3.2707 3.3009</array>
-                   <array dataType="xsd:string" dictRef="cc:energyDiff" size="15">0.17607E-03 0.51785E-03 0.70275E-04 0.13808E-03 0.18201E-03 0.69163E-03 0.12917E-03 0.33188E-02 0.66342E-03 0.10037E-02 0.20923E-02 0.53162E-03 0.27594E-01 0.17331E-01 0.15409</array>
+                   <array dataType="xsd:string" dictRef="cc:oscillator" size="15">0.17607E-03 0.51785E-03 0.70275E-04 0.13808E-03 0.18201E-03 0.69163E-03 0.12917E-03 0.33188E-02 0.66342E-03 0.10037E-02 0.20923E-02 0.53162E-03 0.27594E-01 0.17331E-01 0.15409</array>
                    <array dataType="xsd:string" dictRef="cc:muX" size="15">0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000</array>
                    <array dataType="xsd:string" dictRef="cc:muY" size="15">0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000</array>
                    <array dataType="xsd:string" dictRef="cc:muZ" size="15">0.61472E-01 0.10182 0.36767E-01 -0.49964E-01 -0.51365E-01 0.10009 0.42625E-01 -0.21336 -0.95144E-01 -0.11662 0.16578 0.82339E-01 0.58777 -0.46506 -1.3804</array>
@@ -310,7 +310,7 @@ excitation.energy
    <templateList>  <template id="excitationEnergies" pattern="\s*\*\s+Final\sexcitation\senergies\sfrom\sDavidson\salgorithm.*" endPattern="\s*\*\s+Final\sexcitation\senergies\sfrom\sDavidson\salgorithm.*" endPattern2="\s*Eigenvalues\sof\ssmall.*" endPattern3="\sAll\sSINGLET-SINGLET\sexcitation\senergies.*" endPattern4="~" repeat="*">    <templateList>      <template pattern="\s*Symmetry.*" endPattern=".*" endOffset="0">        <record id="symmetry">\s*Symmetry{A,cc:symm}</record>
                    </template>      <template id="energies" pattern="\s*Excitation\senergies\sE\sin.*" endPattern="\s+\d.*$\s*" endOffset="1">        <record repeat="5" />        <record repeat="*" makeArray="true">{I,cc:serial}{A,cc:energy}\s+\S+\s+{A,cc:oscillator}\s+{A,cc:energyDiff}.*
                        </record>
-                   </template>      <template id="dipole" pattern="\s*Transition\sdipole\smoments\smu.*" endPattern="\s+\d.*$\s*" endOffset="1">        <record repeat="5" />        <record repeat="*" makeArray="true">{I,cc:serial}{A,cc:energy}{A,cc:energyDiff}{A,cc:muX}{A,cc:muY}{A,cc:muZ}
+                   </template>      <template id="dipole" pattern="\s*Transition\sdipole\smoments\smu.*" endPattern="\s+\d.*$\s*" endOffset="1">        <record repeat="5" />        <record repeat="*" makeArray="true">{I,cc:serial}{A,cc:energy}{A,cc:oscillator}{A,cc:muX}{A,cc:muY}{A,cc:muZ}
                        </record>
                    </template>      <template id="rotatory" pattern="\s*Rotatory\sstrengths\sR\sin.*" endPattern="\s+\d.*$\s*" endOffset="1">        <record repeat="6" />        <record repeat="*" makeArray="true">{I,cc:serial}{A,a:strengths}{A,cc:mX}{A,cc:mY}{A,cc:mZ}
                        </record>

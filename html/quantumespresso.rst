@@ -78,7 +78,7 @@ Atoms and Basis Sets
 
 After settings section, our HTML resume will output cell coordinates, lattice vectors and a coordinates table with molecule atoms.
 
-Geometry is readed from input file using :<list cmlx:templateRef="`atoms`_">, <list cmlx:templateRef="`species`_">, <module cmlx:templateRef="`lattice`_"> and <module cmlx:templateRef="`axes`_"> for geometry optimizations.
+Geometry is read from input file using :<list cmlx:templateRef="`atoms`_">, <list cmlx:templateRef="`species`_">, <module cmlx:templateRef="`lattice`_"> and <module cmlx:templateRef="`axes`_"> for geometry optimizations.
 
 For every atom, we will output it's serial number, atom type, cartesian and fractional coordinates (in angstroms) , and <list cmlx:templateRef="`species`_">.
 
@@ -164,6 +164,36 @@ Data source: <module id='`qespresso.absorptionspec`_'>
 
 .. image:: /imgs/QUANTUMESPRESSO_module_absorption.png
 
+Band structure
+~~~~~~~~~~~~~~
+
+Data source: <module id='`qespresso.bands`_'>
+
+.. image:: /imgs/QUANTUMESPRESSO_module_bands.png
+
+Projected DOS
+~~~~~~~~~~~~~
+
+Data source: <module id='`qespresso.bands <#QuantumEspresso PDOS:qespresso.pdos>`__'>
+
+.. image:: /imgs/QUANTUMESPRESSO_module_pdos.png
+
+Phonon dispersion
+~~~~~~~~~~~~~~~~~
+
+Data source: <module id='`qespresso.phonon.input`_'>
+
+Data source: <module id='`qespresso.phonon`_'>
+
+.. image:: /imgs/QUANTUMESPRESSO_module_phonon.png
+
+Phonon DOS
+~~~~~~~~~~
+
+Data source: <module id='`qespresso.phonon`_'>
+
+.. image:: /imgs/QUANTUMESPRESSO_module_phonon_dos.png
+
 .. [1]
    string ``qex:getCalcType`` string ``modName`` string ``calculation``
 
@@ -226,7 +256,7 @@ Data source: <module id='`qespresso.absorptionspec`_'>
 
                                   
           $functionals  Exchange-correlation parameter from <module cmlx:templateRef="parameter" >
-          $functionalsFromFilenames  Functionals readed from qex:pseudofile scalar on <module cmlx:templateRef="pseudopotential" >
+          $functionalsFromFilenames  Functionals read from qex:pseudofile scalar on <module cmlx:templateRef="pseudopotential" >
                                                       
                      
           <xsl:param name="functionals"/>
@@ -236,22 +266,25 @@ Data source: <module id='`qespresso.absorptionspec`_'>
                               
                                                   
 
-.. _header template: ../codes/quantumespresso/header-d3e36491.html
-.. _parameters template: ../codes/quantumespresso/parameters-d3e36554.html
-.. _environ: ../codes/quantumespresso/environ-d3e37390.html
-.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e37390.html
-.. _parameters: ../codes/quantumespresso/parameters-d3e36554.html
-.. _atoms: ../codes/quantumespresso/qespresso.input-d3e52707.html
-.. _species: ../codes/quantumespresso/qespresso.input-d3e52707.html
-.. _lattice: ../codes/quantumespresso/lattice-d3e36735.html
-.. _axes: ../codes/quantumespresso/axes-d3e36844.html
-.. _ldau: ../codes/quantumespresso/ldau-d3e37680.html
-.. _kpoints: ../codes/quantumespresso/kpoints-d3e37725.html
-.. _point.group: ../codes/quantumespresso/point.group-d3e37367.html
-.. _forces: ../codes/quantumespresso/forces-d3e37805.html
-.. _energies: ../codes/quantumespresso/energies-d3e37570.html
-.. _magnetic: ../codes/quantumespresso/magnetic-d3e37861.html
-.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e37896.html
-.. _projwfc: ../codes/quantumespresso/projwfc-d3e38009.html
-.. _frequencies: ../codes/quantumespresso/frequencies-d3e38228.html
-.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e53709.html
+.. _header template: ../codes/quantumespresso/header-d3e41065.html
+.. _parameters template: ../codes/quantumespresso/parameters-d3e41128.html
+.. _environ: ../codes/quantumespresso/environ-d3e41964.html
+.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e41964.html
+.. _parameters: ../codes/quantumespresso/parameters-d3e41128.html
+.. _atoms: ../codes/quantumespresso/qespresso.input-d3e56129.html
+.. _species: ../codes/quantumespresso/qespresso.input-d3e56129.html
+.. _lattice: ../codes/quantumespresso/lattice-d3e41309.html
+.. _axes: ../codes/quantumespresso/axes-d3e41418.html
+.. _ldau: ../codes/quantumespresso/ldau-d3e42291.html
+.. _kpoints: ../codes/quantumespresso/kpoints-d3e42336.html
+.. _point.group: ../codes/quantumespresso/point.group-d3e41941.html
+.. _forces: ../codes/quantumespresso/forces-d3e42416.html
+.. _energies: ../codes/quantumespresso/energies-d3e42144.html
+.. _magnetic: ../codes/quantumespresso/magnetic-d3e42472.html
+.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e42507.html
+.. _projwfc: ../codes/quantumespresso/projwfc-d3e42620.html
+.. _frequencies: ../codes/quantumespresso/frequencies-d3e42839.html
+.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e57173.html
+.. _qespresso.bands: #QuantumEspresso bands:qespresso.bands
+.. _qespresso.phonon.input: #QuantumEspresso phonon input:qespresso.phonon.input
+.. _qespresso.phonon: #QuantumEspresso phonon output:qespresso.phonon

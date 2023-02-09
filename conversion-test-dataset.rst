@@ -7,13 +7,15 @@ This document collects a number of cases that ioChem-BD can handle. Find below t
 
 We kindly ask the interested reader to browse the **Conversion Templates: Text to CML** for a detailed description of what and from where data fields are captured, and how the HTML5 file is generated for visualisation. Note that ioChem-BD captures many data fields but for only few of them the HTML5 representation is generated. Given the dynamic architecture of iochem-BD, generating new capture templates and/or new representation templates is extremely flexible, so new templates can be written and implemented **at any time without disrupting normal operation**. Contact us for further requests.
 
-Release v2.7.2 (current)
-------------------------
+Release 2.8.0 (current)
+-----------------------
 
 ioChem-BD handles results obtained from:
 
 -  ADF 2009 to 2019
+-  AMS 2020
 -  Amber 18
+-  CASTEP 2021
 -  Gaussian ’09 to ’16
 -  GROMACS 5.0
 -  GronOR 21
@@ -23,6 +25,7 @@ ioChem-BD handles results obtained from:
 -  Orca 3.0, 4.0, 5.0
 -  QuantumESPRESSO 6.1
 -  Turbomole 6.4
+-  SIESTA 4.1.5
 -  VASP 5.3.2
 
 Find below some examples used to check data capture and manipulation mechanisms coded inside ioChem-BD.

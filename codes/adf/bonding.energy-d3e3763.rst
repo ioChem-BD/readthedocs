@@ -79,7 +79,7 @@ bonding.energy
 .. code:: xml
 
    <comment class="example.output" id="bonding.energy">
-        <module cmlx:lineCount="13" cmlx:templateRef="summary">
+        <module cmlx:templateRef="bonding.energy">
          <scalar dataType="xsd:double" dictRef="cc:eener" units="nonsi:electronvolt">-910.9165</scalar>
          <scalar dataType="xsd:double" dictRef="cc:kinener" units="nonsi:electronvolt">678.5727</scalar>
          <scalar dataType="xsd:double" dictRef="cc:coulombener" units="nonsi:electronvolt">236.2086</scalar>

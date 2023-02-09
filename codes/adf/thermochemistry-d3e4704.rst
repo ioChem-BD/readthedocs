@@ -93,7 +93,7 @@ thermochemistry
                <scalar dataType="xsd:integer" dictRef="cc:symmnumber">1</scalar>
                <scalar dataType="xsd:string" dictRef="cc:pointgroup">NOSYM</scalar>
                <module cmlx:lineCount="6" cmlx:templateRef="energies">
-                  <scalar dataType="xsd:double" dictRef="cc:temp" units="nonsi2:cal.mol-1.K-1">300.0</scalar>
+                  <scalar dataType="xsd:double" dictRef="cc:temp" units="si:k">300.0</scalar>
                   <list cmlx:templateRef="entropy">               
                      <scalar dataType="xsd:double" dictRef="cc:transl" units="nonsi2:cal.mol-1.K-1">47.312</scalar>
                      <scalar dataType="xsd:double" dictRef="cc:rotat" units="nonsi2:cal.mol-1.K-1">39.674</scalar>
@@ -130,10 +130,10 @@ thermochemistry
        </templateList>
    <transform process="pullup" xpath=".//cml:scalar" />
    <transform process="pullup" xpath=".//cml:array" repeat="2" />
-   <transform process="addUnits" xpath="./cml:scalar[@dictRef='cc:temp']" value="si:k" />
-   <transform process="addUnits" xpath="./cml:scalar[@dictRef='cc:press']" value="nonsi:atm" />
    <transform process="addUnits" xpath=".//cml:list[@cmlx:templateRef='entropy' or @cmlx:templateRef='heat']/cml:scalar" value="nonsi2:cal.mol-1.K-1" />
    <transform process="addUnits" xpath=".//cml:list[@cmlx:templateRef='internalEnergy']/cml:scalar" value="nonsi2:kcal.mol-1" />
+   <transform process="addUnits" xpath="./cml:scalar[@dictRef='cc:press']" value="nonsi:atm" />
+   <transform process="addUnits" xpath=".//cml:scalar[@dictRef='cc:temp']" value="si:k" />
    <transform process="pullup" xpath=".//cml:list[@cmlx:templateRef='entropy']/cml:scalar[@dictRef='cc:temp']" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />

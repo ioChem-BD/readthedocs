@@ -51,6 +51,8 @@ To upload a calculation into a project you have to first click on that project. 
 
 .. important:: The *Name* field must not contain blank spaces or special characters like \\\*\@\[\]\. otherwise it will be normalized to an underscore symbol.
 
+.. important:: Some specific calculations will require to upload the files in a certain order and/or append specific files in order to work properly, please refer the `shell automated scripts`_ section for an extended desciption.     
+
 Then you have to select the specific format for file upload, which vary depending on the calculation type.
 
 .. figure:: /imgs/WebUploadForm2.png
@@ -87,5 +89,4 @@ Then you have to select the specific format for file upload, which vary dependin
 When all of your calculations are uploaded, you can click the *Refresh* button on the *Simple Navigation* tab to refresh its content. Then, you can navigate throughout your newly uploaded data.
 
 
- 
- 
+.. _shell automated scripts: ./using-shell-client/shell-automated-scripts.html

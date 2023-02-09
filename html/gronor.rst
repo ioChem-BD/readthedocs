@@ -21,7 +21,7 @@ General Info
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Calculation type                                                                                                      | Fixed value                                                                                                          | NOCI                                                                                                                                                          |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Method                                                                                                                | `environment <#../codes/gronor/initialization-d3e23276.html>`__ template.                                            | NOCI-Fragments                                                                                                                                                |
+   | Method                                                                                                                | `environment <#../codes/gronor/initialization-d3e27849.html>`__ template.                                            | NOCI-Fragments                                                                                                                                                |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. image:: /imgs/GRONOR_header.png
@@ -57,7 +57,7 @@ After header section, our HTML resume will output a xyz coordinates table with c
 
 For every atom, we will output it's serial number, atom type, coordinates in angstroms and contracted basis set.
 
-Initially its readed from `geometry`_ module.
+Initially its read from `geometry`_ module.
 
 .. image:: /imgs/GRONOR_geometry.png
 
@@ -80,8 +80,8 @@ Data source: <module dictRef='`cc:finalization`_'> and <module id='`environment`
 
 .. image:: /imgs/GRONOR_timing.png
 
-.. _environment: ../codes/gronor/environment-d3e23193.html
-.. _initialization: ../codes/gronor/initialization-d3e23276.html
-.. _geometry: ../codes/gronor/geometry-d3e23316.html
-.. _`cc:calculation`: ../codes/gronor/calculation-d3e23710.html
-.. _`cc:finalization`: ../codes/gronor/finalization-d3e23937.html
+.. _environment: ../codes/gronor/environment-d3e27766.html
+.. _initialization: ../codes/gronor/initialization-d3e27849.html
+.. _geometry: ../codes/gronor/geometry-d3e27889.html
+.. _`cc:calculation`: ../codes/gronor/calculation-d3e28283.html
+.. _`cc:finalization`: ../codes/gronor/finalization-d3e28510.html

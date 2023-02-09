@@ -40,7 +40,7 @@ After settings, our HTML resume will output a coordinates table with current mol
 
 For every atom, we will output it's serial number, atom type, coordinates in cartesian and fractional modes, in angstroms.
 
-Information its readed from `parameter/topology`_ file specification and `trajectory restart`_ file. Solvent atoms will be discarded.
+Information its read from `parameter/topology`_ file specification and `trajectory restart`_ file. Solvent atoms will be discarded.
 
 .. image:: /imgs/AMBER_geometry.png
 
@@ -105,10 +105,10 @@ Data source: <module cmlx:templateRef='`timing`_'>
                               
                                                   
 
-.. _header: ../codes/amber/header-d3e6746.html
-.. _control: ../codes/amber/control-d3e6977.html
-.. _parameter/topology: ../codes/amber/amber.parm-d3e43177.html
-.. _trajectory restart: ../codes/amber/amber.nctraj-d3e43323.html
-.. _averages: ../codes/amber/averages-d3e7278.html
-.. _results: ../codes/amber/results-d3e7437.html
-.. _timing: ../codes/amber/timing-d3e7573.html
+.. _header: ../codes/amber/header-d3e9497.html
+.. _control: ../codes/amber/control-d3e9728.html
+.. _parameter/topology: ../codes/amber/amber.parm-d3e47787.html
+.. _trajectory restart: ../codes/amber/amber.nctraj-d3e47933.html
+.. _averages: ../codes/amber/averages-d3e10029.html
+.. _results: ../codes/amber/results-d3e10188.html
+.. _timing: ../codes/amber/timing-d3e10324.html

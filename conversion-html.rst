@@ -7,6 +7,7 @@ From CML to HTML5 report
 
    /html/adf
    /html/amber
+   /html/castep
    /html/gaussian
    /html/gromacs
    /html/gronor
@@ -15,5 +16,6 @@ From CML to HTML5 report
    /html/mopac
    /html/orca
    /html/quantumespresso
+   /html/siesta
    /html/turbomole
    /html/vasp

@@ -1,7 +1,12 @@
 Shell commands
 ==============
 
-All commands described here allow **-h** parameter that will display a help message containing a wider description of its usage. 
+All commands described here allow **-h** parameter that will display a help message containing a wider description of its usage.
+
+.. warning:: It is not allowed to upload calculations to the base path (*/db/username*), you must always upload calculations into a project.
+
+.. warning:: Two calculations with the **same name** and in the **same project** are not allowed, otherwise upload process will **fail**.
+ 
 
 Basic parameters
 ----------------
@@ -38,10 +43,12 @@ Command                            Description
 `viewcalc`_                        View calculation information
 `mcalc`_                           Modify a calculation
 `dcalc`_                           Delete calculation from repository
-`loadcalc`_                        Load calculation into repository
+`loadcalc`_                        Load calculation utility
 Calculation type specific commands 
 `loadadf`_                         Load ADF calculation
+`loadams`_                         Load AMS calculation
 `loadamber`_                       Load Amber calculation
+`loadcastep`_                      Load CASTEP calculation
 `loadgauss`_                       Load Gaussian calculation
 `loadgromacs`_                     Load GROMACS calculation
 `loadgronor`_                      Load GronOR calculation
@@ -51,6 +58,7 @@ Calculation type specific commands
 `loadorca`_                        Load Orca calculation
 `loadqespresso`_                   Load QuantumESPRESSO calculation
 `loadturbo`_                       Load Turbomole calculation
+`loadsiesta`_                      Load SIESTA calculation
 `loadvasp`_                        Load Vasp calculation
 ================================== ==================================
 
@@ -375,12 +383,13 @@ Navigating to parent project and using calculation name:
 |
 
 loadcalc
-~~~~~~~~~~~~~~
+~~~~~~~~
 
-Uploads a calculation into the Create module on the current project path. It is not allowed to upload calculations to the base path (*/db/username*), you must always upload calculations into a project. 
+.. warning:: It is **advised** to use the custom upload scripts for each calculation type (*loadadf*, *loadgauss*, *loadXXXX*) instead of this generic command.
+
+Uploads a calculation into the Create module on the current project path.  
 
 This is a generic command that will allow us to upload multiple files and formats, some parameters will be shared by more than one format so they will behave differently depending on the format, so please read the command help (-h parameter) carefully.
-
 
 Common parameters for all calculations:
 +++++++++++++++++++++++++++++++++++++++++
@@ -395,9 +404,77 @@ Parameters    Description
 -a *filename* Additional file loading for calculation. (optional)
 ============= ===============================================================
 
+Additional parameters for Amber
++++++++++++++++++++++++++++++++
 
-.. warning:: Two calculations with the **same name** and in the **same project** are not allowed, otherwise upload process will **fail**.
+============== ============================================================================
+Parameters     Description
+============== ============================================================================
+-p *filename*  Topology file of calculation, \*.prmtop. (required)
+-ir *filename* Input coordinate file .inpcrd, or initial restart file .ncrst (required)
+-r *filename*  Final restart file .ncrst (required)
+-t *filename*  Trajectory file of calculation, \*.nc (required) 
+============== ============================================================================
 
+
+Additional parameters for AMS
++++++++++++++++++++++++++++++
+
+================= ============================================================================
+Parameters        Description
+================= ============================================================================
+-rkf1 *filename*  Use this file as ams.rkf file of calculation (required)
+-rkf2 *filename*  Use this file as adf.rkf file of calculation (required)
+================= ============================================================================
+
+   
+Additional parameters for CASTEP
+++++++++++++++++++++++++++++++++
+
+================= ============================================================================
+Parameters        Description
+================= ============================================================================
+-oc *filename*    Cell definition parameters (required)
+-xcd *filename*   Chart document file(s) (optional)
+-og *filename*    Geometry file, required on geometry optimization calculations
+================= ============================================================================   
+   
+  
+Additional parameters for GROMACS
++++++++++++++++++++++++++++++++++
+
+================= ============================================================================
+Parameters        Description
+================= ============================================================================
+-oc *filename*    Geometry file of calculation, \*.gro (required)
+-t *filename*     Trajectory file of calculation, \*.xtc (required)
+================= ============================================================================  
+  
+    
+Additional parameters for LAMMPS
+++++++++++++++++++++++++++++++++
+
+================= ============================================================================
+Parameters        Description
+================= ============================================================================
+-p *filename*     Data file used on the read_data command (required)
+-t *filename*     Trajectory file of calculation, compressed or not (required)
+================= ============================================================================  
+    
+    
+Additional parameters for QUANTUMESPRESSO
++++++++++++++++++++++++++++++++++++++++++
+
+================= =============================================================================================================
+Parameters        Description
+================= =============================================================================================================
+-as *filename*    Absorption spectra data file, from TDDFT calculations. (optional)
+-b *filename(s)*  Bands file(s) to current upload, separated by # (optional).
+-pi *filename*    Input used on the phonon matdyn.x tool. (optional)
+-po *filename*    Output file containing the phonon frequencies. (optional)
+-dos *filename*   PDOS of atomic sites and atomic orbitals file, from PDOS calculations, separated by ~ (optional).
+================= =============================================================================================================  
+   
 Additional parameters for Turbomole
 +++++++++++++++++++++++++++++++++++
 
@@ -430,13 +507,15 @@ Examples:
    $ loadcalc -i INCAR -o OUTCAR -n NO_dim -d NO_dim                                       # Upload **VASP** calculation and set its name to NO_dim
 
 
-To ease the usage of this command we have developed a group of helper Linux scripts to simplify shell upload
+To ease the usage of this command we have developed a group of helper Linux scripts to simplify shell upload.
 
 ======================================================================================================= ==============================================================================
 Script                                                                                                  Function
 ======================================================================================================= ==============================================================================
 `loadadf`_                                                                                              Upload **ADF** calculation
+`loadams`_                                                                                              Upload **AMS** calculation
 `loadamber`_                                                                                            Upload **Amber** calculation
+`loadcastep`_                                                                                           Upload **CASTEP** calculation
 `loadgauss`_                                                                                            Upload **Gaussian** calculation
 `loadgromacs`_                                                                                          Upload **GROMACS** calculation
 `loadgronor`_                                                                                           Upload **GronOR** calculation
@@ -446,6 +525,7 @@ Script                                                                          
 `loadorca`_                                                                                             Upload **Orca** calculation
 `loadqespresso`_                                                                                        Upload **QuantumEspresso** calculation
 `loadturbo`_                                                                                            Upload **Turbomole** calculation
+`loadsiesta`_                                                                                           Upload **SIESTA** calculation
 `loadvasp`_                                                                                             Upload **Vasp** calculations (Nudge Elastic Band and Dimmer are also included)
 ======================================================================================================= ==============================================================================
 
@@ -464,7 +544,9 @@ Script                                                                          
 .. _dcalc: #dcalc
 .. _loadcalc: #loadcalc
 .. _loadadf:  ./using-shell-client/shell-automated-scripts.html#loadadf
+.. _loadams:  ./using-shell-client/shell-automated-scripts.html#loadams
 .. _loadamber:  ./using-shell-client/shell-automated-scripts.html#loadamber
+.. _loadcastep:  ./using-shell-client/shell-automated-scripts.html#loadcastep
 .. _loadgauss:  ./using-shell-client/shell-automated-scripts.html#loadgauss
 .. _loadgromacs:  ./using-shell-client/shell-automated-scripts.html#loadgromacs
 .. _loadgronor:  ./using-shell-client/shell-automated-scripts.html#loadgronor
@@ -474,4 +556,5 @@ Script                                                                          
 .. _loadorca:  ./using-shell-client/shell-automated-scripts.html#loadorca
 .. _loadqespresso:  ./using-shell-client/shell-automated-scripts.html#loadqespresso
 .. _loadturbo:  ./using-shell-client/shell-automated-scripts.html#loadturbo
+.. _loadsiesta: ./using-shell-client/shell-automated-scripts.html#loadsiesta
 .. _loadvasp: ./using-shell-client/shell-automated-scripts.html#loadvasp

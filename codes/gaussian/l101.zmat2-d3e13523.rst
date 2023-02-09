@@ -1,0 +1,139 @@
+.. _l101.zmat2-d3e13523:
+
+l101.zmat2
+==========
+
+.. table:: Implementation level
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Type                                                                                                                       | Status                                                                                                                     |
+   +============================================================================================================================+============================================================================================================================+
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: Template attributes
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                                                                                                                  | Value                                                                                                                      |
+   +============================================================================================================================+============================================================================================================================+
+   | *source*                                                                                                                   | Gaussian log                                                                                                               |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | id                                                                                                                         | l101.zmat2                                                                                                                 |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | pattern                                                                                                                    | &#92;s+Charge.*Multiplicity&#92;s&#92;=&#92;s&#92;S+&#92;s*$&#92;s*&#92;d+&#92;s*&#92;d+.\*                                |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern                                                                                                                 | &#92;s\*                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | xml:base                                                                                                                   | l101/l101.zmat2.xml                                                                                                        |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+    Charge =  1 Multiplicity = 1
+    29                   0     0.63977  -0.76231   0.44114 
+    7                    0    -1.04852   2.10943   0.53365 
+    6                    0    -0.74977   3.3482    0.13047 
+    6                    0    -2.06242   2.45569  -1.48941 
+    6                    0    -1.35572   3.59703  -1.13251 
+    7                    0    -0.44078  -0.864    -1.30784 
+    6                    0    -0.19719  -1.69056  -2.34008 
+    6                    0    -1.42913  -2.06672  -2.92901 
+    6                    0    -2.44773  -1.42896  -2.22813 
+    7                    0    -1.12595  -0.69754   1.57126 
+    6                    0    -1.36268  -0.989     2.85878 
+    6                    0    -2.7152   -0.68807   3.16021 
+    6                    0    -3.30982  -0.20358   2.00266
+    
+     
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="l101.zmat2">
+       <module cmlx:templateRef="l101.zmat2">
+             <molecule cmlx:templateRef="atom" formalCharge="1" id="zmat" spinMultiplicity="1">
+                <atomArray>
+                   <atom elementType="Cu" id="a1" x3="0.63977" y3="-0.76231" z3="0.44114">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">29</scalar>
+                   </atom>
+                   <atom elementType="N" id="a2" x3="-1.04852" y3="2.10943" z3="0.53365">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">7</scalar>
+                   </atom>
+                   <atom elementType="C" id="a3" x3="-0.74977" y3="3.3482" z3="0.13047">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a4" x3="-2.06242" y3="2.45569" z3="-1.48941">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a5" x3="-1.35572" y3="3.59703" z3="-1.13251">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="N" id="a6" x3="-0.44078" y3="-0.864" z3="-1.30784">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">7</scalar>
+                   </atom>
+                   <atom elementType="C" id="a7" x3="-0.19719" y3="-1.69056" z3="-2.34008">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a8" x3="-1.42913" y3="-2.06672" z3="-2.92901">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a9" x3="-2.44773" y3="-1.42896" z3="-2.22813">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="N" id="a10" x3="-1.12595" y3="-0.69754" z3="1.57126">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">7</scalar>
+                   </atom>
+                   <atom elementType="C" id="a11" x3="-1.36268" y3="-0.989" z3="2.85878">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a12" x3="-2.7152" y3="-0.68807" z3="3.16021">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+                   <atom elementType="C" id="a13" x3="-3.30982" y3="-0.20358" z3="2.00266">
+                      <scalar dataType="xsd:integer" dictRef="g:type">0</scalar>
+                      <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                   </atom>
+               </atomArray>
+           </molecule>
+       </module>
+     </comment>
+
+.. container:: formalpara-title
+
+   **Template definition**
+
+.. code:: xml
+
+   <record id="charge">\s*Charge\s*={I,g:charge}\s*Multiplicity\s*={I,g:mult}</record>
+   <record id="atom" repeat="*" makeArray="true">\s*{I,cc:elementType}{I,g:type}{F,cc:x3}{F,cc:y3}{F,cc:z3}</record>
+   <record id="atom" repeat="*" makeArray="true">\s*{A,cc:elementType}{I,g:type}{F,cc:x3}{F,cc:y3}{F,cc:z3}</record>
+   <transform process="createMolecule" id="zmat" xpath=".//cml:array" />
+   <transform process="move" to=".//cml:molecule" xpath="./cml:list[@cmlx:templateRef='charge']" />
+   <transform process="addAttribute" xpath=".//cml:molecule[@id='zmat']" name="formalCharge" value="$string(.//cml:scalar[@dictRef='g:charge'])" />
+   <transform process="addAttribute" xpath=".//cml:molecule[@id='zmat']" name="spinMultiplicity" value="$string(.//cml:scalar[@dictRef='g:mult'])" />
+   <transform process="delete" xpath="./cml:list[@cmlx:templateRef='charge']" />
+   <transform process="pullupSingleton" xpath="./cml:list" />
+
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/None.png

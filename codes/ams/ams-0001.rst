@@ -1,0 +1,17 @@
+.. _ams-0001:
+
+RKF binary files
+================
+
+From AMS2020 onwards, the data from the molecular DFT code ADF is captured directly from the binary result files, more specifically from the *ams.rkf* and *adf.rkf* files.
+
+This change aims to improve the data capture process by accessing the raw data within the binary files rather than the parsed textual data in the output files, which change from version to version.
+
+For this purpose, a helper tool called **rkf2cml** has been developed that helps to easily extract the information that can be retrieved. It has been released under the LGPLv3 licence and its source code is available in this `GitLab
+repository <https://gitlab.com/ioChem-BD/rkf2cml>`__.
+
+.. important::
+
+   Some fields are still captured from the textual output file, which is why the AMS format still contains data-capture templates, depicted in the following pages.
+
+   It is expected that the use of capture templates will be reduced to zero in the future.

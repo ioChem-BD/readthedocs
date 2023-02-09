@@ -58,7 +58,7 @@ After settings, our HTML resume will output cell dimensions and an xyz coordinat
 
 For every atom, we will output it's serial number, atom type, coordinates in angstroms in cartesian and fractional types.
 
-Information its readed from `read_data structure file`_ and parsed based on the *atom_style* defined.
+Information its read from `read_data structure file`_ and parsed based on the *atom_style* defined.
 
 .. image:: /imgs/LAMMPS_geometry.png
 
@@ -224,10 +224,10 @@ Data sources:
                          
 
 .. _atom_styles: https://docs.lammps.org/read_data.html#format-of-the-body-of-a-data-file
-.. _program.header template: ../codes/lammps/header-d3e23974.html
-.. _setup: ../codes/lammps/setup-d3e24010.html
-.. _read_data structure file: ../codes/lammps/lammps.data-d3e51578.html
-.. _steps: ../codes/lammps/steps-d3e24250.html
-.. _mpi: ../codes/lammps/mpi-d3e24368.html
-.. _walltime: ../codes/lammps/walltime-d3e24432.html
-.. _performance: ../codes/lammps/performance-d3e24332.html
+.. _program.header template: ../codes/lammps/header-d3e28548.html
+.. _setup: ../codes/lammps/setup-d3e28584.html
+.. _read_data structure file: ../codes/lammps/lammps.data-d3e54793.html
+.. _steps: ../codes/lammps/steps-d3e28824.html
+.. _mpi: ../codes/lammps/mpi-d3e28942.html
+.. _walltime: ../codes/lammps/walltime-d3e29006.html
+.. _performance: ../codes/lammps/performance-d3e28906.html

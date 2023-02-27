@@ -200,6 +200,13 @@ Data source: <module cmlx:templateRef='`excitation.energy`_'>
 
 .. image:: /imgs/ADF_module_finalexcitationenergies.png
 
+Rotatory Strengths
+~~~~~~~~~~~~~~~~~~
+
+Data source: <module cmlx:templateRef='`excitation.energy`_'>
+
+.. image:: /imgs/ADF_module_rotatory_str.png
+
 NMR Shielding Tensors
 ~~~~~~~~~~~~~~~~~~~~~
 

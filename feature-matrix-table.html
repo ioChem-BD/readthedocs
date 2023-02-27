@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ioChem-BD - Feature matrix</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />        
+        <style>
+            /* Feature matrix stylesheet */
+            div#informationDiv,
+            div#otherModulesDiv, 
+            table#featureTable {
+                font-family:Lato;  
+            }
+            
+            div#informationDiv > span > ul,
+            div#otherModulesDiv > span > ul {
+                margin-top: 0px;
+            }
+            
+            div#informationDiv > h5,
+            div#otherModulesDiv > h5 {
+                margin-top: 5px; 
+                margin-bottom: 5px;
+            }
+            
+            div#otherModulesText > ul {
+                margin-top: 2px;
+            }
+            
+            .fa-circle-check {
+                color:darkgreen
+            }
+            .fa-circle-check {
+                color:darkgreen
+            }   
+            .fa-circle-info{
+                color:teal
+            }
+            
+            .fa-minus {
+                color:gainsboro
+            }
+            
+            table#featureTable > tbody > tr.code {
+                text-align: center;
+            }
+            
+            div#otherModulesText {
+                text-align: left;
+            }
+            
+            th.rotate {
+                /* Something you can count on */
+                height: 140px;
+                white-space: nowrap;
+            }
+            
+            th.rotate > div {
+                transform: 
+                  /* Magic Numbers */
+                  translate(0px, 60px)
+                  /* 45 is really 360 - 45 */
+                  rotate(315deg);
+                width: 30px;
+            }
+            
+            th.rotate > div > span {
+                border-bottom: 1px solid #ccc;
+                padding: 2px 10px;
+            }
+            
+            /* Highlight row and column on mouseover */
+            table#featureTable > thead > tr > td,
+            table#featureTable > thead > tr{
+                background-color: white !important;
+            }
+            
+            div#featureTableDiv {
+                overflow:hidden;
+            }
+                
+            table#featureTable > tbody > tr:hover {
+                background-color: LemonChiffon;
+            }
+                
+            table#featureTable td, 
+            table#featureTable th {
+                position: relative;
+            }
+                
+            table#featureTable td:hover::after,
+            table#featureTable th:hover::after {
+                content: "";
+                position: absolute;
+                background-color: LemonChiffon;
+                left: 0;
+                top: -5000px;
+                /*height: 100000px;*/
+                width: 100%;
+                z-index: -1;
+            }
+            
+            span.featuretext,
+            div.othermodules,
+            span.footnote {
+                display:none;
+            }
+            
+            span#informationText,
+            div#otherModulesText {
+                max-width: 600px;
+                display: inline-block;
+            }
+            
+            i.fa-square {
+                background-color: LemonChiffon;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    </head>
+    <body>
+        <div id="featureTableDiv">
+            <table id="featureTable">
+                <thead><tr>
+                    <th><span><i class="far fa-square" style="margin-right: 10px;"></i>Enabled feature </span></th><th class='rotate'><div class='featureheader'><span>Input file / settings</span></div><span class='featuretext'>Input file(s) are stored, allowing to reproduce the results.</span></th><th class='rotate'><div class='featureheader'><span>General Info</span></div><span class='featuretext'>Display the most relevant metadata fields like author, program used, type of calculation, method used and basis used</span></th><th class='rotate'><div class='featureheader'><span>Atomic coordinates</span></div><span class='featuretext'>Atom types used, atomic coordinates in cartesian and fractional units, cell dimensions on materials.</span></th><th class='rotate'><div class='featureheader'><span>Molecular Info</span></div><span class='featuretext'>Solvation related information, charge and multiplicity fields, point group and kpoints</span></th><th class='rotate'><div class='featureheader'><span>Energies</span></div><span class='featuretext'>Multiple energies types: Bonding energy, Free energy, Total energy, Zero Point Vibrational energy, etc</span></th><th class='rotate'><div class='featureheader'><span>Molecular orbitals</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Orbital Energy</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Mulliken charges</span></div><span class='featuretext'>Mulliken atomic charges</span></th><th class='rotate'><div class='featureheader'><span>Multipole deriv. Atom</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Dipole moment</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Quadrupole</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>S2</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Frequencies</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Thermochemistry</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Excitations</span></div><span class='featuretext'>TDDFT excitation energies</span></th><th class='rotate'><div class='featureheader'><span>NMR</span></div><span class='featuretext'>NMR Shielding tensors</span></th><th class='rotate'><div class='featureheader'><span>Timing</span></div><span class='featuretext'></span></th><th class='rotate'><div class='featureheader'><span>Interactive graphs</span></div><span class='featuretext'>Extended data visualization and analysis using interactive graphs.</span></th><th class='rotate'><div class='featureheader'><span>Molecular Dynamics</span></div><span class='featuretext'>MD visualization on Jsmol</span></th><th class='rotate'><div class='featureheader'><span>Other modules</span></div><span class='featuretext'></span></th>
+                </tr></thead><tbody>
+                    <tr class='code'><td>ADF AMS</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>Fit test.</li><li>Rotatory Strengths.</li></ul></div></td></tr>
+                    <tr class='code'><td>Amber</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>Molecular dynamics file is stored but not displayed</span></td><td><i class='fa-solid fa-minus'></i></td></tr>
+                    <tr class='code'><td>CASTEP</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>On geometry optimizations, it will display initial and final geometries, side to side.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>It can display CASTEP plot files (.xcd) like optimization convergence, density of states or band gap.</li></ul></div></td></tr>
+                    <tr class='code'><td>Gaussian</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>Will also include QMMM and frozen atoms information.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>ESP charges.</li><li>Electronic Coupling.</li></ul></div></td></tr>
+                    <tr class='code'><td>GROMACS</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>Molecular dynamics file is stored but not displayed</span></td><td><i class='fa-solid fa-minus'></i></td></tr>
+                    <tr class='code'><td>GronOR</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>Will also include Fragment Wave Functions and Many-Electron Basis Functions (MEBFs) sections.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>NOCI states.</li></ul></div></td></tr>
+                    <tr class='code'><td>LAMMPS</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td></tr>
+                    <tr class='code'><td>Molcas</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>Will also include Symmetry information, SEWARD Integrals, bond distances and geom. opt. Restrictions.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>Harmonic frequencies (plot).</li><li>Wave function, orbital and CI expansion specifications.</li><li>Wave functions.</li><li>Electrostatic moments.</li><li>Single-State CASPT2.</li><li>HZERO.</li><li>Multipole Expansion Analysis.</li><li>LoProp Analysis.</li></ul></div></td></tr>
+                    <tr class='code'><td>Mopac</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td></tr>
+                    <tr class='code'><td>Orca</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>TDHF / TDDFT root energies (plot).</li><li>Broken symmetry magnetic coupling analysis.</li><li>g-matrix and ZFS.</li></ul></div></td></tr>
+                    <tr class='code'><td>QuantumESPRESSO</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>Magnetic moment per site.</li><li>Projects wavefunctions onto orthogonalized atomic wavefunctions.</li><li>Absorption spectra (plot).</li><li>Band structure (plot).</li><li>Projected DOS (plot).</li><li>Phonon dispersion (plot).</li><li>Phonon DOS (plot).</li></ul></div></td></tr>
+                    <tr class='code'><td>SIESTA</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>Pressure.</li></ul></div></td></tr>
+                    <tr class='code'><td>Turbomole</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>TDHF/TDDFT.</li></ul></div></td></tr>
+                    <tr class='code'><td>VASP</td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>On geometry optimizations, it will display initial and final geometries, side to side.</span></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-info'></i><span class='footnote'>IR Spectrum visualization using JSmol and the JCAMP-DX plugin.</span></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-minus'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i></td><td><i class='fa-solid fa-circle-check'></i><div  class='othermodules'><ul><li>MD energy and force progression (plot).</li><li>Band structure (plot).</li><li>Density of states (DOS).</li><li>Magnetization.</li><li>Structure.</li></ul></div></td></tr>
+                    <tr><td></td>
+                        <td colspan="20">                            
+                            <div id="informationDiv"><h5>Information:</h5><span id="informationText"></span></div>
+                            <div id="otherModulesDiv"><h5 id="otherModulesTitle">Other modules:</h5><div id="otherModulesText"></div></div></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height: 300px"></div>
+        <script>            
+            $(document).ready(function(){
+                $("span.featuretext:not(:empty)").each(function(){  $(this).parent().children().css("cursor", "pointer")});
+                $("div#informationDiv").hide();
+                $("div#otherModulesDiv").hide();            
+            
+                $("div.featureheader > span").on("mouseover", function(){
+                    if(($($(this).parent()).next() != null) && $($(this).parent()).next().html() != ''){
+                        $("div#informationDiv").hide();
+                        $("div#otherModulesDiv").show();                        
+                        $("h5#otherModulesTitle").html("Feature description:");
+                        $("div#otherModulesText").html($($(this).parent()).next().html());                       
+                        $(this).css("background-color", "Moccasin");
+                    }
+                });               
+                
+                $("div.featureheader > span").on("mouseleave", function(){
+                    $("div#otherModulesDiv").hide();
+                    $("h5#otherModulesTitle").html("");
+                    $("div#otherModulesText").html($($(this).parent()).next().html());
+                    $("table#featureTable thead tr th div span").css("background-color", "white");
+                });
+            
+                $("table#featureTable tbody tr").on("mouseenter", 
+                    function(){
+                        $("td > i.fa-circle-check", this).each(function(index) {
+                            var i = $(this).parent().index()-1;                           
+                            $($("table#featureTable thead tr th div span")[i]).css("background-color", "LemonChiffon");
+                            
+                            if($(this).parent().index() == $(this).parent().parent().children().length-1){
+                                $("div#otherModulesDiv").show();
+                                $("h5#otherModulesTitle").html("Other modules:");
+                                $("div#otherModulesText").html($(this).next().html());
+                            }
+                        });
+                        
+                        let hasInformation = false;
+                        let information = "<ul class='fa-ul'>";                        
+                        $("td > i.fa-circle-info", this).each(function(index) {
+                            var i = $(this).parent().index()-1;                           
+                            $($("table#featureTable thead tr th div span")[i]).css("background-color", "LemonChiffon");
+                            hasInformation = true;
+                            information += "<li><span class='fa-li'><i class='fas fa-circle-info'></i></span>" + $(this).next().html() + "</li>";                            
+                        });
+                        information += "</ul>" 
+                        if(hasInformation){
+                            $("div#informationDiv").show();
+                            $("span#informationText").html(information);
+                        } else {
+                            $("div#informationDiv").hide();
+                            $("span#informationText").html('');
+                        }
+                    
+                });
+                
+                $("table#featureTable tbody tr").on("mouseleave", 
+                    function(){
+                        $("table#featureTable thead tr th div span").css("background-color", "white");
+                        $("div#informationDiv").hide();
+                        $("span#informationText").html('');
+                        
+                        $("div#otherModulesDiv").hide();
+                        $("h5#otherModulesTitle").html("");
+                        $("div#otherModulesText").html("");
+                });
+            });            
+        </script>
+    </body>
+</html>

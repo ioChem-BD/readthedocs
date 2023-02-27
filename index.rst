@@ -154,6 +154,7 @@ Topics inside this documentation
    :caption: Data conversion
    
    How to use this help? <conversion-howto>
+   Feature matrix <feature-matrix>
    From chemical codes to CML<conversion-cml>
    From CML to HTML5 report <conversion-html>
    Conversion test dataset <conversion-test-dataset>

@@ -1,8 +1,8 @@
 Vasp
 ====
 
-Header
-------
+General Info
+------------
 
 .. table:: VASP - General Info - Main fields
 

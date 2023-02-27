@@ -18,7 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = 'ioChem-BD'
-copyright = '2022, ioChem-BD software'
+copyright = '2023, ioChem-BD software'
 author = 'Moisés Álvarez'
 version = 'latest'
 

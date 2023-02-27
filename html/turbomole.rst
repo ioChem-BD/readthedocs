@@ -1,8 +1,8 @@
 Turbomole
 =========
 
-Header
-------
+General Info
+------------
 
 .. table:: Turbomole - General Info - Main fields
 

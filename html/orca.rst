@@ -145,7 +145,7 @@ Natural orbitals
 
 Data source: <module cmlx:templateRef='`natural`_'>
 
-.. image:: /imgs/
+.. image:: /imgs/ORCA_module_natural.png
 
 NMR Shielding tensors
 ~~~~~~~~~~~~~~~~~~~~~

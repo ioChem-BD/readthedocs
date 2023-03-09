@@ -1009,7 +1009,7 @@ Generating such project hierarchy via shell commands (excluding *$HOME*) will be
        $ cdpro reopt
        $ cpro -n freq -d freq    
        $ cdpro freq    
-       $ loadcalc -i input.in -o output -n freq1 -d freq1
+       $ loadgauss -i input.in -o output -n freq1 -d freq1
 
 
 Using **-auto** parameter can be as simple as this
@@ -1017,7 +1017,7 @@ Using **-auto** parameter can be as simple as this
 .. code:: bash
 
        $ cd /home/user/mnt_cluster/metOH-oxidation/MoO2/metOH/TS1_NEB/02/reopt/freq
-       $ loadcalc -i input.in -o output -n freq1 -d freq1 **-auto**
+       $ loadgauss -i input.in -o output -n freq1 -d freq1 **-auto**
 
 
 Generated projects path will generate also *mnt_cluster* project, because **-auto** parameter excludes *$HOME*. If we want to exclude *mnt_cluster* folder or our folder is mounted in another path that does not contain a *$HOME* path like */mnt/cluster/…* we can edit our upload script *loadXXXX*:

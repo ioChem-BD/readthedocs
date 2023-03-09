@@ -43,7 +43,6 @@ Command                            Description
 `viewcalc`_                        View calculation information
 `mcalc`_                           Modify a calculation
 `dcalc`_                           Delete calculation from repository
-`loadcalc`_                        Load calculation utility
 Calculation type specific commands 
 `loadadf`_                         Load ADF calculation
 `loadams`_                         Load AMS calculation
@@ -382,132 +381,7 @@ Navigating to parent project and using calculation name:
 
 |
 
-loadcalc
-~~~~~~~~
-
-.. warning:: It is **advised** to use the custom upload scripts for each calculation type (*loadadf*, *loadgauss*, *loadXXXX*) instead of this generic command.
-
-Uploads a calculation into the Create module on the current project path.  
-
-This is a generic command that will allow us to upload multiple files and formats, some parameters will be shared by more than one format so they will behave differently depending on the format, so please read the command help (-h parameter) carefully.
-
-Common parameters for all calculations:
-+++++++++++++++++++++++++++++++++++++++++
-
-============= ===============================================================
-Parameters    Description
-============= ===============================================================
--n *name*     Name of the calculation inside Create. (mandatory)
--d *desc*     Description of the calculation. (mandatory)
--i *filename* Input file (mandatory)
--o *filename* Output file (OUTCAR on VASP, job.last on Turbomole).(mandatory)
--a *filename* Additional file loading for calculation. (optional)
-============= ===============================================================
-
-Additional parameters for Amber
-+++++++++++++++++++++++++++++++
-
-============== ============================================================================
-Parameters     Description
-============== ============================================================================
--p *filename*  Topology file of calculation, \*.prmtop. (required)
--ir *filename* Input coordinate file .inpcrd, or initial restart file .ncrst (required)
--r *filename*  Final restart file .ncrst (required)
--t *filename*  Trajectory file of calculation, \*.nc (required) 
-============== ============================================================================
-
-
-Additional parameters for AMS
-+++++++++++++++++++++++++++++
-
-================= ============================================================================
-Parameters        Description
-================= ============================================================================
--rkf1 *filename*  Use this file as ams.rkf file of calculation (required)
--rkf2 *filename*  Use this file as adf.rkf file of calculation (required)
-================= ============================================================================
-
-   
-Additional parameters for CASTEP
-++++++++++++++++++++++++++++++++
-
-================= ============================================================================
-Parameters        Description
-================= ============================================================================
--oc *filename*    Cell definition parameters (required)
--xcd *filename*   Chart document file(s) (optional)
--og *filename*    Geometry file, required on geometry optimization calculations
-================= ============================================================================   
-   
-  
-Additional parameters for GROMACS
-+++++++++++++++++++++++++++++++++
-
-================= ============================================================================
-Parameters        Description
-================= ============================================================================
--oc *filename*    Geometry file of calculation, \*.gro (required)
--t *filename*     Trajectory file of calculation, \*.xtc (required)
-================= ============================================================================  
-  
-    
-Additional parameters for LAMMPS
-++++++++++++++++++++++++++++++++
-
-================= ============================================================================
-Parameters        Description
-================= ============================================================================
--p *filename*     Data file used on the read_data command (required)
--t *filename*     Trajectory file of calculation, compressed or not (required)
-================= ============================================================================  
-    
-    
-Additional parameters for QUANTUMESPRESSO
-+++++++++++++++++++++++++++++++++++++++++
-
-================= =============================================================================================================
-Parameters        Description
-================= =============================================================================================================
--as *filename*    Absorption spectra data file, from TDDFT calculations. (optional)
--b *filename(s)*  Bands file(s) to current upload, separated by # (optional).
--pi *filename*    Input used on the phonon matdyn.x tool. (optional)
--po *filename*    Output file containing the phonon frequencies. (optional)
--dos *filename*   PDOS of atomic sites and atomic orbitals file, from PDOS calculations, separated by ~ (optional).
-================= =============================================================================================================  
-   
-Additional parameters for Turbomole
-+++++++++++++++++++++++++++++++++++
-
-============== =================================
-Parameters     Description
-============== =================================
--oc *filename* Turbomole coords file. (optional)
--oe *filename* Turbomole energy file. (optional)
--ob *filename* Turbomole basis file. (optional)
-============== =================================
-
-Additional parameters for VASP
-++++++++++++++++++++++++++++++
-
-============== ============================
-Parameters     Description
-============== ============================
--dc *filename* VASP DOSCAR file. (optional)
--kp *filename* VASP KPOINTS file (optional)
-============== ============================
-
-
-Examples:
-+++++++++
-
-.. code:: console
-                                                                                                                                                                                                                                                      
-   $ loadcalc -i ESR_TiF3.run -o ESR_TiF3.run.o33132 -n ESR_TiF3 -d "Sample description"   # Upload **ADF** calculation and set its name to ESR_TiF3 
-   $ loadcalc -i control -o job.last -oc coords -oe energy -ob basis -n Fe_Bipy -d Fe_Bipy # Upload **Turbomole** calculation and set its name to Fe_Bipy
-   $ loadcalc -i INCAR -o OUTCAR -n NO_dim -d NO_dim                                       # Upload **VASP** calculation and set its name to NO_dim
-
-
-To ease the usage of this command we have developed a group of helper Linux scripts to simplify shell upload.
+There is a group of helper Linux scripts that simplify the process of uploading calculations:
 
 ======================================================================================================= ==============================================================================
 Script                                                                                                  Function
@@ -542,7 +416,6 @@ Script                                                                          
 .. _viewcalc: #viewcalc
 .. _mcalc: #mcalc
 .. _dcalc: #dcalc
-.. _loadcalc: #loadcalc
 .. _loadadf:  ./using-shell-client/shell-automated-scripts.html#loadadf
 .. _loadams:  ./using-shell-client/shell-automated-scripts.html#loadams
 .. _loadamber:  ./using-shell-client/shell-automated-scripts.html#loadamber

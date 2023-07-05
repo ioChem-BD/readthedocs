@@ -15,6 +15,7 @@ Per file type
 - `loadgauss`_
 - `loadgromacs`_
 - `loadgronor`_
+- `loadgrrm`_
 - `loadlammps`_
 - `loadmolcas`_
 - `loadmopac`_
@@ -386,6 +387,14 @@ This command will behave the same as previous one but will upload different file
 
        $ loadgronor -n Sc2C82 -d "Sample upload" -i input2.in -o dimmer.cml
 
+loadgrrm
+~~~~~~~~
+
+Same parameters and functionalities than the `loadadf`_ script.
+
+.. important:: Reaction path searches are not yet supported (AFIR, etc).
+
+
 loadlammps
 ~~~~~~~~~~~
 
@@ -736,6 +745,14 @@ On calculations that generate multiple output files like **dscf**, **escf**, we 
        $ loadturbo -i control -o dscf.out -o escf.out
 
 
+The output of *freeh* (the free enthalpy module), can also be appended also using the *-o* parameter. HTML Report will then display thermochemistry values and energy corrections.
+
+.. code:: bash
+
+       $ loadturbo -i control -o job.last -o freeh.out
+
+.. important:: The *freeh* module processing is only valid for single temperature and pressure values, it will not work for ranges.  
+
 Examples
 ''''''''
 
@@ -758,7 +775,6 @@ If no parameter is set, *name* and *description* fields will come from parent fo
        $ pwd
        /home/user/Desktop/flourophenol
        $ loadturbo
-
 
 loadsiesta
 ~~~~~~~~~~
@@ -1229,6 +1245,7 @@ Restrictions:
 .. _loadgauss: #loadgauss
 .. _loadgromacs: #loadgromacs
 .. _loadgronor: #loadgronor
+.. _loadgrrm: #loadgrrm
 .. _loadlammps: #loadlammps
 .. _loadmolcas: #loadmolcas
 .. _loadmopac: #loadmopac

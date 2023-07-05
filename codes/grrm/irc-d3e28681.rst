@@ -1,0 +1,331 @@
+.. _irc-d3e28681:
+
+irc
+===
+
+.. table:: Implementation level
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Type                                                                                                                       | Status                                                                                                                     |
+   +============================================================================================================================+============================================================================================================================+
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: Template attributes
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                                                                                                                  | Value                                                                                                                      |
+   +============================================================================================================================+============================================================================================================================+
+   | *source*                                                                                                                   | GRRM log                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | id                                                                                                                         | irc                                                                                                                        |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | pattern                                                                                                                    | IRCIRCIRCIRC.\*                                                                                                            |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern                                                                                                                 | IRCIRCIRCIRC.\*                                                                                                            |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endOffset                                                                                                                  | 1                                                                                                                          |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | xml:base                                                                                                                   | irc.xml                                                                                                                    |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+           IRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCI
+           INITIAL STRUCTURE
+           C     -0.064198235583     -0.007930187832     -0.000000000000
+           O      1.233143761809      0.016481892179      0.000000000000
+           H      0.644724226899      1.031280651044      0.000000000000
+           H     -0.513669753124     -1.039832355389      0.000000000000
+           ENERGY    = -114.276451735641
+           Spin(**2) =    0.000000000000
+           (...)       
+           FREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQF
+           Geometry (Origin = Center of Mass, Axes = Principal Axis), SYMMETRY = Cs  
+           C      0.695923922878     -0.078083657444      0.000000000000
+           O     -0.593539542416      0.066747898232      0.000000000000
+           H     -0.142357946467     -1.016067523497      0.000000000000
+           H      1.276014279045      0.886458672976      0.000000000000
+           
+           0                  1               2       
+           Freq.  :     -2057.48289608    764.48753053   1327.25146103
+           Red. M :         1.11011042      1.13331104      1.48466979
+           (...)
+           FREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQF
+           
+           IRC FOLLOWING (FORWARD) STARTING FROM FIRST-ORDER SADDLE
+           =========================================================================
+           
+           # STEP 1
+           C     -0.071150053068     -0.011562155761     -0.000000000000
+           O      1.231437348088      0.020978168998      0.000000000000
+           H      0.741327492878      1.014741115267      0.000000000000
+           H     -0.500416895204     -1.051406775680      0.000000000000
+           ENERGY    = -114.279418458276
+           Spin(**2) =    0.000000000000
+           
+           # STEP 2
+           C     -0.074800472155     -0.013609448325      0.000000000000
+           O      1.230332553586      0.023373404369     -0.000000000000
+           H      0.794622143506      1.007287090514      0.000000000000
+           H     -0.492712740670     -1.057590112617      0.000000000000
+           ENERGY    = -114.283167686397
+           Spin(**2) =    0.000000000000
+           (...)
+           
+           EQ EXIST WITHIN STEPSIZE, OPTIMIZATION CARRIED OUT
+           
+           OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTO
+           
+           # ITR. 0
+           C     -0.105850351028     -0.031433719366      0.000000000000
+           O      1.198842252895      0.043662456033      0.000000000000
+           H      1.454397774356      0.983359563995      0.000000000000
+           H     -0.283008859220     -1.143434017688     -0.000000000000
+           Item                       Value            Threshold
+           ENERGY          -114.329482198186                             (   0.000000000000 :    0.000000000000)
+           Spin(**2)          0.000000000000
+           LAMDA              0.000000036186
+           TRUST RADII        0.100000000000
+           STEP RADII         0.000068764539
+           Maximum  Force             0.000073967330      0.000060000000
+           RMS      Force             0.000040582806      0.000040000000
+           Maximum  Displacement      0.000038660074      0.000300000000
+           RMS      Displacement      0.000019850613      0.000200000000
+           NORMAL MODE EIGENVALUE : N_MODE = 6
+           0.094521103   0.107577985   0.165587813   0.593325375   0.875514194
+           1.134713490
+           (...)
+           =========================================================================
+           Optimized structure, SYMMETRY = Cs  
+           C     -0.105863255395     -0.031402444471      0.000001934131
+           O      1.198838617361      0.043660566367      0.000002749597
+           H      1.454375505562      0.983319983770     -0.000002542309
+           H     -0.282970050525     -1.143423822692     -0.000002141419
+           ENERGY    = -114.329482200635
+           Spin(**2) =    0.000000000000
+           (...)
+           Minimum point was found
+           OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTO
+           
+           FREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQF
+           Geometry (Origin = Center of Mass, Axes = Principal Axis), SYMMETRY = Cs  
+           C      0.732099863660      0.125228037218     -0.000000305817
+           O     -0.557768432533     -0.084822458724     -0.000000327663
+           H     -1.011259054252      0.776922966538      0.000004806572
+           H      1.146461185184     -0.921797777996      0.000004034985
+           
+           0                  1               2       
+           Freq.  :      1104.21793079   1214.80606311   1376.76812203
+           (...)
+           FREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQFREQF
+           
+           IRC FOLLOWING (BACKWARD) STARTING FROM FIRST-ORDER SADDLE
+           =========================================================================
+           
+           # STEP 1
+           C     -0.057246418098     -0.004298219903      0.000000000000
+           O      1.234850175530      0.011985615360      0.000000000000
+           H      0.548120960920      1.047820186821      0.000000000000
+           H     -0.526922611044     -1.028257935098      0.000000000000
+           ENERGY    = -114.279689146250
+           Spin(**2) =    0.000000000000
+           
+           # STEP 2
+           C     -0.049927090418     -0.000749373503      0.000000000000
+           O      1.236267436601      0.007489612335     -0.000000000000
+           H      0.451627531415      1.064724546798      0.000000000000
+           H     -0.540072123984     -1.016062970509      0.000000000000
+           ENERGY    = -114.289141566899
+           Spin(**2) =    0.000000000000
+           (...)
+           IRC following along both forward and backward directions were finished
+           IRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCIRCI
+       
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="irc">
+           <module cmlx:templateRef="irc">
+               <module cmlx:templateRef="irc-path">
+                   <scalar cmlx:templateRef="direction" dataType="xsd:string" dictRef="g:ircDirection">FORWARD</scalar>
+                   <module cmlx:templateRef="irc-iteration">
+                       <module cmlx:templateRef="irc-step">
+                           <scalar cmlx:templateRef="step" dataType="xsd:integer" dictRef="g:ircStep">1</scalar>
+                           <module cmlx:templateRef="molecule">
+                               <molecule cmlx:templateRef="atom" id="molecule">
+                                   <atomArray>
+                                       <atom elementType="C" id="a1" x3="-0.07115005" y3="-0.01156216" z3="-0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                                       </atom>
+                                       <atom elementType="O" id="a2" x3="1.23143735" y3="0.02097817" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a3" x3="0.74132749" y3="1.01474112" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a4" x3="-0.5004169" y3="-1.05140678" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                   </atomArray>
+                                   <bondArray>
+                                       <bond atomRefs2="a1 a3" order="S" />
+                                       <bond atomRefs2="a1 a2" order="S" />
+                                       <bond atomRefs2="a1 a4" order="S" />
+                                       <bond atomRefs2="a2 a3" order="S" />
+                                   </bondArray>
+                                   <formula concise="CH2O">
+                                       <atomArray count="1 2 1" elementType="C H O" />
+                                   </formula>
+                                   <property dictRef="cml:molmass">
+                                       <scalar units="unit:dalton">28.0101</scalar>
+                                   </property>
+                               </molecule>
+                           </module>
+                           <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.279418458276</scalar>
+                           <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                       </module>
+                       <module cmlx:templateRef="irc-step">
+                           <scalar cmlx:templateRef="step" dataType="xsd:integer" dictRef="g:ircStep">2</scalar>
+                           <module cmlx:templateRef="molecule">
+                               <molecule cmlx:templateRef="atom" id="molecule">
+                                   <atomArray>
+                                       <atom elementType="C" id="a1" x3="-0.07480047" y3="-0.01360945" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                                       </atom>
+                                       <atom elementType="O" id="a2" x3="1.23033255" y3="0.0233734" z3="-0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a3" x3="0.79462214" y3="1.00728709" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a4" x3="-0.49271274" y3="-1.05759011" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                   </atomArray>
+                                   <bondArray>
+                                       <bond atomRefs2="a1 a3" order="S" />
+                                       <bond atomRefs2="a1 a2" order="S" />
+                                       <bond atomRefs2="a1 a4" order="S" />
+                                       <bond atomRefs2="a2 a3" order="S" />
+                                   </bondArray>
+                                   <formula concise="CH2O">
+                                       <atomArray count="1 2 1" elementType="C H O" />
+                                   </formula>
+                                   <property dictRef="cml:molmass">
+                                       <scalar units="unit:dalton">28.0101</scalar>
+                                   </property>
+                               </molecule>
+                           </module>
+                           <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.283167686397</scalar>
+                           <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                       </module>
+                   </module>
+               </module>
+               <module cmlx:templateRef="irc-path">
+                   <scalar cmlx:templateRef="direction" dataType="xsd:string" dictRef="g:ircDirection">BACKWARD</scalar>
+                   <module cmlx:templateRef="irc-iteration">
+                       <module cmlx:templateRef="irc-step">
+                           <scalar cmlx:templateRef="step" dataType="xsd:integer" dictRef="g:ircStep">1</scalar>
+                           <module cmlx:templateRef="molecule">
+                               <molecule cmlx:templateRef="atom" id="molecule">
+                                   <atomArray>
+                                       <atom elementType="C" id="a1" x3="-0.05724642" y3="-0.00429822" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                                       </atom>
+                                       <atom elementType="O" id="a2" x3="1.23485018" y3="0.01198562" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a3" x3="0.54812096" y3="1.04782019" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a4" x3="-0.52692261" y3="-1.02825794" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                   </atomArray>
+                                   <bondArray>
+                                       <bond atomRefs2="a1 a2" order="S" />
+                                       <bond atomRefs2="a1 a3" order="S" />
+                                       <bond atomRefs2="a1 a4" order="S" />
+                                       <bond atomRefs2="a2 a3" order="S" />
+                                   </bondArray>
+                                   <formula concise="CH2O">
+                                       <atomArray count="1 2 1" elementType="C H O" />
+                                   </formula>
+                                   <property dictRef="cml:molmass">
+                                       <scalar units="unit:dalton">28.0101</scalar>
+                                   </property>
+                               </molecule>
+                           </module>
+                           <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.279689146250</scalar>
+                           <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                       </module>
+                       <module cmlx:templateRef="irc-step">
+                           <scalar cmlx:templateRef="step" dataType="xsd:integer" dictRef="g:ircStep">2</scalar>
+                           <module cmlx:templateRef="molecule">
+                               <molecule cmlx:templateRef="atom" id="molecule">
+                                   <atomArray>
+                                       <atom elementType="C" id="a1" x3="-0.04992709" y3="-0.00074937" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                                       </atom>
+                                       <atom elementType="O" id="a2" x3="1.23626744" y3="0.00748961" z3="-0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a3" x3="0.45162753" y3="1.06472455" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                       <atom elementType="H" id="a4" x3="-0.54007212" y3="-1.01606297" z3="0.0000">
+                                           <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                                       </atom>
+                                   </atomArray>
+                                   <bondArray>
+                                       <bond atomRefs2="a1 a2" order="S" />
+                                       <bond atomRefs2="a1 a3" order="S" />
+                                       <bond atomRefs2="a1 a4" order="S" />
+                                       <bond atomRefs2="a2 a3" order="S" />
+                                   </bondArray>
+                                   <formula concise="CH2O">
+                                       <atomArray count="1 2 1" elementType="C H O" />
+                                   </formula>
+                                   <property dictRef="cml:molmass">
+                                       <scalar units="unit:dalton">28.0101</scalar>
+                                   </property>
+                               </molecule>
+                           </module>
+                           <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.289141566899</scalar>
+                           <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                       </module>
+                   </module>
+               </module>
+           </module>
+       </comment>
+
+.. container:: formalpara-title
+
+   **Template definition**
+
+.. code:: xml
+
+   <xi:include href="singleStruc.xml" />
+   <xi:include href="freq.xml" />
+   <template id="irc-path" pattern="IRC FOLLOWING.*" endPattern="IRC FOLLOWING.*" endPattern2="Energy profile along IRC.*" repeat="2">  <record id="direction">IRC FOLLOWING \({X,g:ircDirection}\).*</record>  <transform process="pullupSingleton" xpath="./cml:list" />  <record id="null" repeat="2" />  <template id="irc-iteration" pattern="# STEP.*" endPattern="EQ EXIST.*" endPattern2="MAXIMUM INTER.*">    <template id="irc-step" pattern="# STEP.*" endPattern="# STEP.*" endPattern2="~" repeat="*">      <record id="step"># STEP\s*{I,g:ircStep}</record>      <template id="molecule" pattern="[A-Za-z]{1,2}\s+.*" endPattern="\s*ENERGY\s*=.*" repeat="*">        <record makeArray="true" repeat="*" id="atom">\s*{A,compchem:elementType}\s*{F,compchem:x3}\s*{F,compchem:y3}\s*{F,compchem:z3}\s*
+                       </record>        <transform process="createMolecule" xpath="./cml:list[@cmlx:templateRef='atom']/cml:array" id="molecule" />        <transform process="pullupSingleton" xpath="./cml:list" />
+                   </template>      <record id="energy">\s*ENERGY\s*=\s*{F,cc:energy}\s*</record>      <record id="spinsqr">\s*Spin\(\*\*2\)\s*=\s*{F,cc:s2}\s*</record>      <record id="null" repeat="1">{X,cc:dummy}</record>      <transform process="pullupSingleton" xpath="./cml:list" />      <transform process="delete" xpath="(//cml:list[@cmlx:templateRef='null'])" />      <transform process="delete" xpath="(//cml:scalar[@cmlx:templateRef='null'])" />      <transform process="delete" xpath=".//cml:module[count(*)=0]" />      <transform process="addUnits" xpath=".//cml:scalar[@dictRef='cc:energy']" value="nonsi:hartree" />
+               </template>
+           </template>  <template id="irc-opt" pattern="EQ EXIST.*" endPattern="~">    <templateList>      <xi:include href="opt.xml" />      <xi:include href="optiStruc.xml" />      <xi:include href="freq.xml" />
+               </templateList>
+           </template> 
+       </template>
+
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Partial.png

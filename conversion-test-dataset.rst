@@ -7,7 +7,7 @@ This document collects a number of cases that ioChem-BD can handle. Find below t
 
 We kindly ask the interested reader to browse the **Conversion Templates: Text to CML** for a detailed description of what and from where data fields are captured, and how the HTML5 file is generated for visualisation. Note that ioChem-BD captures many data fields but for only few of them the HTML5 representation is generated. Given the dynamic architecture of iochem-BD, generating new capture templates and/or new representation templates is extremely flexible, so new templates can be written and implemented **at any time without disrupting normal operation**. Contact us for further requests.
 
-Release 2.8.0 (current)
+Release 2.9.0 (current)
 -----------------------
 
 ioChem-BD handles results obtained from:
@@ -19,6 +19,7 @@ ioChem-BD handles results obtained from:
 -  Gaussian ’09 to ’16
 -  GROMACS 5.0
 -  GronOR 21
+-  GRRM 23
 -  LAMMPS 30-Jul-2021
 -  Molcas 8.0
 -  Mopac 2016
@@ -210,6 +211,20 @@ ethene/monomer/cas22/ethene           `Input <https://www.iochem-bd.org/data-con
 ethene/monomer/hf/ethene              `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/hf/ethene.inp>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/hf/ethene.out>`__                           ethene         `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/hf/ethene.cml>`__              `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/hf/ethene.html>`__
 ethene/monomer/triplet/ethene         `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/triplet/ethene.inp>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/triplet/ethene.out>`__                 ethene         `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/triplet/ethene.cml>`__         `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/gronor/ethene/monomer/triplet/ethene.html>`__
 ===================================== ============================================================================================================================================================================================================================== ============== =========================================================================================================== ==============================================================================================================
+
+GRRM 23
+~~~~~~~
+
+================== ============================================================================================================================================================ ============================================== ================================================================================================================================================================= ============================================================================================================================================================================
+Calculation folder Source files                                                                                                                                                 **Properties**                                 **Generated CML file**                                                                                                                                            **CML derived content**
+================== ============================================================================================================================================================ ============================================== ================================================================================================================================================================= ============================================================================================================================================================================
+FREQ               `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.log>`__     Frequencies B3LYP H2CO                         `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.log.xml>`__     `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.log.html>`__ `MULTI-XYZ`_
+MIN                `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/MIN.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/MIN.log>`__       Geometry optimization B3LYP H2CO               `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/MIN.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/MIN.log.xml>`__       `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/MIN.log.html>`__
+PT0                `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/PT0.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/PT0.log>`__       Path top structure SC-AFIR2 B3LYP H2CO         `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/PT0.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/PT0.log.xml>`__       `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/PT0.log.html>`__
+SADDLE             `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.log>`__ Transition state optimization B3LYP H2CO       `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.log.xml>`__ `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.log.html>`__ `MULTI-XYZ <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/SADDLE.log.xyz>`__
+TS4                `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.log>`__       Transition state structure SC-AFIR2 B3LYP H2CO `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.log.xml>`__       `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.log.html>`__ `MULTI-XYZ <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/TS4.log.xyz>`__
+IRC                `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.com>`__ / `Output <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.log>`__       Intrinsic Reaction Coordinate B3LYP H2CO       `Input <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.com.xml>`__ / `CML <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.log.xml>`__       `HTML5 <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.log.html>`__ `MULTI-XYZ <https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.log2.xyz>`__ `IRC-XYZ`_
+================== ============================================================================================================================================================ ============================================== ================================================================================================================================================================= ============================================================================================================================================================================
 
 Turbomole 6.4
 ~~~~~~~~~~~~~
@@ -561,6 +576,8 @@ zmatrix                   `Input <https://www.iochem-bd.org/data-conversion/v2.0
 .. _JCAMP-DX1: https://www.iochem-bd.org/data-conversion/v2.0.0/ams/Opt_Freq/Opt_Freq_Raman/jcamp1.dx
 .. _JCAMP-DX2: https://www.iochem-bd.org/data-conversion/v2.0.0/ams/Opt_Freq/Opt_Freq_Raman/jcamp2.dx
 .. _HMTL5: https://www.iochem-bd.org/data-conversion/v1.0.0/gaussian/cucurb.html
+.. _MULTI-XYZ: https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/FREQ.log.xyz
+.. _IRC-XYZ: https://www.iochem-bd.org/data-conversion/v2.0.0/grrm/IRC.log.xyz
 .. _B: https://www.iochem-bd.org/data-conversion/v1.0.0/turbomole/acetic/cc/basis
 .. _C1: https://www.iochem-bd.org/data-conversion/v1.0.0/turbomole/acetic/cc/control
 .. _C2: https://www.iochem-bd.org/data-conversion/v1.0.0/turbomole/acetic/cc/coord

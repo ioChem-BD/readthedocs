@@ -1,0 +1,301 @@
+.. _opt-d3e30414:
+
+opt
+===
+
+.. table:: Implementation level
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Type                                                                                                                       | Status                                                                                                                     |
+   +============================================================================================================================+============================================================================================================================+
+   | CML extraction template                                                                                                    | |image1|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | HTML5 representation                                                                                                       | |image2|                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: Template attributes
+
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                                                                                                                  | Value                                                                                                                      |
+   +============================================================================================================================+============================================================================================================================+
+   | *source*                                                                                                                   | GRRM log                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | id                                                                                                                         | opt                                                                                                                        |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | pattern                                                                                                                    | OPTOPTOPT.\*                                                                                                               |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | endPattern                                                                                                                 | =====.\*                                                                                                                   |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+   | xml:base                                                                                                                   | opt.xml                                                                                                                    |
+   +----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+
+.. container:: formalpara-title
+
+   **Input**
+
+::
+
+       OPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTOPTO
+
+       # ITR. 0
+       C      0.000000000000      0.000000000000      0.000000000000
+       O      1.200000000000      0.000000000000      0.000000000000
+       H     -0.500000000000      1.000000000000      0.000000000000
+       H     -0.500000000000     -1.000000000000      0.000000000000
+               Item                       Value            Threshold
+               ENERGY          -114.411340148425                             (   0.000000000000 :    0.000000000000)
+               Spin(**2)          0.000000000000
+               LAMDA             -0.044086028537
+               TRUST RADII        0.100000000000
+               STEP RADII         0.099999772863
+       Maximum  Force             0.060160801264      0.000060000000
+       RMS      Force             0.027342505434      0.000040000000
+       Maximum  Displacement      0.041995124706      0.000300000000
+       RMS      Displacement      0.028867447891      0.000200000000
+       NORMAL MODE EIGENVALUE : N_MODE = 6
+       0.127182496   0.172800300   0.222172473   0.382188000   0.873986295
+       1.804155953
+
+       # ITR. 1
+       C      0.041995124706     -0.000000000000      0.000000000000
+       O      1.240611085149     -0.000000000000      0.000000000000
+       H     -0.541303104928      0.960155233197      0.000000000000
+       H     -0.541303104928     -0.960155233197      0.000000000000
+               Item                       Value            Threshold
+               ENERGY          -114.415281650643                             (   0.000000000000 :    0.000000000000)
+               Spin(**2)          0.000000000000
+               LAMDA             -0.000438194998
+               TRUST RADII        0.299999318587
+               STEP RADII         0.030670409747
+       Maximum  Force             0.014223663897      0.000060000000
+       RMS      Force             0.005975118658      0.000040000000
+       Maximum  Displacement      0.015360034330      0.000300000000
+       RMS      Displacement      0.008853784662      0.000200000000
+       NORMAL MODE EIGENVALUE : N_MODE = 6
+       0.129460642   0.172928531   0.222530463   0.389774177   0.873454815
+       1.815713072
+
+       # ITR. 2
+       C      0.052372084277     -0.000000000000     -0.000000000000
+       O      1.251877081287     -0.000000000000     -0.000000000000
+       H     -0.552124582782      0.944795198867      0.000000000000
+       H     -0.552124582782     -0.944795198867     -0.000000000000
+               Item                       Value            Threshold
+               ENERGY          -114.415497750428                             (   0.000000000000 :    0.000000000000)
+               Spin(**2)          0.000000000000
+               LAMDA             -0.000000942648
+               TRUST RADII        0.092011229241
+               STEP RADII         0.000763328126
+       Maximum  Force             0.001085693332      0.000060000000
+       RMS      Force             0.000579095912      0.000040000000
+       Maximum  Displacement      0.000460488138      0.000300000000
+       RMS      Displacement      0.000220353850      0.000200000000
+       NORMAL MODE EIGENVALUE : N_MODE = 6
+       0.131638656   0.172870054   0.222531346   0.396090889   0.872938732
+       1.819986160
+
+       # ITR. 3
+       C      0.051911596139     -0.000000000000      0.000000000000
+       O      1.251598064141      0.000000000000     -0.000000000000
+       H     -0.551754830140      0.944696873126     -0.000000000000
+       H     -0.551754830140     -0.944696873126     -0.000000000000
+               Item                       Value            Threshold
+               ENERGY          -114.415498155971                             (   0.000000000000 :    0.000000000000)
+               Spin(**2)          0.000000000000
+               LAMDA             -0.000000317202
+               TRUST RADII        0.010000000000
+               STEP RADII         0.000010525342
+       Maximum  Force             0.000038304881      0.000060000000
+       RMS      Force             0.000015729923      0.000040000000
+       Maximum  Displacement      0.000007220466      0.000469913999
+       RMS      Displacement      0.000003038404      0.000313276000
+       NORMAL MODE EIGENVALUE : N_MODE = 6
+       0.132095091   0.172870422   0.222531963   0.394282898   0.872956860
+       1.851748547
+
+       =========================================================================
+       
+
+.. container:: formalpara-title
+
+   **Output text**
+
+.. code:: xml
+
+   <comment class="example.output" id="opt">
+           <module cmlx:templateRef="opt">    
+               <module cmlx:templateRef="geometry.cycle">
+                   <scalar cmlx:templateRef="iter" dataType="xsd:integer" dictRef="cc:cycleNumber">0</scalar>
+                   <module cmlx:templateRef="molecule">
+                      <molecule cmlx:templateRef="atom" id="molecule">
+                         <atomArray>
+                            <atom elementType="C" id="a1" x3="0.0000" y3="0.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                            </atom>
+                            <atom elementType="O" id="a2" x3="1.2000" y3="0.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                            </atom>
+                            <atom elementType="H" id="a3" x3="-0.5000" y3="1.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                            <atom elementType="H" id="a4" x3="-0.5000" y3="-1.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                         </atomArray>
+                         <bondArray>
+                            <bond atomRefs2="a1 a2" order="S" />
+                            <bond atomRefs2="a1 a3" order="S" />
+                            <bond atomRefs2="a1 a4" order="S" />
+                         </bondArray>
+                         <formula concise="CH2O">
+                            <atomArray count="1 2 1" elementType="C H O" />
+                         </formula>
+                         <property dictRef="cml:molmass">
+                            <scalar units="unit:dalton">28.0101</scalar>
+                         </property>
+                      </molecule>
+                   </module>
+                   <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.411340148425</scalar>
+                   <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                   <array dataType="xsd:string" delimiter="|" dictRef="g:item" size="4">Maximum Force|RMS Force|Maximum Displacement|RMS Displacement</array>
+                   <array dataType="xsd:double" dictRef="g:value" size="4">0.060160801264 0.027342505434 0.041995124706 0.028867447891</array>
+                   <array dataType="xsd:double" dictRef="g:threshold" size="4">0.000060000000 0.000040000000 0.000300000000 0.000200000000</array>
+                   <array cmlx:templateRef="normal-mode-eigvals" dataType="xsd:double" dictRef="cc:eigenval" size="6">0.127182496 0.172800300 0.222172473 0.382188000 0.873986295 1.804155953</array>
+                </module>
+                <module cmlx:templateRef="geometry.cycle">
+                   <scalar cmlx:templateRef="iter" dataType="xsd:integer" dictRef="cc:cycleNumber">1</scalar>
+                   <module cmlx:templateRef="molecule">
+                      <molecule cmlx:templateRef="atom" id="molecule">
+                         <atomArray>
+                            <atom elementType="C" id="a1" x3="0.04199512" y3="-0.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                            </atom>
+                            <atom elementType="O" id="a2" x3="1.24061109" y3="-0.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                            </atom>
+                            <atom elementType="H" id="a3" x3="-0.5413031" y3="0.96015523" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                            <atom elementType="H" id="a4" x3="-0.5413031" y3="-0.96015523" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                         </atomArray>
+                         <bondArray>
+                            <bond atomRefs2="a1 a2" order="S" />
+                            <bond atomRefs2="a1 a3" order="S" />
+                            <bond atomRefs2="a1 a4" order="S" />
+                         </bondArray>
+                         <formula concise="CH2O">
+                            <atomArray count="1 2 1" elementType="C H O" />
+                         </formula>
+                         <property dictRef="cml:molmass">
+                            <scalar units="unit:dalton">28.0101</scalar>
+                         </property>
+                      </molecule>
+                   </module>
+                   <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.415281650643</scalar>
+                   <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                   <array dataType="xsd:string" delimiter="|" dictRef="g:item" size="4">Maximum Force|RMS Force|Maximum Displacement|RMS Displacement</array>
+                   <array dataType="xsd:double" dictRef="g:value" size="4">0.014223663897 0.005975118658 0.015360034330 0.008853784662</array>
+                   <array dataType="xsd:double" dictRef="g:threshold" size="4">0.000060000000 0.000040000000 0.000300000000 0.000200000000</array>
+                   <array cmlx:templateRef="normal-mode-eigvals" dataType="xsd:double" dictRef="cc:eigenval" size="6">0.129460642 0.172928531 0.222530463 0.389774177 0.873454815 1.815713072</array>
+                </module>
+                <module cmlx:templateRef="geometry.cycle">
+                   <scalar cmlx:templateRef="iter" dataType="xsd:integer" dictRef="cc:cycleNumber">2</scalar>
+                   <module cmlx:templateRef="molecule">
+                      <molecule cmlx:templateRef="atom" id="molecule">
+                         <atomArray>
+                            <atom elementType="C" id="a1" x3="0.05237208" y3="-0.0000" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                            </atom>
+                            <atom elementType="O" id="a2" x3="1.25187708" y3="-0.0000" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                            </atom>
+                            <atom elementType="H" id="a3" x3="-0.55212458" y3="0.9447952" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                            <atom elementType="H" id="a4" x3="-0.55212458" y3="-0.9447952" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                         </atomArray>
+                         <bondArray>
+                            <bond atomRefs2="a1 a2" order="S" />
+                            <bond atomRefs2="a1 a3" order="S" />
+                            <bond atomRefs2="a1 a4" order="S" />
+                         </bondArray>
+                         <formula concise="CH2O">
+                            <atomArray count="1 2 1" elementType="C H O" />
+                         </formula>
+                         <property dictRef="cml:molmass">
+                            <scalar units="unit:dalton">28.0101</scalar>
+                         </property>
+                      </molecule>
+                   </module>
+                   <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.415497750428</scalar>
+                   <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                   <array dataType="xsd:string" delimiter="|" dictRef="g:item" size="4">Maximum Force|RMS Force|Maximum Displacement|RMS Displacement</array>
+                   <array dataType="xsd:double" dictRef="g:value" size="4">0.001085693332 0.000579095912 0.000460488138 0.000220353850</array>
+                   <array dataType="xsd:double" dictRef="g:threshold" size="4">0.000060000000 0.000040000000 0.000300000000 0.000200000000</array>
+                   <array cmlx:templateRef="normal-mode-eigvals" dataType="xsd:double" dictRef="cc:eigenval" size="6">0.131638656 0.172870054 0.222531346 0.396090889 0.872938732 1.819986160</array>
+                </module>
+                <module cmlx:templateRef="geometry.cycle">
+                   <scalar cmlx:templateRef="iter" dataType="xsd:integer" dictRef="cc:cycleNumber">3</scalar>
+                   <module cmlx:templateRef="molecule">
+                      <molecule cmlx:templateRef="atom" id="molecule">
+                         <atomArray>
+                            <atom elementType="C" id="a1" x3="0.0519116" y3="-0.0000" z3="0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">6</scalar>
+                            </atom>
+                            <atom elementType="O" id="a2" x3="1.25159806" y3="0.0000" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">8</scalar>
+                            </atom>
+                            <atom elementType="H" id="a3" x3="-0.55175483" y3="0.94469687" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                            <atom elementType="H" id="a4" x3="-0.55175483" y3="-0.94469687" z3="-0.0000">
+                               <scalar dataType="xsd:integer" dictRef="cc:atomicNumber">1</scalar>
+                            </atom>
+                         </atomArray>
+                         <bondArray>
+                            <bond atomRefs2="a1 a2" order="S" />
+                            <bond atomRefs2="a1 a3" order="S" />
+                            <bond atomRefs2="a1 a4" order="S" />
+                         </bondArray>
+                         <formula concise="CH2O">
+                            <atomArray count="1 2 1" elementType="C H O" />
+                         </formula>
+                         <property dictRef="cml:molmass">
+                            <scalar units="unit:dalton">28.0101</scalar>
+                         </property>
+                      </molecule>
+                   </module>
+                   <scalar cmlx:templateRef="energy" dataType="xsd:double" dictRef="cc:energy" units="nonsi:hartree">-114.415498155971</scalar>
+                   <scalar cmlx:templateRef="spinsqr" dataType="xsd:double" dictRef="cc:s2">0.000000000000</scalar>
+                   <array dataType="xsd:string" delimiter="|" dictRef="g:item" size="4">Maximum Force|RMS Force|Maximum Displacement|RMS Displacement</array>
+                   <array dataType="xsd:double" dictRef="g:value" size="4">0.000038304881 0.000015729923 0.000007220466 0.000003038404</array>
+                   <array dataType="xsd:double" dictRef="g:threshold" size="4">0.000060000000 0.000040000000 0.000469913999 0.000313276000</array>
+                   <array cmlx:templateRef="normal-mode-eigvals" dataType="xsd:double" dictRef="cc:eigenval" size="6">0.132095091 0.172870422 0.222531963 0.394282898 0.872956860 1.851748547</array>
+                </module>
+            </module>
+       </comment>
+
+.. container:: formalpara-title
+
+   **Template definition**
+
+.. code:: xml
+
+   <templateList>  <template id="geometry.cycle" pattern="# ITR.*" endPattern="# ITR.*" endPattern2="==========.*" endPattern3="~" repeat="*">    <template id="iter" pattern=".*" endPattern=".*">      <record id="iter"># ITR.\s+{I,cc:cycleNumber}</record>      <transform process="pullupSingleton" xpath="./cml:list" />
+               </template>    <template id="molecule" pattern="[A-Za-z]{1,2}\s+.*" endPattern="\s+Item\s+Value\s+Threshold.*" repeat="*">      <record makeArray="true" repeat="*" id="atom">\s*{A,compchem:elementType}\s*{F,compchem:x3}\s*{F,compchem:y3}\s*{F,compchem:z3}\s*
+                   </record>      <transform process="createMolecule" xpath="./cml:list[@cmlx:templateRef='atom']/cml:array" id="molecule" />      <transform process="pullupSingleton" xpath="./cml:list" />      <record id="null" repeat="1" />
+               </template>    <template id="energy" pattern="\s*ENERGY.*" endPattern=".*">      <record id="energy">\s+ENERGY\s+{F,cc:energy}\s+\(.*\)</record>      <transform process="pullupSingleton" xpath="./cml:list" />
+               </template>    <template id="spinsqr" pattern="\s*Spin\(\*\*2\).*" endPattern=".*">      <record id="spinsqr">\s*Spin\(\*\*2\)\s*{F,cc:s2}\s*</record>      <transform process="pullupSingleton" xpath="./cml:list" />
+               </template>    <template id="convergence" pattern="\s+Maximum\s+Force.*" endPattern="\s+RMS\s+Displacement.*" endOffset="1">      <record id="row" repeat="*" makeArray="true">\s*{X,g:item}\s+{F,g:value}{F,g:threshold}\s*
+                   </record>      <transform process="moveRelative" xpath="./cml:list/cml:array[@dictRef]" to="./ancestor::cml:module[@cmlx:templateRef='convergence']" />      <transform process="delete" xpath="(./cml:list[@cmlx:templateRef='row'])" />      <transform process="pullupSingleton" xpath="./cml:list" />      <transform process="setValue" xpath=".//cml:array[@dictRef='g:item']" value="$string(replace(replace(./text(), '^\||\|$', ''), '\s+', ' '))" />
+               </template>    <template id="eigenvals" pattern="NORMAL MODE EIGENVALUE.*" offset="1" endPattern="~">      <record id="normal-mode-eigvals" makeArray="true" repeat="*">\s+{1_5F,cc:eigenval}</record>      <transform process="pullupSingleton" xpath="./cml:list" />
+               </template>    <transform process="pullup" xpath="./cml:module/cml:scalar" />    <transform process="pullup" xpath="./cml:module/cml:array" />    <transform process="delete" xpath="(//cml:list[@cmlx:templateRef='null'])" />    <transform process="delete" xpath=".//cml:module[count(*)=0]" />    <transform process="pullupSingleton" xpath="./cml:list" />    <transform process="addUnits" xpath=".//cml:scalar[@dictRef='cc:energy']" value="nonsi:hartree" />
+           </template>
+       </templateList>
+
+.. |image1| image:: ../../imgs/Total.png
+.. |image2| image:: ../../imgs/Total.png

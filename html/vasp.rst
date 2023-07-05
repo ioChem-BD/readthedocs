@@ -237,20 +237,20 @@ On Band structure calculations the platform will display a graph with the eigenv
                                   
                                                   
 
-.. _`cc:program`: ../codes/vasp/generator-d3e46138.html
-.. _`v:ispin`: ../codes/vasp/incar-d3e46188.html
-.. _`cc:temp`: ../codes/vasp/incar-d3e46188.html
-.. _incar: ../codes/vasp/incar-d3e46188.html
-.. _grimmes: ../codes/vasp/grimmes-d3e47673.html
-.. _position: ../codes/vasp/position-d3e46880.html
-.. _potcar: ../codes/vasp/potcar-d3e46752.html
-.. _laticce: ../codes/vasp/lattice-d3e46840.html
-.. _calculated.position: ../codes/vasp/calculated.position-d3e47024.html
-.. _basis used: ../codes/vasp/atom.potcar-d3e46760.html
-.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e55480.html
-.. _energy: ../codes/vasp/energy-d3e47263.html
-.. _eigenvalues: ../codes/vasp/eigenvalues-d3e47499.html
-.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e55697.html
-.. _magnetization: ../codes/vasp/magnetization-d3e47362.html
-.. _vibrations: ../codes/vasp/vibrations-d3e47197.html
-.. _kpoints: ../codes/vasp/vasp.kpoints-d3e55480.html
+.. _`cc:program`: ../codes/vasp/generator-d3e49385.html
+.. _`v:ispin`: ../codes/vasp/incar-d3e49435.html
+.. _`cc:temp`: ../codes/vasp/incar-d3e49435.html
+.. _incar: ../codes/vasp/incar-d3e49435.html
+.. _grimmes: ../codes/vasp/grimmes-d3e50920.html
+.. _position: ../codes/vasp/position-d3e50127.html
+.. _potcar: ../codes/vasp/potcar-d3e49999.html
+.. _laticce: ../codes/vasp/lattice-d3e50087.html
+.. _calculated.position: ../codes/vasp/calculated.position-d3e50271.html
+.. _basis used: ../codes/vasp/atom.potcar-d3e50007.html
+.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e58858.html
+.. _energy: ../codes/vasp/energy-d3e50510.html
+.. _eigenvalues: ../codes/vasp/eigenvalues-d3e50746.html
+.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e59075.html
+.. _magnetization: ../codes/vasp/magnetization-d3e50609.html
+.. _vibrations: ../codes/vasp/vibrations-d3e50444.html
+.. _kpoints: ../codes/vasp/vasp.kpoints-d3e58858.html

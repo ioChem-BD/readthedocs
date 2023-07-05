@@ -24,7 +24,19 @@ General Info
    | Method(s)                                                                                                             | Custom logic  [2]_                                                                                                   | DFT (b3-lyp, D3, ri-j, gridsize:m3)                                                                                                                           |
    +-----------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
+.. table:: Turbomole - General Info with additional fields (if `freeh`_ module exists)
+
+   +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Field                                                                                                                              | Source                                                                                                                             | Sample value                                                                                                                       |
+   +====================================================================================================================================+====================================================================================================================================+====================================================================================================================================+
+   | Temperature                                                                                                                        | <scalar dictRef="`cc:temp`_">                                                                                                      | 298.15 K                                                                                                                           |
+   +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+   | Pressure                                                                                                                           | <scalar dictRef="`cc:press`_">                                                                                                     | 1.0 atm                                                                                                                            |
+   +------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------+
+
 .. image:: /imgs/TURBOMOLE_header.png
+
+.. image:: /imgs/TURBOMOLE_header2.png
 
 Atoms and Basis Sets
 --------------------
@@ -264,24 +276,27 @@ Data source: <module cmlx:templateRef='`excitation`_'>
                                   
                                                   
 
-.. _`cc:program`: ../codes/turbomole/program-d3e42889.html
-.. _coord file: ../codes/turbomole/turbomole.coord-d3e51790.html
-.. _atomcoord: ../codes/turbomole/atomcoord-d3e43179.html
-.. _basis used: ../codes/turbomole/basisset-d3e43813.html
-.. _did not converge: ../codes/turbomole/convergence.info-d3e45584.html
-.. _symmetry module: ../codes/turbomole/symmetry-d3e43870.html
-.. _`t:charge`: ../codes/turbomole/electrostatic.moments-d3e44893.html
-.. _Orbital statistics module: ../codes/turbomole/molecular.orbitals.statistics-d3e45507.html
-.. _Unrestricted orbitals control file section: ../codes/turbomole/unrestrictedorbitals-d3e51719.html
-.. _restrictions: ../codes/turbomole/restrictions-d3e52145.html
-.. _cosmo: ../codes/turbomole/cosmo-d3e44312.html
-.. _population.analysis: ../codes/turbomole/population.analysis-d3e43576.html
-.. _fit.pointcharges: ../codes/turbomole/fit.pointcharges-d3e45893.html
-.. _electrostatic.moments: ../codes/turbomole/electrostatic.moments-d3e44893.html
-.. _orbitals: ../codes/turbomole/orbitals-d3e43951.html
-.. _turbomole.energy: ../codes/turbomole/turbomole.energy-d3e54747.html
-.. _energy: ../codes/turbomole/energy-d3e45768.html
-.. _nuclear.repulsion: ../codes/turbomole/nuclear.repulsion-d3e45736.html
-.. _zero.point.energy: ../codes/turbomole/zero.point.energy-d3e45865.html
-.. _vibrations: ../codes/turbomole/vibrations-d3e51368.html
-.. _excitation: ../codes/turbomole/excitation-d3e44028.html
+.. _`cc:program`: ../codes/turbomole/program-d3e45974.html
+.. _freeh: ../codes/turbomole/thermochemistry-d3e49133.html
+.. _`cc:temp`: ../codes/turbomole/thermochemistry-d3e49133.html
+.. _`cc:press`: ../codes/turbomole/thermochemistry-d3e49133.html
+.. _coord file: ../codes/turbomole/turbomole.coord-d3e55168.html
+.. _atomcoord: ../codes/turbomole/atomcoord-d3e46264.html
+.. _basis used: ../codes/turbomole/basisset-d3e46898.html
+.. _did not converge: ../codes/turbomole/convergence.info-d3e48669.html
+.. _symmetry module: ../codes/turbomole/symmetry-d3e46955.html
+.. _`t:charge`: ../codes/turbomole/electrostatic.moments-d3e47978.html
+.. _Orbital statistics module: ../codes/turbomole/molecular.orbitals.statistics-d3e48592.html
+.. _Unrestricted orbitals control file section: ../codes/turbomole/unrestrictedorbitals-d3e55097.html
+.. _restrictions: ../codes/turbomole/restrictions-d3e55523.html
+.. _cosmo: ../codes/turbomole/cosmo-d3e47397.html
+.. _population.analysis: ../codes/turbomole/population.analysis-d3e46661.html
+.. _fit.pointcharges: ../codes/turbomole/fit.pointcharges-d3e49091.html
+.. _electrostatic.moments: ../codes/turbomole/electrostatic.moments-d3e47978.html
+.. _orbitals: ../codes/turbomole/orbitals-d3e47036.html
+.. _turbomole.energy: ../codes/turbomole/turbomole.energy-d3e58125.html
+.. _energy: ../codes/turbomole/energy-d3e48853.html
+.. _nuclear.repulsion: ../codes/turbomole/nuclear.repulsion-d3e48821.html
+.. _zero.point.energy: ../codes/turbomole/zero.point.energy-d3e49035.html
+.. _vibrations: ../codes/turbomole/vibrations-d3e54746.html
+.. _excitation: ../codes/turbomole/excitation-d3e47113.html

@@ -12,6 +12,7 @@ From chemical codes to CML
    /codes/gaussian
    /codes/gromacs
    /codes/gronor
+   /codes/grrm
    /codes/lammps
    /codes/molcas
    /codes/mopac

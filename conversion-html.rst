@@ -11,6 +11,7 @@ From CML to HTML5 report
    /html/gaussian
    /html/gromacs
    /html/gronor
+   /html/grrm
    /html/lammps
    /html/molcas
    /html/mopac

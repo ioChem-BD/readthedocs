@@ -51,6 +51,7 @@ Calculation type specific commands
 `loadgauss`_                       Load Gaussian calculation
 `loadgromacs`_                     Load GROMACS calculation
 `loadgronor`_                      Load GronOR calculation
+`loadgrrm`_                        Load GRRM calculation
 `loadlammps`_                      Load LAMMPS calculation
 `loadmolcas`_                      Load Molcas calculation
 `loadmopac`_                       Load Mopac calculation
@@ -227,7 +228,7 @@ Modifies the selected project properties, name, description or even moves it to 
 Parameters          Description
 =================== ===================================================
 -n *path*           Relative or absolute project path (mandatory)
--p *permissions*    Permissions of the project. Ex: ‘110100’ (optional)
+-p *permissions*    Permissions of the project. Ex: ‘rw----’ (optional)
 -o *owner*          Owner of the project (optional)
 -g *group*          Group owner of the project (optional)
 -cg *concept_group* Concept Group of the project (optional)
@@ -423,6 +424,7 @@ Script                                                                          
 .. _loadgauss:  ./using-shell-client/shell-automated-scripts.html#loadgauss
 .. _loadgromacs:  ./using-shell-client/shell-automated-scripts.html#loadgromacs
 .. _loadgronor:  ./using-shell-client/shell-automated-scripts.html#loadgronor
+.. _loadgrrm:  ./using-shell-client/shell-automated-scripts.html#loadgrrm
 .. _loadlammps:  ./using-shell-client/shell-automated-scripts.html#loadlammps
 .. _loadmolcas:  ./using-shell-client/shell-automated-scripts.html#loadmolcas
 .. _loadmopac:  ./using-shell-client/shell-automated-scripts.html#loadmopac

@@ -11,11 +11,12 @@ adf.results
    /codes/adf/fit.test-d3e3300
    /codes/adf/mulliken-d3e3351
    /codes/adf/multipole-d3e3541
-   /codes/adf/quadrupole.moment-d3e3704
-   /codes/adf/s2-d3e3734
-   /codes/adf/bonding.energy-d3e3763
-   /codes/adf/sfo.population-d3e3867
-   /codes/adf/excitation.energy-d3e4290
+   /codes/adf/dipole.moment-d3e3703
+   /codes/adf/quadrupole.moment-d3e3737
+   /codes/adf/s2-d3e3767
+   /codes/adf/bonding.energy-d3e3796
+   /codes/adf/sfo.population-d3e3901
+   /codes/adf/excitation.energy-d3e4323
 
 ===========
 
@@ -126,7 +127,7 @@ adf.results
 
 .. code:: xml
 
-   <templateList>  <xi:include href="results/orbital.energies.spin.zora.xml" />  <xi:include href="results/orbital.energies.zora.xml" />  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/multipole/multipole.xml" />  <xi:include href="results/quadrupole.moment.xml" />  <xi:include href="results/s2.xml" />  <xi:include href="results/bonding.energy.xml" />  <xi:include href="results/sfopopulation/sfo.population.xml" />  <xi:include href="results/excitationenergy/excitation.energy.xml" />     
+   <templateList>  <xi:include href="results/orbital.energies.spin.zora.xml" />  <xi:include href="results/orbital.energies.zora.xml" />  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/multipole/multipole.xml" />  <xi:include href="results/dipole.moment.xml" />  <xi:include href="results/quadrupole.moment.xml" />  <xi:include href="results/s2.xml" />  <xi:include href="results/bonding.energy.xml" />  <xi:include href="results/sfopopulation/sfo.population.xml" />  <xi:include href="results/excitationenergy/excitation.energy.xml" />     
        </templateList>
 
 .. |image1| image:: ../../imgs/Total.png

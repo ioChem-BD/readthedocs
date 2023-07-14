@@ -9,6 +9,20 @@ Final checks
 
 It is up to the sysadmin to configure the network interfaces, firewall services, proxies and other routing mechanisms to allow proper communications.
 
+Optional tasks
+++++++++++++++
+
+In order to improve site content indexing by web robots and search engines, you can crontab the generation of the Browse module sitemap with the following command.
+
+.. code:: bash
+
+    iochembd$ crontab -e
+    #Append the following line being *BASEPATH* the platform installation folder
+            
+    00 00 * * *  BASEPATH/browse/bin/dspace generate-sitemaps 
+   
+
+
 This last step conclude the ioChem-BD system installation and configuration.
 
 Summary

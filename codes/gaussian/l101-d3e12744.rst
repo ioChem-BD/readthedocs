@@ -98,6 +98,7 @@ l101
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l101/l101.title.xml" />  <xi:include href="l101/l101.qmmm.xml" />  <xi:include href="l101/l101.zmatvariables.xml" />  <xi:include href="l101/l101.zmat.xml" />  <xi:include href="l101/l101.zmatfragment.xml" />  <xi:include href="l101/l101.zmatcommas.xml" />  <xi:include href="l101/l101.zmat2.xml" />  <xi:include href="l101/l101.redundantcoords.xml" />  <xi:include href="l101/l101.isotope.xml" />  <xi:include href="l101/l101.isotope2.xml" />  <xi:include href="l101/l101.modredundant.xml" />
        

@@ -87,6 +87,7 @@ averages
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="averages">
            <module cmlx:templateRef="averages">
@@ -163,6 +164,7 @@ averages
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Energies\s*\(kJ/mol\).*" endPattern="\s*">    <record />    <record>{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}</record>    <record>{E,x:value}{E,x:value}{E,x:value}{E,x:value}{E,x:value}</record>    <record>{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}</record>    <record>{E,x:value}{E,x:value}{E,x:value}{E,x:value}{E,x:value}</record>    <record>{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}{A15,x:label}</record>    <record>{E,x:value}{E,x:value}{E,x:value}{E,x:value}{E,x:value}</record>    <record>{A15,x:label}</record>    <record>{E,x:value}</record>    <transform process="createWrapper" xpath=".//cml:scalar[@dictRef='x:label']" elementName="cml:property" />    <transform process="pullup" xpath=".//cml:property" repeat="2" />    <transform process="pullup" xpath=".//cml:property" />    <transform process="pullup" xpath=".//cml:scalar[@dictRef='x:value']" repeat="2" />    <transform process="pullup" xpath=".//cml:scalar[@dictRef='x:value']" />    <transform process="moveRelative" xpath="../cml:scalar[@dictRef='x:value']" to="../cml:property[not(exists(cml:scalar[@dictRef='x:value']))][position() =1]" />
            </template>  <template pattern="\s*Box-X.*" endPattern=".*" endOffset="1">    <record />    <record>{E,x:coord}{E,x:coord}{E,x:coord}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:coord']" args="operator=multiply operand=10" />    <transform process="createVector3" xpath="." dictRef="gm:box.coords" from=".//cml:scalar[@dictRef='x:coord']" />    <transform process="pullup" xpath=".//cml:vector3" repeat="3" />       

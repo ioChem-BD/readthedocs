@@ -61,6 +61,7 @@ l101.zmat
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.zmat">
        <module cmlx:templateRef="l101.zmat">
@@ -94,6 +95,7 @@ l101.zmat
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.zmat2">
        <module cmlx:templateRef="l101.zmat">
@@ -122,6 +124,7 @@ l101.zmat
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="charge">.*Charge ={I,g:charge} Multiplicity ={I,g:mult}</record>

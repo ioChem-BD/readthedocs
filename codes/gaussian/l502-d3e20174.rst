@@ -82,6 +82,7 @@ l502
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output.raw" id="l502">
        <module cmlx:templateRef="l502.cycle">
@@ -114,6 +115,7 @@ l502
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="l502.type" pattern="\s+\w+\s+\w+\s+shell\s*SCF.*" endPattern=".*" endOffset="0">    <record id="l502.type">\s+\w+\s+{A,g:l502.type}\s+.*</record> 
        </template>  <template id="l502.type" pattern="\s+\w+\s+shell\s*SCF.*" endPattern=".*" endOffset="0">    <record id="l502.type">\s+{A,g:l502.type}\s+.*</record>

@@ -62,6 +62,7 @@ quild.iteration
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="quild/quild.iteration.coord.xml" />
        </templateList>

@@ -68,6 +68,7 @@ geometry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="geometry">
          <molecule id="molgeom">

@@ -126,6 +126,7 @@ adf.results
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="results/orbital.energies.spin.zora.xml" />  <xi:include href="results/orbital.energies.zora.xml" />  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/multipole/multipole.xml" />  <xi:include href="results/dipole.moment.xml" />  <xi:include href="results/quadrupole.moment.xml" />  <xi:include href="results/s2.xml" />  <xi:include href="results/bonding.energy.xml" />  <xi:include href="results/sfopopulation/sfo.population.xml" />  <xi:include href="results/excitationenergy/excitation.energy.xml" />     
        </templateList>

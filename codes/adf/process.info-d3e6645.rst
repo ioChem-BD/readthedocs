@@ -98,6 +98,7 @@ process.info
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="process.info">      
        <module cmlx:lineCount="63" cmlx:templateRef="process.info"> 
@@ -110,6 +111,7 @@ process.info
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="process.info2">     
        <module cmlx:lineCount="63" cmlx:templateRef="process.info"> 
@@ -122,6 +124,7 @@ process.info
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Kid\sNode.*" endPattern="\s*" offset="2" endOffset="0">    <record repeat="*">\s+\S+\s+{A,cc:nodeName}\s+.*</record>
            </template>  <template pattern="\s*={10,}+\s*$\s*Rank.*" endPattern="\s*={10,}+\s*" endPattern2="~" offset="2" endOffset="0">    <record repeat="*">\s+\S+\s+{A,cc:nodeName}\s+.*</record>

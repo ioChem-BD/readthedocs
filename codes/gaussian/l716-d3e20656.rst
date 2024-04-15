@@ -268,6 +268,7 @@ l716
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716">
    <module cmlx:templateRef="l716"> (Enter /usr/local/Gaussian/g03/l716.exe) Dipole = 8.10731309D-01 1.24950664D-04 1.05916263D+00 Polarizability= 1.80172759D+02 9.64366159D-02 8.96067492D+01 1.42853847D+01 2.32604318D-02 8.23087172D+01 
@@ -566,6 +567,7 @@ l716
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l716/l716.dipole.xml" />  <xi:include href="l716/l716.polarizability.xml" />  <xi:include href="l716/l716.secondderiv.xml" />  <xi:include href="l716/l716.forceconstants.xml" />  <xi:include href="l716/l716.forcematrix.xml" />  <xi:include href="l716/l716.forces.xml" />  <xi:include href="l716/l716.zeropoint.xml" />  <xi:include href="l716/l716.freq.chunk.xml" />  <xi:include href="l716/thermochemistry/l716.thermochemistry.xml" />  <xi:include href="l716/thermochemistry/l716.thermoprops.xml" />  <xi:include href="l716/l716.irspectrum.xml" /> 
      </templateList>

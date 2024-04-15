@@ -57,6 +57,7 @@ results
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="results">
            <module cmlx:templateRef="results">
@@ -81,6 +82,7 @@ results
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="section" pattern="\s*NSTEP.*" endPattern="\s*">    <record />    <record>{I,am:step}{E,am:etot}{E,am:rms}{E,am:gmax}.*</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="3" />
            </template>  <template id="section" pattern="(.+=){4}.+" endPattern=".*" endPattern2="~" endOffset="0" repeat="*">    <record>{X,am:name}={F,am:value}{X,am:name}={F,am:value}{X,am:name}={F,am:value}{X,am:name}={F,am:value}</record>    <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(lower-case(./text()))" />    <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(replace(./text(), '[-_ ]', '.'))" />    <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />    <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />    <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />    <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />    <transform process="pullup" xpath=".//cml:scalar" repeat="3" />                 

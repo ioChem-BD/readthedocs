@@ -50,6 +50,7 @@ l122
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l122">    
          <module cmlx:lineCount="2" cmlx:templateRef="l122">
@@ -63,6 +64,7 @@ l122
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="correctedEnergy">\s+Counterpoise\:\scorrected\senergy\s+\={F,g:counterpoiseEnergy}</record>
    <record id="bsseEnergy">\s+Counterpoise\:\s+BSSE\s+energy\s+\={F,g:counterpoiseBSSE}</record>

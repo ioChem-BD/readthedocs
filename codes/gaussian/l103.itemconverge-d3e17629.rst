@@ -51,6 +51,7 @@ l103.itemconverge
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.itemconverge">
        <module cmlx:templateRef="l103.itemconverge">
@@ -68,6 +69,7 @@ l103.itemconverge
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="row" repeat="*" makeArray="true">\s*{X,g:item}\s+{F,g:value}{F,g:threshold}{A,g:converged}\s*</record>

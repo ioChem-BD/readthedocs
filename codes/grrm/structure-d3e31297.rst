@@ -117,6 +117,7 @@ structure
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="structure2">
          <module cmlx:templateRef="structure">
@@ -164,6 +165,7 @@ structure
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <template id="label-symmetry" pattern="# Geometry of.*" endPattern=".*">  <record id="label-symmetry"># Geometry of {X,cc:label},\s*SYMMETRY ={X,cc:pointgroup}</record>
        </template>

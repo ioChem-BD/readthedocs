@@ -64,6 +64,7 @@ l1.control
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.control">
        <module cmlx:templateRef="l1.control">
@@ -95,6 +96,7 @@ l1.control
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="control" repeat="*">\s*{X,g:control};\s*</record>
 

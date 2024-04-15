@@ -57,6 +57,7 @@ l101.modredundant
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.modredundant">
          <module cmlx:lineCount="10" cmlx:templateRef="l101.modredundant">
@@ -118,6 +119,7 @@ l101.modredundant
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <templateList>  <template pattern="\s+[XBADL].*[AFK]\s*" endPattern=".*" endPattern2="~" repeat="*" endOffset="0">    <record id="modred">\s+{A,x:restriction}{1_4I,x:serial}{A,x:action}</record>          

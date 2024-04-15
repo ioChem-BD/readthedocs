@@ -53,6 +53,7 @@ l120
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l120">
            <module cmlx:lineCount="5" cmlx:templateRef="l120">
@@ -69,6 +70,7 @@ l120
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record id="gridpoint" makeArray="true" repeat="*">\s+ONIOM\:\sgridpoint{I,cc:gridpoint}method\:{A,cc:method}system\:{A,cc:system}energy\:{F,cc:energy}</record>

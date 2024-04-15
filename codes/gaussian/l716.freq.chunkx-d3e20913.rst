@@ -792,6 +792,7 @@ l716.freq.chunkx
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.freq.chunk"> 
        <module cmlx:lineCount="41" cmlx:templateRef="l716.freq.chunkx" id="default">
@@ -811,6 +812,7 @@ l716.freq.chunkx
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.freq.chunk1">
        <module cmlx:lineCount="291" cmlx:templateRef="l716.freq.chunkx" id="default">
@@ -830,6 +832,7 @@ l716.freq.chunkx
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.freq.chunk2">
         <module cmlx:lineCount="125" cmlx:templateRef="l716.freq.chunkx" id="default">
@@ -851,6 +854,7 @@ l716.freq.chunkx
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.freq.chunk3">
        <module cmlx:templateRef="l716.freq.high.precision.chunkx" id="high.precision">
@@ -870,6 +874,7 @@ l716.freq.chunkx
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <templateList>  <template id="deletetag" repeat="*" pattern="\s{15}\s*\S[\s\d]*$\s{15}\s*.*" endPattern="\s{1,5}\d.*$\s{15}\s*\S[\s\d]*" endPattern2="\s{1,5}\d.*$\s*" endPattern3="~" endOffset="1">    <templateList>      <template pattern=".*" endPattern="\s*(Frc\sconsts|Force\sconstants).*" endOffset="1" id="sysvals">        <record id="serial">{1_5I,x:serial}</record>        <record id="irrep">{1_5A,cc:irrep}</record>        <record id="freq">\s*Frequencies\s*\-\-\-?\s*{1_5F,cc:frequency}</record>        <record id="redmass">\s*(Red\.\s*masses|Reduced\smasses)\s*\-\-\-?\s*{1_5F,cc:redmass}</record>        <record id="frcconst">\s*(Frc\sconsts|Force\sconstants)\s*\-\-\-?\s*{1_5F,cc:forceconst}</record>        

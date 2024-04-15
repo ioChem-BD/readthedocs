@@ -77,6 +77,7 @@ bonding.energy
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="bonding.energy">
         <module cmlx:templateRef="bonding.energy">
@@ -96,6 +97,7 @@ bonding.energy
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="summary" pattern="\s*Summary\sof\sBonding\sEnergy.*" endPattern="\s*Total\sBonding\sEnergy.*" endOffset="1">    <templateList>      <template pattern="\s*Electrostatic\sEnergy.*" endPattern=".*" endOffset="0">        <record id="electrostatic">.*:\s+\S+\s*{F,cc:eener}.*</record>                   
                    </template>      <template pattern="\s*Kinetic\sEnergy.*" endPattern=".*" endOffset="0">        <record id="kinener">.*:\s+\S+\s*{F,cc:kinener}.*</record>                  

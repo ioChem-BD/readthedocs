@@ -127,6 +127,7 @@ adf
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="adf/../program.header.xml" />  <xi:include href="adf/init/modelparameters/model.parameters.xml" />  <xi:include href="adf/runtype.xml" />  <xi:include href="adf/build_fragments.xml" />  <xi:include href="adf/results/results.xml" />  <xi:include href="adf/frequencyanalysis.xml" />       
        </templateList>

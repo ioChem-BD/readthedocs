@@ -63,6 +63,7 @@ l914_excitations
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l914_excitations">
    <module cmlx:templateRef="l914_excitations">
@@ -149,6 +150,7 @@ l914_excitations
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList repeat="*">  <template id="l914_excitations1" name="Time-dependent DFT excitations" repeat="*" pattern="\s*Excited State\s*\d.*" endPattern="\s*" endPattern2="~" offset="0" endOffset="1">    <record repeat="1" id="l914_excit1">\s*Excited State\s*{I,g:tddft_enumber}:\s*{A,g:tddft_ttype}\s*{F,g:tddft_eenergy}\s*eV\s*{F,g:tddft_wavelength}\s*nm\s*f={F,g:tddft_oscillator_strength}.*={F,g:tddft_s2}\s*</record>    <record repeat="*" id="l914_excit2">\s*{I,g:tddft_orbitalstart}\s*\->\s*{I,g:tddft_orbitalend}\s*{F,g:tddft_unknown}\s*</record>    <templateList>      <template id="l914_excitations1_total_ener" pattern="\s*Total\sEnergy.*" endPattern=".*" endPattern2="~">        <record id="l914_tote">\s*Total\s*Energy,\s*E\(.*\)\s*=\s*{F,g:tddft_totale}\s*</record>        <transform process="pullup" xpath=".//cml:list" />              
                </template>

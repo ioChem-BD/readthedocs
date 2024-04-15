@@ -51,6 +51,7 @@ l702
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l702.integral">
        <module cmlx:templateRef="l702" />
@@ -61,6 +62,7 @@ l702
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="*" id="702" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />

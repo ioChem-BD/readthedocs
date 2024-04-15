@@ -98,6 +98,7 @@ l716.thermoprops
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermoprops">
        <module cmlx:templateRef="l716.thermoprops">
@@ -154,6 +155,7 @@ l716.thermoprops
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" id="xxx" />
    <record id="total">\s*Total\s*{F,cc:ethermo.total}{F,cc:cv.total}{F,cc:s.total}</record>

@@ -52,6 +52,7 @@ fit.test
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="fit.test"> 
            <module cmlx:lineCount="4" cmlx:templateRef="fit.test">
@@ -66,6 +67,7 @@ fit.test
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <templateList>  <template pattern="\s*Sum-of-Fragments.*" endPattern=".*" endOffset="0">    <record>\s*Sum-of-Fragments:{F,cc:sumfragments}</record>

@@ -149,6 +149,7 @@ quild.iteration.coord
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" name="quild.iteration.coord">
           <module cmlx:lineCount="99" cmlx:templateRef="quild.iteration.coord">
@@ -704,6 +705,7 @@ quild.iteration.coord
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record>\s*New\scoordinates\s\(angs\)\sand\ssteps\safter\sIter\_QUILD\:{I,a:quildIteration}</record>

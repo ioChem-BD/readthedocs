@@ -65,6 +65,7 @@ orbital.energies
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="orbital.energies">
            <module cmlx:lineCount="16" cmlx:templateRef="orbital.energies">
@@ -82,6 +83,7 @@ orbital.energies
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="5" />
    <record id="energies" repeat="*" makeArray="true">{A,cc:irrep}{I,cc:serial}{F,cc:occup}\s+\S+\s+{F,cc:energy}</record>

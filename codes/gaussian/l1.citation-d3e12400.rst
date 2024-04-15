@@ -68,6 +68,7 @@ l1.citation
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="citation">
        <module />
@@ -78,6 +79,7 @@ l1.citation
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="citation">{X,g:l1.citation}</record>
    <record repeat="*" />

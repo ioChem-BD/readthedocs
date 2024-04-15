@@ -121,6 +121,7 @@ orbital.energies.spin.zora
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="orbital.energies.spin.zora">
            <module cmlx:templateRef="orbital.energies.spin.zora">
@@ -139,6 +140,7 @@ orbital.energies.spin.zora
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="spin" name="spin section" pattern="\s*\*{5}\sSPIN\s.*\s\*{5}.*" endPattern="\s*LUMO.*" endPattern2="~" repeat="*">    <record>\s*\*{5}\sSPIN\s{A,cc:spin}\s\*{5}.*</record>    <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin' and text()='1']" value="A" />    <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin' and text()='2']" value="B" />    <record repeat="5" />    <templateList>      <template id="section" pattern="\s*\S+\s*" endPattern="\s*\S+\s*" endPattern2="~" endOffset="0" repeat="*">        <record>{A,cc:irrep}</record>        <record repeat="*">{I,cc:serial}{F,cc:occup}\s+\S+\s+{F,cc:energy}.*</record>        <transform process="addChild" xpath="./cml:list/cml:list" elementName="cml:scalar" dictRef="cc:irrep" />        <transform process="addAttribute" xpath=".//cml:scalar[@dictRef='cc:irrep']" name="dataType" value="xsd:string" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:irrep']" value="$string(ancestor::cml:module[@cmlx:templateRef='section']//cml:scalar[@dictRef='cc:irrep' and text() != ''])" />        <transform process="addChild" xpath="./cml:list/cml:list" elementName="cml:scalar" dictRef="cc:spin" />        <transform process="addAttribute" xpath=".//cml:scalar[@dictRef='cc:spin']" name="dataType" value="xsd:string" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:spin']" value="$string(ancestor::cml:module[@cmlx:templateRef='spin']//cml:scalar[@dictRef='cc:spin'])" />        <transform process="delete" xpath="./ancestor::cml:module[@cmlx:templateRef='spin']/cml:list/cml:scalar[@dictRef='cc:spin']" />                                            
                        </template>

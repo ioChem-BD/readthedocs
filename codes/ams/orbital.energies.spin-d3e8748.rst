@@ -104,6 +104,7 @@ orbital.energies.spin
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="orbital.energies.spin">
            <module cmlx:lineCount="57" cmlx:templateRef="orbital.energies.spin">
@@ -122,6 +123,7 @@ orbital.energies.spin
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="5" />
    <record id="energies" makeArray="true" repeat="*">{A,cc:irrep}{I,cc:serial}{A,cc:spin}{F,cc:occup}\s+\S+\s+{F,cc:energy}</record>

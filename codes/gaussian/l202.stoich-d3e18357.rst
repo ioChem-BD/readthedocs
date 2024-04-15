@@ -54,6 +54,7 @@ l202.stoich
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l202.stoich">
        <module cmlx:templateRef="l202.stoich">
@@ -74,6 +75,7 @@ l202.stoich
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="stoich">\s*Stoichiometry\s*{A,g:stoichiometry}</record>
    <record id="framework">\s*Framework group\s*{A,cc:frameworkgroup}</record>

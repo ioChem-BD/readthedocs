@@ -702,6 +702,7 @@ l601.orbital.openshell
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.orbital.openshell">
        <module cmlx:lineCount="654" cmlx:templateRef="l601.orbital.openshell">
@@ -1051,6 +1052,7 @@ l601.orbital.openshell
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="orbitalsection" pattern="\s+\w+\sMolecular\sOrbital\sCoefficients.*" endPattern=".*$\s+Beta\sMolecular\sOrbital\sCoefficients.*" endPattern2="~" endOffset="1" repeat="*">    <record id="orbitaltype">\s+{A,cc:orbitaltype}\sMolecular\sOrbital\sCoefficients.*</record>    <templateList>      <template id="coeff" pattern="\s{20,}\d+.*" endPattern=".*$\s{20,}\d+.*" endPattern2="~" endOffset="1" repeat="*">        <record id="serial">{1_5I,cc:serial}</record>        <record id="occupation">{1_5A,cc:occupation}</record>        <record id="eigenvalues">\s+.*\-\-{1_5F,cc:eigenvalues}</record>        <record id="row" repeat="*">{I,cc:serial}{X,x:label}\s{7,}{1_5F,x:floatArr}</record> 
                    </template>                               

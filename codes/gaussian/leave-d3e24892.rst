@@ -47,6 +47,7 @@ leave
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="leave" repeat="*"> Leave Link{A,g:link} at {X,cc:date}, MaxMem={F,cc:maxmem}cpu:{F,cc:cputime}</record>
 

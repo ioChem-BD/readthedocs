@@ -47,6 +47,7 @@ l716.thermochemistry.temperature
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.temperature">
        <module cmlx:templateRef="l716.thermochemistry.temperature">
@@ -60,6 +61,7 @@ l716.thermochemistry.temperature
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="temperature">\s*Temperature{F,cc:temp,u:kelvin} Kelvin\.\s+Pressure{F,cc:press,u:atm} Atm\.\s*</record>
    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />

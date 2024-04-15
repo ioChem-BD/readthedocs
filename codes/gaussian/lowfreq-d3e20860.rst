@@ -46,6 +46,7 @@ lowfreq
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.lowfreq">
        <module cmlx:templateRef="lowfreq">
@@ -58,6 +59,7 @@ lowfreq
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="lowfreq" repeat="*">\sLow frequencies\s\-\-\-{1_6F,g:1716.lowfreq}</record>
    <transform process="joinArrays" xpath="./cml:list/cml:array" />

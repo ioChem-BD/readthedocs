@@ -81,6 +81,7 @@ sfo.population
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="sfopopulation/molecular.orbitals.xml" />
        </templateList>
@@ -252,6 +253,7 @@ molecular.orbitals
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="molecular.orbitals">
            <module cmlx:lineCount="1683" cmlx:templateRef="molecular.orbitals">    
@@ -315,6 +317,7 @@ molecular.orbitals
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="molecular.orbitals2">
          <module cmlx:lineCount="4714" cmlx:templateRef="molecular.orbitals">
@@ -378,6 +381,7 @@ molecular.orbitals
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="restricted" pattern="\s+E\(eV\)\s+Occ.*" endPattern="~" endOffset="1" repeat="*">    <record repeat="3" />    <templateList>      <template pattern="(\s*\S+\s*){11}+" endPattern=".*$(\s*\S+\s*){11}+" endPattern2="~" repeat="*" endOffset="1">        <record id="mo">\s*{F,cc:mo.energy}{F,cc:mo.occupation}{I,cc:mo.number}{A,cc:mo.label}{F,cc:percent}%{I,cc:sfo1}{A,cc:sfo2}{F,cc:energy}{F,cc:occupation}{I,cc:fragment1}{A,cc:fragment2}\s*</record>        <record id="mo" repeat="*">\s*{F,cc:percent}%{I,cc:sfo1}{A,cc:sfo2}{F,cc:energy}{F,cc:occupation}{I,cc:fragment1}{A,cc:fragment2}\s*</record>        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:percent']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:sfo1']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:sfo2']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:energy']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:occupation']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:fragment1']" />        <transform process="createArray" xpath="." from=".//cml:scalar[@dictRef='cc:fragment2']" />                                        
                    </template>                       

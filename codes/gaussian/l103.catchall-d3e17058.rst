@@ -47,6 +47,7 @@ l103.catchall
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l103.discard">\s*{X,x:discard}.*</record>
 

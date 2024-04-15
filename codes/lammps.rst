@@ -10,9 +10,10 @@ LAMMPS
 
    /codes/lammps/setup-d3e31542
    /codes/lammps/geomopt-d3e31747
-   /codes/lammps/steps-d3e31782
-   /codes/lammps/performance-d3e31864
-   /codes/lammps/mpi-d3e31900
-   /codes/lammps/walltime-d3e31964
+   /codes/lammps/dump-d3e31782
+   /codes/lammps/steps-d3e31812
+   /codes/lammps/performance-d3e31893
+   /codes/lammps/mpi-d3e31929
+   /codes/lammps/walltime-d3e31993
    /codes/lammps/header-d3e31506
-   /codes/lammps/lammps.data-d3e58172
+   /codes/lammps/lammps.data-d3e58274

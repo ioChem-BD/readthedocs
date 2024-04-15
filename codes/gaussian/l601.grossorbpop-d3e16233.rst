@@ -431,6 +431,7 @@ l601.grossorbpop
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.grossorbpop">
            <module cmlx:templateRef="l601.grossorbpop">
@@ -445,6 +446,7 @@ l601.grossorbpop
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output2" id="l601.grossorbpop">
            <module cmlx:templateRef="l601.grossorbpop">
@@ -462,6 +464,7 @@ l601.grossorbpop
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="gross" pattern="\s{20,}\d+.*" endPattern=".*$\s{20,}\d+.*" endPattern2="~" endOffset="1" repeat="*">    <record id="serial">{1_5I,cc:serial}</record>    <record id="row" repeat="*">{I,cc:serial}{X,x:label}\s{7,}{1_5F,x:floatArr}</record> 
            </template>  <template id="gross" pattern="\s{20,}TOTAL\s*ALPHA\s*BETA\s*SPIN.*" endPattern=".*$\s{20,}\d+.*" endPattern2="~" endOffset="1">    <record />    <record id="row" repeat="*">{I,cc:serial}{X,x:label}\s{7,}{F,g:totaloccup}{F,g:alphaoccup}{F,g:betaoccup}{F,g:spin}</record>

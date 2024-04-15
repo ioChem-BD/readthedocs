@@ -56,6 +56,7 @@ l801
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l801">
        <module cmlx:templateRef="l801" />
@@ -66,6 +67,7 @@ l801
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l801.line" repeat="*" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />

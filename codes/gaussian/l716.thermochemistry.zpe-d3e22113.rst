@@ -46,6 +46,7 @@ l716.thermochemistry.zpe
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.zpe">
        <module cmlx:templateRef="l716.thermochemistry.zpe">
@@ -58,6 +59,7 @@ l716.thermochemistry.zpe
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="zpejmol">\s*Zero\-point vibrational energy\s*{F,cc:zpe,u:jmol-1}\s*\(Joules/Mol\)\s*</record>
    <record id="zpekcal">\s*.*\(Kcal/Mol\)\s*</record>

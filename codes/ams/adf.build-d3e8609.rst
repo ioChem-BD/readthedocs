@@ -193,6 +193,7 @@ adf.build
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="adf.build">
            <module cmlx:templateRef="adf.build">
@@ -216,6 +217,7 @@ adf.build
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="scanfreq" pattern="\s*Summary\sof\sa\sfrequency\sscan\sin\sthe\srequested\srange.*" endPattern="\s*={20,}.*" endPattern2="~" endOffset="0" repeat="*">    <templateList>      <template pattern="\s*Frequency.*" endPattern="\s*\-?[0-9]+.*" endOffset="0">        <record repeat="*" />
                    </template>      <template pattern="\s*\-?[0-9]+.*" endPattern=".*not\sre-calculated\s\(not\sin\sthe\srequired\srange.*" endOffset="0">        <record repeat="*" makeArray="true" id="scanfreq">{F,a:oldfreq}{F,a:newfreq}{F,a:dipolederivX}{F,a:dipolederivY}{F,a:dipolederivZ}{F,cc:irintensity}{F,cc:forceconst}{F,cc:redmass}</record>

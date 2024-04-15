@@ -120,6 +120,7 @@ adf.results
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="results/orbital.energies.xml" />  <xi:include href="results/orbital.energies.spin.xml" />  <xi:include href="results/fit.test.xml" />  <xi:include href="results/mulliken.xml" />  <xi:include href="results/sfo.population.xml" />
        </templateList>

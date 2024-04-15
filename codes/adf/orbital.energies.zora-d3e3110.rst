@@ -128,6 +128,7 @@ orbital.energies.zora
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="orbital.energies.zora">   
            <module cmlx:templateRef="orbital.energies.zora">
@@ -145,6 +146,7 @@ orbital.energies.zora
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="orbital.energies.zora">
            <module cmlx:templateRef="orbital.energies.zora">
@@ -162,6 +164,7 @@ orbital.energies.zora
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <templateList>  <template id="section" pattern="\s*\S+\s*" endPattern="\s*\S+\s*" endPattern2="~" endOffset="0" repeat="*">    <record>{A,cc:irrep}</record>    <record repeat="*">{I,cc:serial}{F,cc:occup}\s+\S+\s+{F,cc:energy}.*</record>    <transform process="addChild" xpath="./cml:list/cml:list" elementName="cml:scalar" dictRef="cc:irrep" />    <transform process="addAttribute" xpath=".//cml:scalar[@dictRef='cc:irrep']" name="dataType" value="xsd:string" />    <transform process="setValue" xpath=".//cml:scalar[@dictRef='cc:irrep']" value="$string(ancestor::cml:module[@cmlx:templateRef='section']//cml:scalar[@dictRef='cc:irrep' and text() != ''])" />                       

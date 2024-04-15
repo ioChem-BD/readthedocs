@@ -100,6 +100,7 @@ l502.cycle
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l502.basis">
    <module cmlx:templateRef="l502.cycle">
@@ -131,6 +132,7 @@ l502.cycle
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="cycle" repeat="*">\s*Cycle\s*{I,cc:cycle}\s*Pass{I,g:pass}\s*IDiag{I,g:idiag}\:\s*</record>
    <templateList>  <template id="l502.ediff" pattern="\sE\=.*Delta\-E.*" repeat="*" endPattern=".*">    <record id="l502.ediff" repeat="*">\s*E={F,g:l502.e}\s+Delta\-E={F,g:l502.deltae}.*</record>

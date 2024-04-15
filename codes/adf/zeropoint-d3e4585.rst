@@ -51,6 +51,7 @@ zeropoint
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="zeropoint"> 
            <module cmlx:templateRef="zeropoint">
@@ -63,6 +64,7 @@ zeropoint
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record id="zeropoint">\s*={10,}+\s*{F,cc:zeropoint}eV.*</record>

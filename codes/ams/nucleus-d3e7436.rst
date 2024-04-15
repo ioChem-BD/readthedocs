@@ -134,6 +134,7 @@ nucleus
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="nucleus">.*N\sU\sC\sL\sE\sU\sS\s:{A,cc:elementType}\({X,a:nucleus}\)\s*</record>
    <templateList>  <template id="paramagnetic" pattern="\s*===(\s(UN)?SCALED:)?\s*PARAMAGNETIC\sNMR\sSHIELDING\sTENSORS\s\(ppm\).*" endPattern="\s*={20,}+\s*" endPattern2="\s*#{20,}+\s*" endPattern3="~">    <templateList>      <template pattern=".*total\sparamagnetic\stensor.*" endPattern="\s+\*{20,}+\s*">        <record repeat="6" />        <record id="paramagnetic">\s*isotropic(\sshielding)?\s*={F,a:shielding}</record>

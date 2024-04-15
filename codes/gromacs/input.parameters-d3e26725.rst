@@ -214,6 +214,7 @@ input.parameters
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="input.parameters">
            <module cmlx:templateRef="input.parameters">
@@ -329,6 +330,7 @@ input.parameters
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <template id="discarded" pattern="\s*E-.*" endPattern=".*" endOffset="1"> 

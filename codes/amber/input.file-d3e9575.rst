@@ -71,6 +71,7 @@ input.file
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="input.file">
            <module cmlx:templateRef="input.file">
@@ -104,6 +105,7 @@ input.file
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <record id="lines" repeat="*">{X,cc:inputLine}</record>

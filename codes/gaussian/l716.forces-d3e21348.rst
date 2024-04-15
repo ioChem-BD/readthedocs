@@ -57,6 +57,7 @@ l716.forces
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.forces">
        <module cmlx:templateRef="l716.forces">
@@ -83,6 +84,7 @@ l716.forces
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <record repeat="*" id="force" makeArray="true">\s*{I,x:serial}{I,x:elementType}{3F,cc:force}\s*</record>

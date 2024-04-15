@@ -149,6 +149,7 @@ steep
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record>\s*Started\sSteepest\sDescents\son\srank\s+\S+\s+{X,cc:runDate}</record>

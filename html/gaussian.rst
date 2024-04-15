@@ -166,6 +166,7 @@ Data source: <module cmlx:templateRef='`l914`_'>
    string ``gaussian:getCalcType`` boolean ``isOptimization`` boolean ``hasStationaryPoint`` boolean ``hasMinimum`` boolean ``isEET``
 
    .. code:: xml
+      :number-lines:
 
                                       
           $isOptimization       Exists module <module cmlx:templateRef="l103" > ?

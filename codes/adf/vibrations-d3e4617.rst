@@ -81,6 +81,7 @@ vibrations
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="vibrations">
            <module cmlx:lineCount="36" cmlx:templateRef="vibrations">
@@ -95,6 +96,7 @@ vibrations
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="8" />
    <templateList>  <template pattern="(\s*[-0-9\.]+\s*){1,3}+" endPattern="\s*" endOffset="0" repeat="*">    <templateList>      <template pattern="(\s*[-0-9\.]+\s*){1,3}+" endPattern=".*" endOffset="1">        <record id="freq">{1_3F,cc:frequency}</record>          

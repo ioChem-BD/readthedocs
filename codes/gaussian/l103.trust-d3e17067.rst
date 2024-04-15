@@ -46,6 +46,7 @@ l103.trust
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.trust">
        <module cmlx:templateRef="l103.trust">
@@ -62,6 +63,7 @@ l103.trust
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="*" id="length">\s*Trust Radius={E,g:trustrad} FncErr={E,g:fncerr} GrdErr={E,g:grderr}</record>
    <record repeat="*" id="angle">\s*Number of steps in this run={I,g:nstep} maximum allowed number of steps= {I,g:allowedstep}\.\s*</record>

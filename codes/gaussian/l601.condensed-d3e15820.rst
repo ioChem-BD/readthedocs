@@ -76,6 +76,7 @@ l601.condensed
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.condensed">
        <module cmlx:templateRef="l601.condensed">
@@ -99,6 +100,7 @@ l601.condensed
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <templateList>  <template id="cond" repeat="*" pattern="\s*\d+\s+\d+.*" endPattern=".*$\s{7}.*" endPattern2="~" endOffset="1">    <record id="serial">{1_6I,x:intarr}</record>    <record repeat="*" id="row">{I,cc:serial}{A,cc:elementType}{1_6F,x:floatArr}</record>

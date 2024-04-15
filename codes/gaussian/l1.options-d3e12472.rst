@@ -70,6 +70,7 @@ l1.options
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.options.1">
        <module cmlx:templateRef="l1.options">
@@ -82,6 +83,7 @@ l1.options
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.options.2">
        <module cmlx:templateRef="l1.options">
@@ -94,6 +96,7 @@ l1.options
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="options" repeat="*">\s*\%{1_20A,g:kk}\s*</record>
    <transform process="pullup" xpath=".//cml:list/cml:array" />

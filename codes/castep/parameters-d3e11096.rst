@@ -108,6 +108,7 @@ parameters
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="parameters">
            <module cmlx:templateRef="parameters">      
@@ -424,6 +425,7 @@ parameters
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="title" pattern="\s*\*{10,}\s*Title.*" endPattern="\s*" endPattern2="\s*\*{10,}.*" endOffset="0">    <record />    <record>{X, cc:title}</record>    <transform process="pullup" xpath=".//cml:scalar[@dictRef='cc:title']" repeat="2" />
            </template>  <template id="general" pattern="\s*\*{10,}\s*\w+.*" endPattern="\s*$\s*\*{10,}.*" endPattern2="~" endOffset="0" repeat="*">    <record>\s*\*{10,}\s*{X,ca:parameter.type}\sParameters.*</record>    <record repeat="1" />    <templateList>      <template id="parameters" pattern="\s*((?!output.+\s+unit).)*:\s+\w+((?!\s\s\s\S+).)*" endPattern=".*" endPattern2="~" repeat="*">        <record id="parameter" name="parameter" repeat="*">{X,x:label}\s*:{X, x:value}</record>        <transform process="addChild" xpath=".//cml:list[cml:scalar]" elementName="cml:parameter" />        <transform process="moveRelative" xpath=".//cml:scalar" to="following-sibling::cml:parameter" />        <transform process="move" xpath=".//cml:parameter" to="." />        <transform process="delete" xpath=".//cml:list" />

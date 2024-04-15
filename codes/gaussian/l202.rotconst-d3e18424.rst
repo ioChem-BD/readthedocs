@@ -49,6 +49,7 @@ l202.rotconst
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l202.rotconst">
        <module cmlx:templateRef="l202.rotconst">
@@ -61,6 +62,7 @@ l202.rotconst
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="rotconst">\s*Rotational constants \(GHZ\):{3F,cc:rotconst}</record>
    <transform process="pullupSingleton" xpath="./cml:list" />

@@ -37,12 +37,13 @@ Command    Description
 Calculation related commands
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-================================== ==================================
+================================== ======================================
 Command                            Description
-================================== ==================================
+================================== ======================================
 `viewcalc`_                        View calculation information
 `mcalc`_                           Modify a calculation
 `dcalc`_                           Delete calculation from repository
+`getxyz`_                          Retrieve calculation geometry as XYZ
 Calculation type specific commands 
 `loadadf`_                         Load ADF calculation
 `loadams`_                         Load AMS calculation
@@ -60,7 +61,7 @@ Calculation type specific commands
 `loadturbo`_                       Load Turbomole calculation
 `loadsiesta`_                      Load SIESTA calculation
 `loadvasp`_                        Load Vasp calculation
-================================== ==================================
+================================== ======================================
 
 |
 
@@ -356,7 +357,7 @@ Examples:
 dcalc
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This comands deletes a calculation given its name.
+This command deletes a calculation given its name.
 
 ========== =================================================
 Parameters Description
@@ -382,6 +383,27 @@ Navigating to parent project and using calculation name:
 
 |
 
+getxyz
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This command retrieves the geometry of a calculation given its id.
+
+================ =================================================
+Parameters       Description
+================ =================================================
+-n *id*          Calculation number id (mandatory)
+-o *filename*    Output to file instead of stdout (optional)
+================ =================================================
+
+
+.. code:: console
+
+       $ getxyz -n 14837                   # Retrieve geometry of calculation with ID 14837 and display on stdout
+       $ getxyz -n 14837 -o geom.xyz       # Retrieve geometry of calculation with ID 14837 and store it in geom.xyz file 
+
+
+|
+
 There is a group of helper Linux scripts that simplify the process of uploading calculations:
 
 ======================================================================================================= ==============================================================================
@@ -394,6 +416,7 @@ Script                                                                          
 `loadgauss`_                                                                                            Upload **Gaussian** calculation
 `loadgromacs`_                                                                                          Upload **GROMACS** calculation
 `loadgronor`_                                                                                           Upload **GronOR** calculation
+`loadgrrm`_                                                                                             Upload **GRRM** calculation
 `loadlammps`_                                                                                           Upload **LAMMPS** calculation
 `loadmolcas`_                                                                                           Upload **Molcas** calculation
 `loadmopac`_                                                                                            Upload **Mopac** calculation
@@ -417,6 +440,7 @@ Script                                                                          
 .. _viewcalc: #viewcalc
 .. _mcalc: #mcalc
 .. _dcalc: #dcalc
+.. _getxyz: #getxyz
 .. _loadadf:  ./using-shell-client/shell-automated-scripts.html#loadadf
 .. _loadams:  ./using-shell-client/shell-automated-scripts.html#loadams
 .. _loadamber:  ./using-shell-client/shell-automated-scripts.html#loadamber

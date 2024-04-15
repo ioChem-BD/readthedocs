@@ -52,6 +52,7 @@ l716.thermochemistry.moi
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.moi">
        <module cmlx:templateRef="l716.thermochemistry.moi">
@@ -65,6 +66,7 @@ l716.thermochemistry.moi
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <templateList>  <template id="noeigen" pattern="\s*(EIGENVALUES|Eigenvalues)\s\-\-\s+\*+.*" endPattern=".*" endOffset="0">    <record />          

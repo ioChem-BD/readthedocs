@@ -64,6 +64,7 @@ adf.build
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <xi:include href="build/scanfreq.xml" />
    <xi:include href="build/../frequencyanalysis/thermochemistry.xml" />

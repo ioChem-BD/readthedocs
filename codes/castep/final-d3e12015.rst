@@ -71,6 +71,7 @@ final
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="geomopt/../setup/cell.xml" />  <xi:include href="geomopt/mulliken.xml" />  <xi:include href="geomopt/enthalpy.xml" />
            

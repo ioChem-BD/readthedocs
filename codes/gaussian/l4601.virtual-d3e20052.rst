@@ -42,6 +42,7 @@ Empty
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="virt">\s*Virtual\s*{1_20A,g:virtorbs}</record>
    <record id="virt" repeat="*">\s*{1_20A,g:virtorbs}</record>

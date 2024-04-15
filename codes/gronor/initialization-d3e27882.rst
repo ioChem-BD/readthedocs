@@ -49,6 +49,7 @@ initialization
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="initialization">
            <module dictRef="cc:initialization" id="jobInitialization">

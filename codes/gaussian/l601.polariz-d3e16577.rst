@@ -50,6 +50,7 @@ l601.polariz
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.pol">
        <module cmlx:templateRef="l601.polariz">
@@ -63,6 +64,7 @@ l601.polariz
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l601.pol">\s*Exact polarizability:{F,g:l601.pol.exact}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}</record>
    <record id="l601.pol">\s*Approx polarizability:{F,g:l601.pol.approx}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}{F,g:l601.pol}</record>

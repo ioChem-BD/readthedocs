@@ -47,6 +47,7 @@ l716.thermochemistry.rotsymnum
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.rotsymnum">
        <module cmlx:templateRef="l716.thermochemistry.rotsymnum">
@@ -59,6 +60,7 @@ l716.thermochemistry.rotsymnum
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="number">\s*Rotational symmetry number\s*{I,cc:symmnumber}\.\s*</record>
    <transform process="pullup" xpath=".//cml:scalar" />

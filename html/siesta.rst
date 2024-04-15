@@ -105,6 +105,7 @@ Data source ``<cml><metadataList><metadata name='siesta:EndTime'>``
    string ``siesta:normalizeRunType`` string ``type``
 
    .. code:: xml
+      :number-lines:
 
                                   
          $type  Value of the parameter <parameter name='MD.TypeOfRun'>     

@@ -210,6 +210,7 @@ l602.electrostatic
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l602.electrostatic">
          <module cmlx:templateRef="l602.electrostatic">
@@ -227,6 +228,7 @@ l602.electrostatic
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="espcharges" pattern="\s*ESP\scharges:.*" endPattern="\s*Sum\sof\sESP\scharges.*" endOffset="1">    <record repeat="2" />    <record repeat="*" makeArray="true">{I,cc:serial}{A,cc:elementType}{F,g:espcharge}</record>     
            </template>

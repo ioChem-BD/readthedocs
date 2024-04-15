@@ -88,6 +88,7 @@ dirac
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="dirac/../program.header.xml" />
            </templateList>

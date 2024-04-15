@@ -60,6 +60,7 @@ l103.deltas
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.deltas">
        <module cmlx:templateRef="l103.deltas">
@@ -80,6 +81,7 @@ l103.deltas
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <record repeat="*" id="delta" makeArray="true">\s*{A,cc:variable}{F,g:lastval}{F,cc:deriv}{F,cc:delta.linear}{F,cc:delta.quad}{F,cc:delta.total}{F,cc:newval}\s*</record>

@@ -50,6 +50,7 @@ l716.polarizability
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.polarizability">
        <module cmlx:templateRef="l716.polarizability">
@@ -62,6 +63,7 @@ l716.polarizability
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="polariz">\sPolarizability={3E,cc:polarizability}</record>
    <record id="polariz">\s*{3E,x:d}</record>

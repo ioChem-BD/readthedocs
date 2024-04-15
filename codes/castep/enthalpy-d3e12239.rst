@@ -48,6 +48,7 @@ enthalpy
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="enthalpy">
            <module cmlx:templateRef="enthalpy">
@@ -61,6 +62,7 @@ enthalpy
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record>\s*LBFGS:\sFinal\sEnthalpy\s*={E,ca:enthalpy}.*</record>
    <record>\s*LBFGS: Final bulk modulus = {F,ca:bulkmodulus}.*</record>

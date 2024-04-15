@@ -89,6 +89,7 @@ calculation
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="noci">    
            <module dictRef="cc:calculation" id="NOCI">

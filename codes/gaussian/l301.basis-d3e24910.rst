@@ -91,6 +91,7 @@ l301.basis
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.basis">
        <module cmlx:templateRef="l301.basis">
@@ -124,6 +125,7 @@ l301.basis
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.basis.09">
        <module cmlx:templateRef="l301.basis">
@@ -165,6 +167,7 @@ l301.basis
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="basis">\s*Standard basis:{A,cc:basis}{X,cc:diffuse}</record>
    <templateList id="ernie">  <template pattern="\s*Ernie.*" endPattern=".*" endOffset="0" id="ernie">    <record id="ernie" repeat="*">\s*Ernie: Thresh={E,g:thresh}\s*Tol={E,g:tol}\s*Strict={A,g:strict}\.\s*</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" /> 

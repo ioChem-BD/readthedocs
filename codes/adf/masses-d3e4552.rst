@@ -77,6 +77,7 @@ masses
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="masses">
          <module cmlx:templateRef="masses">
@@ -90,6 +91,7 @@ masses
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <record makeArray="true" repeat="*">\s*\d+\.\s*{A,cc:elementType}{F,cc:atomicmass}</record>

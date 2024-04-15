@@ -77,6 +77,7 @@ l1
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l1/l1.legal.xml" />  <xi:include href="l1/l1.citation.xml" />  <xi:include href="l1/l1.end.xml" /> 
        </templateList>

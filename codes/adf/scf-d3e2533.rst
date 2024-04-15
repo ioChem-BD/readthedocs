@@ -76,6 +76,7 @@ scf
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="scf">
            <module cmlx:lineCount="162" cmlx:templateRef="scf"> 
@@ -88,6 +89,7 @@ scf
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*SCF\sCONVERGED.*" endPattern=".*" endOffset="0">    <record>{X,cc:scfConverged}</record>  
            </template>   

@@ -57,6 +57,7 @@ l716.zeropoint
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.zeropoint">
        <module cmlx:templateRef="l716.zeropoint">
@@ -76,6 +77,7 @@ l716.zeropoint
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="zeropoint" repeat="*">{X,x:name}=\s*{F,x:value}.*</record>
    <transform process="createNameValue" xpath="./cml:list/cml:list" name=".//cml:scalar[@dictRef='x:name']" value=".//cml:scalar[@dictRef='x:value']" />

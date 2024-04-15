@@ -72,6 +72,7 @@ l301.pcm.nonstandard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.nonstandard1">       
            <module cmlx:lineCount="25" cmlx:templateRef="l301.pcm.nonstandard">
@@ -86,6 +87,7 @@ l301.pcm.nonstandard
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record id="eps">\s+EPS\={F,cc:eps}</record>

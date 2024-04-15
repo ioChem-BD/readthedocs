@@ -55,6 +55,7 @@ setup
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="setup/cell.xml" />  <xi:include href="setup/atoms.xml" />  <xi:include href="setup/symmetry.xml" />   
        </templateList>

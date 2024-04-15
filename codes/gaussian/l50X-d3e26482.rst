@@ -65,6 +65,7 @@ l50X
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l50X">
     SCF Done:  E(RB3LYP) =  -1.16553541841     a.u. after    1 cycles
@@ -78,6 +79,7 @@ l50X
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l50X">
        <module cmlx:templateRef="l50X">
@@ -92,6 +94,7 @@ l50X
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="l50X.scf" pattern="\s*SCF\s+Done.*" repeat="*" endPattern=".*">    <record id="scfdone">\s*SCF Done:\s+E\(.*\) ={F,g:rbhflyp}\s+[Aa]\.[Uu]\.\s+after{I,cc:ncycle}cycles\s*</record>  
        </template>  <template id="ssquared" pattern="\s*S\*\*2.*" endPattern=".*" endOffset="0">    <record id="ssquared">\s*S\*\*2\s+={F,g:ssquared}.*</record>

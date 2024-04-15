@@ -90,6 +90,7 @@ fragment.files
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="fragment.files">
            <module cmlx:lineCount="18" cmlx:templateRef="fragment.files">
@@ -156,6 +157,7 @@ fragment.files
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="fragment.files2">
            <module cmlx:lineCount="14" cmlx:templateRef="fragment.files">
@@ -203,6 +205,7 @@ fragment.files
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <templateList>  <template id="atom" pattern="\s*\S+:\s*" endPattern="\s*\S+:\s*" endPattern2="\s*" endOffset="0" repeat="*">    <record id="elementType">\s*{A,cc:elementType}\:\s*</record>    <record id="file">\s*file\s:{X,a:file}\s*</record>    <templateList>      <template pattern="\s*jobid:.*RunTime.*Nodes:.*Procs:.*" endPattern=".*">        <record id="jobid">\s*jobid:{X,cc:jobname}\s*RunTime:{X,cc:runtime}Nodes:{I,cc:nodes}Procs:{I,cc:processors}\s*</record>

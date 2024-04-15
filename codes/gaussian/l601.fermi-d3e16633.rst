@@ -66,6 +66,7 @@ l601.fermi
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.fermi">
        <module cmlx:templateRef="l601.fermi">
@@ -98,6 +99,7 @@ l601.fermi
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <record id="fermi.atom" repeat="*" makeArray="true">\s*{I,cc:serial}{A,x:elementType}\({I,x:isotopeNumber}\)\s{F,cc:coupling,u:au}\s{F,cc:coupling,u:mhz}\s{F,cc:coupling,u:gauss}\s{F,cc:coupling,u:ten4cm-1}\s*</record>

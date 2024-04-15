@@ -54,6 +54,7 @@ preddelta
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.preddelta">
        <module cmlx:templateRef="preddelta">
@@ -68,6 +69,7 @@ preddelta
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="predicted">\s*Predicted change in Energy={E,g:predchange}.*</record>
    <templateList>  <xi:include href="l103/l103.catchall.xml" />

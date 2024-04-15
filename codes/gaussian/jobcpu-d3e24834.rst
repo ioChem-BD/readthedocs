@@ -49,6 +49,7 @@ jobcpu
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="jobcpu">
        <module cmlx:templateRef="jobcpu">
@@ -63,6 +64,7 @@ jobcpu
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="jobcpu">\s*Job cpu time:\s*{X,cc:jobtime}</record>
    <record id="files" />

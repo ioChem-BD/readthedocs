@@ -59,6 +59,7 @@ l101.qmmm
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.qmmm">
           <module cmlx:templateRef="l101.qmmm">                      
@@ -128,6 +129,7 @@ l101.qmmm
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="chargemultlevelsystem" repeat="*" makeArray="true">\s+Charge\s+\={I,g:charge}Multiplicity\s\={I,g:multiplicity}for\s{A,x:level}level\scalculation\son{A,x:system}system.*</record>
    <templateList>  <template pattern="\s+([a-zA-Z_0-9]+)-([a-zA-Z_0-9]+)--([a-zA-Z_0-9\.]+)\s+(\S+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+(-?[0-9\.]+)\s+\S\s+\S+\s+.*" endPattern=".*" endPattern2="~" repeat="*">    <record id="isotope" repeat="*">{A,x:atom}-{A,g:atomicType}--{F,x:charge}{I,x:frozen}{3F,x:coords}{A,x:layer}{A,x:atomlink}{I,x:bondedto}{1_3F,x:scalefactor}</record>    <transform process="operateScalar" xpath=".//cml:scalar[@dictRef='x:charge']" args="operator=multiply operand=-1" />    <transform process="pullup" xpath="./cml:list/cml:list/*" repeat="1" />    <transform process="delete" xpath="./cml:list/cml:list[count(*)=0]" />

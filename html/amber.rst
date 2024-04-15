@@ -69,6 +69,7 @@ Data source: <module cmlx:templateRef='`timing`_'>
    string ``amber:getMethod`` string ``imin`` string ``ntt`` string ``ntp``
 
    .. code:: xml
+      :number-lines:
 
           $imin  Variable imin from module <module cmlx:templateRef="control" >
           $ntt  Variable ntt from module <module cmlx:templateRef="control" > 
@@ -107,8 +108,8 @@ Data source: <module cmlx:templateRef='`timing`_'>
 
 .. _header: ../codes/amber/header-d3e9530.html
 .. _control: ../codes/amber/control-d3e9761.html
-.. _parameter/topology: ../codes/amber/amber.parm-d3e51034.html
-.. _trajectory restart: ../codes/amber/amber.nctraj-d3e51180.html
+.. _parameter/topology: ../codes/amber/amber.parm-d3e51136.html
+.. _trajectory restart: ../codes/amber/amber.nctraj-d3e51282.html
 .. _averages: ../codes/amber/averages-d3e10062.html
 .. _results: ../codes/amber/results-d3e10221.html
 .. _timing: ../codes/amber/timing-d3e10357.html

@@ -59,6 +59,7 @@ l9999.final
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l9999.final">
        <module cmlx:templateRef="l9999.final">
@@ -128,6 +129,7 @@ l9999.final
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="final" />
    <record id="atom1">{A,g:elementType}</record>

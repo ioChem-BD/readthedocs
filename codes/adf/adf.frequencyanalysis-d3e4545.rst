@@ -123,6 +123,7 @@ adf.frequencyanalysis
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="frequencyanalysis/masses.xml" />  <xi:include href="frequencyanalysis/zeropoint.xml" />  <xi:include href="frequencyanalysis/vibrations.xml" />  <xi:include href="frequencyanalysis/intensities.xml" />  <xi:include href="frequencyanalysis/thermochemistry.xml" />
        </templateList>

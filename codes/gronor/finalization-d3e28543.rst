@@ -41,6 +41,7 @@ finalization
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="finalization">
            <module dictRef="cc:finalization">

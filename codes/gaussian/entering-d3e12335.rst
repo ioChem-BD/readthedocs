@@ -47,6 +47,7 @@ entering
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="entering">
        <module cmlx:templateRef="entering">
@@ -60,6 +61,7 @@ entering
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="enter">\s*Entering Gaussian System,\s*Link 0={X,g:link0}\s*</record>
    <record />

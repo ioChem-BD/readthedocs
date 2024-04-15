@@ -73,6 +73,7 @@ mulliken
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.mulliken">
        <module cmlx:templateRef="mulliken">
@@ -108,6 +109,7 @@ mulliken
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="l601.mullik" repeat="*" pattern=".*[Aa]tomic\scharges.*|\s*Mulliken\scharges.*|\s+Atomic\scharges\swith\shydrogens\ssummed.*|\s+APT\satomic\scharges.*|\s+Mulliken\scharges\swith\shydrogens.*" endPattern="\s*Sum of.*" endOffset="1">    <record id="title">{X,g:title}</record>    <record id="serial">{I,cc:serial}</record>    <record id="row" makeArray="true" repeat="*">{I,cc:serial}{A,cc:elementType}{F,x:charge}</record>    <record id="sum">\s+Sum\sof.*={F,x:chargesum}</record>
        </template>  <template id="l601.spatial" pattern="\s*Electronic spatial extent.*" repeat="*" endPattern=".*" endOffset="0">    <record id="l601.elect">\s*Electronic spatial extent.*={F,g:electextent2}\s*</record>

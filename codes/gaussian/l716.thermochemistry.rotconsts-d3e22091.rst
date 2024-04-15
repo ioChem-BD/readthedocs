@@ -47,6 +47,7 @@ l716.thermochemistry.rotconsts
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.rotconsts">
        <module cmlx:templateRef="l716.thermochemistry.rotconsts">
@@ -59,6 +60,7 @@ l716.thermochemistry.rotconsts
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="rotconst">\s*Rotational constants \(GHZ\):\s*{3F,cc:rotconst}\s*</record>
    <transform process="pullupSingleton" xpath=".//cml:list" />

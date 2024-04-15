@@ -75,6 +75,7 @@ l1.end
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.end">
        <module cmlx:templateRef="l1.end">
@@ -101,6 +102,7 @@ l1.end
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l1/l1.version.xml" />  <xi:include href="l1/l1.options.xml" />  <xi:include href="l1/../l101/l101.title.xml" />  <xi:include href="l1/l1.keywords.xml" />  <xi:include href="l1/l1.control.xml" />
      </templateList>

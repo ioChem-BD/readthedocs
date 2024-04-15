@@ -53,6 +53,7 @@ geomopt
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="geomopt">
           <module cmlx:templateRef="geomopt">
@@ -67,6 +68,7 @@ geomopt
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record>\s+Stopping\s+criterion\s*={X,l:stopcriteria}</record>

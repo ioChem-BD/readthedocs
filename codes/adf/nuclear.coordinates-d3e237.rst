@@ -82,6 +82,7 @@ nuclear.coordinates
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="nuclear.coordinates">
            <module cmlx:lineCount="34" cmlx:templateRef="nuclear.coordinates">
@@ -273,6 +274,7 @@ nuclear.coordinates
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="3" />
    <record id="atom" makeArray="true" repeat="*">{A,cc:elementType}\({I,cc:serial}\):{F,cc:x3}{F,cc:y3}{F,cc:z3}</record>

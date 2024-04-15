@@ -54,6 +54,7 @@ l202
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l202/l202.orient.xml" />  <xi:include href="l202/l202.distmat.xml" />  <xi:include href="l202/l202.stoich.xml" />  <xi:include href="l202/l202.rotconst.xml" />  
        </templateList>

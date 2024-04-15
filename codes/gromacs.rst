@@ -14,5 +14,5 @@ GROMACS
    /codes/gromacs/steep-d3e27527
    /codes/gromacs/times-d3e27644
    /codes/gromacs/header-d3e26582
-   /codes/gromacs/gromacs.input-d3e51775
-   /codes/gromacs/gromacs.geometry-d3e52387
+   /codes/gromacs/gromacs.input-d3e51877
+   /codes/gromacs/gromacs.geometry-d3e52489

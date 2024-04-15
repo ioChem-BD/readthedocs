@@ -174,7 +174,7 @@ Data source: <module id='`qespresso.bands`_'>
 Projected DOS
 ~~~~~~~~~~~~~
 
-Data source: <module id='`qespresso.bands <#../codes/quantumespresso/qespresso.pdos-d3e60746.html>`__'>
+Data source: <module id='`qespresso.bands <#../codes/quantumespresso/qespresso.pdos-d3e60855.html>`__'>
 
 .. image:: /imgs/QUANTUMESPRESSO_module_pdos.png
 
@@ -198,6 +198,7 @@ Data source: <module id='`qespresso.phonon`_'>
    string ``qex:getCalcType`` string ``modName`` string ``calculation``
 
    .. code:: xml
+      :number-lines:
 
                                   
           $modName  Name of the module <module cmlx:templateRef="header" >
@@ -253,6 +254,7 @@ Data source: <module id='`qespresso.phonon`_'>
 
 .. [2]
    .. code:: xml
+      :number-lines:
 
                                   
           $functionals  Exchange-correlation parameter from <module cmlx:templateRef="parameter" >
@@ -266,25 +268,25 @@ Data source: <module id='`qespresso.phonon`_'>
                               
                                                   
 
-.. _header template: ../codes/quantumespresso/header-d3e44150.html
-.. _parameters template: ../codes/quantumespresso/parameters-d3e44213.html
-.. _environ: ../codes/quantumespresso/environ-d3e45049.html
-.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e45049.html
-.. _parameters: ../codes/quantumespresso/parameters-d3e44213.html
-.. _atoms: ../codes/quantumespresso/qespresso.input-d3e59507.html
-.. _species: ../codes/quantumespresso/qespresso.input-d3e59507.html
-.. _lattice: ../codes/quantumespresso/lattice-d3e44394.html
-.. _axes: ../codes/quantumespresso/axes-d3e44503.html
-.. _ldau: ../codes/quantumespresso/ldau-d3e45376.html
-.. _kpoints: ../codes/quantumespresso/kpoints-d3e45421.html
-.. _point.group: ../codes/quantumespresso/point.group-d3e45026.html
-.. _forces: ../codes/quantumespresso/forces-d3e45501.html
-.. _energies: ../codes/quantumespresso/energies-d3e45229.html
-.. _magnetic: ../codes/quantumespresso/magnetic-d3e45557.html
-.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e45592.html
-.. _projwfc: ../codes/quantumespresso/projwfc-d3e45705.html
-.. _frequencies: ../codes/quantumespresso/frequencies-d3e45924.html
-.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e60552.html
-.. _qespresso.bands: ../codes/quantumespresso/qespresso.bands-d3e60688.html
-.. _qespresso.phonon.input: ../codes/quantumespresso/qespresso.phonon.input-d3e60930.html
-.. _qespresso.phonon: ../codes/quantumespresso/qespresso.phonon-d3e61077.html
+.. _header template: ../codes/quantumespresso/header-d3e44252.html
+.. _parameters template: ../codes/quantumespresso/parameters-d3e44315.html
+.. _environ: ../codes/quantumespresso/environ-d3e45151.html
+.. _`cc:parameter`: ../codes/quantumespresso/environ-d3e45151.html
+.. _parameters: ../codes/quantumespresso/parameters-d3e44315.html
+.. _atoms: ../codes/quantumespresso/qespresso.input-d3e59616.html
+.. _species: ../codes/quantumespresso/qespresso.input-d3e59616.html
+.. _lattice: ../codes/quantumespresso/lattice-d3e44496.html
+.. _axes: ../codes/quantumespresso/axes-d3e44605.html
+.. _ldau: ../codes/quantumespresso/ldau-d3e45478.html
+.. _kpoints: ../codes/quantumespresso/kpoints-d3e45523.html
+.. _point.group: ../codes/quantumespresso/point.group-d3e45128.html
+.. _forces: ../codes/quantumespresso/forces-d3e45603.html
+.. _energies: ../codes/quantumespresso/energies-d3e45331.html
+.. _magnetic: ../codes/quantumespresso/magnetic-d3e45659.html
+.. _eigenvalues: ../codes/quantumespresso/eigenvalues-d3e45694.html
+.. _projwfc: ../codes/quantumespresso/projwfc-d3e45807.html
+.. _frequencies: ../codes/quantumespresso/frequencies-d3e46026.html
+.. _qespresso.absorptionspec: ../codes/quantumespresso/qespresso.absorptionspec-d3e60661.html
+.. _qespresso.bands: ../codes/quantumespresso/qespresso.bands-d3e60797.html
+.. _qespresso.phonon.input: ../codes/quantumespresso/qespresso.phonon.input-d3e61039.html
+.. _qespresso.phonon: ../codes/quantumespresso/qespresso.phonon-d3e61186.html

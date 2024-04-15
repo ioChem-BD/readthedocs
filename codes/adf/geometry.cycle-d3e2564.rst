@@ -133,6 +133,7 @@ geometry.cycle
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="geometry.cyle">
            <module cmlx:lineCount="161" cmlx:templateRef="geometry.cycle">
@@ -251,6 +252,7 @@ geometry.cycle
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="geometry.cycle2">
         <module cmlx:lineCount="1911" cmlx:templateRef="geometry.cycle">
@@ -298,6 +300,7 @@ geometry.cycle
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="cycle" pattern="\s*Geometry\sCYCLE.*" endPattern=".*" endOffset="0">    <record id="cycle">\s*Geometry\sCYCLE{I,cc:cycleNumber}</record>
            </template>  <template id="cycle" pattern="\s*G\sE\sO\sM\sE\sT\sR\sY\s*U\sP\sD\sA\sT\sE.*" endPattern=".*" endOffset="0">    <record id="cycle">\s*G\sE\sO\sM\sE\sT\sR\sY\s*U\sP\sD\sA\sT\sE\s*\*\*\*{I,cc:cycleNumber}\s*\*\*\*.*

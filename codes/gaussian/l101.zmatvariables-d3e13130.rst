@@ -62,6 +62,7 @@ l101.zmatvariables
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.zmatvariables">
        <module cmlx:templateRef="l101.zmatvariables">
@@ -104,6 +105,7 @@ l101.zmatvariables
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="chargemult">\s*Charge\s*={I,x:formalCharge}\s*Multiplicity\s*={I,x:multiplicity}\s*</record>

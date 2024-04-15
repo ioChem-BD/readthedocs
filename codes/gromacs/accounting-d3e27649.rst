@@ -67,6 +67,7 @@ accounting
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="accounting">
             <module cmlx:templateRef="accounting">
@@ -85,6 +86,7 @@ accounting
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="3" />
    <templateList>  <template pattern="\s*((?!Rest).)*" endPattern="\s*Rest.*" endPattern2="~">    <record repeat="*">{X,gm:work}\s+[0-9]+\s+[0-9]+\s+[0-9]+\s+{F,cc:wallTime}{F,gm:gcyclessum}{F,gm:gcyclespercent}</record>           

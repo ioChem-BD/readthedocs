@@ -104,6 +104,7 @@ spin.density
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="spin.density">        
            <module cmlx:lineCount="53" cmlx:templateRef="spin.density">
@@ -122,6 +123,7 @@ spin.density
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Atom\s+Level.*" endPattern="~">    <record repeat="2" />    <record id="spinDensity" repeat="*" makeArray="true">{I,cc:serial}{A,cc:elementType}{F,a:mdcm}{F,a:mdcd}{F,a:mdcq}</record>
            </template>   

@@ -62,6 +62,7 @@ l601.state
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.state">
        <module cmlx:templateRef="l601.state">
@@ -74,6 +75,7 @@ l601.state
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.state1">
        <module cmlx:templateRef="l601.state">
@@ -86,6 +88,7 @@ l601.state
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l601.state">\s*The electronic state\s*.*\s*is{A,g:l601.state}</record>
    <transform process="pullup" xpath=".//cml:scalar" />

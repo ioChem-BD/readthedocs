@@ -91,6 +91,7 @@ hardware
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="hardware">
            <module cmlx:templateRef="hardware">
@@ -119,6 +120,7 @@ hardware
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="hardware2">
         <module cmlx:templateRef="hardware">
@@ -144,6 +146,7 @@ hardware
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Detecting\sCPU\sSIMD\sinstructions.*" pattern2=".*GPUs\sdetected.*" pattern3="\s*Running\s*on.*node.*" pattern4="\s*Hardware\sdetected\son\shost.*" endPattern="\s*" endPattern2="~" endOffset="0" repeat="*">    <record repeat="*">{X,gm:hardware}</record>
            </template>  <template pattern=".*GPUs\sauto-selected.*" endPattern="\s*" endPattern2="~">    <record repeat="*">{I,gm:numProcGPU}GPUs\sauto-selected.*</record>    <record>\s*Mapping\sof\sGPUs\sto\sthe{I,gm:numRanks}.*ranks\sin\sthis\snode:.*</record>

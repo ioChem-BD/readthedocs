@@ -52,6 +52,7 @@ dipole.moment
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="dipole.moment">
            <module cmlx:templateRef="dipole.moment">
@@ -65,6 +66,7 @@ dipole.moment
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="3" />
    <record>\s*Vector\s*:{3F,cc:dipole}.*</record>

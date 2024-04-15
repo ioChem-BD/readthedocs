@@ -151,6 +151,7 @@ program.header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="program.header">
            <module cmlx:templateRef="program.header">
@@ -169,6 +170,7 @@ program.header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="program.header2">
            <module cmlx:templateRef="program.header">
@@ -186,6 +188,7 @@ program.header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="program.header3">
            <module cmlx:templateRef="program.header">
@@ -204,6 +207,7 @@ program.header
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*\*\s*Amsterdam\sDensity\sFunctional\s*\(ADF\)\s*development\sversion\s*\*.*" endPattern=".*">    <record id="program">\s*\*\s*Amsterdam\sDensity\sFunctional\s+\({A,cc:program}\).*</record>
                </template>  <template pattern="\s*\*\s*Amsterdam\sDensity\sFunctional\s*\(ADF\)\s*[\S]+\s+[\S]+.*\s*\*.*" endPattern=".*">    <record id="program">\s*\*\s*Amsterdam\sDensity\sFunctional\s+\({A,cc:program}\)\s*{I,cc:programVersion}\.{A,cc:programSubversion}\s+{X,cc:programDate}\s*\*.*</record>

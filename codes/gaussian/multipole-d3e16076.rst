@@ -66,6 +66,7 @@ multipole
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.multipole">
        <module cmlx:templateRef="multipole">
@@ -84,6 +85,7 @@ multipole
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="dipoletype">\s*Dipole moment \({X,g:dipoletype}\):\s*</record>
    <record id="dipole">\s*X={F,x:d}Y={F,x:d}Z={F,x:d}Tot={F,x:dipole}\s*</record>

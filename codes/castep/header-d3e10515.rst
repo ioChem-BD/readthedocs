@@ -112,6 +112,7 @@ header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="header">   
          <module cmlx:templateRef="header">
@@ -164,6 +165,7 @@ header
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record>\s*at\s*{X,cc:runDate}</record>

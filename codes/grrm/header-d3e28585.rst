@@ -54,6 +54,7 @@ header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="header">
        <module cmlx:templateRef="header">
@@ -82,6 +83,7 @@ header
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="program.name">\s*Global Reaction Route Mapping \({X,cc:program}\).*</record>
    <transform process="pullupSingleton" xpath="./cml:list" />

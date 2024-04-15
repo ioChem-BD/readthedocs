@@ -75,6 +75,7 @@ intensities
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="intensities">
           <module cmlx:templateRef="intensities">
@@ -89,6 +90,7 @@ intensities
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="9" />
    <record repeat="*" makeArray="true">{F,cc:frequency}{F,cc:dipole}{F,cc:absortion}</record>

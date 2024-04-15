@@ -52,6 +52,7 @@ l302.basis2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l302.basis2">
        <module cmlx:templateRef="l302.basis2">
@@ -69,6 +70,7 @@ l302.basis2
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="basis" repeat="*">\s*{1_20A,g:basis}\s*</record>
 

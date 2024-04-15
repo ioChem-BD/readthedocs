@@ -232,6 +232,7 @@ Data source: <module cmlx:templateRef='`input.file`_'>
    string ``adf:getCalcType`` string ``runtype`` boolean ``hasVibrations`` boolean ``isMininum`` boolean ``isQuild`` boolean ``isNMR``
 
    .. code:: xml
+      :number-lines:
 
                                   
           $runtype        Refers to <scalar dataType="xsd:string" dictRef="cc:runtype">

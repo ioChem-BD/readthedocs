@@ -57,6 +57,7 @@ l301.dispersion
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record>\s+R6Disp:{X,g:empdispersion}Dispersion\senergy={F,g:dispenergy}Hartrees.*</record>
    <transform process="addUnits" xpath=".//cml:scalar[@dictRef='g:dispenergy']" value="nonsi:hartree" />

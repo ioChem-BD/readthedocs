@@ -126,6 +126,7 @@ l508
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l508">
        <module cmlx:templateRef="l508">
@@ -142,6 +143,7 @@ l508
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="l508.type" pattern="\s+\w+\s+SCF\.\s*" endPattern=".*" endOffset="0">    <record id="l508.type">\s+{A,g:l508.type}\s+.*</record>
        </template>  <template id="l508.e" pattern="\s.*EE\=\s*\S+\s+Grad.*" repeat="*" endPattern=".*">    <record id="l508.e" repeat="*">\s*Iteration\s+{I,cc:serial}\s*EE=\s*{F,cc:eener}.*</record>       

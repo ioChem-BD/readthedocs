@@ -98,6 +98,7 @@ nmr
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="nmr/../program.header.xml" />  <xi:include href="nmr/nuclear.coordinates.xml" />  <xi:include href="nmr/nucleus.xml" />   
        </templateList>

@@ -73,6 +73,7 @@ l601.mullikenspin
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="1" />
    <record repeat="1" />

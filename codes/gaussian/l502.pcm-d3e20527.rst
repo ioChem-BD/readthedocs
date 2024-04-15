@@ -75,6 +75,7 @@ l502.pcm
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l502.pcm">
            <module cmlx:lineCount="74" cmlx:templateRef="l502.pcm"> 
@@ -87,6 +88,7 @@ l502.pcm
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s+Dispersion\senergy.*" endPattern=".*">    <record id="dispenergy">\s+Dispersion\senergy.*\={F,cc:dispenergy}</record>
            </template>  <template pattern="^(?!Dispersion\senergy).*" endPattern=".*" endPattern2="~" repeat="*">    <record repeat="1" />

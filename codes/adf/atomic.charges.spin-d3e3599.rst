@@ -106,6 +106,7 @@ atomic.charges.spin
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="atomic.charges.spin">
            <module cmlx:lineCount="55" cmlx:templateRef="atomic.charges.spin">       
@@ -124,6 +125,7 @@ atomic.charges.spin
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Atom\s+Level.*" endPattern="~">    <record repeat="2" />    <record id="spin" repeat="*" makeArray="true">{I,cc:serial}{A,cc:elementType}{F,a:mdcm}{F,a:mdcd}{F,a:mdcq}</record>
            </template>   

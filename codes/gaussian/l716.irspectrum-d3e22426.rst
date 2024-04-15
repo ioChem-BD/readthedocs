@@ -66,6 +66,7 @@ l716.irspectrum
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.irspectrum">
        <module cmlx:templateRef="l716.irspectrum">
@@ -78,6 +79,7 @@ l716.irspectrum
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="discard">{X,g:irspectrum}</record>
    <record repeat="*" />

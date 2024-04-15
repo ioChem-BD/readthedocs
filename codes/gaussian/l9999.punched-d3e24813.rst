@@ -49,6 +49,7 @@ l9999.punched
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l9999.punched">
        <module cmlx:templateRef="l9999.punched" />
@@ -59,6 +60,7 @@ l9999.punched
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="punched" />
    <transform process="delete" xpath=".//cml:list[count(*)=0]" />

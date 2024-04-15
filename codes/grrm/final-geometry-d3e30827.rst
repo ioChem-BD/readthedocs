@@ -65,6 +65,7 @@ final-geometry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="">
          <module cmlx:templateRef="final-geometry">
@@ -108,6 +109,7 @@ final-geometry
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <record id="symmetry-group">\s*Optimized structure,\s*SYMMETRY ={X,cc:pointgroup}</record>  <template id="molecule" pattern=".*" endPattern="ENERGY\s+=.*">    <record makeArray="true" repeat="*" id="atom">\s*{A,compchem:elementType}\s*{F,compchem:x3}\s*{F,compchem:y3}\s*{F,compchem:z3}\s*
                </record>    <transform process="createMolecule" xpath="./cml:list[@cmlx:templateRef='atom']/cml:array" id="molecule" />    <transform process="pullupSingleton" xpath="./cml:list" />

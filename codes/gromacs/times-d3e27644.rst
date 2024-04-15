@@ -45,6 +45,7 @@ times
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="times/accounting.xml" />  <xi:include href="times/summary.xml" />
        </templateList>

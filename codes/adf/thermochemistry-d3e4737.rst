@@ -84,6 +84,7 @@ thermochemistry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="thermochemistry"> 
            <module cmlx:templateRef="thermochemistry">       
@@ -121,6 +122,7 @@ thermochemistry
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="temppressure" pattern="\s*Pressure:.*" endPattern="\s*Temperature:.*" endOffset="1">    <record id="pressure">\s*Pressure:{F,cc:press}.*</record>    <record id="temperature">\s*Temperature:{F,cc:temp}.*</record>    <transform process="pullup" xpath=".//cml:scalar" />
            </template>  <template id="inertia" pattern="\s*Moments\sof\sInertia.*" endPattern=".*\d\s*$\s*" endOffset="2">    <record repeat="3" />    <record>{3F,cc:moi}</record>                   

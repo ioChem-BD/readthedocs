@@ -118,6 +118,7 @@ l9999.archive
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l9999.archive">
        <module cmlx:templateRef="l9999.archive">
@@ -173,6 +174,7 @@ l9999.archive
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l9999.archive.1">
        <module cmlx:templateRef="l9999.archive">
@@ -236,6 +238,7 @@ l9999.archive
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l9999.archive.2">
        <module cmlx:templateRef="l9999.archive">
@@ -290,6 +293,7 @@ l9999.archive
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="*" id="ginc">\s{X,g:ginc1}</record>
    <xi:include href="l9999/l9999.archive.toplevel.xml" />

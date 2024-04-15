@@ -178,6 +178,7 @@ l301.basis2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.basis2">
               <module cmlx:lineCount="18" cmlx:templateRef="l301.basis2">
@@ -230,6 +231,7 @@ l301.basis2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.basis2a">
              <module cmlx:lineCount="80" cmlx:templateRef="l301.basis2">
@@ -376,6 +378,7 @@ l301.basis2
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="diffuse">\s+General\sbasis\sread\sfrom\scards\:\s+{X,cc:diffuse}</record>
    <transform process="pullup" xpath="./cml:list/cml:scalar[@dictRef='cc:diffuse']" />

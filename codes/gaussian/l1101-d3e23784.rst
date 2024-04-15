@@ -51,6 +51,7 @@ l1101
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output.raw" id="l1101">
     </comment>
@@ -60,6 +61,7 @@ l1101
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l1101" repeat="*">{X,g:l1101}</record>
 

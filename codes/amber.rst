@@ -15,5 +15,5 @@ Amber
    /codes/amber/header-d3e9530
    /codes/amber/input.file-d3e9575
    /codes/amber/gpuinfo-d3e9664
-   /codes/amber/amber.parm-d3e51034
-   /codes/amber/amber.nctraj-d3e51180
+   /codes/amber/amber.parm-d3e51136
+   /codes/amber/amber.nctraj-d3e51282

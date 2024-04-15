@@ -59,6 +59,7 @@ s2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="s2">
            <module cmlx:lineCount="7" cmlx:templateRef="s2">
@@ -72,6 +73,7 @@ s2
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="6" />
    <record id="s2">\s*Total\sS2\s\(S\ssquared\){F,cc:s2}{F,cc:s2expected}</record>

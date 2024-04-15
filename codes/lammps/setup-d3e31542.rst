@@ -67,6 +67,7 @@ setup
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="setup">
           <module cmlx:templateRef="setup">
@@ -134,6 +135,7 @@ setup
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="datafile" pattern="read_data\s+\S.*$Reading\sdata.*" pattern2="read_data\s+\S.*$\s\s.*" endPattern="\s+\S+.*$\S+.*" endPattern2="\s+\S+.*$\s*" endOffset="1">    <record id="datafile" repeat="*">{X,l:line}</record>    <transform process="addChild" xpath="." elementName="cml:parameter" />    <transform process="move" xpath=".//cml:list" to=".//cml:parameter" />
            </template>  <template id="parameter" pattern="((?!#|WARNING|Reading\spotential\sfile).*)" endPattern=".*" endPattern2="~" repeat="*">    <record id="parameter">{A,x:label}{X,x:value}</record>    <transform process="addChild" xpath="." elementName="cml:parameter" />    <transform process="move" xpath=".//cml:scalar" to=".//cml:parameter" />

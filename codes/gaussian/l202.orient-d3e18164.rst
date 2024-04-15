@@ -59,6 +59,7 @@ l202.orient
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l202.orient">
        <module cmlx:templateRef="l202.orient">
@@ -111,6 +112,7 @@ l202.orient
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="5" />
    <record repeat="*" makeArray="true" id="atom">{I,cc:serial}{I,cc:elementType}{I,g:atomicType}{F,cc:x3}{F,cc:y3}{F,cc:z3}</record>

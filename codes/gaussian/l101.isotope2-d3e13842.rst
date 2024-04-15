@@ -88,6 +88,7 @@ l101.isotope2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.isotope2">
          <module cmlx:lineCount="31" cmlx:templateRef="l101.isotope2">
@@ -105,6 +106,7 @@ l101.isotope2
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="l101.isotope2" pattern="\s*Atom.*" repeat="*" endPattern="\s*NMagM\=.*" endOffset="1">    <record id="atom">\s*Atom {1_10I,x:x}</record>    <record id="iatwgt">\s*IAtWgt={1_10I,x:x}</record>    <record id="atmwgt">\s*AtmWgt={1_10F12.7,x:x}</record>    <record id="nucspn">\s*NucSpn={1_10I,x:x}</record>    <record id="atzeff">\s*AtZEff={1_10F12.7,x:x}</record>    <record id="nqmom">\s*NQMom={1_10F12.7,x:x}</record>    <record id="nmagm">\s*NMagM={1_10F12.7,x:x}</record>
        </template>

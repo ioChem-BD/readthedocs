@@ -96,6 +96,7 @@ l103.localminsaddle
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.outputx" id="l103.localmin">
    <module cmlx:templateRef="l103.localmin">
@@ -120,6 +121,7 @@ l103.localminsaddle
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.localmin.saddle">
    <module cmlx:templateRef="l103.localminsaddle.">
@@ -149,6 +151,7 @@ l103.localminsaddle
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="r">\s*Search for a {X,cc:minmaxts}\.\s*</record>
    <templateList>  <template id="negativeeigenvaluelist" repeat="*" pattern="\s*Eigenvectors required to have negative eigenvalues.*" endPattern="\s\S.*" endOffset="0">    <record id="eigenvalue">\s*Eigenvectors required.*</record>    <templateList>      <template repeat="*" pattern=".*" endPattern=".*" endOffset="0" id="grot">        <record id="stufff" repeat="*">{X,x:stuffff}</record>

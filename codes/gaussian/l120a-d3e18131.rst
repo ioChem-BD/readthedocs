@@ -49,6 +49,7 @@ l120a
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l120a">
            <module cmlx:templateRef="l120a">
@@ -63,6 +64,7 @@ l120a
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record>\s*ONIOM:\sgenerating\spoint{I,g:point}--{A,x:level}level\son{X,x:system}\ssystem.*</record>
    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />

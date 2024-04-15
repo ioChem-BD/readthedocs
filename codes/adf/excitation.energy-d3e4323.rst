@@ -225,6 +225,7 @@ excitation.energy
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="excitation.energy">
            <module cmlx:lineCount="493" cmlx:templateRef="excitation.energy">
@@ -271,6 +272,7 @@ excitation.energy
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="excitation.energy2">
           <module cmlx:templateRef="excitation.energy" dictRef="cc:userDefinedModule">
@@ -306,6 +308,7 @@ excitation.energy
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="excitationEnergies" pattern="\s*\*\s+Final\sexcitation\senergies\sfrom\sDavidson\salgorithm.*" endPattern="\s*\*\s+Final\sexcitation\senergies\sfrom\sDavidson\salgorithm.*" endPattern2="\s*Eigenvalues\sof\ssmall.*" endPattern3="\sAll\sSINGLET-SINGLET\sexcitation\senergies.*" endPattern4="~" repeat="*">    <templateList>      <template pattern="\s*Symmetry.*" endPattern=".*" endOffset="0">        <record id="symmetry">\s*Symmetry{A,cc:symm}</record>
                    </template>      <template id="energies" pattern="\s*Excitation\senergies\sE\sin.*" endPattern="\s+\d.*$\s*" endOffset="1">        <record repeat="5" />        <record repeat="*" makeArray="true">{I,cc:serial}{A,cc:energy}\s+\S+\s+{A,cc:oscillator}\s+{A,cc:energyDiff}.*

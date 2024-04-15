@@ -56,6 +56,7 @@ l101.zmatfragment
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l101.zmatfragment">
        <module cmlx:templateRef="l101.zmatfragment">
@@ -112,6 +113,7 @@ l101.zmatfragment
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="charge">.*Charge ={I,g:charge} Multiplicity ={I,g:mult}\s*in\s*supermolecule</record>

@@ -52,6 +52,7 @@ quadrupole.moment
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="quadrupole.moment">
            <module cmlx:lineCount="7" cmlx:templateRef="quadrupole.moment">
@@ -64,6 +65,7 @@ quadrupole.moment
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <record id="quadval">\s*{1_6F,cc:quadrupole}\s*</record>

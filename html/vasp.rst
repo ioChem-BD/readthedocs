@@ -168,6 +168,7 @@ On Band structure calculations the platform will display a graph with the eigenv
    string ``vasp:getCalcType`` nodeset ``ibrion``
 
    .. code:: xml
+      :number-lines:
 
           ibrion                   Value of ibrion parameter on <module cmlx:templateRef="convergence.info" >.       
                      
@@ -193,6 +194,7 @@ On Band structure calculations the platform will display a graph with the eigenv
    string ``turbo:getMehod`` string ``gga`` boolean ``lhfcalc`` number ``hfscreen`` number ``aggac`` boolean ``luseVdw`` number ``zabVdw`` number ``param1``> number ``param2`` boolean ``ldau``
 
    .. code:: xml
+      :number-lines:
 
        
               gga, lhfcalc, hfscreen , ...           parameters read from OUTCAR file <module cmlx:templateRef="incar">                                      
@@ -237,20 +239,20 @@ On Band structure calculations the platform will display a graph with the eigenv
                                   
                                                   
 
-.. _`cc:program`: ../codes/vasp/generator-d3e49385.html
-.. _`v:ispin`: ../codes/vasp/incar-d3e49435.html
-.. _`cc:temp`: ../codes/vasp/incar-d3e49435.html
-.. _incar: ../codes/vasp/incar-d3e49435.html
-.. _grimmes: ../codes/vasp/grimmes-d3e50920.html
-.. _position: ../codes/vasp/position-d3e50127.html
-.. _potcar: ../codes/vasp/potcar-d3e49999.html
-.. _laticce: ../codes/vasp/lattice-d3e50087.html
-.. _calculated.position: ../codes/vasp/calculated.position-d3e50271.html
-.. _basis used: ../codes/vasp/atom.potcar-d3e50007.html
-.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e58858.html
-.. _energy: ../codes/vasp/energy-d3e50510.html
-.. _eigenvalues: ../codes/vasp/eigenvalues-d3e50746.html
-.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e59075.html
-.. _magnetization: ../codes/vasp/magnetization-d3e50609.html
-.. _vibrations: ../codes/vasp/vibrations-d3e50444.html
-.. _kpoints: ../codes/vasp/vasp.kpoints-d3e58858.html
+.. _`cc:program`: ../codes/vasp/generator-d3e49487.html
+.. _`v:ispin`: ../codes/vasp/incar-d3e49537.html
+.. _`cc:temp`: ../codes/vasp/incar-d3e49537.html
+.. _incar: ../codes/vasp/incar-d3e49537.html
+.. _grimmes: ../codes/vasp/grimmes-d3e51022.html
+.. _position: ../codes/vasp/position-d3e50229.html
+.. _potcar: ../codes/vasp/potcar-d3e50101.html
+.. _laticce: ../codes/vasp/lattice-d3e50189.html
+.. _calculated.position: ../codes/vasp/calculated.position-d3e50373.html
+.. _basis used: ../codes/vasp/atom.potcar-d3e50109.html
+.. _KPOINTS file: ../codes/vasp/vasp.kpoints-d3e58960.html
+.. _energy: ../codes/vasp/energy-d3e50612.html
+.. _eigenvalues: ../codes/vasp/eigenvalues-d3e50848.html
+.. _vasp.doscar: ../codes/vasp/vasp.doscar-d3e59177.html
+.. _magnetization: ../codes/vasp/magnetization-d3e50711.html
+.. _vibrations: ../codes/vasp/vibrations-d3e50546.html
+.. _kpoints: ../codes/vasp/vasp.kpoints-d3e58960.html

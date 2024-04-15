@@ -52,6 +52,7 @@ summary
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="summary">
            <module cmlx:templateRef="summary">
@@ -69,6 +70,7 @@ summary
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record>\s*Time:{F,cc:cputime}{F,cc:wallTime}.*</record>

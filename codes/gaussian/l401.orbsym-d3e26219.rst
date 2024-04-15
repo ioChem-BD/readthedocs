@@ -66,6 +66,7 @@ l401.orbsym
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l401.orbsym">
        <module cmlx:templateRef="l401.orbsym">
@@ -96,6 +97,7 @@ l401.orbsym
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="harris" pattern="\s*((Harris)|(ExpMin)|(HarFok)|(ScaDFX)).*" endPattern="\s*Initial\sguess\sorbital\ssymmetries:.*">    <record id="harris" repeat="*">\s*((Harris)|(ExpMin)|(HarFok)|(ScaDFX)){X,g:expmin}</record>      
        </template>  <xi:include href="l401/l4601.occupied.xml" />  <xi:include href="l401/l4601.virtual.xml" />  <xi:include href="l401/../l601/l601.state.xml" />

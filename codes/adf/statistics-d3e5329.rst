@@ -63,6 +63,7 @@ statistics
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="statistics/timing.xml" />
        </templateList>

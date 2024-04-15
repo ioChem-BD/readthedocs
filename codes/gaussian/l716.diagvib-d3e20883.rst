@@ -48,6 +48,7 @@ l716.diagvib
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.diagvib">
        <module cmlx:templateRef="l716.diagvib">
@@ -60,6 +61,7 @@ l716.diagvib
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="diagvib" />
    <record id="diagvib">\s*{3F,cc:diagvib}\s*</record>

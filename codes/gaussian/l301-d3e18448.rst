@@ -75,6 +75,7 @@ l301
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l301/l301.basis.xml" />  <xi:include href="l301/l301.basis2.xml" />  <xi:include href="l301/l301.dispersion.xml" />  <xi:include href="l301/l301.pcm.nonstandard.xml" />  <xi:include href="l301/l301.pcm.standard.xml" /> 
      </templateList>

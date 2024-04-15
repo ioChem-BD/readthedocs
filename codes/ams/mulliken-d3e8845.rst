@@ -209,6 +209,7 @@ mulliken
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="mulliken">        
            <module cmlx:lineCount="640" cmlx:templateRef="mulliken">
@@ -231,6 +232,7 @@ mulliken
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="mulliken.2">
            <module cmlx:lineCount="613" cmlx:templateRef="mulliken">
@@ -255,6 +257,7 @@ mulliken
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="mulliken.3">
            <module cmlx:lineCount="182" cmlx:templateRef="mulliken">
@@ -277,6 +280,7 @@ mulliken
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="charges" pattern="\s*Atom\s*Charge\s*Spin density.*" endPattern="\s*" endOffset="0">    <record repeat="2" />    <templateList>      <template pattern="(\s*\S+\s*){9}+" endPattern=".*" endPattern2="~" endOffset="1" repeat="*">        <record id="1">{I,cc:serial}{A,cc:elementType}{F,x:charge}{F,a:spinDensity}{A,a:spin}:{F,a:orbitalS}{F,a:orbitalP}{F,a:orbitalD}{F,a:orbitalF}</record>        <record>\s*{A,a:spin}:{F,a:orbitalS}{F,a:orbitalP}{F,a:orbitalD}{F,a:orbitalF}</record>                
                    </template>      <template pattern="(\s*\S+\s*){7}+" endPattern=".*" endPattern2="~" endOffset="0" repeat="*">        <record id="2">{I,cc:serial}{A,cc:elementType}{F,x:charge}{F,a:orbitalS}{F,a:orbitalP}{F,a:orbitalD}{F,a:orbitalF}</record>

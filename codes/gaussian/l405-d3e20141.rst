@@ -88,6 +88,7 @@ l405
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l405">
        <module cmlx:templateRef="l405">
@@ -101,6 +102,7 @@ l405
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*NO\.\sOF\sORBITALS.*" endPattern="\s*NO\.\sOF\sELECTRONS.*" endOffset="1">    <record>\s*NO\.\sOF\sORBITALS\s*={I,g:orbitalnum}</record>    <record>\s*NO\.\sOF\sELECTRONS\s*={I,g:electronnum}</record>    <transform process="pullup" xpath=".//cml:scalar" repeat="2" />                 
        </template>  

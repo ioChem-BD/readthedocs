@@ -69,6 +69,7 @@ model.parameters
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="init/modelparameters/parameters.xml" />  <xi:include href="init/modelparameters/fragment.files.xml" />  <xi:include href="init/modelparameters/solvation.xml" />          
        </templateList>

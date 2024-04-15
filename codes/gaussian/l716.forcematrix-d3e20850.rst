@@ -85,6 +85,7 @@ l716.forcematrix
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="1716.forcematrix">
        <module cmlx:templateRef="l716.forcematrix">
@@ -111,6 +112,7 @@ l716.forcematrix
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <templateList>  <xi:include href="l716/l716.lowfreq.xml" />  <xi:include href="l716/l716.diagvib.xml" />  <xi:include href="l716/l716.freq.chunk.xml" />

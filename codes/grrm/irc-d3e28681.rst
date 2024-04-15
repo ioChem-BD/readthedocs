@@ -154,6 +154,7 @@ irc
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="irc">
            <module cmlx:templateRef="irc">
@@ -315,6 +316,7 @@ irc
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <xi:include href="singleStruc.xml" />
    <xi:include href="freq.xml" />

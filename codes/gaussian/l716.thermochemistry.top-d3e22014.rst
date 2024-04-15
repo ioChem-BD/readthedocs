@@ -47,6 +47,7 @@ l716.thermochemistry.top
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.top">
        <module cmlx:templateRef="l716.thermochemistry.top">
@@ -59,6 +60,7 @@ l716.thermochemistry.top
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="type">\s*This molecule is an?\s*{A,g:top}\s*top\.\s*</record>
    <transform process="pullup" xpath=".//cml:scalar" />

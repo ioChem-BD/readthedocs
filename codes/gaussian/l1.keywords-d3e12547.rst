@@ -47,6 +47,7 @@ l1.keywords
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.keywords">
        <module cmlx:templateRef="l1.keywords">
@@ -62,6 +63,7 @@ l1.keywords
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="prog" repeat="*">{X,cc:keywords}</record>

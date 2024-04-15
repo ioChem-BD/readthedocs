@@ -88,6 +88,7 @@ quild.module
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="quild/../program.header.xml" />  <xi:include href="quild/quild.coord.xml" />        
        </templateList>

@@ -82,6 +82,7 @@ geometry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="geometry">
          <module cmlx:lineCount="33" cmlx:templateRef="geometry">
@@ -229,6 +230,7 @@ geometry
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="coordinates" name="coordinates" pattern="\s*ATOMS.*" endPattern="\s+[0-9]+.*$\s*$\s*" endPattern2="~" endOffset="1">    <record repeat="4" />    <record id="atom" repeat="*" makeArray="true">{I,cc:serial}{A,cc:elementType}{F,cc:x3,unit:angstrom}{F,cc:y3,unit:angstrom}{F,cc:z3,unit:angstrom}.*</record>    <transform process="createMolecule" xpath=".//cml:list[@cmlx:templateRef='atom']/cml:array" id="coordinates" />    <transform process="pullup" repeat="2" xpath=".//cml:molecule" />    <transform process="delete" xpath=".//cml:list[count(*)=0]" />    <transform process="delete" xpath=".//cml:list[count(*)=0]" />    <transform process="delete" xpath=".//cml:module[count(*)=0]" />            
            </template>   

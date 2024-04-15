@@ -48,6 +48,7 @@ l1.version
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.version">
        <module cmlx:templateRef="l1.version">
@@ -63,6 +64,7 @@ l1.version
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="prog">{X,cc:program}:{A,cc:version}\s+{A,cc:program.date}</record>

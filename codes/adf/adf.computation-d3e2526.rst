@@ -75,6 +75,7 @@ adf.computation
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="computation/scf.xml" />  <xi:include href="computation/geometry.cycle.xml" />
        </templateList>

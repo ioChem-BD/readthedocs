@@ -59,6 +59,7 @@ timing
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="timing">
           <module cmlx:lineCount="11" cmlx:templateRef="timing">
@@ -73,6 +74,7 @@ timing
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Total\s+Used\s+:.*" endPattern=".*" endOffset="0">    <record>\s*Total\s+Used\s+:\s+CPU={F,cc:cputime}System={F,cc:systemtime}Elapsed={F,cc:elapsedtime}</record>    <transform process="pullup" repeat="3" xpath=".//cml:scalar" />
            </template>

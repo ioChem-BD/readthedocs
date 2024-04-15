@@ -78,6 +78,7 @@ solvation
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="solvation">
            <module cmlx:lineCount="30" cmlx:templateRef="solvation">
@@ -101,6 +102,7 @@ solvation
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Division\sLevel\sfor\sSurface\sTriangles.*" endPattern=".*">    <record id="ndiv">.*\(NDIV\){I,a:ndiv}</record>       
            </template>  <template pattern="\s*Final\sDivision\sLevel\sfor\sTriangles.*" endPattern=".*">    <record id="nfdiv">.*\(NFDIV\){I,a:nfdiv}</record>

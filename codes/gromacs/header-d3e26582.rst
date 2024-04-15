@@ -108,6 +108,7 @@ header
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="header">   
            <module cmlx:templateRef="header">
@@ -147,6 +148,7 @@ header
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="rundate" pattern="\s*Log\sfile\sopened\son.*" endPattern="\s*.*GROMACS.*" endOffset="0">    <record>\s*Log\sfile\sopened\son{X,cc:runDate}</record>    <record>\s*Host:{A,cc:hostName}.*number\sof\sranks:{I,gm:numRanks}</record>    <transform process="createDate" xpath=".//cml:scalar[@dictRef='cc:runDate']" format="E MMM  d HH:mm:ss yyyy" />    <transform process="createDate" xpath=".//cml:scalar[@dictRef='cc:runDate']" format="E MMM dd HH:mm:ss yyyy" />    <transform process="pullup" xpath=".//cml:list/cml:list/cml:scalar" />                                  
            </template>  <template id="program" pattern="\s*GROMACS.*VERSION.*" endPattern=".*" endOffset="0">    <record>{A,cc:program}:.*,\s*VERSION{A,cc:programVersion}</record>    <transform process="pullup" xpath=".//cml:scalar" />  

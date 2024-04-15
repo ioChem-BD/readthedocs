@@ -50,6 +50,7 @@ l716.thermochemistry.mass
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.mass">
        <module cmlx:templateRef="l716.thermochemistry.mass">
@@ -67,6 +68,7 @@ l716.thermochemistry.mass
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="mass" repeat="*" makeArray="true">\s* Atom{I,cc:serial}has atomic number{I,x:elementType} and mass{F,cc:atomicmass}\s*</record>
    <record id="molmass">\s*Molecular mass:{F,cc:molmass}amu\.\s*</record>

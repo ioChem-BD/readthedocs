@@ -47,6 +47,7 @@ link.enter
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="enter" repeat="*">\s*\(Enter{A,g:enter}\)\s*</record>
 

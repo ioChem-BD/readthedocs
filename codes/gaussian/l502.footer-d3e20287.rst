@@ -63,6 +63,7 @@ l502.footer
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l502.footer">
        <module cmlx:templateRef="l502.footer">
@@ -96,6 +97,7 @@ l502.footer
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="scfdone">\s*SCF Done:\s+E\(.*\) ={F,g:rbhflyp}\s+A\.U\.\s+after{I,cc:ncycle}cycles\s*</record>
    <templateList>  <template id="vovert" pattern="\s*Convg\s*=.*" endPattern=".*" endOffset="0">    <record id="vovert" repeat="*">\s*Convg\s*={E,g:convg}\s+\-V\/T\s*={F,cc:vovert}</record>      

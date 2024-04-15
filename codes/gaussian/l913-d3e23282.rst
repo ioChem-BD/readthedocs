@@ -83,6 +83,7 @@ l913
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output.raw" id="l913">    
        </comment>
@@ -92,6 +93,7 @@ l913
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l913" repeat="*">{X,g:l913}</record>
 

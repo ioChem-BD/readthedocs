@@ -81,6 +81,7 @@ l601.alphabetaeigen
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.alphabeta">
        <module cmlx:templateRef="l601.alphabetaeigen">
@@ -94,6 +95,7 @@ l601.alphabetaeigen
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.alphabeta1">
        <module cmlx:templateRef="l601.alphabetaeigen">
@@ -109,6 +111,7 @@ l601.alphabetaeigen
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="eigen" repeat="*">\s*{X,g:name}\s*eigenvalues \-\-{1_5F,g:eigen}</record>
    <transform process="addAttribute" xpath=".//cml:list/cml:list/cml:array" name="cmlx:temp" value="$string(../cml:scalar)" />

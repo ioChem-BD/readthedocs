@@ -132,6 +132,7 @@ Data sources:
    string ``ca:getCalcType`` string ``setup``
 
    .. code:: xml
+      :number-lines:
 
                                  
           $setup          Refers to all read elements from <module cmlx:templateRef="parameters">                 
@@ -165,11 +166,11 @@ Data sources:
 
 .. _program.header template: ../codes/castep/header-d3e10515.html
 .. _parameters: ../codes/castep/parameters-d3e11096.html
-.. _geometry steps file: ../codes/castep/castep.geom-d3e51486.html
+.. _geometry steps file: ../codes/castep/castep.geom-d3e51588.html
 .. _atoms: ../codes/castep/atoms-d3e10815.html
 .. _`cc:pointgroup`: ../codes/castep/symmetry-d3e11041.html
 .. _`ca:spacegroup`: ../codes/castep/symmetry-d3e11041.html
-.. _castep.cell: ../codes/castep/castep.cell-d3e51189.html
+.. _castep.cell: ../codes/castep/castep.cell-d3e51291.html
 .. _step: ../codes/castep/step-d3e11936.html
 .. _enthalpy: ../codes/castep/enthalpy-d3e12239.html
 .. _mulliken: ../codes/castep/mulliken-d3e12135.html

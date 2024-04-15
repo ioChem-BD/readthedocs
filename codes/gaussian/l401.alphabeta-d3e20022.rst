@@ -72,6 +72,7 @@ l401.alphabeta
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l401.alphabeta">
        <module cmlx:templateRef="l401.alphabeta">
@@ -105,6 +106,7 @@ l401.alphabeta
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="alphabeta">\s*{A,g:l401.type}\s*Orbitals:\s*</record>
    <record id="l401" repeat="*">\s*{1_20A,g:l401}\s*</record>

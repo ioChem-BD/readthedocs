@@ -61,6 +61,7 @@ quild.coord
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="quild.coord">
             <module cmlx:lineCount="80" cmlx:templateRef="quild.coord">
@@ -123,6 +124,7 @@ quild.coord
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <record id="atom" repeat="*" makeArray="true">{A,cc:elementType}{I,cc:serial}\s+\S+\s+\S+\s+\S+\s+{F,cc:x3}{F,cc:y3}{F,cc:z3}</record>

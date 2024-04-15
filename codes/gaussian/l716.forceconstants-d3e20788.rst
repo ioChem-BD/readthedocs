@@ -96,6 +96,7 @@ l716.forceconstants
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.forcematrix">
        <module cmlx:templateRef="l716.forceconstants">
@@ -108,6 +109,7 @@ l716.forceconstants
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="forceconstants">{X,x:forceconstantsxx}</record>
    <templateList>  <template id="l716.forceconst.chunk" pattern="\s\s\s\s\s\s\s\s*\d+\s*[\d\s]*$.*" endPattern="((\s\s\s\s\s\s\s\s\s*[\s\d]+.*)|(\s?[A-Z].*))" repeat="*">    <record id="serial">{1_5I,cc:serial}</record>    <record repeat="*" id="row">\s*{I,g:row}\s{1_5E,cc:forceconst}</record>

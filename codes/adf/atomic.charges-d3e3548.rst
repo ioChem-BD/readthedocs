@@ -147,6 +147,7 @@ atomic.charges
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="atomic.charges">
            <module cmlx:lineCount="96" cmlx:templateRef="atomic.charges">
@@ -165,6 +166,7 @@ atomic.charges
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Atom\s+Level.*" endPattern="~">    <record repeat="2" />    <record id="multipole" repeat="*" makeArray="true">{I,cc:serial}{A,cc:elementType}{F,a:mdcm}{F,a:mdcd}{F,a:mdcq}</record>
            </template>   

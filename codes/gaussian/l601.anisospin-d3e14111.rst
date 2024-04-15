@@ -72,6 +72,7 @@ l601.anisospin
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.anisospin">
        <module cmlx:templateRef="l601.anisospin">
@@ -103,6 +104,7 @@ l601.anisospin
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="6" />
    <templateList>  <template id="atom" name="atom" pattern="\s*Baa.*" endPattern="\s*" repeat="*">    <record id="baa">\s*Baa{F,g:aniso.a.au}{F,g:aniso.a.mhz}{F,g:aniso.a.gauss}{F,g:aniso.a.ten-4cml-1}{F,x:x.x}{F,x:x.y}{F,x:x.z}</record>    <record id="bbb">\s*{I,x:serial}{A,x:elementType}\({I,x:isotopeNumber}\)\s*Bbb{F,g:aniso.b.au}{F,g:aniso.b.mhz}{F,g:aniso.b.gauss}{F,g:aniso.b.ten-4cml-1}{F,x:y.x}{F,x:y.y}{F,x:y.z}</record>    <record id="bcc">\s*Bcc{F,g:aniso.c.au}{F,g:aniso.c.mhz}{F,g:aniso.c.gauss}{F,g:aniso.c.ten-4cml-1}{F,x:z.x}{F,x:z.y}{F,x:z.z}</record>    <transform process="createMatrix33" xpath="." dictRef="g:axis" from=".//cml:scalar[contains(@dictRef,':x.') or contains(@dictRef,':y.') or contains(@dictRef,':z.')]" />    <transform process="createVector3" xpath="." dictRef="g:coupling.g" from="./cml:list/cml:list/cml:scalar[contains(@dictRef,'.a.g') or contains(@dictRef,'.b.g') or contains(@dictRef,'.c.g')]" />    <transform process="createVector3" xpath="." dictRef="g:coupling.au" from="./cml:list/cml:list/cml:scalar[contains(@dictRef,'.a.a') or contains(@dictRef,'.b.a') or contains(@dictRef,'.c.a')]" />    <transform process="createVector3" xpath="." dictRef="g:coupling.mhz" from="./cml:list/cml:list/cml:scalar[contains(@dictRef,'.a.m') or contains(@dictRef,'.b.m') or contains(@dictRef,'.c.m')]" />    <transform process="createVector3" xpath="." dictRef="g:coupling.ten" from="./cml:list/cml:list/cml:scalar[contains(@dictRef,'.a.t') or contains(@dictRef,'.b.t') or contains(@dictRef,'.c.t')]" />    <transform process="move" to="." xpath=".//*[contains(@dictRef,':serial') or contains(@dictRef,':elementType') or contains(@dictRef,':isotop') or contains(@dictRef,':coupling')]" />    <transform process="pullupSingleton" xpath="./cml:list/cml:list" />    <transform process="pullupSingleton" xpath="./cml:list" />

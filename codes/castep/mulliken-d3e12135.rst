@@ -68,6 +68,7 @@ mulliken
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="mulliken">
          <module cmlx:templateRef="mulliken">
@@ -91,6 +92,7 @@ mulliken
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="4" />
    <templateList>  <template pattern=".*up:.*" endPattern=".*dn:.*" endPattern2="~" endOffset="1" repeat="*">    <record>{A,cc:elementType}{I,cc:serial}{A,ca:spin}:{F,ca:orbitalS}{F,ca:orbitalP}{F,ca:orbitalD}{F,ca:orbitalF}{F,x:total}{F,x:charge}{F,x:spin}</record>    <record>{I,cc:serial}{A,ca:spin}:{F,ca:orbitalS}{F,ca:orbitalP}{F,ca:orbitalD}{F,ca:orbitalF}{F,x:total}</record>

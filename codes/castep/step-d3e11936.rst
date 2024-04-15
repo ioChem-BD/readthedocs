@@ -127,6 +127,7 @@ step
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="step">
          <module cmlx:templateRef="step">
@@ -149,6 +150,7 @@ step
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="scf" pattern="\s*SCF\sloop.*" endPattern="\s*-{10,}.*$\s*">    <record repeat="3" />    <record id="scftable" repeat="*" makeArray="true">{A,x:step}{E,cc:finalEnergy}{E,ca:efermi}.*</record>    <transform process="setValue" xpath=".//cml:array[@dictRef='x:step']" value="$string(replace(., 'Initial', '0'))" />    <transform process="addUnits" xpath=".//cml:array[@dictRef='cc:finalEnergy' or @dictRef='ca:efermi']" value="nonsi:electronvolt" />
            </template>  <template id="energy" pattern="\s*Final\senergy.*" endPattern="\s*">    <record>\s*Final\senergy,\sE\s*={F,cc:finalEnergy}.*</record>    <record>\s*Final\sfree\senergy\s\(E\-TS\)\s*={F,cc:freeEnergy}.*</record>    <transform process="addUnits" xpath=".//cml:scalar" value="nonsi:electronvolt" />

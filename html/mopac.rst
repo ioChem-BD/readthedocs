@@ -80,6 +80,7 @@ Data source: <module cmlx:templateRef='`energies`_'>
    string ``molcas:getCalcType`` boolean ``isRestrictedOpt`` boolean ``isOptimization`` boolean ``isTS`` boolean ``isIncomplete``
 
    .. code:: xml
+      :number-lines:
 
           
           $isOptimization   Exists module <module cmlx:templateRef="optimization" > ?
@@ -124,6 +125,7 @@ Data source: <module cmlx:templateRef='`energies`_'>
    string\* ``mp:getMethods`` nodes ``inputLines``
 
    .. code:: xml
+      :number-lines:
 
           
           $inputLines   Input lines from <module cmlx:templateRef="inputlines" >                   
@@ -142,8 +144,8 @@ Data source: <module cmlx:templateRef='`energies`_'>
                               
                                                   
 
-.. _header template: ../codes/mopac/header-d3e37193.html
-.. _input.file: ../codes/mopac/input.file-d3e37240.html
-.. _geometry module: ../codes/mopac/geometry-d3e37445.html
-.. _vibrations: ../codes/mopac/vibrations-d3e37143.html
-.. _energies: ../codes/mopac/energies-d3e37581.html
+.. _header template: ../codes/mopac/header-d3e37295.html
+.. _input.file: ../codes/mopac/input.file-d3e37342.html
+.. _geometry module: ../codes/mopac/geometry-d3e37547.html
+.. _vibrations: ../codes/mopac/vibrations-d3e37245.html
+.. _energies: ../codes/mopac/energies-d3e37683.html

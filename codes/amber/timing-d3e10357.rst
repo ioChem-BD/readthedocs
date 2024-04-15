@@ -183,6 +183,7 @@ timing
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="timing">
            <module cmlx:templateRef="timing">
@@ -202,6 +203,7 @@ timing
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="timing2">
            <module cmlx:templateRef="timing">
@@ -221,6 +223,7 @@ timing
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="walltime" pattern="\s*\|\s+Final\sPerformance\sInfo:.*" endPattern="\s*" endPattern2=".*[0-9]$\s*\|\s+-{20,}]">    <templateList>      <template pattern="\s*\|\s+Average\stimings\sfor\sall\ssteps.*" endPattern="\s*\|\s*" endPattern2="~">        <record />        <record>\s*\|\s+Elapsed\(s\)\s*={F,cc:elapsedtime}Per\sStep\(ms\)\s*={F,am:elapsedstep}</record>        <record>\s*\|\s+ns\/day\s*={F,am:nsperday}seconds/ns\s*={F,am:secondsperns}</record>        <transform process="pullup" xpath=".//cml:scalar" />
                    </template>

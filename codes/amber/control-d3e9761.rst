@@ -110,6 +110,7 @@ control
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="">
          <module cmlx:templateRef="control">
@@ -195,6 +196,7 @@ control
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="section" pattern="\s*[a-zA-Z0-9](?!wald\sparameters).*:" endPattern="\s*" endPattern2="~" endOffset="0" repeat="*">    <record id="section">{X,am:section.name}:</record>    <templateList>      <template id="section" pattern=".+,.+,.+,.+" endPattern=".*" endPattern2="~" endOffset="0" repeat="*">        <record>{X,am:name}={A,am:value},{X,am:name}={A,am:value},{X,am:name}={A,am:value},{X,am:name}={A,am:value}</record>        <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(lower-case(./text()))" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(replace(./text(), '[-_ ]', '.'))" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="pullup" xpath=".//cml:scalar" repeat="3" />
                    </template>      <template id="section" pattern=".+,.+,.+" endPattern=".*" endPattern2="~" endOffset="0" repeat="*">        <record>{X,am:name}={A,am:value},{X,am:name}={A,am:value},{X,am:name}={A,am:value}</record>        <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(lower-case(./text()))" />        <transform process="setValue" xpath=".//cml:scalar[@dictRef='am:name']" value="$string(replace(./text(), '[-_ ]', '.'))" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="createNameValue" xpath="./cml:list/cml:list" name="./cml:scalar[@dictRef='am:name'][position() = 1]" value="./cml:scalar[@dictRef='am:value'][position()= 1]" />        <transform process="pullup" xpath=".//cml:scalar" repeat="3" />

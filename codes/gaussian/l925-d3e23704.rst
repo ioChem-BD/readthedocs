@@ -105,6 +105,7 @@ l925
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l925">
            <module cmlx:templateRef="l925">      
@@ -125,6 +126,7 @@ l925
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="ecoupling" pattern="\s*Frag=.*State=.*" endPattern="\s*Solvent\sscreening.*" endOffset="1" repeat="*">    <record>\s*Frag={I,g:fragmentA}State={I,g:stateA}\(w={F,g:wA}eV\).*Frag={I,g:fragmentB}State={I,g:stateB}\(w={F,g:wB}eV\)</record>    <record repeat="7" />    <record>\s*Total\scoupling\s*={F,g:coupling}eV</record>        
            </template>       

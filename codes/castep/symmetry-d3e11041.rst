@@ -72,6 +72,7 @@ symmetry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="symmetry">
            <module cmlx:templateRef="symmetry">
@@ -91,6 +92,7 @@ symmetry
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="operations" pattern="\s*Number\sof\ssymmetry\soperations.*" endPattern=".*" endPattern2=".*$\s*">    <record>\s*Number\sof\ssymmetry\soperations\s*={I,ca:nsym}</record>
            </template>  <template id="pointgroup" pattern="\s*Point\sgroup\sof\scrystal.*" endPattern="\s*Space\sgroup\sof\scrystal.*" endPattern2=".*$\s*" endOffset="1">    <record>\s*Point\sgroup\sof\scrystal\s*={X,cc:pointgroup}</record>    <record>\s*Space\sgroup\sof\scrystal\s*={X,ca:spacegroup}</record>     

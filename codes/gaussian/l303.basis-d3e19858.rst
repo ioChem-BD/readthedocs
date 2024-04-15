@@ -51,6 +51,7 @@ l303.basis
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output.raw" id="l303.basis">
     </comment>
@@ -60,6 +61,7 @@ l303.basis
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l303">\s*DipDrv:  MaxL={I,g:dipdrv}.*</record>
 

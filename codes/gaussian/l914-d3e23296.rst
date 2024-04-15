@@ -326,6 +326,7 @@ l914
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l914">
    <module cmlx:templateRef="l914">
@@ -414,6 +415,7 @@ l914
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l914/l914_excitations.xml" /> 
    </templateList>

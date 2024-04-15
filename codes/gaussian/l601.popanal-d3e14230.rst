@@ -269,6 +269,7 @@ l601.popanal
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.popanal">
    <module cmlx:templateRef="l601.popanal">
@@ -371,6 +372,7 @@ l601.popanal
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="5" />
    <record repeat="2" />

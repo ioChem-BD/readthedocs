@@ -78,6 +78,7 @@ environment
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="environment">
            <module dictRef="cc:environment" id="environment">

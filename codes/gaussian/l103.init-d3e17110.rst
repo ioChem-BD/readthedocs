@@ -95,6 +95,7 @@ l103.init
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.init">
    <module cmlx:templateRef="l103.init">
@@ -131,6 +132,7 @@ l103.init
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="6" />
    <templateList repeat="*">  <template id="length" pattern="\s*\!\s*R\d+\s*R.*" endPattern=".*" endPattern2="~" repeat="*" endOffset="0">    <record repeat="*" id="length">\s*\!\s*{A,g:symbol}\s*R\({I,g:atom1},{I,g:atom2}\)\s*{F,cc:distance}\s*{X,g:deriv}\s*\!\s*</record>

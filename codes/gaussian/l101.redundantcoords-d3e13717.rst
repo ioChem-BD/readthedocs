@@ -44,6 +44,7 @@ l101.redundantcoords
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.redundantcoords">
        <module cmlx:templateRef="l101.redundantcoords">
@@ -57,6 +58,7 @@ l101.redundantcoords
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="redundant">{X,g:redundant}</record>
    <record id="checkpoint">{X,g:checkpoint}</record>

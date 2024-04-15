@@ -69,6 +69,7 @@ atoms
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="atoms">
            <module cmlx:templateRef="atoms">
@@ -150,6 +151,7 @@ atoms
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="atomtable" pattern="\s+x{20,}x.*" endPattern="\s+x{20,}x.*">    <record repeat="4" />    <record repeat="*" id="atom">\s*x{A,cc:elementType}{I,cc:serial}{F,cc:xFract}{F,cc:yFract}{F,cc:zFract}\s*x.*</record>    <transform process="addChild" xpath=".//cml:list[@cmlx:templateRef='atom']/cml:list" elementName="cml:atom" id="atom" />    <transform process="addAttribute" xpath=".//cml:atom" name="id" value="$string(concat('a', count(preceding::cml:atom)+1))" />    <transform process="addAttribute" xpath=".//cml:atom" name="elementType" value="$string(preceding-sibling::cml:scalar[@dictRef='cc:elementType']/text())" />    <transform process="addAttribute" xpath=".//cml:atom" name="xFract" value="$string(preceding-sibling::cml:scalar[@dictRef='cc:xFract']/text())" />    <transform process="addAttribute" xpath=".//cml:atom" name="yFract" value="$string(preceding-sibling::cml:scalar[@dictRef='cc:yFract']/text())" />    <transform process="addAttribute" xpath=".//cml:atom" name="zFract" value="$string(preceding-sibling::cml:scalar[@dictRef='cc:zFract']/text())" />    <transform process="setValue" xpath=".//cml:atom" value="$string(preceding-sibling::cml:scalar[@dictRef='cc:elementType']/text())" />    <transform process="addChild" xpath="." elementName="cml:atomArray" />    <transform process="move" xpath=".//cml:atom" to="./cml:atomArray" />                
                </template>

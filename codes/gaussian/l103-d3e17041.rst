@@ -146,6 +146,7 @@ l103
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103">  
        <module cmlx:templateRef="l103">
@@ -189,6 +190,7 @@ l103
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l103.1">
        <module cmlx:templateRef="l103">
@@ -253,6 +255,7 @@ l103
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="tmp" repeat="*">(\s+\(Enter.*|\s*GradGradGrad.*|\s+)</record>
    <record id="berny">{X,g:optimization}</record>

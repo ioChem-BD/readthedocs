@@ -52,6 +52,7 @@ timing
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="timing">
            <module cmlx:templateRef="timing">
@@ -68,6 +69,7 @@ timing
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record>\s*Initialisation\stime\s*={A,ca:inittime}s\s*</record>
    <record>\s*Calculation\stime\s*={A,ca:calctime}s\s*</record>

@@ -123,6 +123,7 @@ symmetry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="symmetry">
            <module cmlx:templateRef="symmetry">
@@ -136,6 +137,7 @@ symmetry
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="symmetry2">
            <module cmlx:templateRef="symmetry">
@@ -150,6 +152,7 @@ symmetry
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*Symmetry:.*" endPattern=".*" endOffset="0">    <record>\s*Symmetry:{X,a:symmetry}</record>
            </template>  <template pattern="\s*Net\sCharge.*" endPattern=".*" endOffset="0">    <record>\s*Net\sCharge:{I,a:charge}\(Nuclei\sminus\sElectrons\).*</record>

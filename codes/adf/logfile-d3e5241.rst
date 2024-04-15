@@ -106,6 +106,7 @@ logfile
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="logfile">
            <module cmlx:lineCount="53" cmlx:templateRef="logfile">
@@ -120,6 +121,7 @@ logfile
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern=".*ADF.*RunTime:.*" endPattern=".*" endOffset="1" repeat="*">    <record id="runtime">.*RunTime:{X,cc:runDate}</record>    <record id="title">.*:\d\d:\d\d.?\s*{X,cc:title}\s*</record>
            </template>  <template pattern=".*RunTime:.*" endPattern=".*" repeat="*">    <record id="runtime">.*RunTime:{X,cc:runDate}</record>

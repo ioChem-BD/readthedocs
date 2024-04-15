@@ -48,6 +48,7 @@ l101.zmata
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="chargemult">\s*Charge\s*={I,x:formalCharge}\s*Multiplicity\s*={I,x:multiplicity}</record>
    <record id="atom" repeat="*" makeArray="true">\s*{I,cc:elementType},{I,g:type},{F,cc:x3},{F,cc:y3},{F,cc:z3}</record>

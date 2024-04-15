@@ -79,6 +79,7 @@ l1002.minotr
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1002.minotr">
        <module cmlx:templateRef="l1002.minotr">
@@ -121,6 +122,7 @@ l1002.minotr
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="l1002" repeat="*">{1_20A,g:l1002.minotr}</record>
 

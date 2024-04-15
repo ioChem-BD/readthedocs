@@ -47,6 +47,7 @@ l502.footer2
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l502.footer2">
            <module id="spincontamination" cmlx:lineCount="1" cmlx:templateRef="l502.footer2">
@@ -59,6 +60,7 @@ l502.footer2
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="spincontamination">\s+S\*\*2\sbefore\sannihilation{F,cc:spincontamination}.*</record>
    <transform process="pullup" xpath="./cml:list/cml:scalar" />

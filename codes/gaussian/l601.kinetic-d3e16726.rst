@@ -258,6 +258,7 @@ l601.kinetic
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l601.kinetic">
            <module cmlx:templateRef="l601.kinetic">                     
@@ -277,6 +278,7 @@ l601.kinetic
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <template pattern="\s*Orbital\senergies\sand\skinetic\senergies.*" endPattern="\s*Orbital\senergies\sand\skinetic\senergies.*" endPattern2="\s*Total\skinetic\senergy\sfrom\sorbitals.*" endOffset="0" repeat="*">  <record>\s*Orbital\senergies\sand\skinetic\senergies\s*\({A,g:spintype}\):\s*</record>  <record />  <record repeat="*" makeArray="true">{I,x:serial}{A,x:label}{F,g:orbitalener}{F,g:kineticener}</record>                              
        </template>

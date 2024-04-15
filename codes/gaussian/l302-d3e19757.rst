@@ -70,6 +70,7 @@ l302
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l302/l302.basis.xml" />  <xi:include href="l302/l302.basis2.xml" />
      </templateList>

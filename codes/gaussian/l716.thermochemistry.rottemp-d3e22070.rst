@@ -47,6 +47,7 @@ l716.thermochemistry.rottemp
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.thermochemistry.rottemp">
        <module cmlx:templateRef="l716.thermochemistry.rottemp">
@@ -59,6 +60,7 @@ l716.thermochemistry.rottemp
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="rottemp">\s*Rotational temperatures? \(Kelvin\)\s*{1_3F,cc:rottemp}\s*</record>
    <transform process="pullupSingleton" xpath="./cml:list" />

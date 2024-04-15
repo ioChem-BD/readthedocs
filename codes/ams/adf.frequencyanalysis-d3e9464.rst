@@ -83,6 +83,7 @@ adf.frequencyanalysis
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="intensities">
            <module cmlx:templateRef="adf.frequencyanalysis">             
@@ -99,6 +100,7 @@ adf.frequencyanalysis
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="intensities" name="Vibrational frequencies intensity" pattern="\s*List\sof\sAll\sFrequencies:\s*" endPattern="(\s*[\d\.-]+\s*){3}$\s*" endPattern2="~" endOffset="1" repeat="*">    <record repeat="9" />    <record repeat="*" makeArray="true">{F,cc:frequency}{F,cc:dipole}{F,cc:absortion}</record>    <transform process="pullup" xpath=".//cml:array" />    <transform process="delete" xpath=".//cml:list[count(*)=0]" />    <transform process="delete" xpath=".//cml:list[count(*)=0]" />    <transform process="addUnits" xpath=".//cml:array[@dictRef='cc:frequency']" value="nonsi:cm-1" />    <transform process="addUnits" xpath=".//cml:array[@dictRef='cc:dipole']" value="nonsi2:1e-40.esu2.cm2" />    <transform process="addUnits" xpath=".//cml:array[@dictRef='cc:absortion']" value="nonsi2:km.mole-1" />
            </template>

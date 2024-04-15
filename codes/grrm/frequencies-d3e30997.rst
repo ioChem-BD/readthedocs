@@ -114,6 +114,7 @@ frequencies
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="frequencies">
          <module cmlx:templateRef="frequencies">
@@ -184,6 +185,7 @@ frequencies
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="null" repeat="2" />
    <template id="molecule" pattern="[A-Za-z]{1,2}\s+.*" endPattern="Freq\..*" endOffset="-2">  <record makeArray="true" repeat="*" id="atom">\s*{A,compchem:elementType}\s*{F,compchem:x3}\s*{F,compchem:y3}\s*{F,compchem:z3}\s*

@@ -83,6 +83,7 @@ l401
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <xi:include href="l401/l401.orbsym.xml" />  <xi:include href="l401/l401.alphabeta.xml" />
      </templateList>

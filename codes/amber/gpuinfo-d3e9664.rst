@@ -57,6 +57,7 @@ gpuinfo
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="gpuinfo">
             <module cmlx:templateRef="gpuinfo">
@@ -98,6 +99,7 @@ gpuinfo
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern="\s*\|.*:.*" endPattern="\s*\|\s+\S.*$\s*\|\s*" endPattern2="~" endOffset="1" repeat="*">    <record id="gpu" repeat="*">\s*\|{X,cc:parameter}:{X,cc:value}</record>
            </template>

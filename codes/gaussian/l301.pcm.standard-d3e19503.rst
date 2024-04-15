@@ -169,6 +169,7 @@ l301.pcm.standard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.standard1">
            <module cmlx:lineCount="14" cmlx:templateRef="l301.pcm.standard">
@@ -188,6 +189,7 @@ l301.pcm.standard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.standard2">
            <module cmlx:lineCount="20" cmlx:templateRef="l301.pcm.standard">
@@ -207,6 +209,7 @@ l301.pcm.standard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.standard3">
            <module cmlx:lineCount="20" cmlx:templateRef="l301.pcm.standard">
@@ -227,6 +230,7 @@ l301.pcm.standard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.standard4">
            <module cmlx:lineCount="20" cmlx:templateRef="l301.pcm.standard">         
@@ -246,6 +250,7 @@ l301.pcm.standard
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l301.pcm.standard5">      
            <module cmlx:lineCount="20" cmlx:templateRef="l301.pcm.standard">
@@ -265,6 +270,7 @@ l301.pcm.standard
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record repeat="2" />
    <record id="model">\sModel\s+\:\s*{X,g:model}\..*</record>

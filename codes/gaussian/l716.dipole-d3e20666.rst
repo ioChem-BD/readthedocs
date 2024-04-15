@@ -51,6 +51,7 @@ l716.dipole
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l716.dipole">
        <module cmlx:templateRef="l716.dipole">
@@ -63,6 +64,7 @@ l716.dipole
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record id="dipole" repeat="*">\sDipole\s*={3E,x:d}</record>
    <transform process="pullupSingleton" dictRef="cc:dipole" xpath="./cml:list" />

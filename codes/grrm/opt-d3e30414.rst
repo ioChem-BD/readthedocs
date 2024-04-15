@@ -121,6 +121,7 @@ opt
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="opt">
            <module cmlx:templateRef="opt">    
@@ -284,6 +285,7 @@ opt
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="geometry.cycle" pattern="# ITR.*" endPattern="# ITR.*" endPattern2="==========.*" endPattern3="~" repeat="*">    <template id="iter" pattern=".*" endPattern=".*">      <record id="iter"># ITR.\s+{I,cc:cycleNumber}</record>      <transform process="pullupSingleton" xpath="./cml:list" />
                </template>    <template id="molecule" pattern="[A-Za-z]{1,2}\s+.*" endPattern="\s+Item\s+Value\s+Threshold.*" repeat="*">      <record makeArray="true" repeat="*" id="atom">\s*{A,compchem:elementType}\s*{F,compchem:x3}\s*{F,compchem:y3}\s*{F,compchem:z3}\s*

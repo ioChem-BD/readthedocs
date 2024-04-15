@@ -47,6 +47,7 @@ l101.title
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="l1.redundantcoords">
        <module cmlx:templateRef="l101.title">
@@ -59,6 +60,7 @@ l101.title
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <record />
    <record id="title">{X,cc:title}</record>

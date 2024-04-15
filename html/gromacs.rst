@@ -71,6 +71,7 @@ Data sources:
    string ``gromacs:getCalcType`` string ``tcoupl`` string ``pcoupl``
 
    .. code:: xml
+      :number-lines:
 
                                  
           $tcoupl  Variable tcoupl from module <module cmlx:templateRef="input" > 
@@ -104,7 +105,7 @@ Data sources:
 
 .. _program.header template: ../codes/gromacs/header-d3e26582.html
 .. _input.parameters: ../codes/gromacs/input.parameters-d3e26725.html
-.. _molecular structure file.: ../codes/gromacs/gromacs.geometry-d3e52387.html
+.. _molecular structure file.: ../codes/gromacs/gromacs.geometry-d3e52489.html
 .. _averages: ../codes/gromacs/averages-d3e27311.html
 .. _hardware: ../codes/gromacs/hardware-d3e27169.html
 .. _summary: ../codes/gromacs/summary-d3e27724.html

@@ -51,6 +51,7 @@ adf.runtype
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="adf.runType">
          <module cmlx:lineCount="241" cmlx:templateRef="adf.runtype">       
@@ -63,6 +64,7 @@ adf.runtype
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template pattern=".*R\sU\sN\s+T\sY\sP\sE.*" endPattern=".*" endOffset="0">    <record id="runtype">.*R\sU\sN\s+T\sY\sP\sE\s\:{X,cc:runtype}\*.*</record>    <transform process="pullup" repeat="2" xpath=".//cml:scalar[@dictRef='cc:runtype']" />
            </template>   

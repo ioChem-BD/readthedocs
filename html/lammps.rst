@@ -108,6 +108,7 @@ Data sources:
    string ``l:getMethod`` string ``setup``
 
    .. code:: xml
+      :number-lines:
 
                                  
           $setup          Refers to all defined setup parameters from <module cmlx:templateRef="setup">                 
@@ -159,6 +160,7 @@ Data sources:
    string ``l:getCouplingMethods`` string ``setup``
 
    .. code:: xml
+      :number-lines:
 
                                  
           $setup          Refers to all defined setup parameters from <module cmlx:templateRef="setup">                 
@@ -226,8 +228,8 @@ Data sources:
 .. _atom_styles: https://docs.lammps.org/read_data.html#format-of-the-body-of-a-data-file
 .. _program.header template: ../codes/lammps/header-d3e31506.html
 .. _setup: ../codes/lammps/setup-d3e31542.html
-.. _read_data structure file: ../codes/lammps/lammps.data-d3e58172.html
-.. _steps: ../codes/lammps/steps-d3e31782.html
-.. _mpi: ../codes/lammps/mpi-d3e31900.html
-.. _walltime: ../codes/lammps/walltime-d3e31964.html
-.. _performance: ../codes/lammps/performance-d3e31864.html
+.. _read_data structure file: ../codes/lammps/lammps.data-d3e58274.html
+.. _steps: ../codes/lammps/steps-d3e31812.html
+.. _mpi: ../codes/lammps/mpi-d3e31929.html
+.. _walltime: ../codes/lammps/walltime-d3e31993.html
+.. _performance: ../codes/lammps/performance-d3e31893.html

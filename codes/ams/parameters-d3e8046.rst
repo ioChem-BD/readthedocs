@@ -68,6 +68,7 @@ parameters
    **Output text**
 
 .. code:: xml
+   :number-lines:
 
    <comment class="example.output" id="parameters">       
            <module cmlx:lineCount="17" cmlx:templateRef="parameters">
@@ -93,6 +94,7 @@ parameters
    **Template definition**
 
 .. code:: xml
+   :number-lines:
 
    <templateList>  <template id="scf" pattern="\s*DENSITY\sFUNCTIONAL\sPOTENTIAL\s\(scf\).*" endPattern="\s*">    <record repeat="1" />    <record id="functional">.*:{X,cc:functional}</record>    <record id="gradient">\s*Gradient\sCorrections:\s+{X,cc:functional}\s*\=\=\s*Not Default\s*\=\=\s*</record>    <transform process="addChild" xpath="." position="1" elementName="cml:scalar" id="method" dictRef="cc:method" value="DFT" />
            </template>  <template id="spin" pattern="\s*SPIN.*" endPattern="\s*" endPattern2="~">    <record repeat="1" />    <record id="molecule">\s*Molecule:\s*{A,cc:spinMolecule}.*</record>    <templateList>      <template pattern="\s*Fragments:.*" endPattern=".*" endPattern2="~">        <record id="fragments">\s*Fragments:\s*{A,cc:spinFragments}.*</record>

@@ -19,7 +19,7 @@ To generate a new report, users have to click on the Reports tab and then choose
 
    New report button
 
-.. note:: The current version of ioChem-BD has *Supporting information* and *Energy reaction profile* reports activated.
+.. note:: The current version of ioChem-BD has *Supporting information*, *Reaction energy profile* and *Reaction graph* reports activated.
 
 Report page
 -----------

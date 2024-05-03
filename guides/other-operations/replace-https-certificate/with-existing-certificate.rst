@@ -124,7 +124,7 @@ If the result of the update process is successful, we can start the service.
 
 .. code:: bash
 
-      iochembd$    BASE_PATH/apache-tomcat-7.0.37/bin/startup.sh
+      iochembd$    BASE_PATH/apache-tomcat/bin/startup.sh
 
 Once started, we can check that the ioChem-BD service is running with a valid HTTPS certificate, green lock indicates a valid certificate.
 

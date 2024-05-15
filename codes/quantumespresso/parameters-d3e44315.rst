@@ -135,7 +135,7 @@ parameters
    <transform process="operateScalar" xpath=".//cml:scalar[text() = 'lattice parameter (alat)']/following-sibling::cml:scalar[@dictRef='cc:value']" args="operator=multiply operand=0.52918" />
    <transform process="addUnits" xpath=".//cml:scalar[text() = 'lattice parameter (alat)']/following-sibling::cml:scalar[@dictRef='cc:value']" value="nonsi:angstrom" />
    <transform process="setValue" xpath=".//cml:scalar[text() = 'unit-cell volume']/following-sibling::cml:scalar[@dictRef='cc:value']" value="$string(replace(//cml:scalar[text() = 'unit-cell volume']/following-sibling::cml:scalar[@dictRef='cc:value']/text(),'\s+\(a.u.\)\^3',''))" />
-   <transform process="operateScalar" xpath=".//cml:scalar[text() = 'unit-cell volume']/following-sibling::cml:scalar[@dictRef='cc:value']" args="operator=multiply operand=0.52918" />
+   <transform process="operateScalar" xpath=".//cml:scalar[text() = 'unit-cell volume']/following-sibling::cml:scalar[@dictRef='cc:value']" args="operator=multiply operand=0.14818471" />
    <transform process="addUnits" xpath=".//cml:scalar[text() = 'unit-cell volume']/following-sibling::cml:scalar[@dictRef='cc:value']" value="nonsi:angstrom3" />
    <transform process="setValue" xpath=".//cml:scalar[text() = 'kinetic-energy cutoff']/following-sibling::cml:scalar[@dictRef='cc:value']" value="$string(replace(//cml:scalar[text() = 'kinetic-energy cutoff']/following-sibling::cml:scalar[@dictRef='cc:value']/text(),'\s+Ry\s*',''))" />
    <transform process="operateScalar" xpath=".//cml:scalar[text() = 'kinetic-energy cutoff']/following-sibling::cml:scalar[@dictRef='cc:value']" args="operator=multiply operand=13.605698066" />

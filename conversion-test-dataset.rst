@@ -7,7 +7,7 @@ This document collects a number of cases that ioChem-BD can handle. Find below t
 
 We kindly ask the interested reader to browse the **Conversion Templates: Text to CML** for a detailed description of what and from where data fields are captured, and how the HTML5 file is generated for visualisation. Note that ioChem-BD captures many data fields but for only few of them the HTML5 representation is generated. Given the dynamic architecture of iochem-BD, generating new capture templates and/or new representation templates is extremely flexible, so new templates can be written and implemented **at any time without disrupting normal operation**. Contact us for further requests.
 
-Release 2.9.0 (current)
+Release 3.0.0 (current)
 -----------------------
 
 ioChem-BD handles results obtained from:

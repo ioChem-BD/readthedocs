@@ -64,15 +64,19 @@ The Navigation tab will display a navigation tree composed of nodes and leaves. 
 
 | On calculations, the *Type* column contains the abbreviation of the original software package used:
 
-  -  ADF: Calculation generated with `Amsterdam Density functional`_ software package
+  -  ADF/AMS/: Calculation generated with `Amsterdam Density functional`_ software package
   -  AMB: Calculation generated with `Amber`_ software package
+  -  CAS: Calculation generated with `CASTEP`_ software package
   -  GAU: Calculation generated with `Gaussian`_ software package
   -  GMC: Calculation generated with `GROMACS`_ software package
+  -  GRRM: Calculation generated with `GRRM`_ software package    
   -  GRO: Calculation generated with `GronOR`_ software package
+  -  LAM: Calculation generated with `LAMMPS`_ software package
   -  MOL: Calculation generated with `Molcas`_ software package
   -  MOP: Calculation generated with `Mopac`_ software package
   -  ORC: Calculation generated with `Orca`_ software package
   -  QEX: Calculation generated with `QuantumESPRESSO`_ software package
+  -  SIE: Calculation generated with `SIESTA`_ software package
   -  TML: Calculation generated with `Turbomole`_ software package
   -  VSP: Calculation generated with `Vienna Ab initio Simulation Package`_ software package
 
@@ -97,7 +101,7 @@ Read the `Publishing Calculations`_ section or the `Generate reports`_ section t
 Search mode
 ~~~~~~~~~~~
 
-The Search tab will display a form where the user can query all uploaded projects/calculations. Multiple filters are available to refine queries. Currently, it only filters by administrative metadata:
+The Search tab will display a form where the user can query all uploaded projects/calculations. Multiple filters are available to refine queries. Currently, it filters by administrative metadata and molecular structure:
 
   -  *Name* and *description* of the element, partial text matching search.
   -  *Type* of the element (calculation software type)
@@ -253,8 +257,7 @@ On the bottom area of this frame there is an empty space. It is left blank inten
 .. _path definition: uploading-content-to-create/using-web-interface.html#paths
 .. _Generating reports: generating-reports.html
 .. _Conversion template reference: ../../conversion-html.html
-
- 
-
-
-
+.. _CASTEP: http://www.castep.org/
+.. _GRRM: https://iqce.jp/GRRM/index_e.shtml
+.. _LAMMPS: https://www.lammps.org
+.. _SIESTA: https://siesta-project.org/siesta/

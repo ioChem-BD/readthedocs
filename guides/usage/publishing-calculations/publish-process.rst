@@ -24,20 +24,18 @@ Select the elements to publish
 
 On Create module, navigate to the project where the desired calculations reside. 
 
-We can select an individual calculation by clicking on it, or using multiselect with *Ctrl + Click*, *Alt + Click*. 
-Another way to select calculations is right clicking on parent project and choose *Select child elements* from its context menu.
+Then you must select it and right click it, then choose *Publish* from the *Browse module* section of the context menu.
 
-.. attention:: 
-   You must select the project **and its inner calculations** prior publishing.  
-   If you only select the project and not its content you will publish the project **empty of contents**.
+.. attention::
+   Since ioChem-BD v3.0, you can only select and publish the entire project, not part of its content. 
+   You must select the project **only** prior publishing.  If you select other content, the publish option will not be available.
 
 
-Once desired projects and calculations are selected, right click on the current selection to display its context menu. Then select *Publish* option.
 
 .. figure:: /imgs/CreatePublishSelection1.png
-   :alt: Calculation selection
+   :alt: Project selection
 
-   Calculation selection
+   Project selection
 
 
 If an error message appears at this point, please read the FAQ entry about `no publishing community defined`_.

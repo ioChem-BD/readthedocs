@@ -146,12 +146,24 @@ Assign community publishers
 
 Once our publication structure has been defined, our last step as administrator is to define who will publish and where he/she will publish
 
+.. note:: The ioChem-BD administrator account has higher levels of administrator than simple users managing their publishing community. So the system admin will be able to remove published collections and items, whereas other users will not.
+
 To assign publication rights to a community we must define its administrators, it can be done in two ways.
 
-1.Adding users as community administrators
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1. Adding the community on user’s edition form
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note:: The ioChem-BD administrator account has higher levels of administrator than simple users managing their publishing community. So the system admin will be able to remove published collections and items, whereas other users will not.
+On the top bar we will navigate to the *Administer* option, then *Access control* and finally *E-People*, it will open *Administer EPeople* page.
+
+From here, we will search and edit the specific user by clicking the *Edit* button. On the edition form, you can choose the communities where the user will be allowed to publish by selecting it on the listbox named *Communities user can publish into*.
+
+.. figure:: /imgs/Admin_createuser4.png
+   :alt: Set user publishing communities
+
+   Set user publishing communities
+
+2. Adding users as community administrators
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We will first navigate to the desired community, in this example this will be a specific user community. From the sidebar we will click on the *Edit* button.
 
@@ -178,18 +190,6 @@ If we are working with a group community with no users, as described in the four
    Set community administrators
 
 We will do so for every user / group of users that we want to be able to publish, otherwise users will not be able to publish in the Browse module.
-
-2. Adding the community on user’s edition form
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-On the top bar we will navigate to the *Administer* option, then *Access control* and finally *E-People*, it will open *Administer EPeople* page.
-
-From here, we will search and edit the specific user by clicking the *Edit* button. On the edition form, you can choose the communities where the user will be allowed to publish by selecting it on the listbox named *Communities user can publish into*.
-
-.. figure:: /imgs/Admin_createuser4.png
-   :alt: Set user publishing communities
-
-   Set user publishing communities
 
 Resume
 ~~~~~~

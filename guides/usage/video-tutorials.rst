@@ -16,4 +16,4 @@ Reaction Graph report creation
 
 .. raw:: html
 
-    <iframe width="696" height="435" src="https://doi.org/10.19061/O21Igs5R8Ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="696" height="435" src="https://www.youtube.com/embed/O21Igs5R8Ho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
